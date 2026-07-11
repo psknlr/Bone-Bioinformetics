@@ -1,0 +1,6 @@
+step,requires,status
+SuSiE/FINEMAP fine-mapping,full GWAS summary statistics (GWAS Catalog / OT credibleSets),pending_inputs
+coloc / SuSiE-coloc,GWAS region sumstats + eQTL Catalogue tabix,pending_inputs
+SMR/HEIDI,GWAS sumstats + cis-eQTL/pQTL besd,pending_inputs
+cis-eQTL/pQTL Mendelian randomisation,harmonised instrument sumstats,pending_inputs
+multi-tissue QTL consistency,eQTL Catalogue multi-dataset tabix,pending_inputs

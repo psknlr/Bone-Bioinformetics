@@ -1,0 +1,5 @@
+step,requires,status
+PyKEEN/R-GCN/HGT link prediction with time/book split,full heterogeneous KG + trained embedding,scaffolded_meta_path_only
+GNINA/AutoDock Vina cross-docking,docking binaries + prepared receptors/ligands,pending_binaries
+MD + MM/GBSA,GROMACS/AMBER + force fields,pending_binaries
+PrimeKG/BindingDB integration,downloaded PrimeKG CSV + BindingDB TSV,pending_inputs

@@ -1,0 +1,4 @@
+step,requires,status
+weighted L1000 Level-5 connectivity score,GSE92742/GSE70138 Level-5 signatures,pending_inputs
+scPerturb E-distance effect comparison,scPerturb h5ad datasets,pending_inputs
+combination Pareto-front synergy modelling,per-compound reversal profiles,pending_inputs

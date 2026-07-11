@@ -1,0 +1,5 @@
+target,uniprot,alphafold_model,alphafold_mean_plddt,experimental_pdb,example_pdb_id,docking_status
+AR,P10275,True,57.25,True,5cj6,pending_requires_vina_gnina_and_ligand_prep
+DPP4,P27487,True,96.25,True,2qt9,pending_requires_vina_gnina_and_ligand_prep
+HIF1A,Q16665,True,60.75,True,9ofu,pending_requires_vina_gnina_and_ligand_prep
+TP53,P04637,True,75.06,True,9r2q,pending_requires_vina_gnina_and_ligand_prep

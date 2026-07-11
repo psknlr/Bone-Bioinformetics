@@ -1,0 +1,809 @@
+source,source_type,target,target_type,relation
+杜仲,herb,aucubin,compound,contains
+aucubin,compound,L3MBTL1,target,binds
+杜仲,herb,chlorogenic acid,compound,contains
+chlorogenic acid,compound,HDAC1,target,binds
+杜仲,herb,chlorogenic acid,compound,contains
+chlorogenic acid,compound,AKR1B1,target,binds
+杜仲,herb,chlorogenic acid,compound,contains
+chlorogenic acid,compound,AKR1B10,target,binds
+杜仲,herb,chlorogenic acid,compound,contains
+chlorogenic acid,compound,AKR1B1,target,binds
+杜仲,herb,chlorogenic acid,compound,contains
+chlorogenic acid,compound,PTPN1,target,binds
+杜仲,herb,chlorogenic acid,compound,contains
+chlorogenic acid,compound,AKR1B1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,POLB,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,POLB,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,GPBAR1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PLA2G1B,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,POLB,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,AKR1B10,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,AKR1B10,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,AKR1B10,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,AKR1B10,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,AKR1B10,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,AKR1B10,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,AKR1B10,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,CDC25B,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPRC,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,DUSP3,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,F3,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,RELA,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,CES1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN2,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,FUNDC1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,GPBAR1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PTPN1,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,AKR1B10,target,binds
+牛膝,herb,oleanolic acid,compound,contains
+oleanolic acid,compound,PSMB2,target,binds
+续断,herb,chlorogenic acid,compound,contains
+chlorogenic acid,compound,HDAC1,target,binds
+续断,herb,chlorogenic acid,compound,contains
+chlorogenic acid,compound,AKR1B1,target,binds
+续断,herb,chlorogenic acid,compound,contains
+chlorogenic acid,compound,AKR1B10,target,binds
+续断,herb,chlorogenic acid,compound,contains
+chlorogenic acid,compound,AKR1B1,target,binds
+续断,herb,chlorogenic acid,compound,contains
+chlorogenic acid,compound,PTPN1,target,binds
+续断,herb,chlorogenic acid,compound,contains
+chlorogenic acid,compound,AKR1B1,target,binds
+骨碎补,herb,neoeriocitrin,compound,contains
+neoeriocitrin,compound,PKM,target,binds
+骨碎补,herb,neoeriocitrin,compound,contains
+neoeriocitrin,compound,PKM,target,binds
+骨碎补,herb,eriodictyol,compound,contains
+eriodictyol,compound,CYP1B1,target,binds
+骨碎补,herb,eriodictyol,compound,contains
+eriodictyol,compound,CA4,target,binds
+骨碎补,herb,eriodictyol,compound,contains
+eriodictyol,compound,CA7,target,binds
+骨碎补,herb,eriodictyol,compound,contains
+eriodictyol,compound,CA12,target,binds
+骨碎补,herb,eriodictyol,compound,contains
+eriodictyol,compound,RPS6KA3,target,binds
+骨碎补,herb,eriodictyol,compound,contains
+eriodictyol,compound,FTO,target,binds
+骨碎补,herb,eriodictyol,compound,contains
+eriodictyol,compound,FTO,target,binds
+骨碎补,herb,eriodictyol,compound,contains
+eriodictyol,compound,FTO,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP2C9,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,GSK3A,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,ALOX5,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,AHR,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,XDH,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,HSD17B1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,HSD17B2,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,ABCC1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,AR,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP1A2,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP1A1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP1B1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,NOX4,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,LMNA,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,TDP1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP2C19,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP2C19,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,HIF1A,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,ALOX15,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,ALOX15,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,HIF1A,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,TP53,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,TP53,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,TP53,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,TP53,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP3A4,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP2D6,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP2C9,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP3A4,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,ABCG2,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,ABCG2,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP2C9,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP2D6,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP2C19,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP3A4,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP1A2,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP1A1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CYP1B1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,ABCB1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CTDSP1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,AKR1B1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,ABCC1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,FLT3,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,ESRRA,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,DAPK1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CA2,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CA7,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CA12,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,TYR,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CISD1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CISD1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,SLC2A1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,MPO,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,HSD17B2,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,DPP4,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,IP6K2,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,IPMK,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CSNK2B,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,TRPC5,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,YES1,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,HDAC6,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,RPS6KA3,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,DPP4,target,binds
+骨碎补,herb,kaempferol,compound,contains
+kaempferol,compound,CSNK2B,target,binds
+TERT,target,osteoporosis,disease,associated_with
+CSMD1,target,osteoporosis,disease,associated_with
+MARK3,target,osteoporosis,disease,associated_with
+FHL2,target,osteoporosis,disease,associated_with
+SEM1,target,osteoporosis,disease,associated_with
+SOX4,target,osteoporosis,disease,associated_with
+AR,target,osteoporosis,disease,associated_with
+E2F6,target,osteoporosis,disease,associated_with
+PDZRN4,target,osteoporosis,disease,associated_with
+OPA1,target,osteoporosis,disease,associated_with
+RARG,target,osteoporosis,disease,associated_with
+QTMAN,target,osteoporosis,disease,associated_with
+LRP5,target,osteoporosis,disease,associated_with
+GUCY1B1,target,osteoporosis,disease,associated_with
+CKB,target,osteoporosis,disease,associated_with
+COL1A2,target,osteoporosis,disease,associated_with
+TNFRSF11B,target,osteoporosis,disease,associated_with
+WNT1,target,osteoporosis,disease,associated_with
+CCR1,target,osteoporosis,disease,associated_with
+TTR,target,osteoporosis,disease,associated_with
+HOXB8,target,osteoporosis,disease,associated_with
+GUCY1A1,target,osteoporosis,disease,associated_with
+IGF1,target,osteoporosis,disease,associated_with
+JAG1,target,osteoporosis,disease,associated_with
+FGFR1,target,osteoporosis,disease,associated_with
+CCDC170,target,osteoporosis,disease,associated_with
+LIN7C,target,osteoporosis,disease,associated_with
+CCN2,target,osteoporosis,disease,associated_with
+CTSK,target,osteoporosis,disease,associated_with
+LRP6,target,osteoporosis,disease,associated_with
+WNT16,target,osteoporosis,disease,associated_with
+GUCY1A2,target,osteoporosis,disease,associated_with
+FGFRL1,target,osteoporosis,disease,associated_with
+LEP,target,osteoporosis,disease,associated_with
+SOX6,target,osteoporosis,disease,associated_with
+GLP1R,target,osteoporosis,disease,associated_with
+USP7,target,osteoporosis,disease,associated_with
+AKAP11,target,osteoporosis,disease,associated_with
+SPRED1,target,osteoporosis,disease,associated_with
+KDM6B,target,osteoporosis,disease,associated_with
+DAG1,target,osteoporosis,disease,associated_with
+HOXA4,target,osteoporosis,disease,associated_with
+WNT11,target,osteoporosis,disease,associated_with
+OFD1,target,osteoporosis,disease,associated_with
+CASR,target,osteoporosis,disease,associated_with
+CTHRC1,target,osteoporosis,disease,associated_with
+MEOX1,target,osteoporosis,disease,associated_with
+PPARG,target,osteoporosis,disease,associated_with
+GALNT3,target,osteoporosis,disease,associated_with
+CBR1,target,osteoporosis,disease,associated_with
+ZDHHC6,target,osteoporosis,disease,associated_with
+VDR,target,osteoporosis,disease,associated_with
+SH2B3,target,osteoporosis,disease,associated_with
+NFATC1,target,osteoporosis,disease,associated_with
+CSNK2A2IP,target,osteoporosis,disease,associated_with
+EN1,target,osteoporosis,disease,associated_with
+SP7,target,osteoporosis,disease,associated_with
+FAM3C,target,osteoporosis,disease,associated_with
+SRC,target,osteoporosis,disease,associated_with
+WLS,target,osteoporosis,disease,associated_with
+IAPP,target,osteoporosis,disease,associated_with
+ASB16,target,osteoporosis,disease,associated_with
+SRPK3,target,osteoporosis,disease,associated_with
+HES7,target,osteoporosis,disease,associated_with
+PKDCC,target,osteoporosis,disease,associated_with
+PPP6R3,target,osteoporosis,disease,associated_with
+WNT3A,target,osteoporosis,disease,associated_with
+IL6,target,osteoporosis,disease,associated_with
+NDRG2,target,osteoporosis,disease,associated_with
+HOXC5,target,osteoporosis,disease,associated_with
+RING1,target,osteoporosis,disease,associated_with
+ZBTB40,target,osteoporosis,disease,associated_with
+DHFR2,target,osteoporosis,disease,associated_with
+CDK9,target,osteoporosis,disease,associated_with
+PTH1R,target,osteoporosis,disease,associated_with
+HIVEP3,target,osteoporosis,disease,associated_with
+KAT2A,target,osteoporosis,disease,associated_with
+RSPO3,target,osteoporosis,disease,associated_with
+FGF21,target,osteoporosis,disease,associated_with
+IDUA,target,osteoporosis,disease,associated_with
+API5,target,osteoporosis,disease,associated_with
+PLS3,target,osteoporosis,disease,associated_with
+DLL3,target,osteoporosis,disease,associated_with
+BGLAP,target,osteoporosis,disease,associated_with
+IFITM5,target,osteoporosis,disease,associated_with
+HMGCR,target,osteoporosis,disease,associated_with
+CD40LG,target,osteoporosis,disease,associated_with
+FBXL14,target,osteoporosis,disease,associated_with
+POSTN,target,osteoporosis,disease,associated_with
+AXIN1,target,osteoporosis,disease,associated_with
+KLF3,target,osteoporosis,disease,associated_with
+NOTCH1,target,osteoporosis,disease,associated_with
+HBQ1,target,osteoporosis,disease,associated_with
+LGR4,target,osteoporosis,disease,associated_with
+FMN2,target,osteoporosis,disease,associated_with
+SETD4,target,osteoporosis,disease,associated_with
+PGR,target,osteoporosis,disease,associated_with
+FOXC2,target,osteoporosis,disease,associated_with
+SLC34A3,target,osteoporosis,disease,associated_with
+CALCR,target,osteoporosis,disease,associated_with
+CST3,target,osteoporosis,disease,associated_with
+HIF1A,target,osteoporosis,disease,associated_with
+TMCO5A,target,osteoporosis,disease,associated_with
+TBX6,target,osteoporosis,disease,associated_with
+ALG12,target,osteoporosis,disease,associated_with
+FGFR3,target,osteoporosis,disease,associated_with
+INS,target,osteoporosis,disease,associated_with
+APOB,target,osteoporosis,disease,associated_with
+BTG2,target,osteoporosis,disease,associated_with
+UBA7,target,osteoporosis,disease,associated_with
+MEPE,target,osteoporosis,disease,associated_with
+DPP4,target,osteoporosis,disease,associated_with
+ESR2,target,osteoporosis,disease,associated_with
+TP53,target,osteoporosis,disease,associated_with
+AQP1,target,osteoporosis,disease,associated_with
+ALDH7A1,target,osteoporosis,disease,associated_with
+HOXC4,target,osteoporosis,disease,associated_with
+FOXL1,target,osteoporosis,disease,associated_with
+GCG,target,osteoporosis,disease,associated_with
+NKX3-2,target,osteoporosis,disease,associated_with
+P4HA2,target,osteoporosis,disease,associated_with
+CYP19A1,target,osteoporosis,disease,associated_with
+RPS6KA5,target,osteoporosis,disease,associated_with
+GPR78,target,osteoporosis,disease,associated_with
+TLR4,target,osteoporosis,disease,associated_with
+SHBG,target,osteoporosis,disease,associated_with
+PHC2,target,osteoporosis,disease,associated_with
+HOXC9,target,osteoporosis,disease,associated_with
+GREM2,target,osteoporosis,disease,associated_with
+SUPT3H,target,osteoporosis,disease,associated_with
+CYP27B1,target,osteoporosis,disease,associated_with
+APOA1,target,osteoporosis,disease,associated_with
+ACVR2B,target,osteoporosis,disease,associated_with
+DDN,target,osteoporosis,disease,associated_with
+SLC34A1,target,osteoporosis,disease,associated_with
+VTI1A,target,osteoporosis,disease,associated_with
+FDPS,target,osteoporosis,disease,associated_with
+GAS5,target,osteoporosis,disease,associated_with
+KAT2B,target,osteoporosis,disease,associated_with
+ALPL,target,osteoporosis,disease,associated_with
+STK39,target,osteoporosis,disease,associated_with
+CRELD2,target,osteoporosis,disease,associated_with
+PAX1,target,osteoporosis,disease,associated_with
+TRAF6,target,osteoporosis,disease,associated_with
+STARD13,target,osteoporosis,disease,associated_with
+C3orf38,target,osteoporosis,disease,associated_with
+CCND2,target,osteoporosis,disease,associated_with
+NHERF1,target,osteoporosis,disease,associated_with
+LRG1,target,osteoporosis,disease,associated_with
+ETS2,target,osteoporosis,disease,associated_with
+METTL14,target,osteoporosis,disease,associated_with
+PHEX,target,osteoporosis,disease,associated_with
+MGP,target,osteoporosis,disease,associated_with
+COPB2,target,osteoporosis,disease,associated_with
+SMN2,target,osteoporosis,disease,associated_with
+HDAC5,target,osteoporosis,disease,associated_with
+CCR3,target,osteoporosis,disease,associated_with
+PCSK9,target,osteoporosis,disease,associated_with
+TNFRSF11A,target,osteoporosis,disease,associated_with
+HOXC6,target,osteoporosis,disease,associated_with
+SMN1,target,osteoporosis,disease,associated_with
+MTHFR,target,osteoporosis,disease,associated_with
+SPP1,target,osteoporosis,disease,associated_with
+SOST,target,osteoporosis,disease,associated_with
+COL1A1,target,osteoporosis,disease,associated_with
+SERPINF1,target,osteoporosis,disease,associated_with
+OXT,target,osteoporosis,disease,associated_with
+MIR2861,target,osteoporosis,disease,associated_with
+MALAT1,target,osteoporosis,disease,associated_with
+CFAP97D1,target,osteoporosis,disease,associated_with
+RYR1,target,osteoporosis,disease,associated_with
+CDX1,target,osteoporosis,disease,associated_with
+LRP4,target,osteoporosis,disease,associated_with
+RARRES2,target,osteoporosis,disease,associated_with
+CSRNP3,target,osteoporosis,disease,associated_with
+TNFSF11,target,osteoporosis,disease,associated_with
+UGT8,target,osteoporosis,disease,associated_with
+TLE3,target,osteoporosis,disease,associated_with
+RUNX2,target,osteoporosis,disease,associated_with
+PFKFB3,target,osteoporosis,disease,associated_with
+MACF1,target,osteoporosis,disease,associated_with
+STARD3NL,target,osteoporosis,disease,associated_with
+STX19,target,osteoporosis,disease,associated_with
+MIMS1,target,osteoporosis,disease,associated_with
+MESP2,target,osteoporosis,disease,associated_with
+IL18,target,osteoporosis,disease,associated_with
+GLDN,target,osteoporosis,disease,associated_with
+FGF2,target,osteoporosis,disease,associated_with
+GPT,target,osteoporosis,disease,associated_with
+ESR1,target,osteoporosis,disease,associated_with
+COLEC10,target,osteoporosis,disease,associated_with
+CTNNB1,target,osteoporosis,disease,associated_with
+TMEM135,target,osteoporosis,disease,associated_with
+GHR,target,osteoporosis,disease,associated_with
+SLC25A13,target,osteoporosis,disease,associated_with
+SLC1A3,target,osteoporosis,disease,associated_with
+WNT4,target,osteoporosis,disease,associated_with
+APPL1,target,osteoporosis,disease,associated_with
+GCK,target,osteoporosis,disease,associated_with
+MYF5,target,osteoporosis,disease,associated_with
+ABCB1,target,Abacavir transmembrane transport,pathway,participates_in
+ABCB1,target,ABC-family protein mediated transport,pathway,participates_in
+ABCB1,target,Atorvastatin ADME,pathway,participates_in
+ABCB1,target,Prednisone ADME,pathway,participates_in
+ABCC1,target,Sphingolipid de novo biosynthesis,pathway,participates_in
+ABCC1,target,Heme degradation,pathway,participates_in
+ABCC1,target,Synthesis of Leukotrienes (LT) and Eoxins (EX),pathway,participates_in
+ABCC1,target,ABC-family protein mediated transport,pathway,participates_in
+ABCC1,target,Cytoprotection by HMOX1,pathway,participates_in
+ABCC1,target,Paracetamol ADME,pathway,participates_in
+ABCC1,target,Transport of RCbl within the body,pathway,participates_in
+ABCC1,target,NFE2L2 regulating MDR associated enzymes,pathway,participates_in
+ABCG2,target,Sphingolipid de novo biosynthesis,pathway,participates_in
+ABCG2,target,Heme biosynthesis,pathway,participates_in
+ABCG2,target,Heme degradation,pathway,participates_in
+ABCG2,target,Abacavir transmembrane transport,pathway,participates_in
+ABCG2,target,Iron uptake and transport,pathway,participates_in
+ABCG2,target,Differentiation of Keratinocytes in Interfollicular Epidermis in Mammalian Skin,pathway,participates_in
+ABCG2,target,Paracetamol ADME,pathway,participates_in
+ABCG2,target,Ciprofloxacin ADME,pathway,participates_in
+AHR,target,PPARA activates gene expression,pathway,participates_in
+AHR,target,Phase I - Functionalization of compounds,pathway,participates_in
+AHR,target,Endogenous sterols,pathway,participates_in
+AHR,target,Xenobiotics,pathway,participates_in
+AHR,target,Aryl hydrocarbon receptor signalling,pathway,participates_in
+AKR1B1,target,Pregnenolone biosynthesis,pathway,participates_in
+AKR1B1,target,Fructose biosynthesis,pathway,participates_in
+AKR1B1,target,Galactose catabolism,pathway,participates_in
+AKR1B10,target,Retinoid metabolism and transport,pathway,participates_in
+ALOX15,target,Synthesis of Leukotrienes (LT) and Eoxins (EX),pathway,participates_in
+ALOX15,target,Synthesis of 12-eicosatetraenoic acid derivatives,pathway,participates_in
+ALOX15,target,Synthesis of 15-eicosatetraenoic acid derivatives,pathway,participates_in
+ALOX15,target,Interleukin-4 and Interleukin-13 signaling,pathway,participates_in
+ALOX15,target,Biosynthesis of DHA-derived SPMs,pathway,participates_in
+ALOX15,target,Biosynthesis of protectins,pathway,participates_in
+ALOX15,target,Biosynthesis of E-series 18(S)-resolvins,pathway,participates_in
+ALOX15,target,Biosynthesis of E-series 18(R)-resolvins,pathway,participates_in
+ALOX5,target,Synthesis of 5-eicosatetraenoic acids,pathway,participates_in
+ALOX5,target,Synthesis of Leukotrienes (LT) and Eoxins (EX),pathway,participates_in
+ALOX5,target,Biosynthesis of Lipoxins (LX),pathway,participates_in
+ALOX5,target,Interleukin-4 and Interleukin-13 signaling,pathway,participates_in
+ALOX5,target,Neutrophil degranulation,pathway,participates_in
+ALOX5,target,Interleukin-18 signaling,pathway,participates_in
+ALOX5,target,Biosynthesis of D-series resolvins,pathway,participates_in
+ALOX5,target,Biosynthesis of maresins,pathway,participates_in
+AR,target,HSP90 chaperone cycle for steroid hormone receptors (SHR) in the presence of ligand,pathway,participates_in
+AR,target,Nuclear Receptor transcription pathway,pathway,participates_in
+AR,target,SUMOylation of intracellular receptors,pathway,participates_in
+AR,target,Activated PKN1 stimulates transcription of AR (androgen receptor) regulated genes KLK2 and KLK3,pathway,participates_in
+AR,target,Ub-specific processing proteases,pathway,participates_in
+AR,target,RUNX2 regulates osteoblast differentiation,pathway,participates_in
+CA12,target,Reversible hydration of carbon dioxide,pathway,participates_in
+CA2,target,Erythrocytes take up carbon dioxide and release oxygen,pathway,participates_in
+CA2,target,Erythrocytes take up oxygen and release carbon dioxide,pathway,participates_in
+CA2,target,Reversible hydration of carbon dioxide,pathway,participates_in
+CA2,target,Developmental Lineage of Pancreatic Ductal Cells,pathway,participates_in
+CA4,target,Erythrocytes take up carbon dioxide and release oxygen,pathway,participates_in
+CA4,target,Erythrocytes take up oxygen and release carbon dioxide,pathway,participates_in
+CA4,target,Reversible hydration of carbon dioxide,pathway,participates_in
+CA7,target,Reversible hydration of carbon dioxide,pathway,participates_in
+CDC25B,target,Cyclin A/B1/B2 associated events during G2/M transition,pathway,participates_in
+CDC25B,target,Cyclin A:Cdk2-associated events at S phase entry,pathway,participates_in
+CDC25B,target,Deregulated CDK5 triggers multiple neurodegenerative pathways in Alzheimer's disease models,pathway,participates_in
+CDC25B,target,Regulation of MITF-M-dependent genes involved in cell cycle and proliferation,pathway,participates_in
+CES1,target,Metallothioneins bind metals,pathway,participates_in
+CES1,target,Interferon gamma signaling,pathway,participates_in
+CSNK2B,target,Synthesis of PC,pathway,participates_in
+CSNK2B,target,WNT mediated activation of DVL,pathway,participates_in
+CSNK2B,target,Condensation of Prometaphase Chromosomes,pathway,participates_in
+CSNK2B,target,Signal transduction by L1,pathway,participates_in
+CSNK2B,target,Neutrophil degranulation,pathway,participates_in
+CSNK2B,target,Regulation of TP53 Activity through Phosphorylation,pathway,participates_in
+CSNK2B,target,Cooperation of PDCL (PhLP1) and TRiC/CCT in G-protein beta folding,pathway,participates_in
+CSNK2B,target,Receptor Mediated Mitophagy,pathway,participates_in
+CYP1A1,target,PPARA activates gene expression,pathway,participates_in
+CYP1A1,target,Xenobiotics,pathway,participates_in
+CYP1A1,target,Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET),pathway,participates_in
+CYP1A1,target,Synthesis of (16-20)-hydroxyeicosatetraenoic acids (HETE),pathway,participates_in
+CYP1A1,target,Biosynthesis of protectins,pathway,participates_in
+CYP1A2,target,Methylation,pathway,participates_in
+CYP1A2,target,Aromatic amines can be N-hydroxylated or N-dealkylated by CYP1A2,pathway,participates_in
+CYP1A2,target,Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET),pathway,participates_in
+CYP1A2,target,Synthesis of (16-20)-hydroxyeicosatetraenoic acids (HETE),pathway,participates_in
+CYP1A2,target,Aflatoxin activation and detoxification,pathway,participates_in
+CYP1A2,target,Biosynthesis of protectins,pathway,participates_in
+CYP1A2,target,Biosynthesis of maresin-like SPMs,pathway,participates_in
+CYP1B1,target,Endogenous sterols,pathway,participates_in
+CYP1B1,target,Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET),pathway,participates_in
+CYP1B1,target,Synthesis of (16-20)-hydroxyeicosatetraenoic acids (HETE),pathway,participates_in
+CYP1B1,target,Defective CYP1B1 causes Glaucoma,pathway,participates_in
+CYP2C19,target,Xenobiotics,pathway,participates_in
+CYP2C19,target,CYP2E1 reactions,pathway,participates_in
+CYP2C19,target,Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET),pathway,participates_in
+CYP2C19,target,Synthesis of (16-20)-hydroxyeicosatetraenoic acids (HETE),pathway,participates_in
+CYP2C19,target,Aspirin ADME,pathway,participates_in
+CYP2C9,target,Xenobiotics,pathway,participates_in
+CYP2C9,target,CYP2E1 reactions,pathway,participates_in
+CYP2C9,target,Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET),pathway,participates_in
+CYP2C9,target,Synthesis of (16-20)-hydroxyeicosatetraenoic acids (HETE),pathway,participates_in
+CYP2C9,target,Biosynthesis of maresin-like SPMs,pathway,participates_in
+CYP2C9,target,Aspirin ADME,pathway,participates_in
+CYP2D6,target,Fatty acids,pathway,participates_in
+CYP2D6,target,Miscellaneous substrates,pathway,participates_in
+CYP2D6,target,Xenobiotics,pathway,participates_in
+CYP2D6,target,CYP2E1 reactions,pathway,participates_in
+CYP2D6,target,Biosynthesis of maresin-like SPMs,pathway,participates_in
+CYP2D6,target,Aspirin ADME,pathway,participates_in
+CYP3A4,target,Phase I - Functionalization of compounds,pathway,participates_in
+CYP3A4,target,Xenobiotics,pathway,participates_in
+CYP3A4,target,Aflatoxin activation and detoxification,pathway,participates_in
+CYP3A4,target,Biosynthesis of maresin-like SPMs,pathway,participates_in
+CYP3A4,target,Aspirin ADME,pathway,participates_in
+CYP3A4,target,Atorvastatin ADME,pathway,participates_in
+CYP3A4,target,Prednisone ADME,pathway,participates_in
+DAPK1,target,Caspase activation via Dependence Receptors in the absence of ligand,pathway,participates_in
+DPP4,target,"Synthesis, secretion, and inactivation of Glucagon-like Peptide-1 (GLP-1)",pathway,participates_in
+DPP4,target,"Synthesis, secretion, and inactivation of Glucose-dependent Insulinotropic Polypeptide (GIP)",pathway,participates_in
+DUSP3,target,ERKs are inactivated,pathway,participates_in
+ESRRA,target,PPARA activates gene expression,pathway,participates_in
+ESRRA,target,Transcriptional activation of mitochondrial biogenesis,pathway,participates_in
+ESRRA,target,Nuclear Receptor transcription pathway,pathway,participates_in
+ESRRA,target,Regulation of RUNX2 expression and activity,pathway,participates_in
+F3,target,NGF-stimulated transcription,pathway,participates_in
+F3,target,Initiation of coagulation cascade,pathway,participates_in
+F3,target,Regulation of clotting cascade,pathway,participates_in
+FLT3,target,PI3K Cascade,pathway,participates_in
+FLT3,target,PIP3 activates AKT signaling,pathway,participates_in
+FLT3,target,Constitutive Signaling by Aberrant PI3K in Cancer,pathway,participates_in
+FLT3,target,RAF/MAP kinase cascade,pathway,participates_in
+FLT3,target,"PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling",pathway,participates_in
+FLT3,target,FLT3 Signaling,pathway,participates_in
+FLT3,target,STAT5 Activation,pathway,participates_in
+FLT3,target,FLT3 mutants bind TKIs,pathway,participates_in
+FTO,target,Reversal of alkylation damage by DNA dioxygenases,pathway,participates_in
+FUNDC1,target,Receptor Mediated Mitophagy,pathway,participates_in
+GPBAR1,target,Class A/1 (Rhodopsin-like receptors),pathway,participates_in
+GPBAR1,target,G alpha (s) signalling events,pathway,participates_in
+GSK3A,target,AKT phosphorylates targets in the cytosol,pathway,participates_in
+GSK3A,target,XBP1(S) activates chaperone genes,pathway,participates_in
+GSK3A,target,Constitutive Signaling by AKT1 E17K in Cancer,pathway,participates_in
+GSK3A,target,Suppression of apoptosis,pathway,participates_in
+GSK3A,target,Maturation of nucleoprotein,pathway,participates_in
+GSK3A,target,Maturation of nucleoprotein,pathway,participates_in
+HDAC1,target,Transcription of E2F targets under negative control by DREAM complex,pathway,participates_in
+HDAC1,target,Transcription of E2F targets under negative control by p107 (RBL1) and p130 (RBL2) in complex with HDAC1,pathway,participates_in
+HDAC1,target,G0 and Early G1,pathway,participates_in
+HDAC1,target,p75NTR negatively regulates cell cycle via SC1,pathway,participates_in
+HDAC1,target,Formation of the beta-catenin:TCF transactivating complex,pathway,participates_in
+HDAC1,target,NOTCH1 Intracellular Domain Regulates Transcription,pathway,participates_in
+HDAC1,target,Downregulation of SMAD2/3:SMAD4 transcriptional activity,pathway,participates_in
+HDAC1,target,SMAD2/SMAD3:SMAD4 heterotrimer regulates transcription,pathway,participates_in
+HDAC6,target,NOTCH1 Intracellular Domain Regulates Transcription,pathway,participates_in
+HDAC6,target,Constitutive Signaling by NOTCH1 PEST Domain Mutants,pathway,participates_in
+HDAC6,target,Constitutive Signaling by NOTCH1 HD+PEST Domain Mutants,pathway,participates_in
+HDAC6,target,HSF1 activation,pathway,participates_in
+HDAC6,target,Notch-HLH transcription pathway,pathway,participates_in
+HDAC6,target,Cargo trafficking to the periciliary membrane,pathway,participates_in
+HDAC6,target,Transcriptional regulation by RUNX2,pathway,participates_in
+HDAC6,target,RUNX2 regulates osteoblast differentiation,pathway,participates_in
+HIF1A,target,Regulation of gene expression by Hypoxia-inducible Factor,pathway,participates_in
+HIF1A,target,Cellular response to hypoxia,pathway,participates_in
+HIF1A,target,Oxygen-dependent proline hydroxylation of Hypoxia-inducible Factor Alpha,pathway,participates_in
+HIF1A,target,NOTCH1 Intracellular Domain Regulates Transcription,pathway,participates_in
+HIF1A,target,Ub-specific processing proteases,pathway,participates_in
+HIF1A,target,Interleukin-4 and Interleukin-13 signaling,pathway,participates_in
+HIF1A,target,PTK6 Expression,pathway,participates_in
+HIF1A,target,PTK6 promotes HIF1A stabilization,pathway,participates_in
+HSD17B1,target,Estrogen biosynthesis,pathway,participates_in
+HSD17B1,target,The canonical retinoid cycle in rods (twilight vision),pathway,participates_in
+HSD17B2,target,Estrogen biosynthesis,pathway,participates_in
+IP6K2,target,Synthesis of IPs in the nucleus,pathway,participates_in
+IP6K2,target,Interferon alpha/beta signaling,pathway,participates_in
+IPMK,target,Synthesis of IPs in the nucleus,pathway,participates_in
+L3MBTL1,target,Regulation of TP53 Activity through Methylation,pathway,participates_in
+LMNA,target,Meiotic synapsis,pathway,participates_in
+LMNA,target,Nuclear Envelope Breakdown,pathway,participates_in
+LMNA,target,Initiation of Nuclear Envelope (NE) Reformation,pathway,participates_in
+LMNA,target,Breakdown of the nuclear lamina,pathway,participates_in
+LMNA,target,XBP1(S) activates chaperone genes,pathway,participates_in
+LMNA,target,Depolymerization of the Nuclear Lamina,pathway,participates_in
+LMNA,target,Signaling by BRAF and RAF1 fusions,pathway,participates_in
+LMNA,target,Deregulated CDK5 triggers multiple neurodegenerative pathways in Alzheimer's disease models,pathway,participates_in
+MPO,target,Neutrophil degranulation,pathway,participates_in
+MPO,target,Events associated with phagocytolytic activity of PMN cells,pathway,participates_in
+NOX4,target,Detoxification of Reactive Oxygen Species,pathway,participates_in
+NOX4,target,STAT5 activation downstream of FLT3 ITD mutants,pathway,participates_in
+NOX4,target,Signaling by FLT3 fusion proteins,pathway,participates_in
+PKM,target,Neutrophil degranulation,pathway,participates_in
+PKM,target,Glycolysis,pathway,participates_in
+PKM,target,Pyruvate metabolism,pathway,participates_in
+PKM,target,Negative Regulation of CDH1 Gene Transcription,pathway,participates_in
+PKM,target,Regulation of pyruvate metabolism,pathway,participates_in
+PLA2G1B,target,Acyl chain remodelling of PC,pathway,participates_in
+PLA2G1B,target,Acyl chain remodelling of PS,pathway,participates_in
+PLA2G1B,target,Acyl chain remodelling of PE,pathway,participates_in
+PLA2G1B,target,Acyl chain remodelling of PI,pathway,participates_in
+PLA2G1B,target,Acyl chain remodelling of PG,pathway,participates_in
+PLA2G1B,target,Synthesis of PA,pathway,participates_in
+PLA2G1B,target,Developmental Lineage of Pancreatic Acinar Cells,pathway,participates_in
+POLB,target,POLB-Dependent Long Patch Base Excision Repair,pathway,participates_in
+POLB,target,Resolution of AP sites via the multiple-nucleotide patch replacement pathway,pathway,participates_in
+POLB,target,Resolution of AP sites via the single-nucleotide replacement pathway,pathway,participates_in
+POLB,target,APEX1-Independent Resolution of AP Sites via the Single Nucleotide Replacement Pathway,pathway,participates_in
+POLB,target,PCNA-Dependent Long Patch Base Excision Repair,pathway,participates_in
+POLB,target,Ub-specific processing proteases,pathway,participates_in
+POLB,target,Abasic sugar-phosphate removal via the single-nucleotide replacement pathway,pathway,participates_in
+PSMB2,target,Activation of NF-kappaB in B cells,pathway,participates_in
+PSMB2,target,Oxygen-dependent proline hydroxylation of Hypoxia-inducible Factor Alpha,pathway,participates_in
+PSMB2,target,ER-Phagosome pathway,pathway,participates_in
+PSMB2,target,Cross-presentation of soluble exogenous antigens (endosomes),pathway,participates_in
+PSMB2,target,Autodegradation of Cdh1 by Cdh1:APC/C,pathway,participates_in
+PSMB2,target,SCF-beta-TrCP mediated degradation of Emi1,pathway,participates_in
+PSMB2,target,APC/C:Cdc20 mediated degradation of Securin,pathway,participates_in
+PSMB2,target,APC/C:Cdh1 mediated degradation of Cdc20 and other APC/C:Cdh1 targeted proteins in late mitosis/early G1,pathway,participates_in
+PTPN1,target,Integrin signaling,pathway,participates_in
+PTPN1,target,Negative regulation of MET activity,pathway,participates_in
+PTPN1,target,Insulin receptor recycling,pathway,participates_in
+PTPN1,target,Regulation of IFNG signaling,pathway,participates_in
+PTPN1,target,PTK6 Down-Regulation,pathway,participates_in
+PTPN1,target,MECP2 regulates neuronal receptors and channels,pathway,participates_in
+PTPN1,target,Regulation of IFNA/IFNB signaling,pathway,participates_in
+PTPN1,target,Growth hormone receptor signaling,pathway,participates_in
+PTPN2,target,Negative regulation of MET activity,pathway,participates_in
+PTPN2,target,Regulation of IFNG signaling,pathway,participates_in
+PTPN2,target,Interleukin-37 signaling,pathway,participates_in
+PTPN2,target,PKR-mediated signaling,pathway,participates_in
+PTPRC,target,Phosphorylation of CD3 and TCR zeta chains,pathway,participates_in
+PTPRC,target,Other semaphorin interactions,pathway,participates_in
+PTPRC,target,Neutrophil degranulation,pathway,participates_in
+RELA,target,Activation of NF-kappaB in B cells,pathway,participates_in
+RELA,target,RIP-mediated NFkB activation via ZBP1,pathway,participates_in
+RELA,target,Regulated proteolysis of p75NTR,pathway,participates_in
+RELA,target,Downstream TCR signaling,pathway,participates_in
+RELA,target,NF-kB is activated and signals survival,pathway,participates_in
+RELA,target,Senescence-Associated Secretory Phenotype (SASP),pathway,participates_in
+RELA,target,FCERI mediated NF-kB activation,pathway,participates_in
+RELA,target,DEx/H-box helicases activate type I IFN and inflammatory cytokines production ,pathway,participates_in
+RPS6KA3,target,ERK/MAPK targets,pathway,participates_in
+RPS6KA3,target,CREB phosphorylation,pathway,participates_in
+RPS6KA3,target,Senescence-Associated Secretory Phenotype (SASP),pathway,participates_in
+RPS6KA3,target,Recycling pathway of L1,pathway,participates_in
+RPS6KA3,target,CREB1 phosphorylation through NMDA receptor-mediated activation of RAS signaling,pathway,participates_in
+RPS6KA3,target,RSK activation,pathway,participates_in
+RPS6KA3,target,Gastrin-CREB signalling pathway via PKC and MAPK,pathway,participates_in
+SLC2A1,target,Cellular hexose transport,pathway,participates_in
+SLC2A1,target,Vitamin C (ascorbate) metabolism,pathway,participates_in
+SLC2A1,target,Regulation of insulin secretion,pathway,participates_in
+SLC2A1,target,Defective SLC2A1 causes GLUT1 deficiency syndrome 1 (GLUT1DS1),pathway,participates_in
+SLC2A1,target,Lactose synthesis,pathway,participates_in
+TDP1,target,Nonhomologous End-Joining (NHEJ),pathway,participates_in
+TP53,target,Activation of NOXA and translocation to mitochondria,pathway,participates_in
+TP53,target,Activation of PUMA and translocation to mitochondria,pathway,participates_in
+TP53,target,Pre-NOTCH Transcription and Translation,pathway,participates_in
+TP53,target,Oxidative Stress Induced Senescence,pathway,participates_in
+TP53,target,Formation of Senescence-Associated Heterochromatin Foci (SAHF),pathway,participates_in
+TP53,target,Oncogene Induced Senescence,pathway,participates_in
+TP53,target,DNA Damage/Telomere Stress Induced Senescence,pathway,participates_in
+TP53,target,SUMOylation of transcription factors,pathway,participates_in
+TRPC5,target,TRP channels,pathway,participates_in
+TRPC5,target,Role of second messengers in netrin-1 signaling,pathway,participates_in
+TYR,target,Melanin biosynthesis,pathway,participates_in
+TYR,target,Regulation of MITF-M-dependent genes involved in pigmentation,pathway,participates_in

@@ -1,0 +1,5 @@
+niche,marker_n,target_overlap,overlap_genes,assignment
+osteoprogenitor_niche,9,0,,no_direct_marker_overlap
+osteoclast_immune_niche,8,0,,no_direct_marker_overlap
+vascular_osteogenic_niche,7,0,,no_direct_marker_overlap
+marrow_adipogenic_niche,6,0,,no_direct_marker_overlap

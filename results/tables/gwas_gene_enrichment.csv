@@ -1,0 +1,2 @@
+n_candidate_targets,n_gwas_bone_genes,n_overlap,fold_enrichment,hypergeom_p,background_genes,overlap_genes,note
+62,1126,3,0.8594510972325674,0.6858492222084314,20000,FTO;GPBAR1;LMNA,author-reported GWAS Catalog genes; coloc/MR still require full summary statistics

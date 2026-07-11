@@ -1,0 +1,2 @@
+comparison,core_distance,random_mean,random_sd,empirical_p_core_closer,n_random
+core_combo_vs_random_equal_size_combos,1.2258064516129032,1.2258064516129035,2.220446049250313e-16,1.0,2000

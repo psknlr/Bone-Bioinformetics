@@ -1,0 +1,8 @@
+step,requires,status
+scVI/scANVI or Harmony cross-dataset integration,GSE169396 + GSE253355 + GSE284089 matrices,pending_inputs
+donor-level pseudo-bulk differential,annotated single-cell matrices with donor labels,pending_inputs
+cell2location / RCTD / Tangram spatial mapping,GSE284089 spatial slides + single-cell reference,pending_inputs
+UCell / AUCell single-cell module score,single-cell expression matrix,pending_inputs
+Monocle3 / Slingshot / CellRank trajectory,BMSC→osteoblast / monocyte→osteoclast matrices,pending_inputs
+LIANA+/CellChat/NicheNet communication,annotated single-cell matrices,pending_inputs
+pySCENIC / DoRothEA regulon inference,single-cell counts,pending_inputs
