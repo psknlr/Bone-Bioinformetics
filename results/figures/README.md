@@ -15,3 +15,6 @@ The command writes:
 - `Fig3_network_proximity.png`
 - `Fig4_single_cell_localisation.png`
 - `Fig5_human_genetics.png`
+- `Fig6_causal_evidence_heatmap.png`
+- `Fig7_high_order_resource_map.png`
+- `Fig8_osteoclast_dynamic_targets.png`

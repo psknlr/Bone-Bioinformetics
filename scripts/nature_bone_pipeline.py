@@ -63,6 +63,29 @@ HIGH_ORDER_RESOURCES = [
     {"module":"proteomics", "resource":"PXD017804", "url":"https://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD017804", "use":"postmenopausal low-BMD plasma proteomics validation"},
 ]
 
+FULL_SCALE_RESOURCES = [
+    {"category":"single_cell_spatial","accession":"GSE253355_MSC_Subset","url":"https://ftp.ncbi.nlm.nih.gov/geo/series/GSE253nnn/GSE253355/suppl/GSE253355_MSC_Subset_Seurat.rds.gz","size_note":"382.5 MB","default_action":"manifest_only"},
+    {"category":"single_cell_spatial","accession":"GSE253355_Normal_BM_Atlas","url":"https://ftp.ncbi.nlm.nih.gov/geo/series/GSE253nnn/GSE253355/suppl/GSE253355_Normal_Bone_Marrow_Atlas_Seurat_SB_v2.rds.gz","size_note":"1.4 GB","default_action":"manifest_only"},
+    {"category":"single_cell_spatial","accession":"GSE253355_RAW","url":"https://ftp.ncbi.nlm.nih.gov/geo/series/GSE253nnn/GSE253355/suppl/GSE253355_RAW.tar","size_note":"1.1 GB","default_action":"manifest_only"},
+    {"category":"single_cell_spatial","accession":"GSE224152_matrix","url":GSE224152_MATRIX_URL,"size_note":"2.5 MB","default_action":"download_and_analyse"},
+    {"category":"single_cell_spatial","accession":"GSE147287_RAW","url":"https://ftp.ncbi.nlm.nih.gov/geo/series/GSE147nnn/GSE147287/suppl/GSE147287_RAW.tar","size_note":"91.2 MB","default_action":"full_mode_optional"},
+    {"category":"single_cell_spatial","accession":"GSE147390_RAW","url":"https://ftp.ncbi.nlm.nih.gov/geo/series/GSE147nnn/GSE147390/suppl/GSE147390_RAW.tar","size_note":"75.6 MB","default_action":"full_mode_optional"},
+    {"category":"single_cell_spatial","accession":"GSE169396_RAW","url":"https://ftp.ncbi.nlm.nih.gov/geo/series/GSE169nnn/GSE169396/suppl/GSE169396_RAW.tar","size_note":"134.2 MB","default_action":"full_mode_optional"},
+    {"category":"single_cell_spatial","accession":"GSE255646_GEX_H5","url":"https://ftp.ncbi.nlm.nih.gov/geo/series/GSE255nnn/GSE255646/suppl/GSE255646_filtered_feature_bc_matrix.h5","size_note":"145.1 MB","default_action":"full_mode_optional"},
+    {"category":"single_cell_spatial","accession":"GSE255646_metadata","url":"https://ftp.ncbi.nlm.nih.gov/geo/series/GSE255nnn/GSE255646/suppl/GSE255646_per_barcode_metadata.tsv.gz","size_note":"metadata","default_action":"full_mode_optional"},
+    {"category":"osteoclast_bulk","accession":"GSE246769_counts","url":GSE246769_COUNTS_URL,"size_note":"2.0 MB","default_action":"download_and_analyse"},
+    {"category":"fracture_single_cell","accession":"GSE242414_RAW","url":"https://ftp.ncbi.nlm.nih.gov/geo/series/GSE242nnn/GSE242414/suppl/GSE242414_RAW.tar","size_note":"81 MB","default_action":"full_mode_optional"},
+    {"category":"mouse_trajectory","accession":"GSE269583_RAW","url":"https://ftp.ncbi.nlm.nih.gov/geo/series/GSE269nnn/GSE269583/suppl/GSE269583_RAW.tar","size_note":"2.0 GB","default_action":"manifest_only"},
+    {"category":"mouse_aging","accession":"GSE145477_RAW","url":"https://ftp.ncbi.nlm.nih.gov/geo/series/GSE145nnn/GSE145477/suppl/GSE145477_RAW.tar","size_note":"73.7 MB","default_action":"full_mode_optional"},
+    {"category":"perturbation","accession":"LINCS_GSE92742","url":"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742","size_note":"large Level 5 signatures","default_action":"manifest_only"},
+    {"category":"perturbation","accession":"LINCS_GSE70138","url":"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138","size_note":"large Level 5 signatures","default_action":"manifest_only"},
+    {"category":"knowledge_graph","accession":"PrimeKG","url":"https://github.com/mims-harvard/PrimeKG","size_note":"multi-million-edge KG","default_action":"manifest_only"},
+    {"category":"binding","accession":"BindingDB","url":"https://www.bindingdb.org/rwd/bind/chemsearch/marvin/Download.jsp","size_note":"large TSV/SDF","default_action":"manifest_only"},
+    {"category":"proteomics","accession":"PXD035745","url":"https://www.ebi.ac.uk/pride/archive/projects/PXD035745","size_note":"TMT proteomics","default_action":"manifest_only"},
+    {"category":"proteomics","accession":"PXD017804","url":"https://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD017804","size_note":"plasma proteomics","default_action":"manifest_only"},
+    {"category":"metabolomics","accession":"MTBLS11650","url":"https://www.ebi.ac.uk/metabolights/editor/MTBLS11650","size_note":"femoral-neck osteoporosis metabolomics","default_action":"manifest_only"},
+]
+
 CELL_MARKERS = {
     "BMSC/成骨祖细胞": {"LRP5","WNT16","SOST","RUNX2","SP7","BMP2","SMAD1","COL1A1"},
     "成骨细胞": {"RUNX2","SP7","ALPL","BGLAP","COL1A1","BMP2"},
@@ -313,6 +336,71 @@ def causal_pharmacology_scores(outdir):
 def write_high_order_resource_manifest(outdir):
     out=pd.DataFrame(HIGH_ORDER_RESOURCES); out.to_csv(outdir/"high_order_public_resource_manifest.csv", index=False); return out
 
+def write_full_scale_execution_plan(outdir, analysis_scope="quick", download_large=False, large_data_dir="data/full_scale"):
+    rows=[]
+    for r in FULL_SCALE_RESOURCES:
+        action=r["default_action"]
+        if analysis_scope == "full" and action == "full_mode_optional":
+            action = "download_if_--download-large" if not download_large else "download_requested"
+        if action == "manifest_only" and analysis_scope == "full":
+            action = "manifest_only_due_size_or_external_format"
+        rows.append({**r, "analysis_scope":analysis_scope, "planned_action":action, "local_path":str(Path(large_data_dir)/Path(r["url"]).name) if download_large and action == "download_requested" else "not_downloaded"})
+    out=pd.DataFrame(rows); out.to_csv(outdir/"full_scale_resource_execution_plan.csv", index=False); return out
+
+def download_requested_large_resources(cache, outdir, analysis_scope="quick", download_large=False, large_data_dir="data/full_scale"):
+    Path(large_data_dir).mkdir(parents=True, exist_ok=True)
+    rows=[]
+    if analysis_scope != "full" or not download_large:
+        pd.DataFrame(rows, columns=["accession","url","local_path","status","bytes"]).to_csv(outdir/"full_scale_download_log.csv", index=False); return pd.DataFrame(rows)
+    for r in FULL_SCALE_RESOURCES:
+        if r["default_action"] != "full_mode_optional":
+            continue
+        local=Path(large_data_dir)/Path(r["url"]).name
+        try:
+            if not local.exists():
+                local.write_bytes(cache.get_bytes(r["url"]))
+            rows.append({"accession":r["accession"],"url":r["url"],"local_path":str(local),"status":"downloaded_or_cached","bytes":local.stat().st_size})
+        except Exception as e:
+            rows.append({"accession":r["accession"],"url":r["url"],"local_path":str(local),"status":f"failed:{str(e)[:120]}","bytes":0})
+    out=pd.DataFrame(rows); out.to_csv(outdir/"full_scale_download_log.csv", index=False); return out
+
+def plot_nature_style_extensions(figdir, tabdir):
+    figdir=Path(figdir); tabdir=Path(tabdir)
+    sns.set_theme(style="white", context="talk")
+    score_path=tabdir/"genetics_anchored_causal_pharmacology_scores.csv"
+    if score_path.exists():
+        sc=pd.read_csv(score_path).head(30).copy()
+        cols=["max_pchembl","open_targets_score","gse224152_pct_cells_detected","gse246769_delta_d9_vs_d0","evidence_count"]
+        if not sc.empty:
+            mat=sc.set_index("target")[cols].apply(pd.to_numeric, errors="coerce").fillna(0)
+            mat=(mat-mat.min())/(mat.max()-mat.min()).replace(0,1)
+            plt.figure(figsize=(9, max(6, 0.28*len(mat))))
+            sns.heatmap(mat, cmap="viridis", cbar_kws={"label":"scaled evidence"})
+            plt.title("Multi-evidence causal pharmacology scorecard")
+            plt.tight_layout(); plt.savefig(figdir/"Fig6_causal_evidence_heatmap.png", dpi=300); plt.close()
+    res_path=tabdir/"high_order_public_resource_manifest.csv"
+    if res_path.exists():
+        res=pd.read_csv(res_path)
+        G=nx.Graph()
+        for _,r in res.iterrows():
+            G.add_edge(r["module"], r["resource"])
+        plt.figure(figsize=(11,8))
+        pos=nx.spring_layout(G, seed=4, k=0.8)
+        colors=["#b2182b" if n in set(res.module) else "#2166ac" for n in G.nodes]
+        nx.draw_networkx(G,pos,node_color=colors,node_size=900,font_size=8,edge_color="#999999",width=1.2)
+        plt.axis("off"); plt.title("High-order public-data resource map")
+        plt.tight_layout(); plt.savefig(figdir/"Fig7_high_order_resource_map.png", dpi=300); plt.close()
+    dyn_path=tabdir/"gse246769_osteoclast_dynamics.csv"
+    if dyn_path.exists():
+        dyn=pd.read_csv(dyn_path).copy()
+        if not dyn.empty:
+            dyn["abs_delta"]=dyn["delta_d9_vs_d0"].abs(); top=dyn.nlargest(12,"abs_delta")
+            long=top.melt(id_vars=["gene"], value_vars=["log2cpm_d0","log2cpm_d2","log2cpm_d5","log2cpm_d9"], var_name="day", value_name="log2CPM")
+            long["day"]=long["day"].str.extract(r"(d\d+)")[0]
+            plt.figure(figsize=(10,6)); sns.lineplot(data=long,x="day",y="log2CPM",hue="gene",marker="o")
+            plt.title("Top target dynamics during human osteoclast differentiation")
+            plt.tight_layout(); plt.savefig(figdir/"Fig8_osteoclast_dynamic_targets.png", dpi=300); plt.close()
+
 def plot_all(figdir, mods, hist, prox, cell, genetics):
     sns.set_theme(style="whitegrid", context="talk")
     plt.figure(figsize=(10,7)); top=mods.nsmallest(20,"fdr").copy(); top["-log10(FDR)"]=-np.log10(top.fdr.clip(1e-12)); sns.scatterplot(data=top,x="lift_vs_independence",y="-log10(FDR)",size="support_n",hue="contains_core",sizes=(80,450)); plt.tight_layout(); plt.savefig(figdir/"Fig1_stable_modules.png",dpi=300); plt.close()
@@ -322,9 +410,9 @@ def plot_all(figdir, mods, hist, prox, cell, genetics):
     if not genetics.empty: plt.figure(figsize=(6,6)); sns.barplot(data=genetics.head(20),y="target",x="open_targets_score",color="#b2182b"); plt.tight_layout(); plt.savefig(figdir/"Fig5_human_genetics.png",dpi=300); plt.close()
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument("--workbook",default="osteoporosis_extraction_output_finalV6.xlsx"); ap.add_argument("--outdir",default="results"); ap.add_argument("--cache",default=".cache/public_api")
+    ap=argparse.ArgumentParser(); ap.add_argument("--workbook",default="osteoporosis_extraction_output_finalV6.xlsx"); ap.add_argument("--outdir",default="results"); ap.add_argument("--cache",default=".cache/public_api"); ap.add_argument("--analysis-scope", choices=["quick","full"], default="quick"); ap.add_argument("--download-large", action="store_true"); ap.add_argument("--large-data-dir", default="data/full_scale")
     args=ap.parse_args(); out=Path(args.outdir); tab=out/"tables"; fig=out/"figures"; tab.mkdir(parents=True,exist_ok=True); fig.mkdir(parents=True,exist_ok=True)
     df=load_records(args.workbook); df.to_csv(tab/"deduplicated_classical_records.csv", index=False)
-    mods,hist=mine_modules(df,tab); cache=ApiCache(Path(args.cache)); comp,targets,disease,prox=real_targets_and_network(tab, cache); cell,gen=omics_genetics(tab,targets,disease); reference_marker_overlap(tab, cache, targets); gse224152_expression_localisation(tab, cache, targets); gse246769_osteoclast_dynamics(tab, cache, targets); write_dataset_manifest(tab); gwas_catalog_trait_studies(tab, cache); causal_pharmacology_scores(tab); write_high_order_resource_manifest(tab); plot_all(fig,mods,hist,prox,cell,gen)
+    mods,hist=mine_modules(df,tab); cache=ApiCache(Path(args.cache)); comp,targets,disease,prox=real_targets_and_network(tab, cache); cell,gen=omics_genetics(tab,targets,disease); reference_marker_overlap(tab, cache, targets); gse224152_expression_localisation(tab, cache, targets); gse246769_osteoclast_dynamics(tab, cache, targets); write_dataset_manifest(tab); gwas_catalog_trait_studies(tab, cache); causal_pharmacology_scores(tab); write_high_order_resource_manifest(tab); write_full_scale_execution_plan(tab, args.analysis_scope, args.download_large, args.large_data_dir); download_requested_large_resources(cache, tab, args.analysis_scope, args.download_large, args.large_data_dir); plot_all(fig,mods,hist,prox,cell,gen); plot_nature_style_extensions(fig, tab)
     print(f"Analysed {len(df)} deduplicated records; queried public APIs; wrote outputs to {out}.")
 if __name__ == "__main__": main()
