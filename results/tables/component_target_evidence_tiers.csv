@@ -1,0 +1,183 @@
+molecule_chembl_id,target_chembl_id,target_pref_name,pchembl_value,standard_type,herb,compound_query,target_gene_symbol
+CHEMBL514882,CHEMBL1287622,Lethal(3)malignant brain tumor-like protein 1,7.2,Potency,杜仲,aucubin,L3MBTL1
+CHEMBL284616,CHEMBL2093865,Histone deacetylase,6.87,Ki,杜仲,chlorogenic acid,HDAC1
+CHEMBL284616,CHEMBL1900,Aldo-keto reductase family 1 member B1,6.52,IC50,杜仲,chlorogenic acid,AKR1B1
+CHEMBL284616,CHEMBL5983,Aldo-keto reductase family 1 member B10,5.1,IC50,杜仲,chlorogenic acid,AKR1B10
+CHEMBL284616,CHEMBL1900,Aldo-keto reductase family 1 member B1,5.75,IC50,杜仲,chlorogenic acid,AKR1B1
+CHEMBL284616,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,7.0,IC50,杜仲,chlorogenic acid,PTPN1
+CHEMBL284616,CHEMBL1900,Aldo-keto reductase family 1 member B1,5.09,IC50,杜仲,chlorogenic acid,AKR1B1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.41,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL2392,DNA polymerase beta,5.06,IC50,牛膝,oleanolic acid,POLB
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.12,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL2392,DNA polymerase beta,5.06,IC50,牛膝,oleanolic acid,POLB
+CHEMBL168,CHEMBL614806,H9,5.43,EC50,牛膝,oleanolic acid,
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.47,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.47,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL5409,G-protein coupled bile acid receptor 1,5.65,EC50,牛膝,oleanolic acid,GPBAR1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.38,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL394,HCT-116,5.32,IC50,牛膝,oleanolic acid,
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.42,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.25,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.02,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.22,Ki,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL4426,Phospholipase A2,5.52,IC50,牛膝,oleanolic acid,PLA2G1B
+CHEMBL168,CHEMBL2392,DNA polymerase beta,5.52,IC50,牛膝,oleanolic acid,POLB
+CHEMBL168,CHEMBL5983,Aldo-keto reductase family 1 member B10,5.4,IC50,牛膝,oleanolic acid,AKR1B10
+CHEMBL168,CHEMBL5983,Aldo-keto reductase family 1 member B10,5.45,Ki,牛膝,oleanolic acid,AKR1B10
+CHEMBL168,CHEMBL5983,Aldo-keto reductase family 1 member B10,6.18,Ki,牛膝,oleanolic acid,AKR1B10
+CHEMBL168,CHEMBL5983,Aldo-keto reductase family 1 member B10,6.03,Ki,牛膝,oleanolic acid,AKR1B10
+CHEMBL168,CHEMBL5983,Aldo-keto reductase family 1 member B10,6.8,Ki,牛膝,oleanolic acid,AKR1B10
+CHEMBL168,CHEMBL5983,Aldo-keto reductase family 1 member B10,7.14,Ki,牛膝,oleanolic acid,AKR1B10
+CHEMBL168,CHEMBL5983,Aldo-keto reductase family 1 member B10,7.05,IC50,牛膝,oleanolic acid,AKR1B10
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.3,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.47,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.58,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL614526,BGC-823,5.59,IC50,牛膝,oleanolic acid,
+CHEMBL168,CHEMBL392,A549,6.41,IC50,牛膝,oleanolic acid,
+CHEMBL168,CHEMBL390,PC-3,5.19,IC50,牛膝,oleanolic acid,
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.96,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.52,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.7,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.72,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.37,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.35,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.52,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL4804,M-phase inducer phosphatase 2,6.01,IC50,牛膝,oleanolic acid,CDC25B
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.02,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.22,Ki,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.99,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.93,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.52,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,6.0,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.26,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.81,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,6.16,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,6.16,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.26,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.81,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,6.14,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.52,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.81,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.26,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.64,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.96,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.8,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL3243,Receptor-type tyrosine-protein phosphatase C,6.0,IC50,牛膝,oleanolic acid,PTPRC
+CHEMBL168,CHEMBL2635,Dual specificity protein phosphatase 3,5.27,IC50,牛膝,oleanolic acid,DUSP3
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.46,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.11,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL4081,Tissue factor,8.3,IC50,牛膝,oleanolic acid,F3
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.7,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.48,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.69,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.26,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.58,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.3,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.6,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL5533,Transcription factor p65,5.62,IC50,牛膝,oleanolic acid,RELA
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.79,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.31,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.19,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.57,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.37,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL392,A549,5.19,IC50,牛膝,oleanolic acid,
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.53,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.48,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.58,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.3,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL2265,Liver carboxylesterase 1,7.0,IC50,牛膝,oleanolic acid,CES1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.6,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,6.3,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,6.16,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.53,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,5.53,IC50,牛膝,oleanolic acid,PTPN2
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,6.0,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.58,IC50,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL387,MCF7,8.37,IC50,牛膝,oleanolic acid,
+CHEMBL168,CHEMBL6067457,FUN14 domain-containing protein 1,7.14,Ki,牛膝,oleanolic acid,FUNDC1
+CHEMBL168,CHEMBL5409,G-protein coupled bile acid receptor 1,5.65,EC50,牛膝,oleanolic acid,GPBAR1
+CHEMBL168,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,5.4,Ki,牛膝,oleanolic acid,PTPN1
+CHEMBL168,CHEMBL5983,Aldo-keto reductase family 1 member B10,6.05,IC50,牛膝,oleanolic acid,AKR1B10
+CHEMBL168,CHEMBL3831201,20S proteasome,5.57,EC50,牛膝,oleanolic acid,PSMB2
+CHEMBL284616,CHEMBL2093865,Histone deacetylase,6.87,Ki,续断,chlorogenic acid,HDAC1
+CHEMBL284616,CHEMBL1900,Aldo-keto reductase family 1 member B1,6.52,IC50,续断,chlorogenic acid,AKR1B1
+CHEMBL284616,CHEMBL5983,Aldo-keto reductase family 1 member B10,5.1,IC50,续断,chlorogenic acid,AKR1B10
+CHEMBL284616,CHEMBL1900,Aldo-keto reductase family 1 member B1,5.75,IC50,续断,chlorogenic acid,AKR1B1
+CHEMBL284616,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,7.0,IC50,续断,chlorogenic acid,PTPN1
+CHEMBL284616,CHEMBL1900,Aldo-keto reductase family 1 member B1,5.09,IC50,续断,chlorogenic acid,AKR1B1
+CHEMBL3609603,CHEMBL1075189,Pyruvate kinase PKM,6.19,IC50,骨碎补,neoeriocitrin,PKM
+CHEMBL3609603,CHEMBL1075189,Pyruvate kinase PKM,6.19,IC50,骨碎补,neoeriocitrin,PKM
+CHEMBL8996,CHEMBL4878,Cytochrome P450 1B1,5.89,IC50,骨碎补,eriodictyol,CYP1B1
+CHEMBL8996,CHEMBL3729,Carbonic anhydrase 4,7.14,Ki,骨碎补,eriodictyol,CA4
+CHEMBL8996,CHEMBL2326,Carbonic anhydrase 7,8.37,Ki,骨碎补,eriodictyol,CA7
+CHEMBL8996,CHEMBL3242,Carbonic anhydrase 12,7.51,Ki,骨碎补,eriodictyol,CA12
+CHEMBL8996,CHEMBL2345,Ribosomal protein S6 kinase alpha-3,5.32,IC50,骨碎补,eriodictyol,RPS6KA3
+CHEMBL8996,CHEMBL2331065,Alpha-ketoglutarate-dependent dioxygenase FTO,5.55,Kd,骨碎补,eriodictyol,FTO
+CHEMBL8996,CHEMBL2331065,Alpha-ketoglutarate-dependent dioxygenase FTO,5.46,IC50,骨碎补,eriodictyol,FTO
+CHEMBL8996,CHEMBL2331065,Alpha-ketoglutarate-dependent dioxygenase FTO,5.49,Kd,骨碎补,eriodictyol,FTO
+CHEMBL150,CHEMBL3397,Cytochrome P450 2C9,5.22,Ki,骨碎补,kaempferol,CYP2C9
+CHEMBL150,CHEMBL2095188,Glycogen synthase kinase-3,5.46,IC50,骨碎补,kaempferol,GSK3A
+CHEMBL150,CHEMBL215,Polyunsaturated fatty acid 5-lipoxygenase,5.57,IC50,骨碎补,kaempferol,ALOX5
+CHEMBL150,CHEMBL3201,Aryl hydrocarbon receptor,7.55,IC50,骨碎补,kaempferol,AHR
+CHEMBL150,CHEMBL1929,Xanthine dehydrogenase/oxidase,5.97,IC50,骨碎补,kaempferol,XDH
+CHEMBL150,CHEMBL614076,Monocyte,5.57,IC50,骨碎补,kaempferol,
+CHEMBL150,CHEMBL3181,17-beta-hydroxysteroid dehydrogenase type 1,5.98,IC50,骨碎补,kaempferol,HSD17B1
+CHEMBL150,CHEMBL2789,17-beta-hydroxysteroid dehydrogenase type 2,6.44,IC50,骨碎补,kaempferol,HSD17B2
+CHEMBL150,CHEMBL3004,Multidrug resistance-associated protein 1,5.62,Ki,骨碎补,kaempferol,ABCC1
+CHEMBL150,CHEMBL1871,Androgen receptor,5.01,IC50,骨碎补,kaempferol,AR
+CHEMBL150,CHEMBL3356,Cytochrome P450 1A2,6.14,IC50,骨碎补,kaempferol,CYP1A2
+CHEMBL150,CHEMBL2231,Cytochrome P450 1A1,6.2,IC50,骨碎补,kaempferol,CYP1A1
+CHEMBL150,CHEMBL4878,Cytochrome P450 1B1,7.33,IC50,骨碎补,kaempferol,CYP1B1
+CHEMBL150,CHEMBL1250375,NADPH oxidase 4,5.92,IC50,骨碎补,kaempferol,NOX4
+CHEMBL150,CHEMBL1293235,Prelamin-A/C,5.45,Potency,骨碎补,kaempferol,LMNA
+CHEMBL150,CHEMBL1075138,Tyrosyl-DNA phosphodiesterase 1,5.7,Potency,骨碎补,kaempferol,TDP1
+CHEMBL150,CHEMBL3622,Cytochrome P450 2C19,5.0,Potency,骨碎补,kaempferol,CYP2C19
+CHEMBL150,CHEMBL3622,Cytochrome P450 2C19,5.2,Potency,骨碎补,kaempferol,CYP2C19
+CHEMBL150,CHEMBL4261,Hypoxia-inducible factor 1-alpha,5.8,Potency,骨碎补,kaempferol,HIF1A
+CHEMBL150,CHEMBL2903,Polyunsaturated fatty acid lipoxygenase ALOX15,5.0,Potency,骨碎补,kaempferol,ALOX15
+CHEMBL150,CHEMBL2903,Polyunsaturated fatty acid lipoxygenase ALOX15,5.1,Potency,骨碎补,kaempferol,ALOX15
+CHEMBL150,CHEMBL4261,Hypoxia-inducible factor 1-alpha,5.8,Potency,骨碎补,kaempferol,HIF1A
+CHEMBL150,CHEMBL4096,Cellular tumor antigen p53,5.3,Potency,骨碎补,kaempferol,TP53
+CHEMBL150,CHEMBL4096,Cellular tumor antigen p53,5.4,Potency,骨碎补,kaempferol,TP53
+CHEMBL150,CHEMBL4096,Cellular tumor antigen p53,5.0,Potency,骨碎补,kaempferol,TP53
+CHEMBL150,CHEMBL4096,Cellular tumor antigen p53,5.1,Potency,骨碎补,kaempferol,TP53
+CHEMBL150,CHEMBL340,Cytochrome P450 3A4,5.1,Potency,骨碎补,kaempferol,CYP3A4
+CHEMBL150,CHEMBL289,Cytochrome P450 2D6,5.0,Potency,骨碎补,kaempferol,CYP2D6
+CHEMBL150,CHEMBL3397,Cytochrome P450 2C9,8.89,Potency,骨碎补,kaempferol,CYP2C9
+CHEMBL150,CHEMBL340,Cytochrome P450 3A4,5.1,Potency,骨碎补,kaempferol,CYP3A4
+CHEMBL150,CHEMBL5393,Broad substrate specificity ATP-binding cassette transporter ABCG2,5.33,IC50,骨碎补,kaempferol,ABCG2
+CHEMBL150,CHEMBL5393,Broad substrate specificity ATP-binding cassette transporter ABCG2,5.21,IC50,骨碎补,kaempferol,ABCG2
+CHEMBL150,CHEMBL3397,Cytochrome P450 2C9,8.9,AC50,骨碎补,kaempferol,CYP2C9
+CHEMBL150,CHEMBL289,Cytochrome P450 2D6,5.0,AC50,骨碎补,kaempferol,CYP2D6
+CHEMBL150,CHEMBL3622,Cytochrome P450 2C19,5.2,AC50,骨碎补,kaempferol,CYP2C19
+CHEMBL150,CHEMBL340,Cytochrome P450 3A4,5.1,AC50,骨碎补,kaempferol,CYP3A4
+CHEMBL150,CHEMBL3356,Cytochrome P450 1A2,7.1,AC50,骨碎补,kaempferol,CYP1A2
+CHEMBL150,CHEMBL2231,Cytochrome P450 1A1,6.12,Ki,骨碎补,kaempferol,CYP1A1
+CHEMBL150,CHEMBL4878,Cytochrome P450 1B1,7.37,Ki,骨碎补,kaempferol,CYP1B1
+CHEMBL150,CHEMBL4302,ATP-dependent translocase ABCB1,5.17,Kd,骨碎补,kaempferol,ABCB1
+CHEMBL150,CHEMBL1795098,Carboxy-terminal domain RNA polymerase II polypeptide A small phosphatase 1,5.0,IC50,骨碎补,kaempferol,CTDSP1
+CHEMBL150,CHEMBL1900,Aldo-keto reductase family 1 member B1,5.0,IC50,骨碎补,kaempferol,AKR1B1
+CHEMBL150,CHEMBL3004,Multidrug resistance-associated protein 1,5.62,Ki,骨碎补,kaempferol,ABCC1
+CHEMBL150,CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,5.63,IC50,骨碎补,kaempferol,FLT3
+CHEMBL150,CHEMBL3429,Steroid hormone receptor ERR1,5.02,IC50,骨碎补,kaempferol,ESRRA
+CHEMBL150,CHEMBL2558,Death-associated protein kinase 1,5.0,IC50,骨碎补,kaempferol,DAPK1
+CHEMBL150,CHEMBL205,Carbonic anhydrase 2,5.02,Ki,骨碎补,kaempferol,CA2
+CHEMBL150,CHEMBL2326,Carbonic anhydrase 7,7.6,Ki,骨碎补,kaempferol,CA7
+CHEMBL150,CHEMBL3242,Carbonic anhydrase 12,6.84,Ki,骨碎补,kaempferol,CA12
+CHEMBL150,CHEMBL395,HepG2,5.11,EC50,骨碎补,kaempferol,
+CHEMBL150,CHEMBL1973,Tyrosinase,6.0,IC50,骨碎补,kaempferol,TYR
+CHEMBL150,CHEMBL1795168,CDGSH iron-sulfur domain-containing protein 1,5.51,IC50,骨碎补,kaempferol,CISD1
+CHEMBL150,CHEMBL1795168,CDGSH iron-sulfur domain-containing protein 1,6.88,Ki,骨碎补,kaempferol,CISD1
+CHEMBL150,CHEMBL2535,"Solute carrier family 2, facilitated glucose transporter member 1",5.4,IC50,骨碎补,kaempferol,SLC2A1
+CHEMBL150,CHEMBL2439,Myeloperoxidase,5.65,IC50,骨碎补,kaempferol,MPO
+CHEMBL150,CHEMBL2789,17-beta-hydroxysteroid dehydrogenase type 2,6.44,IC50,骨碎补,kaempferol,HSD17B2
+CHEMBL150,CHEMBL284,Dipeptidyl peptidase 4,6.31,IC50,骨碎补,kaempferol,DPP4
+CHEMBL150,CHEMBL4523488,Inositol hexakisphosphate kinase 2,5.6,IC50,骨碎补,kaempferol,IP6K2
+CHEMBL150,CHEMBL4523401,Inositol polyphosphate multikinase,5.36,IC50,骨碎补,kaempferol,IPMK
+CHEMBL150,CHEMBL3832943,Casein kinase 2,6.4,IC50,骨碎补,kaempferol,CSNK2B
+CHEMBL150,CHEMBL1250411,Short transient receptor potential channel 5,5.41,IC50,骨碎补,kaempferol,TRPC5
+CHEMBL150,CHEMBL2073,Tyrosine-protein kinase Yes,5.17,Ki,骨碎补,kaempferol,YES1
+CHEMBL150,CHEMBL1865,Protein deacetylase HDAC6,5.77,IC50,骨碎补,kaempferol,HDAC6
+CHEMBL150,CHEMBL2345,Ribosomal protein S6 kinase alpha-3,5.77,IC50,骨碎补,kaempferol,RPS6KA3
+CHEMBL150,CHEMBL284,Dipeptidyl peptidase 4,5.18,IC50,骨碎补,kaempferol,DPP4
+CHEMBL150,CHEMBL3832943,Casein kinase 2,6.68,Ki,骨碎补,kaempferol,CSNK2B

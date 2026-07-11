@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+# Generated binary analysis artifacts
+results/figures/*.png
+.cache/

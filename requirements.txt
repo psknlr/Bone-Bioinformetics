@@ -1,0 +1,10 @@
+pandas
+openpyxl
+mlxtend
+networkx
+numpy
+scipy
+statsmodels
+matplotlib
+seaborn
+requests
