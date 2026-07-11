@@ -35,7 +35,7 @@ import pandas as pd
 import networkx as nx
 import requests
 
-from nature_bone_pipeline import ApiCache, CORE, GWAS_TRAITS, CELL_MARKERS
+from nature_bone_pipeline import ApiCache, CORE
 
 OT_GRAPHQL = "https://api.platform.opentargets.org/api/v4/graphql"
 OSTEOPOROSIS_EFO = "MONDO_0005298"
