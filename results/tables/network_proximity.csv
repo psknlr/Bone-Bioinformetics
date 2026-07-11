@@ -1,0 +1,6 @@
+set,targets,network_distance,source
+core_combo,62,1.2333333333333334,ChEMBL+OpenTargets+STRING
+杜仲,5,1.2,ChEMBL+OpenTargets+STRING
+牛膝,14,1.2857142857142858,ChEMBL+OpenTargets+STRING
+续断,4,1.0,ChEMBL+OpenTargets+STRING
+骨碎补,46,1.2045454545454546,ChEMBL+OpenTargets+STRING

@@ -1,0 +1,11 @@
+module,resource,url,use
+causal_genetics,GWAS Catalog,https://www.ebi.ac.uk/gwas/rest/api/studies/search/findByEfoTrait,trait-to-study discovery for BMD/osteoporosis/fracture
+causal_genetics,Open Targets credible sets/L2G/colocalisation,https://platform.opentargets.org/downloads,"download credible sets, L2G, colocalisation for fine-mapping-aware causal target validation"
+causal_genetics,eQTL Catalogue tabix paths,https://github.com/eQTL-Catalogue/eQTL-Catalogue-resources/blob/master/tabix/tabix_ftp_paths.tsv,cis-eQTL/sQTL extraction for coloc/SMR/MR
+spatial_single_cell,GSE284089,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE284089,human femur spatial transcriptomics reference for cell-type niche mapping
+perturbation,LINCS L1000 Phase 1/2,https://clue.io/connectopedia/lincs_cmap_data,Level 5 perturbation signatures for disease-signature reversal
+perturbation,scPerturb,https://projects.sanderlab.org/scperturb/,single-cell perturbation effect comparison when relevant perturbagens exist
+knowledge_graph_structure,PrimeKG,https://github.com/mims-harvard/PrimeKG,heterogeneous disease-drug-gene-pathway graph construction
+knowledge_graph_structure,BindingDB,https://www.bindingdb.org/rwd/bind/chemsearch/marvin/Download.jsp,experimental compound-protein affinity evidence
+proteomics,PXD035745,https://www.ebi.ac.uk/pride/archive/projects/PXD035745,Drynaria fortunei osteoporosis-model TMT proteomics validation
+proteomics,PXD017804,https://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD017804,postmenopausal low-BMD plasma proteomics validation

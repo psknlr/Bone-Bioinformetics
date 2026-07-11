@@ -1,0 +1,33 @@
+query_trait,accessionId,diseaseTrait,initialSampleSize,replicateSampleSize,publication,summaryStats
+osteoporosis,GCST90013717,Osteoporosis,"7,788 Japanese ancestry cases, 204,665 Japanese ancestry controls",,32514122,available_if_linked_in_GWAS_Catalog
+osteoporosis,GCST90013753,Osteoporosis,"696 Japanese ancestry male cases, 108,651 Japanese ancestry male controls",,32514122,available_if_linked_in_GWAS_Catalog
+osteoporosis,GCST90013788,Osteoporosis,"7,092 Japanese ancestry female cases, 96,014 Japanese ancestry female controls",,32514122,available_if_linked_in_GWAS_Catalog
+osteoporosis,GCST90102600,Osteoporosis,"8,842 Korean ancestry individuals",,35151124,available_if_linked_in_GWAS_Catalog
+osteoporosis,GCST011716,Osteoporosis,"443 Korean ancestry cases, 2,223 Korean ancestry controls",,32653958,available_if_linked_in_GWAS_Catalog
+osteoporosis,GCST000469,Obesity and osteoporosis,"499 European ancestry male individuals, 501 European ancestry female individuals",,19714249,available_if_linked_in_GWAS_Catalog
+osteoporosis,GCST000560,Osteoporosis,"350 Han Chinese ancestry cases, 350 Han Chinese ancestry controls",,20072603,available_if_linked_in_GWAS_Catalog
+osteoporosis,GCST000698,Osteoporosis-related phenotypes,"2,038 European ancestry female individuals, 1,531 European ancestry male individuals",,20548944,available_if_linked_in_GWAS_Catalog
+osteoporosis,GCST001071,Osteoporosis,"190 Japanese ancestry cases, 1,557 Japanese ancestry controls",,21573128,available_if_linked_in_GWAS_Catalog
+osteoporosis,GCST001830,Osteoporosis,"288 Korean ancestry cases, 1,139 Korean ancestry controls",,23349225,available_if_linked_in_GWAS_Catalog
+heel bone mineral density,GCST010091,Heel bone mineral density (MTAG),"426,824 individuals",,32390946,available_if_linked_in_GWAS_Catalog
+heel bone mineral density,GCST009115,Heel bone mineral density variance,"197,261 European ancestry individuals",,31453325,available_if_linked_in_GWAS_Catalog
+heel bone mineral density,GCST006288,Heel bone mineral density,"76,067 European ancestry women, 66,420 European ancestry men",,28869591,available_if_linked_in_GWAS_Catalog
+heel bone mineral density,GCST006979,Heel bone mineral density,"426,824 British ancestry individuals",,30598549,available_if_linked_in_GWAS_Catalog
+heel bone mineral density,GCST009120,Heel bone mineral density,"197,261 European ancestry individuals",,31453325,available_if_linked_in_GWAS_Catalog
+heel bone mineral density,GCST007066,Heel bone mineral density,"approximately 446,000 European ancestry individuals",,30595370,available_if_linked_in_GWAS_Catalog
+heel bone mineral density,GCST006433,Heel bone mineral density,"394,929 European ancestry individuals",,30048462,available_if_linked_in_GWAS_Catalog
+heel bone mineral density,GCST008602,Heel bone mineral density (MTAG),"at least 142,487 individuals",,30690781,available_if_linked_in_GWAS_Catalog
+heel bone mineral density,GCST90446463,eBMD of the heel (AlphaMissense) (Gene-based burden),"429,619 European ancestry individuals",,39180217,available_if_linked_in_GWAS_Catalog
+heel bone mineral density,GCST90446464,eBMD of the heel (Gene-based burden),"429,619 European ancestry individuals",,39180217,available_if_linked_in_GWAS_Catalog
+femoral neck bone mineral density,GCST010266,Femoral neck bone mineral density and trunk fat mass adjusted by trunk lean mass,"10,208 European ancestry individuals, 445 Hispanic individuals, 843 African ancestry individuals, 1,539 East Asian individuals",,32239398,available_if_linked_in_GWAS_Catalog
+femoral neck bone mineral density,GCST010268,Femoral neck bone mineral density,"10,208 European ancestry individuals, 445 Hispanic individuals, 843 African ancestry individuals, 1,539 East Asian individuals",,32239398,available_if_linked_in_GWAS_Catalog
+femoral neck bone mineral density,GCST003381,Bone mineral density (femoral neck),"1,042 Northern European ancestry individuals",,26911590,available_if_linked_in_GWAS_Catalog
+femoral neck bone mineral density,GCST005229,Hip osteoarthritis or femoral neck bone mineral density,"3,032 hip osteoarthritis cases, 10,968 osteoarthritis controls, 32,961 individuals",,28934396,available_if_linked_in_GWAS_Catalog
+femoral neck bone mineral density,GCST005224,Knee osteoarthritis or femoral neck bone mineral density,"3,088 knee osteoarthritis cases, 10,968 osteoarthritis controls, 32,961 individuals",,28934396,available_if_linked_in_GWAS_Catalog
+femoral neck bone mineral density,GCST005228,Osteoarthritis or femoral neck bone mineral density,"6,694 osteoarthritis cases, 10,968 osteoarthritis controls, 32,961 individuals",,28934396,available_if_linked_in_GWAS_Catalog
+femoral neck bone mineral density,GCST005795,Femoral neck bone mineral density,"up to 4,692 European ancestry individuals, up to 1,539 Han Chinese ancestry individuals, up to 849 African American individuals, up to 446 Hispanic individuals, 2,882 European ancestry whole-genome sequenced individuals, 3,549 European ancestry whole-exome sequenced individuals, 26,534 European ancestry non-array genotype imputed individuals",,29499414,available_if_linked_in_GWAS_Catalog
+femoral neck bone mineral density,GCST003654,Bone mineral density (Ward's triangle area),"4,305 European ancestry individuals,1,579 Chinese Han ancestry individuals, 845 African-American individuals, 446 Hispanic individuals",,27397699,available_if_linked_in_GWAS_Catalog
+femoral neck bone mineral density,GCST004835,Femoral neck bone geometry,411 Mexican ancestry women,,28840121,available_if_linked_in_GWAS_Catalog
+femoral neck bone mineral density,GCST005544,Femoral neck bone mineral density,"26,320 European ancestry individuals, 2,868 whole genome sequenced European ancestry individuals, 3,547 whole exome sequenced European ancestry individuals",,26367794,available_if_linked_in_GWAS_Catalog
+hip fracture,GCST90044632,Fracture of neck of femur (PheCode 800.1),"1,930 European ancestry cases, 454,418 European ancestry controls",,34737426,available_if_linked_in_GWAS_Catalog
+hip fracture,GCST90161240,Hip fracture,"11,516 European ancestry cases, 723,838 European ancestry controls",,36260985,available_if_linked_in_GWAS_Catalog

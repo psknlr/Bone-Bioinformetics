@@ -1,0 +1,21 @@
+category,accession,url,size_note,default_action,analysis_scope,planned_action,local_path
+single_cell_spatial,GSE253355_MSC_Subset,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE253nnn/GSE253355/suppl/GSE253355_MSC_Subset_Seurat.rds.gz,382.5 MB,manifest_only,full,manifest_only_due_size_or_external_format,not_downloaded
+single_cell_spatial,GSE253355_Normal_BM_Atlas,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE253nnn/GSE253355/suppl/GSE253355_Normal_Bone_Marrow_Atlas_Seurat_SB_v2.rds.gz,1.4 GB,manifest_only,full,manifest_only_due_size_or_external_format,not_downloaded
+single_cell_spatial,GSE253355_RAW,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE253nnn/GSE253355/suppl/GSE253355_RAW.tar,1.1 GB,manifest_only,full,manifest_only_due_size_or_external_format,not_downloaded
+single_cell_spatial,GSE224152_matrix,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz,2.5 MB,download_and_analyse,full,download_and_analyse,not_downloaded
+single_cell_spatial,GSE147287_RAW,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE147nnn/GSE147287/suppl/GSE147287_RAW.tar,91.2 MB,full_mode_optional,full,download_if_--download-large,not_downloaded
+single_cell_spatial,GSE147390_RAW,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE147nnn/GSE147390/suppl/GSE147390_RAW.tar,75.6 MB,full_mode_optional,full,download_if_--download-large,not_downloaded
+single_cell_spatial,GSE169396_RAW,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE169nnn/GSE169396/suppl/GSE169396_RAW.tar,134.2 MB,full_mode_optional,full,download_if_--download-large,not_downloaded
+single_cell_spatial,GSE255646_GEX_H5,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE255nnn/GSE255646/suppl/GSE255646_filtered_feature_bc_matrix.h5,145.1 MB,full_mode_optional,full,download_if_--download-large,not_downloaded
+single_cell_spatial,GSE255646_metadata,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE255nnn/GSE255646/suppl/GSE255646_per_barcode_metadata.tsv.gz,metadata,full_mode_optional,full,download_if_--download-large,not_downloaded
+osteoclast_bulk,GSE246769_counts,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE246nnn/GSE246769/suppl/GSE246769_RNAcounts_Differentiation.txt.gz,2.0 MB,download_and_analyse,full,download_and_analyse,not_downloaded
+fracture_single_cell,GSE242414_RAW,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE242nnn/GSE242414/suppl/GSE242414_RAW.tar,81 MB,full_mode_optional,full,download_if_--download-large,not_downloaded
+mouse_trajectory,GSE269583_RAW,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE269nnn/GSE269583/suppl/GSE269583_RAW.tar,2.0 GB,manifest_only,full,manifest_only_due_size_or_external_format,not_downloaded
+mouse_aging,GSE145477_RAW,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE145nnn/GSE145477/suppl/GSE145477_RAW.tar,73.7 MB,full_mode_optional,full,download_if_--download-large,not_downloaded
+perturbation,LINCS_GSE92742,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742,large Level 5 signatures,manifest_only,full,manifest_only_due_size_or_external_format,not_downloaded
+perturbation,LINCS_GSE70138,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138,large Level 5 signatures,manifest_only,full,manifest_only_due_size_or_external_format,not_downloaded
+knowledge_graph,PrimeKG,https://github.com/mims-harvard/PrimeKG,multi-million-edge KG,manifest_only,full,manifest_only_due_size_or_external_format,not_downloaded
+binding,BindingDB,https://www.bindingdb.org/rwd/bind/chemsearch/marvin/Download.jsp,large TSV/SDF,manifest_only,full,manifest_only_due_size_or_external_format,not_downloaded
+proteomics,PXD035745,https://www.ebi.ac.uk/pride/archive/projects/PXD035745,TMT proteomics,manifest_only,full,manifest_only_due_size_or_external_format,not_downloaded
+proteomics,PXD017804,https://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD017804,plasma proteomics,manifest_only,full,manifest_only_due_size_or_external_format,not_downloaded
+metabolomics,MTBLS11650,https://www.ebi.ac.uk/metabolights/editor/MTBLS11650,femoral-neck osteoporosis metabolomics,manifest_only,full,manifest_only_due_size_or_external_format,not_downloaded

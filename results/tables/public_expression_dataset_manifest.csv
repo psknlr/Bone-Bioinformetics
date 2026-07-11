@@ -1,0 +1,12 @@
+accession,role,url,recommended_use
+GSE253355,reference human femoral-head marrow atlas,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE253355,"marker validation, BMSC/endothelial/pericyte/immune localisation; not OP-control inference"
+GSE224152,human marrow non-haematopoietic cells,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz,MSC/stromal/vascular target expression localisation; downloaded in this workflow
+GSE147287,human OP and OA CD271+ marrow cells,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE147nnn/GSE147287/suppl/GSE147287_RAW.tar,exploratory BMSC substate localisation; not powered OP-control pseudo-bulk
+GSE147390,primary human osteoblast-lineage atlas,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE147nnn/GSE147390/suppl/GSE147390_RAW.tar,osteoblast precursor-to-mature trajectory localisation
+GSE169396,human femoral-head whole-cell atlas,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE169nnn/GSE169396/suppl/GSE169396_RAW.tar,whole bone microenvironment localisation; verify clinical grouping before OP-control pseudo-bulk
+GSE255646,human MSC single-cell multiome,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE255nnn/GSE255646/suppl/GSE255646_filtered_feature_bc_matrix.h5,MSC expression plus ATAC/motif/GWAS regulatory interpretation after donor metadata audit
+GSE246769,human osteoclast differentiation bulk RNA-seq time series,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE246nnn/GSE246769/suppl/GSE246769_RNAcounts_Differentiation.txt.gz,multi-donor osteoclast dynamic validation; downloaded in this workflow; not single-cell UCell
+GSE242414,osteoporotic vertebral compression fracture single-cell matrix,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE242nnn/GSE242414/suppl/GSE242414_RAW.tar,fracture microenvironment localisation; not primary OP-normal inference
+GSE269583,mouse BMSC-to-osteoblast differentiation single-cell atlas,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE269nnn/GSE269583/suppl/GSE269583_RAW.tar,cross-species trajectory after human-mouse ortholog mapping
+GSE145477,mouse marrow mesenchymal lineage and ageing,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE145nnn/GSE145477/suppl/GSE145477_RAW.tar,ageing stromal/osteogenic trajectory after ortholog mapping
+GSE249471,bulk CPM perturbation only,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE249nnn/GSE249471/suppl/GSE249471_All_gene_counts.txt.gz,exclude from single-cell UCell/pseudo-bulk/trajectory because GEO attachment is bulk
