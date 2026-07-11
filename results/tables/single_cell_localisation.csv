@@ -1,5 +1,5 @@
-cell_state,target_overlap,odds_ratio,p_value,ucell_signature_score,fdr
-BMSC/成骨祖细胞,8,inf,2.286248547883152e-09,1.0,9.144994191532609e-09
-成骨细胞,6,inf,4.7033911060352184e-07,1.0,9.406782212070437e-07
-破骨细胞,5,inf,6.114408437845783e-06,1.0,6.114408437845783e-06
-骨免疫细胞,5,inf,6.114408437845783e-06,1.0,6.114408437845783e-06
+cell_state,target_overlap,odds_ratio,p_value,ucell_signature_score,source,fdr
+BMSC/成骨祖细胞,0,0.0,0.20461440217290097,0.0,marker overlap only; replace with GEO/CELLxGENE matrix for expression statistics,0.5931871314024497
+成骨细胞,0,0.0,0.341473547619182,0.0,marker overlap only; replace with GEO/CELLxGENE matrix for expression statistics,0.5931871314024497
+破骨细胞,0,0.0,0.5931871314024497,0.0,marker overlap only; replace with GEO/CELLxGENE matrix for expression statistics,0.5931871314024497
+骨免疫细胞,0,0.0,0.5931871314024497,0.0,marker overlap only; replace with GEO/CELLxGENE matrix for expression statistics,0.5931871314024497

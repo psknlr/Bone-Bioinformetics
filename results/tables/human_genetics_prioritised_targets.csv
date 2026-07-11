@@ -1,21 +1,5 @@
-target,BMD_GWAS,fracture_GWAS,colocalisation,cis_MR_direction
-ACP5,supported,suggestive,template_required,bone_protective_if_up
-AKT1,supported,suggestive,template_required,bone_protective_if_up
-ALPL,supported,suggestive,template_required,bone_protective_if_up
-BGLAP,supported,suggestive,template_required,bone_protective_if_up
-BMP2,supported,suggestive,template_required,bone_protective_if_up
-COL1A1,supported,suggestive,template_required,bone_protective_if_up
-CTSK,supported,suggestive,template_required,bone_protective_if_down
-ESR1,supported,suggestive,template_required,bone_protective_if_up
-JUN,supported,suggestive,template_required,bone_protective_if_up
-LRP5,supported,supported,template_required,bone_protective_if_up
-MAPK1,supported,suggestive,template_required,bone_protective_if_up
-NFKB1,supported,suggestive,template_required,bone_protective_if_up
-RUNX2,supported,supported,template_required,bone_protective_if_up
-SMAD1,supported,suggestive,template_required,bone_protective_if_up
-SOST,supported,supported,template_required,bone_protective_if_down
-SP7,supported,suggestive,template_required,bone_protective_if_up
-TNFRSF11B,supported,supported,template_required,bone_protective_if_up
-TNFSF11,supported,suggestive,template_required,bone_protective_if_down
-VDR,supported,suggestive,template_required,bone_protective_if_up
-WNT16,supported,supported,template_required,bone_protective_if_up
+target,open_targets_score,ensembl_id,human_genetics_source
+AR,0.48935523253171564,ENSG00000169083,Open Targets Genetics/Platform disease-target association for MONDO_0005298
+DPP4,0.2697023872895011,ENSG00000197635,Open Targets Genetics/Platform disease-target association for MONDO_0005298
+HIF1A,0.08573418158526028,ENSG00000100644,Open Targets Genetics/Platform disease-target association for MONDO_0005298
+TP53,0.0852182899844695,ENSG00000141510,Open Targets Genetics/Platform disease-target association for MONDO_0005298

@@ -7,3 +7,4 @@ scipy
 statsmodels
 matplotlib
 seaborn
+requests
