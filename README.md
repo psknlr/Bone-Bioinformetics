@@ -73,6 +73,21 @@ Current cell-localisation outputs are named **reference marker-based cell-type o
 
 The workflow now adds a first-pass high-order evidence layer using public data only: GWAS Catalog trait-study discovery for BMD/osteoporosis/fracture, a genetics-anchored causal pharmacology scoring table that combines ChEMBL activity, Open Targets osteoporosis evidence, marker overlap, GSE224152 expression and GSE246769 osteoclast dynamics, and a manifest for larger follow-up resources such as eQTL Catalogue, LINCS L1000, scPerturb, GSE284089, PrimeKG, BindingDB and proteomics datasets. Fine-mapping, coloc, SMR/HEIDI and MR are explicitly marked as pending full summary statistics/QTL inputs rather than simulated.
 
+### Four advanced modules (`scripts/high_order_modules.py`)
+
+Run after the core pipeline (it reads `results/tables/`):
+
+```bash
+python scripts/high_order_modules.py --outdir results --modules 1,2,3,4
+```
+
+Each step that a public REST/GraphQL endpoint supports without multi-GB downloads is computed for real; steps that genuinely require full summary statistics, QTL tabix, large single-cell/spatial matrices or docking binaries are written as structured `*_pending_steps.csv` records naming the exact required input.
+
+1. **Genetics-anchored multi-omics causal pharmacology** — pulls Open Targets `genetic_association` datatype scores per target (the real human-genetics anchor, separated from literature/animal evidence), maps symbols to Ensembl via MyGene, checks eQTL Catalogue cis-eQTL presence, and re-grades candidates A/B/C where **A requires real human-genetics support** plus pharmacology. Fine-mapping/coloc/SMR/MR remain pending on full sumstats/QTL. Outputs: `m1_genetics_anchored_causal_targets.csv`, `m1_opentargets_genetic_datatypes.csv`, `m1_causal_pending_steps.csv`.
+2. **Single-cell / spatial bone-niche localisation** — assigns core targets to the osteoprogenitor / osteoclast-immune / vascular-osteogenic / marrow-adipogenic niches by marker overlap and computes real module-expression scores across the GSE246769 osteoclast differentiation series; scVI/cell2location/CellChat/trajectory are pending on large matrices. Outputs: `m2_niche_localisation.csv`, `m2_module_expression_scores.csv`, `m2_pending_steps.csv`.
+3. **Perturbation-omics disease-signature reversal** — builds an osteoclast up/down signature from GSE246769 and queries Enrichr LINCS L1000 chemical and CRISPR-KO consensus libraries for perturbagens associated with it (candidate reversers). Level-5 weighted CMap and scPerturb E-distance are pending on the bulk signature files. Outputs: `m3_perturbation_reversal.csv`, `m3_pending_steps.csv`.
+4. **Heterogeneous knowledge graph + structural pharmacology** — builds a herb→compound→target→pathway→disease graph from the pipeline tables plus real Reactome pathways and Open Targets edges, runs shared-pathway meta-path link prediction for herb→osteoporosis-gene candidates, and records UniProt/AlphaFold/PDB structural availability per top target; PyKEEN/R-GCN embedding, GNINA/Vina docking and MD/MM-GBSA are pending. Outputs: `m4_knowledge_graph_edges.csv`, `m4_link_prediction.csv`, `m4_structure_evidence.csv`, `m4_pending_steps.csv`.
+
 ## Reproducibility and audit
 
 A reproducible Colab notebook is provided at `notebooks/bone_bioinformatics_colab.ipynb`. The notebook installs dependencies, runs the real-data pipeline, displays generated figures, and previews the key CSV outputs. See `docs/REAL_DATA_AUDIT.md` for a source-by-source audit of which analyses use real data and which high-order modules are intentionally marked as pending full summary-statistics/QTL/perturbation inputs rather than simulated.
