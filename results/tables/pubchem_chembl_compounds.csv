@@ -1,0 +1,17 @@
+query,pubchem_cid,pubchem_title,formula,canonical_smiles,herb,molecule_chembl_id
+pinoresinol diglucoside,174003,Pinoresinol diglucoside,C32H42O16,,杜仲,CHEMBL460862
+aucubin,91458,Aucubin,C15H22O9,,杜仲,CHEMBL514882
+geniposidic acid,443354,Geniposidic Acid,C16H22O10,,杜仲,CHEMBL460031
+chlorogenic acid,1794427,Chlorogenic Acid,C16H18O9,,杜仲,CHEMBL284616
+20-hydroxyecdysone,5459840,20-Hydroxyecdysone,C27H44O7,,牛膝,CHEMBL224128
+ecdysterone,118701161,Ecdysterone,C27H44O7,,牛膝,CHEMBL224128
+oleanolic acid,10494,Oleanolic Acid,C30H48O3,,牛膝,CHEMBL168
+ginsenoside Ro,11815492,Ginsenoside Ro,C48H76O19,,牛膝,CHEMBL488317
+asperosaponin VI,14284436,Asperosaponin VI,C47H76O18,,续断,CHEMBL4521246
+akebia saponin D,14284436,Asperosaponin VI,C47H76O18,,续断,CHEMBL4521246
+loganin,87691,(-)-Loganin,C17H26O10,,续断,CHEMBL1081584
+chlorogenic acid,1794427,Chlorogenic Acid,C16H18O9,,续断,CHEMBL284616
+naringin,442428,Naringin,C27H32O14,,骨碎补,CHEMBL4303320
+neoeriocitrin,114627,Neoeriocitrin,C27H32O15,,骨碎补,CHEMBL3609603
+eriodictyol,440735,(+)-Eriodictyol,C15H12O6,,骨碎补,CHEMBL8996
+kaempferol,5280863,Kaempferol,C15H10O6,,骨碎补,CHEMBL150

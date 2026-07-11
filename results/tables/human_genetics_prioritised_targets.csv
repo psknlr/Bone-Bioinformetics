@@ -1,0 +1,5 @@
+target,open_targets_score,ensembl_id,human_genetics_source
+AR,0.48935523253171564,ENSG00000169083,Open Targets Genetics/Platform disease-target association for MONDO_0005298
+DPP4,0.2697023872895011,ENSG00000197635,Open Targets Genetics/Platform disease-target association for MONDO_0005298
+HIF1A,0.08573418158526028,ENSG00000100644,Open Targets Genetics/Platform disease-target association for MONDO_0005298
+TP53,0.0852182899844695,ENSG00000141510,Open Targets Genetics/Platform disease-target association for MONDO_0005298
