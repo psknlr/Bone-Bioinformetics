@@ -148,7 +148,8 @@ def module1_causal_pharmacology(outdir, cache):
     eqtl = eqtl_catalogue_cis_support(cache, set(ens_map.values()))
     eqtl_by_ens = {r.ensembl_id: r.has_significant_cis_eqtl for _, r in eqtl.iterrows()}
     # direction proxy from real osteoclast dynamics
-    dyn = pd.read_csv(outdir / "gse246769_osteoclast_dynamics.csv") if (outdir / "gse246769_osteoclast_dynamics.csv").exists() else pd.DataFrame(columns=["gene", "delta_d9_vs_d0"])
+    dyn = pd.read_csv(outdir / "gse246769_osteoclast_dynamics.csv") if (outdir / "gse246769_osteoclast_dynamics.csv").exists() else pd.DataFrame(columns=["gene", "paired_delta_d9_vs_d0"])
+    delta_col = "paired_delta_d9_vs_d0" if "paired_delta_d9_vs_d0" in dyn.columns else "delta_d9_vs_d0"
     rows = []
     for gene, sub in tiers.dropna(subset=["target_gene_symbol"]).groupby("target_gene_symbol"):
         rec = ot_gen.get(gene)
@@ -157,7 +158,7 @@ def module1_causal_pharmacology(outdir, cache):
         ens = ens_map.get(gene)
         has_eqtl = eqtl_by_ens.get(ens)
         max_pchem = float(sub["pchembl_value"].max()) if "pchembl_value" in sub else 0.0
-        delta = float(dyn.loc[dyn.gene.eq(gene), "delta_d9_vs_d0"].mean()) if gene in set(dyn.gene) else np.nan
+        delta = float(dyn.loc[dyn.gene.eq(gene), delta_col].mean()) if (delta_col in dyn.columns and gene in set(dyn.gene)) else np.nan
         # genetics-anchored grade: A requires real human-genetics support
         has_human_genetics = (gen_score >= 0.10) or in_gwas
         strong_genetics = (gen_score >= 0.10) and (in_gwas or has_eqtl is True)
@@ -212,8 +213,8 @@ def module2_niche_localisation(outdir):
     dyn_p = outdir / "gse246769_osteoclast_dynamics.csv"
     if dyn_p.exists():
         dyn = pd.read_csv(dyn_p)
-        cols = [c for c in ["log2cpm_d0", "log2cpm_d2", "log2cpm_d5", "log2cpm_d9"] if c in dyn.columns]
-        mod = pd.DataFrame([{"dataset": "GSE246769", "day": c.replace("log2cpm_", ""),
+        cols = [c for c in ["mean_log2cpm_d0", "mean_log2cpm_d2", "mean_log2cpm_d5", "mean_log2cpm_d9"] if c in dyn.columns]
+        mod = pd.DataFrame([{"dataset": "GSE246769", "day": c.replace("mean_log2cpm_", ""),
                              "module_mean_log2cpm": float(dyn[c].mean()),
                              "n_targets_scored": int(dyn[c].notna().sum())} for c in cols])
         mod.to_csv(outdir / "m2_module_expression_scores.csv", index=False)
@@ -257,8 +258,9 @@ def module3_perturbation_reversal(outdir, cache):
     if not dyn_p.exists():
         return
     dyn = pd.read_csv(dyn_p)
-    up = sorted(dyn.loc[dyn.delta_d9_vs_d0 > 1, "gene"].dropna().unique())
-    down = sorted(dyn.loc[dyn.delta_d9_vs_d0 < -1, "gene"].dropna().unique())
+    dcol = "paired_delta_d9_vs_d0" if "paired_delta_d9_vs_d0" in dyn.columns else "delta_d9_vs_d0"
+    up = sorted(dyn.loc[dyn[dcol] > 1, "gene"].dropna().unique()) if dcol in dyn.columns else []
+    down = sorted(dyn.loc[dyn[dcol] < -1, "gene"].dropna().unique()) if dcol in dyn.columns else []
     frames = []
     for lib in ["LINCS_L1000_Chem_Pert_Consensus_Sigs", "LINCS_L1000_CRISPR_KO_Consensus_Sigs"]:
         for sig_name, sig in [("osteoclast_up_at_d9", up), ("osteoclast_down_at_d9", down)]:

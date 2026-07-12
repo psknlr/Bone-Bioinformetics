@@ -19,7 +19,12 @@ The pipeline implements the requested main narrative:
 1. **Stable herb modules**: filters included classical records and reconciles **multiple structured extractions of the same source passage** instead of arbitrarily keeping the first. The default `--dedup-strategy merge` takes the expert-confirmed *union* of herbs/symptoms per passage (a real `source_record_id`), with `highest_quality`, `first` (legacy) and `raw` available; `dedup_conflict_log.csv` records field-level conflicts and `dedup_strategy_sensitivity.csv` shows how the core-quartet count depends on the choice. It then mines modules with FP-Growth, lift against independence, permutation p and Benjamini-Hochberg FDR. `core_module_significance.csv` tests the Du-Zhong/Niu-Xi/Xu-Duan/Gu-Sui-Bu quartet and **every** 2/3/4-herb sub-combination: under proper reconciliation the pairs and triples are FDR-significant, and the complete four-herb set **does co-occur** (in 《病机沙篆》, support = 1, lift ≈ 300×, FDR < 0.01) — rare but real, not the "never co-occurs" artifact produced by keep-first de-duplication.
 2. **Historical stability**: compares the core across dynasty, TCM syndrome, diagnosis **and symptom** strata, reporting complete/pair/any co-occurrence of the core herbs.
 3. **Component-target and network medicine layer**: queries PubChem/ChEMBL for core-herb compound evidence with a real chemical-identity audit (PubChem CID/InChIKey, ChEMBL InChIKey, **synonym-collision flags**), keeps only **single-protein** human targets with assay metadata (cell-line/phenotypic assays are excluded to `excluded_nonmolecular_activities.csv`), de-duplicates activities and aggregates them per gene (`component_target_summary.csv`: n_activities, n_documents, median/max pChEMBL). It then builds a **STRING physical-interaction** network, defines the osteoporosis module by an Open Targets score threshold (documented as a ranking heuristic, not a probability), and computes proximity with a **degree-preserving random reference (z-score, empirical p)** plus a **size-matched null drawn from an independent background** (direct target-disease overlaps correctly count as distance 0).
-4. **Cell and human genetics layer**: exports reference marker-based cell-type overlap localisation **with hypergeometric enrichment**, downloads the real GSE224152 marrow non-haematopoietic expression matrix for target-expression summaries, downloads the real GSE246769 multi-donor osteoclast differentiation bulk RNA-seq matrix for dynamic validation, runs a **gene-level GWAS-Catalog bone-gene enrichment** for the candidate targets, and converges classical/pharmacology/cell-expression/human-genetics evidence into a four-pillar prioritisation. UCell/pseudo-bulk/trajectory and coloc/MR remain reserved for true single-cell matrices and full summary statistics.
+4. **Cell and human genetics layer**:
+   - **GSE224152 single-cell** is processed properly — per-cell QC, CP10k+log1p normalisation, marker-score cell-type annotation (MSC/stromal, endothelial, pericyte/mural, osteo-lineage, immune; donor parsed from the barcode suffix), **per-cell-type and per-donor** candidate-target expression. Genes absent from the matrix are reported as **NA/not_mapped**, never as zero.
+   - **GSE246769** uses a **donor-PAIRED** design: because d0 is missing for donors 5/7/8, each contrast (d2/d5/d9 vs d0) uses only donors present at both timepoints, with within-donor log2CPM differences, paired t-tests and BH-FDR after low-expression filtering — not the confounded mean(d9)−mean(d0).
+   - Curated **marker overlap** is reported as `marker_overlap_fraction` (Fisher exact vs a protein-coding background) and is explicitly **not** a UCell score; broad signalling nodes were removed from the panels.
+   - Human-genetics evidence uses the Open Targets **`genetic_association` datatype** (not the blended overall score) plus **EFO-resolved, paginated** GWAS-Catalog gene enrichment.
+   - The convergence table is a **preliminary multi-source evidence prioritisation** (no causal claim, no direction inference); coloc/MR remain the gate for causality. Full single-cell trajectory/communication and coloc/MR are reserved for larger matrices and summary statistics.
 
 ## Outputs
 
@@ -41,14 +46,16 @@ Generated tables are written to `results/tables/`:
 - `network_proximity_random_combo_null.csv`
 - `gwas_gene_enrichment.csv`
 - `gwas_catalog_bone_genes.csv`
-- `single_cell_localisation.csv`
+- `curated_marker_overlap.csv`
 - `reference_marker_overlap_localisation.csv`
-- `gse224152_target_expression.csv`
+- `gse224152_celltype_localisation.csv`
+- `gse224152_donor_pseudobulk.csv`
+- `gse224152_celltype_composition.csv`
 - `gse246769_osteoclast_dynamics.csv`
 - `public_expression_dataset_manifest.csv`
-- `human_genetics_prioritised_targets.csv`
+- `opentargets_prioritised_targets.csv`
 - `gwas_catalog_bone_trait_studies.csv`
-- `genetics_anchored_causal_pharmacology_scores.csv`
+- `preliminary_multi_source_evidence_prioritisation.csv`
 - `high_order_public_resource_manifest.csv`
 - `full_scale_resource_execution_plan.csv`
 - `full_scale_download_log.csv`
@@ -58,9 +65,9 @@ Generated figures are written to `results/figures/` when the pipeline is run loc
 - `Fig1_stable_modules.png`
 - `Fig2_historical_stability.png`
 - `Fig3_network_proximity.png`
-- `Fig4_single_cell_localisation.png`
-- `Fig5_human_genetics.png`
-- `Fig6_causal_evidence_heatmap.png`
+- `Fig4_curated_marker_overlap.png`
+- `Fig5_genetic_association.png`
+- `Fig6_preliminary_evidence_heatmap.png`
 - `Fig7_high_order_resource_map.png`
 - `Fig8_osteoclast_dynamic_targets.png`
 

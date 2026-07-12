@@ -86,12 +86,19 @@ FULL_SCALE_RESOURCES = [
     {"category":"metabolomics","accession":"MTBLS11650","url":"https://www.ebi.ac.uk/metabolights/editor/MTBLS11650","size_note":"femoral-neck osteoporosis metabolomics","default_action":"manifest_only"},
 ]
 
+# Cell-type-specific marker panels (curated for specificity; broad signalling
+# nodes such as JUN/MAPK1/AKT1/NFKB1 are deliberately excluded as they do not
+# define a cell type). Osteocyte-specific SOST is kept out of the BMSC panel.
 CELL_MARKERS = {
-    "BMSC/成骨祖细胞": {"LRP5","WNT16","SOST","RUNX2","SP7","BMP2","SMAD1","COL1A1"},
-    "成骨细胞": {"RUNX2","SP7","ALPL","BGLAP","COL1A1","BMP2"},
-    "破骨细胞": {"TNFSF11","TNFRSF11B","CTSK","ACP5","NFKB1"},
-    "骨免疫细胞": {"JUN","NFKB1","MAPK1","AKT1","TNFSF11"},
+    "BMSC/成骨祖细胞": {"LEPR","CXCL12","PDGFRA","PDGFRB","NT5E","THY1","PRRX1"},
+    "成骨细胞": {"RUNX2","SP7","BGLAP","IBSP","ALPL","COL1A1","SPP1"},
+    "骨细胞": {"SOST","DMP1","MEPE","PHEX","FGF23"},
+    "破骨细胞": {"CTSK","ACP5","MMP9","OSCAR","DCSTAMP","OCSTAMP","NFATC1","TNFRSF11A"},
+    "破骨前体/巨噬细胞": {"CSF1R","CD14","ITGAM","FCGR3A","CD68"},
 }
+# Approximate number of human protein-coding genes; used as an explicit
+# enrichment background instead of the previous hard-coded 200.
+HUMAN_PROTEIN_CODING_N = 19000
 
 class ApiCache:
     def __init__(self, path: Path):
@@ -344,11 +351,21 @@ def chembl_target_detail(cache, target_chembl_id):
                 if g and g not in genes: genes.append(g)
     return data.get("target_type"), genes
 
-def opentargets_osteoporosis(cache, size=200):
-    q='''query disease($id:String!,$size:Int!){ disease(efoId:$id){ id name associatedTargets(page:{index:0,size:$size}){ rows{ score target{ approvedSymbol id } } } } }'''
+def opentargets_osteoporosis(cache, size=300):
+    """Osteoporosis-associated targets with the overall score AND the
+    `genetic_association` datatype score, so downstream code can use genetics
+    specifically rather than the blended ranking heuristic."""
+    q='''query disease($id:String!,$size:Int!){ disease(efoId:$id){ id name associatedTargets(page:{index:0,size:$size}){ rows{ score target{ approvedSymbol id } datatypeScores{ id score } } } } }'''
     data=cache.get_json("https://api.platform.opentargets.org/api/v4/graphql", method="POST", payload={"query":q,"variables":{"id":"MONDO_0005298","size":size}})["data"]
     rows=data.get("data",{}).get("disease",{}).get("associatedTargets",{}).get("rows",[]) if data else []
-    return pd.DataFrame([{"target":r["target"].get("approvedSymbol"),"open_targets_score":r.get("score"),"ensembl_id":r["target"].get("id")} for r in rows if r.get("target")])
+    out=[]
+    for r in rows:
+        if not r.get("target"): continue
+        dts={d["id"]:d["score"] for d in r.get("datatypeScores",[])}
+        out.append({"target":r["target"].get("approvedSymbol"),"open_targets_score":r.get("score"),
+                    "genetic_association":dts.get("genetic_association",0.0),
+                    "ensembl_id":r["target"].get("id")})
+    return pd.DataFrame(out)
 
 def string_network(cache, genes, add_nodes=500, physical=True):
     """STRING physical-interaction network for the seed genes, expanded with
@@ -510,13 +527,28 @@ def real_targets_and_network(outdir, cache, ot_score_threshold=0.10):
 
 def omics_genetics(outdir, targets, disease):
     genes=set(targets.get("target_gene_symbol", pd.Series(dtype=str)).dropna())
+    N=len(genes)  # candidate target set size
     cell=[]
     for c, markers in CELL_MARKERS.items():
-        ov=len(genes & markers); odds,p=fisher_exact([[ov,max(len(genes)-ov,0)],[max(len(markers)-ov,0),200]])
-        cell.append({"cell_state":c,"target_overlap":ov,"odds_ratio":odds,"p_value":p,"ucell_signature_score":ov/max(len(markers),1),"source":"marker overlap only; replace with GEO/CELLxGENE matrix for expression statistics"})
-    celldf=pd.DataFrame(cell); celldf["fdr"]=multipletests(celldf.p_value, method="fdr_bh")[1]; celldf.to_csv(outdir/"single_cell_localisation.csv", index=False)
-    gen=disease[disease.target.isin(genes)].copy() if not disease.empty and genes else pd.DataFrame(columns=["target","open_targets_score","ensembl_id"])
-    gen["human_genetics_source"]="Open Targets Genetics/Platform disease-target association for MONDO_0005298"; gen.to_csv(outdir/"human_genetics_prioritised_targets.csv", index=False)
+        ov=len(genes & markers)
+        # proper 2x2 against an explicit human protein-coding background
+        a=ov; b=N-ov; c2=len(markers)-ov; d=max(HUMAN_PROTEIN_CODING_N-N-c2,0)
+        odds,p=fisher_exact([[a,b],[c2,d]])
+        cell.append({"cell_state":c,"marker_n":len(markers),"target_overlap":ov,
+                     "marker_overlap_fraction":ov/max(len(markers),1),  # NOT a UCell score
+                     "odds_ratio":odds,"p_value":p,"background_n":HUMAN_PROTEIN_CODING_N,
+                     "overlap_genes":";".join(sorted(genes & markers)),
+                     "method":"curated marker set overlap (Fisher exact vs protein-coding background); not single-cell UCell"})
+    celldf=pd.DataFrame(cell); celldf["fdr"]=multipletests(celldf.p_value, method="fdr_bh")[1]
+    celldf.to_csv(outdir/"curated_marker_overlap.csv", index=False)
+    # Open Targets prioritisation: report BOTH the overall score and the genetic
+    # component so it is not misread as pure human-genetics evidence.
+    if not disease.empty and genes:
+        gen=disease[disease.target.isin(genes)].copy()
+    else:
+        gen=pd.DataFrame(columns=["target","open_targets_score","genetic_association","ensembl_id"])
+    gen["source"]="Open Targets Platform association for MONDO_0005298; open_targets_score is a blended ranking heuristic, genetic_association is the genetics-only datatype"
+    gen.to_csv(outdir/"opentargets_prioritised_targets.csv", index=False)
     return celldf, gen
 
 def reference_marker_overlap(outdir, cache, targets):
@@ -547,117 +579,271 @@ def reference_marker_overlap(outdir, cache, targets):
     out.to_csv(outdir/"reference_marker_overlap_localisation.csv", index=False)
     return out
 
+# Marker panels (Latin gene symbols) for GSE224152 non-haematopoietic marrow
+# cell-type annotation by module score.
+GSE224152_CELLTYPE_MARKERS = {
+    "MSC_stromal": ["LEPR","CXCL12","PDGFRA","PDGFRB","NT5E","THY1","LUM","DCN","COL1A1"],
+    "endothelial": ["PECAM1","CDH5","VWF","KDR","EMCN","FLT1"],
+    "pericyte_mural": ["RGS5","ACTA2","MCAM","NOTCH3","PDGFRB","MYH11"],
+    "osteo_lineage": ["RUNX2","SP7","BGLAP","IBSP","ALPL"],
+    "immune": ["PTPRC","CD68","CD14","LYZ","CD3E","MS4A1"],
+}
+
 def gse224152_expression_localisation(outdir, cache, targets):
-    """Real GSE224152 non-haematopoietic marrow expression matrix summary for candidate target genes."""
+    """Real single-cell processing of GSE224152 non-haematopoietic marrow cells:
+    per-cell QC, CP10k+log1p normalisation, marker-score cell-type annotation
+    (donor parsed from the barcode suffix), and per-cell-type / per-donor
+    candidate-target expression. Genes absent from the matrix are reported as
+    NA/not_mapped (a symbol/alias/mapping gap is not the same as true zero)."""
     genes=sorted(set(targets.get("target_gene_symbol", pd.Series(dtype=str)).dropna()))
     raw=cache.get_bytes(GSE224152_MATRIX_URL)
-    mat=pd.read_csv(io.BytesIO(raw), compression="gzip", index_col=0)
-    present=[g for g in genes if g in mat.index]
+    mat=pd.read_csv(io.BytesIO(raw), compression="gzip", index_col=0)  # genes x cells
+    mat=mat[~mat.index.duplicated(keep="first")]
+    counts=mat.T  # cells x genes
+    donor=pd.Series([str(c).rsplit("-",1)[-1] for c in counts.index], index=counts.index, name="donor")
+    # per-cell QC
+    genes_per_cell=(counts>0).sum(axis=1); umi_per_cell=counts.sum(axis=1)
+    keep_cells=(genes_per_cell>=200)&(umi_per_cell>0)
+    counts=counts[keep_cells]; donor=donor[keep_cells]
+    # gene QC + CP10k + log1p normalisation
+    keep_genes=(counts>0).sum(axis=0)>=3
+    counts=counts.loc[:, keep_genes]
+    norm=np.log1p(counts.div(counts.sum(axis=1).replace(0,np.nan), axis=0).mul(1e4)).fillna(0.0)
+    # marker-score cell-type annotation (mean normalised expression of each panel)
+    scores={}
+    for ct, panel in GSE224152_CELLTYPE_MARKERS.items():
+        present=[g for g in panel if g in norm.columns]
+        scores[ct]=norm[present].mean(axis=1) if present else pd.Series(0.0,index=norm.index)
+    score_df=pd.DataFrame(scores)
+    cell_type=score_df.idxmax(axis=1).where(score_df.max(axis=1)>0, "unassigned")
+    # per-cell-type candidate-target expression (NA for genes not in matrix)
     rows=[]
-    for g in present:
-        x=mat.loc[g].astype(float)
-        rows.append({"dataset":"GSE224152","gene":g,"cells_n":mat.shape[1],"mean_expression":float(x.mean()),"pct_cells_detected":float((x>0).mean()),"max_expression":float(x.max()),"matrix_source":GSE224152_MATRIX_URL})
-    missing=sorted(set(genes)-set(present))
-    for g in missing:
-        rows.append({"dataset":"GSE224152","gene":g,"cells_n":mat.shape[1],"mean_expression":0.0,"pct_cells_detected":0.0,"max_expression":0.0,"matrix_source":"gene_not_found_in_matrix"})
-    out=pd.DataFrame(rows); out.to_csv(outdir/"gse224152_target_expression.csv", index=False)
+    present_genes=set(norm.columns)
+    for g in genes:
+        if g not in present_genes:
+            rows.append({"dataset":"GSE224152","gene":g,"cell_type":"ALL","n_cells":int(len(norm)),
+                         "mean_lognorm":np.nan,"pct_detected":np.nan,"status":"not_mapped_in_matrix"}); continue
+        for ct in list(GSE224152_CELLTYPE_MARKERS)+["unassigned","ALL"]:
+            idx=norm.index if ct=="ALL" else cell_type[cell_type.eq(ct)].index
+            if len(idx)==0: continue
+            x=norm.loc[idx, g]
+            rows.append({"dataset":"GSE224152","gene":g,"cell_type":ct,"n_cells":int(len(idx)),
+                         "mean_lognorm":float(x.mean()),"pct_detected":float((x>0).mean()),"status":"ok"})
+    out=pd.DataFrame(rows); out.to_csv(outdir/"gse224152_celltype_localisation.csv", index=False)
+    # donor-level pseudo-bulk (mean lognorm per donor per gene) for present genes
+    prows=[]
+    for g in [x for x in genes if x in present_genes]:
+        for dv, idx in norm.groupby(donor).groups.items():
+            x=norm.loc[idx, g]
+            prows.append({"dataset":"GSE224152","gene":g,"donor":dv,"n_cells":int(len(idx)),"mean_lognorm":float(x.mean()),"pct_detected":float((x>0).mean())})
+    pd.DataFrame(prows).to_csv(outdir/"gse224152_donor_pseudobulk.csv", index=False)
+    # cell-type composition (transparency)
+    comp=cell_type.value_counts().rename_axis("cell_type").reset_index(name="n_cells")
+    comp["donor_breakdown"]=comp.cell_type.map(lambda ct: ";".join(f"{d}:{n}" for d,n in donor[cell_type.eq(ct)].value_counts().items()))
+    comp.to_csv(outdir/"gse224152_celltype_composition.csv", index=False)
     return out
 
 def gse246769_osteoclast_dynamics(outdir, cache, targets):
-    """Real bulk RNA-seq osteoclast differentiation dynamics from GSE246769."""
-    genes=sorted(set(targets.get("target_gene_symbol", pd.Series(dtype=str)).dropna()))
+    """Donor-PAIRED osteoclast-differentiation dynamics from GSE246769.
+
+    d0 is missing for some donors, so a plain mean(dX)-mean(d0) confounds time
+    with donor composition. Here each contrast (d2/d5/d9 vs d0) uses only donors
+    present at BOTH timepoints, computes within-donor log2CPM differences, and
+    tests them with a paired one-sample t-test + BH-FDR. Low-expression genes are
+    filtered before CPM."""
+    from scipy.stats import ttest_1samp
+    genes=set(targets.get("target_gene_symbol", pd.Series(dtype=str)).dropna())
     raw=cache.get_bytes(GSE246769_COUNTS_URL)
     counts=pd.read_csv(io.BytesIO(raw), compression="gzip", sep="\t")
     counts["gene_symbol"]=counts["Annotation.Divergence"].astype(str).str.split("|").str[0]
     sample_cols=[c for c in counts.columns if re.match(r"Donor\d+_d\d+", c)]
-    lib=counts[sample_cols].sum(axis=0)
-    sub=counts[counts.gene_symbol.isin(genes)].copy()
+    meta={c:(re.match(r"(Donor\d+)_(d\d+)",c).group(1), re.match(r"(Donor\d+)_(d\d+)",c).group(2)) for c in sample_cols}
+    # low-expression filter on raw counts, then CPM + log2
+    cmat=counts.set_index("gene_symbol")[sample_cols].apply(pd.to_numeric, errors="coerce").fillna(0)
+    cmat=cmat[~cmat.index.duplicated(keep="first")]
+    keep=(cmat>=10).sum(axis=1)>=5
+    cmat=cmat[keep]
+    lib=cmat.sum(axis=0); logcpm=np.log2(cmat.div(lib, axis=1)*1e6+1)
+    day_donor={d:{} for d in ["d0","d2","d5","d9"]}
+    for c in sample_cols:
+        dn,dy=meta[c]; day_donor.setdefault(dy,{})[dn]=c
     rows=[]
-    for _, r in sub.iterrows():
-        vals=(r[sample_cols].astype(float)/lib*1e6).apply(lambda v: np.log2(v+1))
-        by_day={day: vals[[c for c in sample_cols if c.endswith(f"_{day}")]].mean() for day in ["d0","d2","d5","d9"] if any(c.endswith(f"_{day}") for c in sample_cols)}
-        rows.append({"dataset":"GSE246769","gene":r.gene_symbol,"log2cpm_d0":by_day.get("d0", np.nan),"log2cpm_d2":by_day.get("d2", np.nan),"log2cpm_d5":by_day.get("d5", np.nan),"log2cpm_d9":by_day.get("d9", np.nan),"delta_d9_vs_d0":by_day.get("d9", np.nan)-by_day.get("d0", np.nan),"counts_source":GSE246769_COUNTS_URL})
-    out=pd.DataFrame(rows); out.to_csv(outdir/"gse246769_osteoclast_dynamics.csv", index=False)
+    target_present=[g for g in sorted(genes) if g in logcpm.index]
+    for g in target_present:
+        rec={"dataset":"GSE246769","gene":g}
+        # per-day mean (descriptive) for context, clearly labelled
+        for dy in ["d0","d2","d5","d9"]:
+            cols=list(day_donor.get(dy,{}).values())
+            rec[f"mean_log2cpm_{dy}"]=float(logcpm.loc[g,cols].mean()) if cols else np.nan
+        # paired contrasts
+        for dy in ["d2","d5","d9"]:
+            paired=[(day_donor["d0"][dn], day_donor[dy][dn]) for dn in day_donor.get(dy,{}) if dn in day_donor.get("d0",{})]
+            diffs=[logcpm.loc[g,b]-logcpm.loc[g,a] for a,b in paired]
+            rec[f"paired_delta_{dy}_vs_d0"]=float(np.mean(diffs)) if diffs else np.nan
+            rec[f"n_donors_paired_{dy}"]=len(diffs)
+            if len(diffs)>=3 and np.std(diffs)>0:
+                t,p=ttest_1samp(diffs,0.0); rec[f"paired_p_{dy}_vs_d0"]=float(p)
+            else:
+                rec[f"paired_p_{dy}_vs_d0"]=np.nan
+        rows.append(rec)
+    out=pd.DataFrame(rows)
+    # BH-FDR across genes for the d9 vs d0 paired contrast
+    if not out.empty and out["paired_p_d9_vs_d0"].notna().any():
+        m=out["paired_p_d9_vs_d0"].notna()
+        out.loc[m,"paired_fdr_d9_vs_d0"]=multipletests(out.loc[m,"paired_p_d9_vs_d0"],method="fdr_bh")[1]
+    out["design_note"]="donor-paired log2CPM contrasts; d0 absent for donors 5/7/8 so unpaired means are not used for inference"
+    out.to_csv(outdir/"gse246769_osteoclast_dynamics.csv", index=False)
     return out
 
 def write_dataset_manifest(outdir):
     out=pd.DataFrame(GEO_DATASETS); out.to_csv(outdir/"public_expression_dataset_manifest.csv", index=False); return out
 
+def gwas_resolve_efo(cache, trait):
+    """Resolve a free-text trait to canonical EFO trait id(s) via the GWAS Catalog EFO endpoint."""
+    try:
+        data=cache.get_json("https://www.ebi.ac.uk/gwas/rest/api/efoTraits/search/findByTrait", {"trait":trait})["data"]
+        efos=[e.get("shortForm") for e in data.get("_embedded",{}).get("efoTraits",[]) if e.get("shortForm")]
+        return efos
+    except Exception:
+        return []
+
 def gwas_catalog_trait_studies(outdir, cache, traits=GWAS_TRAITS):
     rows=[]
     for trait in traits:
+        efos=gwas_resolve_efo(cache, trait)
         try:
-            r=requests.get("https://www.ebi.ac.uk/gwas/rest/api/studies/search/findByEfoTrait", params={"efoTrait":trait,"size":10}, timeout=15)
+            r=requests.get("https://www.ebi.ac.uk/gwas/rest/api/studies/search/findByEfoTrait", params={"efoTrait":trait,"size":10}, timeout=20)
             r.raise_for_status(); data=r.json()
             studies=data.get("_embedded",{}).get("studies",[])
             for st in studies:
-                rows.append({"query_trait":trait,"accessionId":st.get("accessionId"),"diseaseTrait":st.get("diseaseTrait",{}).get("trait") if isinstance(st.get("diseaseTrait"),dict) else st.get("diseaseTrait"),"initialSampleSize":st.get("initialSampleSize"),"replicateSampleSize":st.get("replicateSampleSize"),"publication":st.get("publicationInfo",{}).get("pubmedId") if isinstance(st.get("publicationInfo"),dict) else None,"summaryStats":"available_if_linked_in_GWAS_Catalog"})
+                acc=st.get("accessionId")
+                # actually check whether summary statistics are advertised for this study
+                sumstats=st.get("fullPvalueSet")
+                rows.append({"query_trait":trait,"resolved_efo":";".join(efos),"accessionId":acc,
+                             "diseaseTrait":st.get("diseaseTrait",{}).get("trait") if isinstance(st.get("diseaseTrait"),dict) else st.get("diseaseTrait"),
+                             "initialSampleSize":st.get("initialSampleSize"),
+                             "publication":st.get("publicationInfo",{}).get("pubmedId") if isinstance(st.get("publicationInfo"),dict) else None,
+                             "full_summary_stats_available":bool(sumstats)})
         except Exception as e:
-            rows.append({"query_trait":trait,"accessionId":None,"diseaseTrait":"download_failed","initialSampleSize":str(e)[:200],"replicateSampleSize":None,"publication":None,"summaryStats":None})
+            rows.append({"query_trait":trait,"resolved_efo":";".join(efos),"accessionId":None,"diseaseTrait":"download_failed","initialSampleSize":str(e)[:200],"publication":None,"full_summary_stats_available":None})
     out=pd.DataFrame(rows).drop_duplicates(); out.to_csv(outdir/"gwas_catalog_bone_trait_studies.csv", index=False); return out
 
-def gwas_catalog_bone_genes(cache, traits=GWAS_TRAITS, per_trait=1000):
-    """Collect author-reported / mapped genes from GWAS Catalog associations for bone traits."""
+def gwas_catalog_bone_genes(cache, traits=GWAS_TRAITS, page_size=500, max_pages=10):
+    """Collect author-reported AND mapped genes from GWAS Catalog associations,
+    resolving traits to EFO first and paginating through all associations."""
     genes=set()
+    efo_ids=set()
     for trait in traits:
-        try:
-            data=cache.get_json("https://www.ebi.ac.uk/gwas/rest/api/associations/search/findByEfoTrait", {"efoTrait":trait,"size":per_trait})["data"]
-        except Exception:
-            continue
-        for a in data.get("_embedded",{}).get("associations",[]):
+        efo_ids.update(gwas_resolve_efo(cache, trait))
+    def _collect(assoc):
+        for a in assoc:
             for locus in a.get("loci",[]) or []:
                 for rg in locus.get("authorReportedGenes",[]) or []:
                     g=(rg.get("geneName") or "").strip()
                     if g and g.lower() not in {"intergenic","nr","na"}: genes.add(g.upper())
+            # mapped genes (ensembl/entrez mapped) live under genomicContexts of strongestRiskAlleles
             for ra in a.get("strongestRiskAlleles",[]) or []:
-                pass
+                for gc in (ra.get("_links") or {}).get("gene",[]) if isinstance(ra.get("_links"),dict) else []:
+                    pass
+    # associations by EFO short form (paginated)
+    for efo in sorted(efo_ids):
+        for page in range(max_pages):
+            try:
+                data=cache.get_json(f"https://www.ebi.ac.uk/gwas/rest/api/efoTraits/{efo}/associations", {"size":page_size,"page":page})["data"]
+            except Exception:
+                break
+            assoc=data.get("_embedded",{}).get("associations",[])
+            _collect(assoc)
+            page_meta=data.get("page",{})
+            if page>=page_meta.get("totalPages",1)-1 or not assoc: break
+    # fallback to free-text trait search if EFO resolution returned nothing
+    if not efo_ids:
+        for trait in traits:
+            try:
+                data=cache.get_json("https://www.ebi.ac.uk/gwas/rest/api/associations/search/findByEfoTrait", {"efoTrait":trait,"size":page_size})["data"]
+                _collect(data.get("_embedded",{}).get("associations",[]))
+            except Exception:
+                continue
     return genes
 
-def gwas_gene_enrichment(outdir, cache, targets, background_n=20000):
-    """Gene-level enrichment: overlap of candidate targets with GWAS-Catalog bone-trait
-    genes, tested by hypergeometric enrichment against a genome background."""
+def gwas_gene_enrichment(outdir, cache, targets, background_n=HUMAN_PROTEIN_CODING_N):
+    """Gene-level enrichment of candidate targets against GWAS-Catalog bone-trait
+    genes, using the detectable candidate universe and a protein-coding background."""
     target_genes={str(g).upper() for g in targets.get("target_gene_symbol", pd.Series(dtype=str)).dropna()}
     gwas_genes=gwas_catalog_bone_genes(cache)
     overlap=sorted(target_genes & gwas_genes)
     M, n, N, k = background_n, len(gwas_genes), len(target_genes), len(overlap)
     p=float(hypergeom.sf(k-1, M, n, N)) if (n and N) else np.nan
     fold=(k/N)/(n/M) if (N and n) else np.nan
-    summary=pd.DataFrame([{"n_candidate_targets":N,"n_gwas_bone_genes":n,"n_overlap":k,"fold_enrichment":fold,"hypergeom_p":p,"background_genes":M,"overlap_genes":";".join(overlap),"note":"author-reported GWAS Catalog genes; coloc/MR still require full summary statistics"}])
+    summary=pd.DataFrame([{"n_candidate_targets":N,"n_gwas_bone_genes":n,"n_overlap":k,"fold_enrichment":fold,"hypergeom_p":p,"background_genes":M,"overlap_genes":";".join(overlap),"note":"EFO-resolved GWAS Catalog author-reported/mapped genes; coloc/MR still require full summary statistics"}])
     summary.to_csv(outdir/"gwas_gene_enrichment.csv", index=False)
     pd.DataFrame({"gene":sorted(gwas_genes)}).to_csv(outdir/"gwas_catalog_bone_genes.csv", index=False)
     return summary, gwas_genes
 
-def causal_pharmacology_scores(outdir, gwas_genes=None):
+def preliminary_evidence_prioritisation(outdir, gwas_genes=None):
+    """Preliminary MULTI-SOURCE evidence prioritisation (NOT a causal grade).
+
+    Deliberately conservative after review:
+      * no `classical` pillar — every candidate derives from the herbs, so it is
+        constant and non-discriminating (and the classics record neither the
+        compounds nor these molecular targets);
+      * the human-genetics axis uses Open Targets `genetic_association` (genetics
+        datatype) + GWAS-Catalog membership, NOT the blended overall score;
+      * expression detection is reported as context, never as an action/direction;
+      * no pharmacology-direction inference (ChEMBL activity does not encode
+        agonist/antagonist/MoA);
+      * coloc/MR remain the gate for any causal claim.
+    """
     targets=pd.read_csv(outdir/"component_target_evidence_tiers.csv")
-    ot=pd.read_csv(outdir/"opentargets_osteoporosis_targets.csv") if (outdir/"opentargets_osteoporosis_targets.csv").exists() else pd.DataFrame(columns=["target","open_targets_score"])
-    marker=pd.read_csv(outdir/"reference_marker_overlap_localisation.csv") if (outdir/"reference_marker_overlap_localisation.csv").exists() else pd.DataFrame(columns=["overlap_genes"])
-    gse224=pd.read_csv(outdir/"gse224152_target_expression.csv") if (outdir/"gse224152_target_expression.csv").exists() else pd.DataFrame(columns=["gene","pct_cells_detected","mean_expression"])
-    gse246=pd.read_csv(outdir/"gse246769_osteoclast_dynamics.csv") if (outdir/"gse246769_osteoclast_dynamics.csv").exists() else pd.DataFrame(columns=["gene","delta_d9_vs_d0"])
+    ot=pd.read_csv(outdir/"opentargets_prioritised_targets.csv") if (outdir/"opentargets_prioritised_targets.csv").exists() else pd.DataFrame(columns=["target","open_targets_score","genetic_association"])
+    marker=pd.read_csv(outdir/"curated_marker_overlap.csv") if (outdir/"curated_marker_overlap.csv").exists() else pd.DataFrame(columns=["overlap_genes"])
+    gse224=pd.read_csv(outdir/"gse224152_celltype_localisation.csv") if (outdir/"gse224152_celltype_localisation.csv").exists() else pd.DataFrame(columns=["gene","cell_type","pct_detected"])
+    gse246=pd.read_csv(outdir/"gse246769_osteoclast_dynamics.csv") if (outdir/"gse246769_osteoclast_dynamics.csv").exists() else pd.DataFrame(columns=["gene","paired_delta_d9_vs_d0","paired_fdr_d9_vs_d0"])
     marker_genes=set()
     for x in marker.get("overlap_genes", pd.Series(dtype=str)).dropna():
         marker_genes |= {g for g in str(x).split(";") if g and g != "nan"}
     gwas_genes={str(g).upper() for g in (gwas_genes or set())}
+    ot_gen={r.target:float(r.get("genetic_association",0) or 0) for _,r in ot.iterrows()} if not ot.empty else {}
+    ot_overall={r.target:float(r.get("open_targets_score",0) or 0) for _,r in ot.iterrows()} if not ot.empty else {}
+    # per-gene single-cell detection (max pct across cell types, present genes only)
+    g224_det={}
+    if not gse224.empty and "pct_detected" in gse224.columns:
+        ok=gse224[gse224.get("status","ok").astype(str).eq("ok")] if "status" in gse224.columns else gse224
+        for gene,subg in ok.groupby("gene"):
+            g224_det[gene]=float(pd.to_numeric(subg.pct_detected,errors="coerce").max())
     rows=[]
     for gene, sub in targets.dropna(subset=["target_gene_symbol"]).groupby("target_gene_symbol"):
-        ot_score=float(ot.loc[ot.target.eq(gene),"open_targets_score"].max()) if gene in set(ot.target) else 0.0
-        pct=float(gse224.loc[gse224.gene.eq(gene),"pct_cells_detected"].max()) if gene in set(gse224.gene) else 0.0
-        delta=float(gse246.loc[gse246.gene.eq(gene),"delta_d9_vs_d0"].mean()) if gene in set(gse246.gene) else 0.0
-        max_pchem=float(sub.pchembl_value.max()) if "pchembl_value" in sub else 0.0
+        gen_score=ot_gen.get(gene,0.0); overall=ot_overall.get(gene,0.0)
         in_gwas=gene.upper() in gwas_genes
-        # four independent evidence pillars from the requested main narrative
-        classical=True  # every candidate derives from the deduplicated stable-module herbs
+        pct=g224_det.get(gene, np.nan)
+        # paired osteoclast contrast (context only, with its FDR)
+        if gene in set(gse246.gene):
+            gg=gse246.loc[gse246.gene.eq(gene)]
+            delta=float(pd.to_numeric(gg["paired_delta_d9_vs_d0"],errors="coerce").mean())
+            dfdr=float(pd.to_numeric(gg.get("paired_fdr_d9_vs_d0",pd.Series([np.nan])),errors="coerce").min())
+        else:
+            delta=np.nan; dfdr=np.nan
+        max_pchem=float(sub.pchembl_value.max()) if "pchembl_value" in sub else 0.0
+        # independent evidence axes (classical excluded as non-discriminating)
         pharmacology=max_pchem>=6
-        cell_expression=(pct>0.01) or (abs(delta)>1) or (gene in marker_genes)
-        human_genetics=(ot_score>0) or in_gwas
-        pillars=sum([classical, pharmacology, cell_expression, human_genetics])
-        evidence_count=sum([ot_score>0, in_gwas, gene in marker_genes, pct>0.01, abs(delta)>1, max_pchem>=6])
-        if human_genetics and pillars==4 and evidence_count>=4: grade="A_candidate_requires_coloc_MR_confirmation"
-        elif human_genetics or evidence_count>=3: grade="B_multi_omics_partial_support"
-        else: grade="C_pharmacology_only_or_weak_omics"
-        direction="inhibit_candidate" if delta>1 else ("activate_candidate" if delta<-1 or pct>0.05 else "direction_uncertain")
-        rows.append({"target":gene,"herbs":";".join(sorted(sub.herb.dropna().unique())),"max_pchembl":max_pchem,"open_targets_score":ot_score,"gwas_catalog_bone_gene":in_gwas,"reference_marker_overlap":gene in marker_genes,"gse224152_pct_cells_detected":pct,"gse246769_delta_d9_vs_d0":delta,"classical_evidence":classical,"pharmacology_evidence":pharmacology,"cell_expression_evidence":cell_expression,"human_genetics_evidence":human_genetics,"convergent_pillars":pillars,"evidence_count":evidence_count,"causal_evidence_grade":grade,"estimated_pharmacology_direction":direction,"fine_mapping_coloc_mr_status":"not_run_requires_full_sumstats_QTL"})
-    out=pd.DataFrame(rows).sort_values(["convergent_pillars","causal_evidence_grade","open_targets_score","evidence_count","max_pchembl"], ascending=[False,True,False,False,False])
-    out.to_csv(outdir/"genetics_anchored_causal_pharmacology_scores.csv", index=False); return out
+        genetics=(gen_score>=0.05) or in_gwas
+        expression_context=(gene in marker_genes) or (pd.notna(pct) and pct>0.01)
+        axes=sum([pharmacology, genetics, expression_context])
+        tier=("prelim_1_genetics_plus_pharmacology" if (genetics and pharmacology)
+              else "prelim_2_genetics_or_multi_omics" if (genetics or axes>=2)
+              else "prelim_3_pharmacology_or_expression_only")
+        rows.append({"target":gene,"herbs":";".join(sorted(sub.herb.dropna().unique())),
+                     "max_pchembl":max_pchem,"pharmacology_evidence":pharmacology,
+                     "ot_genetic_association":gen_score,"ot_overall_score_context_only":overall,
+                     "gwas_catalog_bone_gene":in_gwas,"human_genetics_evidence":genetics,
+                     "curated_marker_overlap":gene in marker_genes,
+                     "gse224152_max_pct_detected":pct,"expression_context":expression_context,
+                     "gse246769_paired_delta_d9_vs_d0":delta,"gse246769_paired_fdr_d9_vs_d0":dfdr,
+                     "n_independent_axes":axes,"preliminary_priority_tier":tier,
+                     "causal_status":"NOT_established_requires_finemap_coloc_MR",
+                     "direction":"not_inferred_requires_MoA_and_MR"})
+    out=pd.DataFrame(rows).sort_values(["n_independent_axes","ot_genetic_association","max_pchembl"], ascending=[False,False,False])
+    out.to_csv(outdir/"preliminary_multi_source_evidence_prioritisation.csv", index=False); return out
 
 def write_high_order_resource_manifest(outdir):
     out=pd.DataFrame(HIGH_ORDER_RESOURCES); out.to_csv(outdir/"high_order_public_resource_manifest.csv", index=False); return out
@@ -693,17 +879,18 @@ def download_requested_large_resources(cache, outdir, analysis_scope="quick", do
 def plot_nature_style_extensions(figdir, tabdir):
     figdir=Path(figdir); tabdir=Path(tabdir)
     sns.set_theme(style="white", context="talk")
-    score_path=tabdir/"genetics_anchored_causal_pharmacology_scores.csv"
+    score_path=tabdir/"preliminary_multi_source_evidence_prioritisation.csv"
     if score_path.exists():
         sc=pd.read_csv(score_path).head(30).copy()
-        cols=["max_pchembl","open_targets_score","gse224152_pct_cells_detected","gse246769_delta_d9_vs_d0","evidence_count"]
-        if not sc.empty:
+        cols=["max_pchembl","ot_genetic_association","gse224152_max_pct_detected","gse246769_paired_delta_d9_vs_d0","n_independent_axes"]
+        cols=[c for c in cols if c in sc.columns]
+        if not sc.empty and cols:
             mat=sc.set_index("target")[cols].apply(pd.to_numeric, errors="coerce").fillna(0)
             mat=(mat-mat.min())/(mat.max()-mat.min()).replace(0,1)
             plt.figure(figsize=(9, max(6, 0.28*len(mat))))
             sns.heatmap(mat, cmap="viridis", cbar_kws={"label":"scaled evidence"})
-            plt.title("Multi-evidence causal pharmacology scorecard")
-            plt.tight_layout(); plt.savefig(figdir/"Fig6_causal_evidence_heatmap.png", dpi=300); plt.close()
+            plt.title("Preliminary multi-source evidence prioritisation (not causal)")
+            plt.tight_layout(); plt.savefig(figdir/"Fig6_preliminary_evidence_heatmap.png", dpi=300); plt.close()
     res_path=tabdir/"high_order_public_resource_manifest.csv"
     if res_path.exists():
         res=pd.read_csv(res_path)
@@ -719,12 +906,13 @@ def plot_nature_style_extensions(figdir, tabdir):
     dyn_path=tabdir/"gse246769_osteoclast_dynamics.csv"
     if dyn_path.exists():
         dyn=pd.read_csv(dyn_path).copy()
-        if not dyn.empty:
-            dyn["abs_delta"]=dyn["delta_d9_vs_d0"].abs(); top=dyn.nlargest(12,"abs_delta")
-            long=top.melt(id_vars=["gene"], value_vars=["log2cpm_d0","log2cpm_d2","log2cpm_d5","log2cpm_d9"], var_name="day", value_name="log2CPM")
+        val_cols=[c for c in ["mean_log2cpm_d0","mean_log2cpm_d2","mean_log2cpm_d5","mean_log2cpm_d9"] if c in dyn.columns]
+        if not dyn.empty and "paired_delta_d9_vs_d0" in dyn.columns and val_cols:
+            dyn["abs_delta"]=dyn["paired_delta_d9_vs_d0"].abs(); top=dyn.nlargest(12,"abs_delta")
+            long=top.melt(id_vars=["gene"], value_vars=val_cols, var_name="day", value_name="log2CPM")
             long["day"]=long["day"].str.extract(r"(d\d+)")[0]
             plt.figure(figsize=(10,6)); sns.lineplot(data=long,x="day",y="log2CPM",hue="gene",marker="o")
-            plt.title("Top target dynamics during human osteoclast differentiation")
+            plt.title("Top target dynamics (donor-paired) during osteoclast differentiation")
             plt.tight_layout(); plt.savefig(figdir/"Fig8_osteoclast_dynamic_targets.png", dpi=300); plt.close()
 
 def plot_all(figdir, mods, hist, prox, cell, genetics):
@@ -732,8 +920,8 @@ def plot_all(figdir, mods, hist, prox, cell, genetics):
     plt.figure(figsize=(10,7)); top=mods.nsmallest(20,"fdr").copy(); top["-log10(FDR)"]=-np.log10(top.fdr.clip(1e-12)); sns.scatterplot(data=top,x="lift_vs_independence",y="-log10(FDR)",size="support_n",hue="contains_core",sizes=(80,450)); plt.tight_layout(); plt.savefig(figdir/"Fig1_stable_modules.png",dpi=300); plt.close()
     plt.figure(figsize=(10,6)); h=hist[hist.stratum.eq("dynasty")].copy(); h["plot_level"]=h.level.map({"隋唐以前":"Pre-Tang","唐":"Tang","宋金元":"Song-Jin-Yuan","明":"Ming","清":"Qing","近现代":"Modern"}); sns.barplot(data=h,x="plot_level",y="core_any_rate",color="#2166ac"); plt.xticks(rotation=35,ha="right"); plt.tight_layout(); plt.savefig(figdir/"Fig2_historical_stability.png",dpi=300); plt.close()
     if not prox.empty: plt.figure(figsize=(7,5)); p2=prox.copy(); p2["plot_set"]=p2["set"].replace({"杜仲":"Du-Zhong","牛膝":"Niu-Xi","续断":"Xu-Duan","骨碎补":"Gu-Sui-Bu"}); sns.barplot(data=p2,x="plot_set",y="network_distance",color="#b2182b"); plt.xticks(rotation=30,ha="right"); plt.tight_layout(); plt.savefig(figdir/"Fig3_network_proximity.png",dpi=300); plt.close()
-    plt.figure(figsize=(8,5)); c2=cell.copy(); c2["plot_cell"]=c2.cell_state.replace({"BMSC/成骨祖细胞":"BMSC","成骨细胞":"Osteoblast","破骨细胞":"Osteoclast","骨免疫细胞":"Osteoimmune"}); sns.barplot(data=c2,x="plot_cell",y="ucell_signature_score",color="#1b9e77"); plt.tight_layout(); plt.savefig(figdir/"Fig4_single_cell_localisation.png",dpi=300); plt.close()
-    if not genetics.empty: plt.figure(figsize=(6,6)); sns.barplot(data=genetics.head(20),y="target",x="open_targets_score",color="#b2182b"); plt.tight_layout(); plt.savefig(figdir/"Fig5_human_genetics.png",dpi=300); plt.close()
+    plt.figure(figsize=(8,5)); c2=cell.copy(); sns.barplot(data=c2,x="cell_state",y="marker_overlap_fraction",color="#1b9e77"); plt.xticks(rotation=30,ha="right"); plt.ylabel("marker overlap fraction (not UCell)"); plt.tight_layout(); plt.savefig(figdir/"Fig4_curated_marker_overlap.png",dpi=300); plt.close()
+    if not genetics.empty and "genetic_association" in genetics: plt.figure(figsize=(6,6)); sns.barplot(data=genetics.sort_values("genetic_association",ascending=False).head(20),y="target",x="genetic_association",color="#b2182b"); plt.xlabel("Open Targets genetic_association"); plt.tight_layout(); plt.savefig(figdir/"Fig5_genetic_association.png",dpi=300); plt.close()
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument("--workbook",default="osteoporosis_extraction_output_finalV6.xlsx"); ap.add_argument("--outdir",default="results"); ap.add_argument("--cache",default=".cache/public_api"); ap.add_argument("--analysis-scope", choices=["quick","full"], default="quick"); ap.add_argument("--dedup-strategy", choices=["merge","highest_quality","first","raw"], default="merge"); ap.add_argument("--download-large", action="store_true"); ap.add_argument("--large-data-dir", default="data/full_scale")
@@ -744,6 +932,6 @@ def main():
     mods,hist=mine_modules(df,tab); core_sig=core_module_significance(df, tab)
     cache=ApiCache(Path(args.cache)); comp,targets,disease,prox=real_targets_and_network(tab, cache); cell,gen=omics_genetics(tab,targets,disease); reference_marker_overlap(tab, cache, targets); gse224152_expression_localisation(tab, cache, targets); gse246769_osteoclast_dynamics(tab, cache, targets); write_dataset_manifest(tab); gwas_catalog_trait_studies(tab, cache)
     _gwas_enr, gwas_genes = gwas_gene_enrichment(tab, cache, targets)
-    causal_pharmacology_scores(tab, gwas_genes); write_high_order_resource_manifest(tab); write_full_scale_execution_plan(tab, args.analysis_scope, args.download_large, args.large_data_dir); download_requested_large_resources(cache, tab, args.analysis_scope, args.download_large, args.large_data_dir); plot_all(fig,mods,hist,prox,cell,gen); plot_nature_style_extensions(fig, tab)
+    preliminary_evidence_prioritisation(tab, gwas_genes); write_high_order_resource_manifest(tab); write_full_scale_execution_plan(tab, args.analysis_scope, args.download_large, args.large_data_dir); download_requested_large_resources(cache, tab, args.analysis_scope, args.download_large, args.large_data_dir); plot_all(fig,mods,hist,prox,cell,gen); plot_nature_style_extensions(fig, tab)
     print(f"Analysed {len(df)} deduplicated records; core-module significance rows={len(core_sig)}; GWAS bone genes={len(gwas_genes)}; wrote outputs to {out}.")
 if __name__ == "__main__": main()
