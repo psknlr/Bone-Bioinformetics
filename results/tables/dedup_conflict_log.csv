@@ -1,0 +1,646 @@
+source_record_id,n_extractions,books,title,drugs_conflict,symptoms_conflict,syndrome_conflict,op_related_conflict,relevance_conflict,first_not_highest_quality,first_has_no_drug_but_others_do,union_herbs
+0075d7f02b5db30e8921e913b816402e,14,四诊法,足少阴气绝即骨枯。少阴者，冬脉也，伏行而温于脊髓。故骨髓不温即肉不着骨，骨肉不相,False,True,True,False,False,True,False,
+00e9c7bd283a84a33b4b32adf2c99d6b,2,黄帝内经素问白话版,黄帝问道：痿证是怎样引起的？岐伯说：肺是诸脏之张，又是心脏的华盖。遇有失意的事情,False,True,False,False,False,False,False,
+018f12458b33e8245dd5d3963c866698,3,奇效良方,治 扑损伤，骨碎骨折，筋断刺痛，不问轻重，并皆治之。,False,False,False,True,False,False,False,
+01ed38709092f0130dcb3f41dafd439b,2,千金要方（四库本）,虎骨酒治骨虚酸疼不安好倦主膀胱寒方,False,False,False,False,False,True,False,虎骨酒
+0208176291f4a565c5096137c693430c,2,范中林六经辨证医案,【诊治】患者跛行，左下肢筋骨沿后侧呈放射性疼痛近六年，时有刺痛感。左足凉麻甚。舌,False,False,False,False,False,False,False,不二丹;五通散;当归四逆汤;酒醴
+024f956890114f55e0602f4474c5bf90,2,医宗金鉴,此膏治跌打损伤，筋断骨折，肿硬青紫。,True,True,False,False,False,False,False,没药降灵丹
+02db45c400c79f670059ac4628fc8319,3,素问释义,大迎骨空各一。,False,False,False,True,False,False,False,
+02f1f47105f4e574c376f2069f9022da,2,中藏经校注,论骨痹第三十八,False,False,True,True,False,False,False,
+037b0b81bf008df281a00ddefbfd3fed,5,"古今图书集成医部全录010（303-358,内科、伤寒）",【 注　阴阳之气不和，则液与精不合，使液溢于骨外，而下流于阴矣。液溢于外，则髓液,False,True,True,False,False,True,False,
+03a133ea14216a2154f528ed6c19d9bd,22,素问悬解,肾气热则腰脊不举，骨枯而髓减，发为骨痿。,True,True,False,False,False,True,True,三因加减四斤丸;丹溪虎潜丸;六味丸;安肾丸;小续命汤;独活寄生汤;知母;羌活胜湿汤;黄柏
+03f8d1166c86f521a1f3d265020b7a16,2,杂病广要,医经载五劳六极之证，非传尸骨蒸之比，多由不能卫生，始于过用，逆于阴阳，伤于荣卫，,False,True,True,False,False,False,False,
+04650d82b5a8d522f5ea4640718b81d9,7,重订灵兰要览,小便黄赤，虚火时炎，是为阴虚。东垣所谓膏粱之人，久服汤药，醉以入房，损其真气，则,True,True,True,False,False,True,False,五积散;六味丸;六味地黄丸;大柴胡汤;姜附汤;官桂;封髓丹;小柴胡汤;小续命汤;干姜附子汤;摩腰膏;杜仲;滋肾丸;独活寄生汤;续断;羊肾;羌活;肉桂;肾气丸;茴香丸;风髓丹;鹿茸;黑豆
+04ed345ed2f8689395fed041ff4a64ad,2,普济方（四库本181-240卷）,夫虚劳羸痩者五臓之气伤损也经所谓一损损于皮毛毛聚而毛落二损损于血脉血脉虚少不能荣,False,False,True,False,False,False,False,
+053330738051ad6af62d1e7ec96f32fa,8,古今图书集成医部全录,肾脉微滑为骨痿，坐不能起，起则目无所见。,False,True,True,False,False,True,False,
+053c7c52f6a0ebfc6865585031f8fb0c,2,中藏经校注,痹者，风寒暑湿之气中于人〔1〕脏腑之为〔2〕也。入腑，则病浅易治；入脏，则病深难,False,False,True,False,False,False,False,
+0566e6c2143749fe8b32f40f7c2a8baf,2,古今图书集成医部全录,＋ 骨痹证  主肾气弱,False,False,False,False,False,False,False,
+0589e60cc22250b12cc83c6089dd1656,3,临证一得方,（案103）症属阴分不足，筋挛骨痿，虚损之重候也。填补，其可缓也。,True,False,True,False,False,False,True,回阳玉龙膏
+058fb995ea1dfaed91b022c7e681b141,2,神灸经纶,手足为诸阳之本阳之气主动以应天经曰天有十日人有手十指以应之天有十二行人有足十指茎,True,False,False,False,False,False,False,大补元煎;橘络桑枝膏;清暑益气汤;生脉散
+05c614ba6d6bfafbfc74508b7fb72219,2,"古今图书集成医部全录003（47-68,灵枢）",【 马莳曰：此言肾经之脉异病变也。急为肝脉，肾得急脉而甚，则肾主骨，风邪入骨，当,False,True,False,False,False,False,False,
+0661089426171f0406667ee8ca3d9676,11,古今图书集成医部全录009（211-302）,短刺者，刺骨痹稍摇而深之，致针骨所，以上下摩骨也。,False,True,True,True,False,True,False,
+06c002d7d305784991a92769fd72cfab,2,叶氏录验方,治打扑伤损骨折筋伤皆治之。,True,True,False,False,False,False,True,槐实
+082f308f6b9f64c80a80e3373ca0d9ee,2,三元参赞延寿书,书云：因汗入水，即成骨痹。,False,False,True,True,False,False,False,
+085f16049937b8364077a8e0e862fc49,5,"古今图书集成医部全录010（303-358,内科、伤寒）",【 注　姚氏曰：精液补益脑髓而下流阴股，故髓海有余则足劲轻健而多力。髓从骨空，循,False,True,True,False,False,True,False,
+08773278f2625308356697f646134c41,2,黄帝内经太素,言骨上有空，五谷津液入此骨空，资脑髓也。此骨空种数所在难分，此皆可知者，不可知者,False,False,False,False,False,False,False,
+0a5d6b9e89dc3df26f1fd7a882f0037c,4,普济方（四库本1-60卷）,干汤　疗骨极主肾实热则色炲隐曲膀胱不通大便壅塞四肢急疼,True,True,False,False,True,True,False,三黄汤;地黄;大戟;大黄;干枣;干枣汤方;干汤;甘草;甘遂;芫花;黄芩
+0aa048523b064712f6d638012b3bde4c,2,皇汉医学,疗吐血在胸腹不去，破骨折血结，金疮内塞，产后中寒，下乳汁。(《别录》),False,True,True,True,False,False,False,蛴螬
+0ac5d3dcda2c83b861cfec87966f8093,11,医林掇英,钟老频频点头，诚恳地说：“应医生说得很对，我们对局部辨证应该给予一定的重视。在外,True,True,False,False,False,True,True,清暑益气汤;调中益气汤
+0b010f6bf1aa982532e236bbf9ad6fbb,2,类经,积寒留舍，荣卫不居，卷肉缩筋，肋肘不得伸，内为骨痹，外为不仁。<em>（经络八。,True,False,False,True,True,False,True,附子
+0b3417ae28f6d31f7a148e59d2072086,2,灵素节注类编,一身内外之气，由肺权衡敷布，肺热叶焦，则气不能输转周行，即无津液以濡养皮毛，而虚,False,False,False,False,False,False,False,
+0bd1b88154381296dd284f0024a2e6c3,7,针灸问答,答：睛明　瞳髎　大骨空　小骨空　拳尖　合谷　足三里　光明,False,False,True,True,True,True,False,
+0c0005c405916cb65b658fccdbbb107d,3,古今图书集成医部全录009（211-302）,黄帝问于伯高曰：何以知骨之病也？伯高曰：耳焦枯，受尘垢，病在骨，骨有属，骨之属者,False,False,True,False,False,False,False,
+0c01a840728f3b4f2ea81ab7070c95bd,2,针灸逢源,为三 。(阳辅穴足少阳之别络于厥阴并经下络足跗故曰同阴之脉)阳维之脉令人腰痛。痛,False,True,True,False,False,False,False,
+0c5393a3e69a7052d156f277a213112b,2,古今图书集成医部全录009（211-302）,风痹痿厥四论，《内经》言之详矣。今余又为之说，不亦赘乎？曰：非赘也。为近世不读《,True,False,True,False,False,False,False,凉膈散;柴胡饮子;泻心汤;盐水;苦参;黄连;黄连解毒汤
+0de8a173684b4abba92396465aeddf7b,2,济阳纲目,李氏曰：血阴而气阳也，有暴虚而无伤损者，易复。有虚而亏损者，亦可补益。惟久虚而伤,True,True,True,False,False,False,False,人参理中汤;十全大补汤;四物汤;牛膝丸;生脉散;补中益气汤
+0ef7d1a4e4f258ca240aeba7756e7273,2,黄帝八十一难经纂图句解,肾主骨，骨枯髓减，发为骨痿。痿，无力也。,False,False,True,False,False,False,False,
+0ffd45f88fd4d0112f3967e515f4fe0d,3,医经原旨,大骨枯槁，大肉陷下，骨髓内消，动作益衰，真脏未见，期一岁死，见其真脏，乃予之期日,True,True,True,False,False,False,True,大黄虫丸;百劳丸
+101d8a5072552345eec9a7cb9a84048f,2,素问灵枢心得,真气者，所受于天，与谷气并而充身者也。正气者，正风也，从一方来，非实风，又非虚风,False,False,True,False,True,True,False,
+10a85d8c13d7a3ab435d67d63d68da90,2,古今图书集成医部全录,【 注  痹者，痹闭而不遂也。泣者，凝于络脉，泣濇而不能流行也。厥者，逆冷也。血,False,False,False,False,False,False,False,
+10b95bf7af32fb9211449c9628a81601,2,"古今图书集成医部全录006（122-150,头面耳）",聋之为病，俗医率以慓悍燥烈之药治之，往往谓肾水虚冷故也。夫岂知水火之阴阳，心肾之,False,True,False,False,False,False,False,
+10cab23ca17df4ec09525f4261fc40b2,4,赤水玄珠（标点本）,运气言少气有二：一曰火热。经云：火郁之发，民病少气。又云：少阴之复，少气骨痿。又,False,True,True,False,False,True,False,
+11e100f83783c5edf0c964fe206db65f,2,证治准绳·杂病,故《下经》曰：肉痿者，得之湿地也。又曰：脾热者，色黄而肉蠕动。宜苍、白术，二陈，,False,False,False,False,False,True,False,二陈汤;加味四斤丸;牛膝丸;白术;苍术;金刚丸;霞天膏
+1396fcbb999cfbb7550f742e42d36213,10,古今图书集成医部全录009（211-302）,太阳有余，病骨痹身重。,False,True,True,False,False,False,False,
+13c7270e80f84078cb186c51f7cc7538,2,证治准绳·杂病,宜八味顺气散，或调气散，或四七汤。手足搐搦为风厥，宜小续命汤。因酒而得为酒厥，宜,True,False,False,False,False,False,True,二陈汤;八味顺气散;四七汤;小续命汤;葛花解酲汤;调气散
+13ec430187ef343de5aa912f3b69c3d6,2,杂病心法要诀,成劳者，谓虚损日久，留连不愈，而成五劳、七伤，六极也。因复感者，谓不足之人，阳虚,False,False,False,False,False,True,False,
+14a414d0e21ffd2a40bb78fdf49ac518,2,东医宝鉴,夫肾虚为病，不能纳诸气以归元。故气逆而上，咳嗽痰盛，或喘或胀，髓虚多唾，足冷骨痿,True,True,False,False,False,False,True,人参汤;八味丸;安肾元;补骨脂
+15773af810774da663b1220610e5effb,3,经验丹方汇编,跌打骨折,True,False,True,False,False,False,True,古石灰;小麦叶;白及;白芨;白蜡;童便;自然铜;莲房灰;萝葡叶;青松毛;韭汁
+15b365594c90c361963b88f496907730,7,景岳全书,脾劳者，舌本苦直，不得咽唾。肾劳者，背难以俯仰，小便不利，色赤黄而有余沥，茎内痛,True,True,True,False,True,False,True,丹溪虎潜丸;保命金刚丸;六味丸;鹿角丸
+15dfb7bd31b90e2ad1f2a7dc84782843,2,黄帝内经灵枢注证发微,此言肾绝之证候死期也。肾主骨，其脉行于冬而濡骨髓，惟肾气绝，则骨枯肉脱，齿槁发焦,False,True,False,False,False,False,False,
+15f3ecda5af404289178bbb248508f6c,2,景岳全书,徐东皋曰：腰者肾之外候，一身所恃以转移阖辟者也。盖诸脉皆贯于肾而络于腰脊，肾气一,False,False,True,False,False,False,False,补肾汤丸
+17665f07ba60ba36315dcc62448e87a8,2,太乙版黄帝内经,足少阴之气绝也，水竭骨枯。少阴者，冬之脉也，伏行而濡骨髓者也。故骨不濡，则肉不能,False,False,False,False,False,True,False,
+1786a17cc6a963a9a34703e278cb0f44,6,永类钤方,哺露疳　虚热往来，头骨分开，翻食吐虫，烦渴呕哕。此三者使柴骨枯露，危矣。,True,True,True,True,True,True,True,十全丹;十金丹;大芦荟丸
+17e4d777db0aeb9eb2b3e39780ce8254,9,中国接骨图说,上为细末。诸骨碎骨折出臼者。每服一钱。好酒调下。麻倒不知疼处。,True,True,True,True,False,False,True,乌药;半夏;川芎;当归;木鳖子;猪牙皂角;白芷;紫金皮;麻药方
+18eeeb15116c89297b01828ab1384f73,3,中藏经,又，其脉急甚，则肾痿瘕疾；微急，则沉厥，奔豚，足不收；缓甚，则折脊；微缓，则洞泄,False,True,True,False,False,False,False,
+195724562cd2fc624d9d2cb8431396c9,18,古今图书集成医部全录,太阳有余，病骨痹身重。,False,True,True,True,False,False,False,
+197965c00f056a618d3f5201d75ca353,2,循经考穴编,肾气绝，即骨枯。少阴者，冬脉也，伏行而温于骨髓；骨髓不温，则肉不着骨，骨肉不相亲,False,False,False,False,False,False,False,
+198a0dae55b93d6d7a206fc5c8679023,2,"古今图书集成医部全录005（93-121,脏腑经络运气）",肾，水官也。左肾右肾，前对脐，后着于脊。丈夫六十肾气衰，发落齿槁，阳气衰，毛发焦,False,True,False,False,False,False,False,
+1a6df2fe1aa3818340564d96816e06ce,3,脉经,肾脉急甚，为骨痿、癫疾；微急，为奔豚、沉厥，足不收，不得前后。缓甚，为折脊；微缓,True,True,False,False,False,False,True,内补散;地黄煎;建中汤;肾气丸
+1d3d570d2574b8abb54b67cd12a1b38a,2,医学心悟杂症要义,「腰涌，有风、有寒、有湿、有热、有瘀血、有气滞、有疾饮、皆标也，肾虚其本也。腰痛,True,True,True,False,False,True,False,二陈汤加白术、萆薢、白芥子、竹沥、姜汁;八味丸;六君子汤;六君子汤加杜仲、续断;六味丸;橘核丸;泽兰汤;独活汤;苍白二陈汤;苍白二陈汤加独活
+1d743e32ed03431efe499b250409ea61,2,神农本草经译注,【2】六极：指六种极度虚损的病症。“一曰气极，令人内虚，五臟不足，邪气多，正气少,False,True,True,False,False,False,False,
+1d8236cf79de2ba32177fc019031bc99,3,不居集,骨极,True,True,True,False,True,False,True,八味丸;天门冬大煎;木瓜汤;牛膝丸;独活寄生汤
+1e742750eb9138671a973493b54e547d,3,医灯续焰,李知府妻杨氏，带下病七年，月崩不止，骨痿着床。日服五丸至十丸、十五丸。取下脓血五,True,False,True,False,False,False,False,万病紫菀丸
+1efbfc3c68a4a423d6ff7ea25015d073,2,针方六集,大小骨空皆妙处，艾火须当识得真。,True,False,False,False,False,False,False,艾火
+1f151f8117735e50a8de709f9631ac97,3,卫生易简方,治骨折 用乳香末掺极痛处，以小黄米粥涂上，却用五灵脂一两，茴香一钱，共为末，浓掺,True,True,True,False,False,False,False,乌金散;乌金石;乳香;五灵脂;五灵脂散;大黄;小黄米粥;当归;生姜;自然铜;茴香;黄小米粥;龟板
+1f435d23a8dea12c3524426dc1f6c932,2,外台秘要,删繁论曰∶凡骨极者。主肾也。肾应骨。骨与肾合。又曰以冬遇病为骨痹。骨痹不已。,False,False,True,False,False,False,False,
+1f71a418a63b5ee71de6b91b84f59b0f,2,名老中医陈治恒经验集,肾主骨生髓，肾气衰，故发生骨枯髓减；肝主筋，又为罢极之本，肝气衰则疲乏无力，甚至,True,True,True,False,True,False,True,丹参;人参;山茱萸;巴戟天;当归;补骨脂;鸡血藤;鹿角胶;黄精;黄芪
+1fa2672cb6c08eab4e1e5776afe0e24c,2,内经诠释,骨枯髓虚，肾脂枯不长。足不任身，足弱不能胜任其身。发为骨痿。骨痿，则软弱不能起于,True,True,False,False,False,False,True,内补散;地黄煎;建中汤;肾气丸;肾沥汤
+1fa733a6d3db5b12d1fb7929ed571fcc,2,证治合参,知柏地黄丸（即六味加知母），黄柏　治阴虚火动，骨痿髓枯。,True,True,False,False,False,False,False,知柏地黄丸;知母;黄柏
+1fc87d18734899dd02184e13b57ccc77,38,顾松园医镜,六味加知柏方〔见火。〕治远行劳倦，逢大热而渴，阳气内伐，热舍于肾，水干火旺，骨枯,True,True,False,False,False,True,True,二冬;人参酒;健步丸;六味加知柏方;杜仲;柏皮;清暑益气汤;滋阴补髓汤;煨肾丸;牛膝;牛膝丸;牛膝丸加味四斤丸;猪脊筋;知母;石斛;羌活胜湿汤;虎骨;补益肾肝丸;调中益气汤;金刚丸;黄柏;龟甲
+1fe5fc533e919fd18a7642ce7c2c9807,5,古今图书集成医部全录,大骨枯藁，大肉陷下，肩髓内消，动作益衰，真脏来见，期一岁死。见其真脏，乃予之期日,False,True,True,False,False,True,False,
+1fe93a937e64a789db5a8908fe12c3e6,3,古今图书集成医部全录009（211-302）,【 注　骨痿不起，热伤肾气也。目无所见，热伤骨精也。】,False,True,True,False,False,False,False,
+2079ac4f285d575ffde50deee7a0c20e,5,医学纲目,〔《灵》〕 血脉荣卫周流不休，上应星宿，下应经数。寒邪客之则血泣，血泣则不通，不,True,True,True,True,True,False,True,豕膏
+208bc8007010120a3031d82f609decf0,2,古今图书集成医部全录,足少阴气绝则骨枯发无泽。发无泽者骨先死。,False,True,False,False,False,False,False,
+209ffe106bd0d53ae5b26da649de7ef7,2,赤水玄珠（标点本）,肾热生骨痿，足不任身，腰脊不举，骨枯髓减，色黑而齿槁者。补其荥然谷，通其俞太溪。,False,True,False,False,False,False,False,
+216c816c2c413ff3ceae32db2108fdbe,3,济阳纲目,东垣曰：夫脾胃虚弱，必上焦之气不足，遇夏天热盛，损伤元气，怠惰嗜卧，四肢不收，精,False,True,False,False,False,False,False,
+218bd628a89e5f2095669182fcf87256,14,伤科汇纂,<span style='font-weight:bold;'>骨折伤,True,True,True,True,False,False,False,乳香;厚朴栀子汤;姜汁;定痛膏;封口药;接骨膏;散血膏;杉木片;枫香;柴胡龙骨牡蛎汤;桂枝茯苓丸;没药;生韭自然汁;童便;糯米粉;续断;草荞;补肉膏;补肌散;金沸草
+22819f2e2a096b33fd1f0f3df3c52065,3,古今图书集成医部全录009（211-302）,肾气热生骨痿，故足不任身。诸痿皆属于上者，指病之本在肺也。故必先起于肺，然后热传,False,True,False,False,False,False,False,
+22f78a5165e0d75040885e6ca157093c,2,医学纲目,腰痛引少腹控 ，不可以仰，刺腰尻交者，两髁胂上，以月生死为 数，发针立已，左取右,False,False,False,False,True,True,False,
+2335e04be431807c1cc3618ddd678dff,3,柳选四家医案,风寒湿三气。伏留于骨。骨节酸痛。自冬而起。所谓骨痹也。骨痹不已。内舍于肾。则发热,False,True,False,False,False,False,False,
+2525d1fb9a7e4bb6c44d7f03f1e8922e,2,医学传心录,东垣①曰：“饮食不节则胃病，胃病则气短精神少。胃虚则火邪乘之而生大热，有时而显火,True,False,True,False,False,False,False,五苓散;四君子汤;四物汤;平胃散;补中益气汤;黄芪建中汤
+2592b706db38b651afc806a427bf29d9,4,济阳纲目,麦斗散　治跌伤骨折。,True,True,True,False,False,True,False,人参汤;姜汁、好醋、独子肥皂;杉木或杉板;益元散;续骨神丹;酒;雄鸡血;麦斗散
+25a4b5002146681a7c3c6e7460c22480,2,古今图书集成医部全录009（211-302）,补肝丸　治肾虚骨痿，阴冷如冰，并阴汗两脚痿弱无力。,False,True,False,False,False,False,False,补肝丸
+2662863d4ac0ca4883426d36ff786cb6,32,黄帝八十一难经纂图句解,骨痿少气。,True,True,True,False,False,True,False,二贤散;大七气汤;大枣;奔豚丸;奔豚汤;木香梹榔散;桂枝;桂枝加桂汤;甘草;茯苓
+2669643e900ae63cfd8e486099c0fbfd,2,"古今图书集成医部全录002（1-46,素问）",【 张志聪曰：伯言治痿之法，虽取阳明，而当兼取其五脏之荥俞也。各补其荥者，补五脏,False,False,False,False,False,False,False,
+272ac1c230523a4d470d7da0c320ef94,4,重订通俗伤寒论,筋缓不能自收持。五损损于肾。肾主骨。故骨痿不能起于床。肾司二便。故二便不禁，此先,True,True,True,False,False,True,False,六味地黄丸;左归丸
+276892d812fad7ec41143b83377847d3,3,普济方（四库本1-60卷）,芍药散　治骨虚冷痛倦怠【方见本门骨极类】,False,True,False,False,False,True,False,芍药散
+27a0070334225c2db2bb5d74e833d31a,2,"古今图书集成医部全录010（303-358,内科、伤寒）",传尸劳瘵，皆心受病，气血凝结，故有成虫者。盖由饮食酒色，忧思丧真，遂至于此。凡虫,False,False,False,False,False,False,False,
+27a5b422fde3a7cfd969160fd6e45d62,13,普济方（四库本361-426卷）,头目晕　　　膀胱　　　筋挛骨痹　　　　肝胃,True,True,True,False,False,True,True,当归丸;当归没药丸;当归没药散;当归灵没丸
+27ecb2865068722458c511c8a8ffdd62,2,古今图书集成医部全录,肾之积名曰贲豚，发于少腹，上至心下若豚状，或上或下，无时。久不已，令人喘逆骨痿少,False,True,True,False,True,False,False,
+287cd7533f6b3de1f89910dbd559b815,2,古今图书集成医部全录008（175-210）,【 注　临川陈先生云，医风先医血，血行风自灭。盖肝藏血而主风，又肝气为阳为火，肝,False,False,False,False,False,False,False,
+2907938c46c696562281373b588a65bb,2,伤科汇纂,《纲目》：治筋断骨折，用骨碎补捣筛，煮黄米粥和裹伤处有效。如瘀痛，用续断煮汁内服,True,False,False,False,False,False,False,接骨木、当归、芍药、乳香、自然铜合方;神授散;续断;骨碎补
+29309a3e8d522249ed2712b9c32f21fd,3,古今名医汇粹,骨痹即寒痹，痛痹也，痛苦切心，四肢挛急，关节浮肿，五积散主之。,True,False,True,True,False,False,False,五积散;加减五积散;升麻汤;如意通圣散;桂心散;没药散;神效黄芪汤;虎骨丸;防风汤
+294733cce694206094f647aca2bc0b09,6,普济方（四库本301-360卷）,治打扑伤损或骨折者,True,True,False,True,False,False,False,未展荷叶;白及末;白芨末;童便;荷叶;葱白;蜜;韭汁;韭菜汁
+2a532b76f18b8c32c8640c4bbff7b383,4,灵枢识,简案、举。合也。谓支节尽痛。马云骨痹已成节。不能举而痛。非也。马又依一本改阴作阳,False,False,True,True,False,False,False,
+2a5cb5120db144e437868aa0cb0fdb93,2,普济方,x按摩法疗骨蒸方 x 上患 等病。必瘦。脊骨自出。以壮丈夫屈手头指。及中指。夹患,True,True,False,False,False,False,True,大青竹筒
+2a663b753e1238f5eb51e7acab149317,6,外科全生集,<span style='font-weight:bold;'>跌打骨断,True,True,True,True,False,False,False,乳香;地鳖虫;大黄;寄生;广皮;故纸;杜仲;桃仁;没药;猴骨;白芨;穿山甲;红花;肉桂;脱骨断筋方;自然铜;芒硝;虎骨;骨碎补;鹿筋;黄柏;黄米粥
+2a9b6ea0063a03319d34d08bfac90fd0,4,医学纲目,足少阴气绝则骨枯，少阴者，冬脉也，伏行而濡骨髓者也，故骨不濡则肉不能着也。骨肉不,False,True,True,False,False,True,False,
+2ab075e9d19e0fdb4ea7fb943e2b5248,2,古今图书集成医部全录,骨痿,True,True,True,False,False,True,False,清暑益气汤;龙骨丸
+2ac613feb5aedb14891991c673623644,9,类经,虚邪之中人也，洒淅动形，起毫毛而发腠理。其入深，内搏于骨，则为骨痹。搏于筋，则为,False,True,True,True,True,False,False,
+2af1627e3b8e83166a2168eaf4561c3b,2,普济方（四库本301-360卷）,治攧骨折伤方,True,False,False,False,False,False,False,栗子;糯米;麻皮;黑豆
+2b526eaedaacedd5d8c71ec89bfd09c5,3,范中林六经辨证医案,【按语】本例属厥阴证骨痹。因患者原身体强壮，主要为暴力骨折后，寒湿乘隙深入筋骨，,True,False,False,False,False,False,False,不二丹;酒醴之剂
+2b5f91de2b5b409d2567e106b2e1bc6e,13,景岳全书,《五癃津液别篇》曰：五谷之精液和合而为膏者，内渗入于骨空，补益脑髓，而下流于阴股,False,True,True,False,True,True,False,
+2be0b8c2be48c054c566ec129b845414,5,永类钤方,【病证】冬为骨痹，骨重不举，不遂而痛，邪移于肾，其状善胀。,True,True,True,True,False,False,False,三痹汤;乌药顺气散;二妙苍蘗散;五积散;单豨莶丸;宣明升麻汤;川芎茯苓汤;当归拈痛汤;续断丸;羌活胜湿汤;蠲痹汤;越婢汤;防己黄芪汤;附子理中汤
+2bf3a90371ea344eab5d78a428844b56,3,普济方（四库本301-360卷）,治骨折伤损法方,True,True,True,True,False,False,False,地黄;童子小便;苏枋;麻皮灰
+2c76c7c4d0b5be00a90b9624d89a1b6a,2,针灸甲乙经校注,〔12〕精伤则骨酸痿厥　《太素》注：“精为骨髓之液，故精伤则骨酸痛及骨痿也。”,False,True,True,False,True,False,False,
+2c905a14d38964864c3f0b10cf6101e5,2,普济方（四库本1-60卷）,地黄煎【出圣恵方】治骨极强骨髓令人健,True,False,False,False,True,False,False,丹参;地黄煎;当归;桑寄生;牛膝;狗脊;生地黄;羊髓;防风;鹿角胶;黄芪
+2cb74b6079e0065b0e339a9908b01e5a,2,黄帝八十一难经纂图句解,然：足少阴气绝，即骨枯。,False,True,True,False,False,False,False,
+2cd13622e852aa0381d2abb9dc8ca96c,8,全体病源类纂,《痹论》：以冬遇此风寒湿三气者，为骨痹（节）。骨痹不已，复感于邪，内舍于肾，则善,False,False,True,True,False,False,False,
+2d80c6a6a486b6c1e01cccbbf26c9d65,2,圣济总录,治肾脏虚损，骨痿羸瘦。行坐无力。短气不足，腰背相引疼痛。石钟乳丸方,True,True,False,False,False,False,False,石钟乳丸方;鹿茸丸
+2d9f0d62db7a5c035f51ffb652377f65,2,针灸甲乙经校注,譩嘻〔1〕，在肩髆〔2〕内亷，侠第六椎下两傍各三寸，以手按之痛，病者言譩嘻，是穴,False,True,True,False,True,False,False,
+2f3069bb2fd109163b8e30e0e79411eb,3,千金要方（四库本）,阳辅　阳交　阳陵泉主髀枢膝骨痹不仁,False,True,True,True,False,True,False,
+2f5d453cac968851d4daf87487e28a31,6,读素问钞,大骨枯愿大肉陷下肩髓内消。（缺盆深也。）,False,True,False,False,False,True,False,
+2fa452bd3f254c6e3d00baf38ee4ef7d,2,"古今图书集成医部全录004（69-92,难经脉法）",【 注　肾为阴脏主骨，阴寒太甚，故为骨癫疾。肾为生气之原，正气虚寒，则为沉厥。虚,False,False,False,False,False,False,False,
+2fa5f56c5e17586bc527d67a52b8d470,2,不居集,骨极之状，腰脊酸削，齿痛，手足烦痛，不欲行动。肾之所主，肉苁蓉、锁阳、虎骨。,True,False,True,False,True,False,True,肉苁蓉;虎骨;锁阳
+30a5eef75c709cfb25ed27851be5fdae,2,孙真人备急千金要方（道藏本）,粟米：味咸，微寒，无毒。养肾气，去骨痹、热中，益气也。,True,True,False,False,False,False,False,粟米;陈粟米
+312df1a901f81a92aaa070d9644d7ede,4,类经,怵惕思虑者则伤神，神伤则恐惧流淫而不止。悲哀动中者，竭绝而失主。喜乐者，神惮散而,False,True,False,False,True,True,False,
+319cfd1c91b57f484de404d9722f986f,5,跌打损伤回生集,接骨紫金丹（治跌打骨折，瘀血攻心，发烧及昏不省人事）,True,True,True,False,False,True,True,接骨紫金丹;白及
+31b975714df80b9f75bc5ad5ebccae65,3,难经集注,虞曰。今之五损损于肾。肾主骨故骨痿不能起于床。素问曰。肾热则腰脊不举。骨枯髓减。,True,True,False,False,False,False,False,麦冬
+326804308ae072cf92d069f4d93c0dc7,6,针灸易学,目白，后太阳、光明、大骨空、小骨空。,False,False,True,True,True,True,False,
+3378653b82d59cf5496aeae933c65b9e,2,普济方（四库本301-360卷）,干地黄散【出千金方】　治骨折筋断伤疼痛者,False,True,True,False,False,False,False,干地黄散
+339a0d5b4a76a80ff8a72e251e8ba786,2,黄帝内经素问语译,"黄帝道:痿证是怎样引起的呢?岐伯说:肺是各种脏器之长,又是心脏的华盖。遇有失意的",False,False,False,False,False,True,False,
+33f874f7e201fe74856e72969da69df6,2,丹溪手镜,劳 为咽噎，喘促嗽血唾血，腰痛骨痿阴痿，男小精，女不月，劳伤筋，为气耗，逸治劳。,False,True,True,False,False,False,False,
+340415656674969d4be4dfd2023d166d,2,针灸甲乙经,曰：何以知其皮肉血气筋骨之病也？曰：色起两眉间薄泽者，病在皮。唇色青黄赤白黑者，,False,False,False,False,False,False,False,
+341ece2a36b6d691ac95e025c8b928eb,2,黄帝内经素问详注直讲全集,帝曰：治之奈何？岐伯曰：各补其荥而通其俞，调其虚实，和其逆顺。筋脉骨肉，各以其时,False,False,False,False,False,False,False,
+3438f39802d24ab471c1febfc6dd7d02,6,圣济总录,治骨极腰脊痛，不能久立，发堕齿槁，手足疼甚，骨碎补丸方,True,True,True,False,True,True,False,木瓜丸;木瓜汤;肾沥汤;骨碎补丸
+346eda1a34eab2255d829abbadbba585,2,灵枢识,张云：其最深者。内伤于骨。是为骨蚀。谓侵蚀及骨也。,False,False,True,False,False,False,False,
+34734fb42a2188ea38c48e103b5ab6cf,2,"古今图书集成医部全录002（1-46,素问）",【 张志聪曰：气街即气冲，系足阳明经穴，在少腹毛中两旁各二寸横骨之两端。冲脉并足,False,False,False,False,True,False,False,
+347392942efd000f84901f5d49696930,3,古今图书集成医部全录009（211-302）,【 注　远行劳倦则伤肾，逢大热则暑暍伤阴，渴则阴液内竭，是以阳热之气，内伐其阴，,False,True,False,False,False,False,False,
+351590ee0a9fd1fc7d251550d55c96c1,3,黄帝内经灵枢略,黄帝问曰：余闻人有精气津液血脉，余意以为一气耳。今乃辩为六名，余不知所以，愿闻何,False,True,True,False,True,False,False,
+3523df0cab3811e64c3e3d9ea776a1ab,3,证治准绳,故《下经》曰：肉痿者，得之湿地也。又曰：脾热者，色黄而肉蠕动。宜苍、白术，二陈，,True,True,False,False,False,False,False,二陈;二陈汤;加味四斤丸;牛膝丸;白术;苍术;金刚丸;霞天膏
+358817077819f3e14a8a4d582a895099,2,奉时旨要,《经》云：五穀之精液，和合而为膏者，内渗于骨空，补益脑髓，而下流于阴股。阴阳不和,False,False,True,False,True,True,False,
+35eecc3fa581f318daf36ff95978a73b,2,全体病源类纂,沉氏曰：骨之撑架于身者，犹梁柱之于屋；然屋非梁柱不坚竖，人非骨骼不支持。《经》言,False,False,True,False,False,False,False,虎潜丸
+367318d7dd2071211ab29ba9c07b0e97,3,黄帝内经太素,有所远行劳倦，而逢大热而渴，渴则阳明气内代，则热合于肾，肾者水脏也，今水者不胜火,True,True,False,False,False,True,False,归脾汤
+370844f66e7fb8bddd3aed43017c9b50,2,素问经注节解,大骨枯愿，大肉陷下，肩髓内消，动作益衰，真脏未见，期一岁死。见其真脏，乃予之期日,False,False,False,False,False,True,False,
+37518a7192285bf7d3baf1a926ef5037,11,任应秋讲黄帝内经素问,【提要】论刺骨痹之法。,False,True,True,True,False,False,False,
+3762d8e56ef337bf26fae9d31b2ecbf5,2,脾胃论,《刺志论》云：气虚身热，得之伤暑，热伤气故也。《痿论》云：有所远行劳倦，逢大热而,False,True,False,False,False,True,False,清暑益气汤
+37a173ddeffea1e9ae1de8786d35bc85,3,袖珍方,治肾经虚败，遂成骨痿，腰脚难举，日加困乏。,True,True,False,False,False,True,False,起痿丹
+382e4447586baeea6af5791abb943e4d,11,读素问钞,内伐则热舍于肾肾水脏也今水不胜火则骨枯而髓虚故足不任身发为骨痿。（以热舍于肾中。,True,True,False,False,False,False,True,六味丸;知柏八味丸;补阴丸
+386ccf93f22534c4841aa8a6b356ec44,3,奇效良方,治肾脏中风寒湿成骨痹，腰脊疼痛，不得俯仰，两脚冷 痹，缓弱不遂，头昏耳聋，语音混,True,True,False,False,True,False,True,熟干地黄丸;附子独活汤
+388385d838fd0ca54242feb706dfd79f,21,素问释义,肾气热，则腰脊不举，骨枯而髓减，发为骨痿。,True,True,False,False,False,False,False,二妙散;杜仲;温肾散;滋阴降火汤;苁蓉;菟丝;菟丝子;萆薢;虎潜丸;虎骨散;金刚丸
+38cc1f9f32a1c734c0d223625f715a4a,52,兰台轨范,五损损于骨骨痿不能起于床,True,True,True,False,True,True,True,六味地黄汤;吉林参;地骨皮;天冬;天花粉;杜仲;沙虫干;牛膝丸;玄参;甘露饮加减;田鸡油;知母;石斛;苁蓉;菟丝子;萆薢;金刚丸;阿胶;鹿角胶;麦门冬;黄柏;黄芩;黄芪建中汤
+395587b16a4efbd2a4892df22e7f915c,6,普济方（四库本301-360卷）,治脑骨破及骨折,True,True,True,False,False,False,False,定痛方;葱白;蜜
+39d778cbea023e6718a831c28e7acae6,2,黄帝内经太素,劳倦逢于大热，渴则阳明内代者，阳明主谷，其气热盛，复有外热来加，阳明之脉内即代绝,False,True,False,False,False,False,False,
+39f87c6394095d203ccfcecd4721f704,3,扁鹊神应针灸玉龙经,大小骨空真妙穴，灸之七壮病除根。,False,False,True,False,True,True,False,
+3a4932b09a6300256a326a3c21e3d12e,10,袖珍方,治打扑闪肭，筋断骨折，挛急疼痛，不能屈伸。,True,True,True,True,False,True,True,乳香;川乌生;川芎;当归;没药;没药降圣丹;生地黄;白芍药;自然铜;骨碎补
+3a52978cd242991f14885373ac15876c,2,古今图书集成医部全录,有所远行劳倦，逢大热而渴，渴则阳气内伐，内伐则热舍于肾。肾者，水脏也。今水不胜火,False,False,False,False,False,False,False,
+3a6a68617dd3dc6791d6780af15324b3,2,"古今图书集成医部全录010（303-358,内科、伤寒）",按《难经》上损下损之说，其义极精，然有未尽者，犹宜悉也。盖凡思虑劳倦外感等证则伤,False,False,True,False,False,False,False,
+3afd90cc5f0552dfbe62157f4666f0c1,3,顾松园医镜,〕胆，足少阳也。是动则病口苦，〔胆病则汁溢，故口苦，〕善太息，〔胆郁则不舒，故太,False,True,True,False,False,True,False,
+3aff2da6cc742d9de13fd74e1d08b394,2,急救仙方（道藏本）,洗药，治男子、妇人骨断，用此煎水洗后整骨了，却用乌龙角贴。,True,True,True,False,False,False,False,乌龙角;仙正散洗药
+3b68e07b4b7e33afcdaa9c3d7f738714,2,普济方（四库本1-60卷）,芍药汤【出千金方】治骨极骨髓中疼,False,True,False,True,True,False,False,三黄汤
+3b7bd70948d10db394f34731e49b2924,2,证治准绳,茹黄门卒中风病，发时服药，泄出恶脓四升，赤黄水一升，一肉虫如乱发，愈。李知府妻杨,False,False,True,False,False,False,False,
+3b8a92fcc5386bcf76d8c25fcb582e95,2,古今图书集成医部全录,凡骨碎断或未碎断，但皮破损肉者，先用补肌散填满疮口，次用散血膏敷贴。如骨折，要接,True,False,True,False,False,False,False,定痛膏;封口药;接骨膏;散血膏;枫香;童便;补肉膏;补肌散;金沸草
+3bb4d1c5fb658787ee279fe53d30f910,3,"古今图书集成医部全录006（122-150,头面耳）",肾主骨之精，为瞳子散大者，因肾水虚骨枯，而心包络之火得以乘之也。,True,False,False,False,False,False,True,滋阴地黄丸
+3c3837a3c60b4108812ed5c463b2776d,6,千金要方（四库本）,治折骨断筋方,True,True,True,True,False,False,True,水蛭;活血丹;生鱼;生鳖;竹沥;钴铜末
+3d01c067f17831ee322bac1740e14b55,2,赤水元珠（四库本）,东垣曰大抵寒湿多而风热少然有房室劳伤肾虚腰痛者是阳气虚弱不能运动故也经曰腰者肾之,False,False,True,False,False,False,False,六味地黄丸;凤髄丹;滋肾丸;肾气丸;茴香丸
+3e46cba7c563ca453bdc8fabbb29a46a,2,奇效良方,治膀胱肾冷，坐起欲倒，目 ，气不足，骨痿。,True,True,False,False,False,False,False,龙骨丸
+3e5a74421e884a3848541a8fd145b38b,22,奇效良方,治肾损骨痿，不能起于床，宜服此益精。,True,True,True,False,False,True,True,保阴六味;大黄虫丸;牛膝丸;猪腰子;薯蓣丸
+3ebd048c4f7cdb6e14fa1f8ccba0e41a,2,经穴汇解,大骨空 手大指第二节前。尖上。屈指当骨节中。灸二七壮。主治内障久痛。及吐泻。（类,False,False,True,False,True,False,False,
+3ed0d000e045867f1137ec0519731fac,3,针灸甲乙经校注,〔1〕次窌　穴为腰尻骨两傍四骨空之第二空，故名次窌。,False,False,False,False,False,True,False,
+3f24f70661b72cde48bbf53548cca477,3,类经,精伤则骨 痿厥，精时自下。<em>（藏象九。）</em>,False,True,True,False,True,False,False,
+3fb7a47db87eb2ce0294292590f0d2c3,2,古今图书集成医部全录009（211-302）,痿者，手足痿软而无力，百节缓纵而不收也。圣人以痿病在诸证为切要，故特着篇目，分五,False,False,False,False,False,False,False,
+402276a92ff3c95add2c7b055eddd5a6,3,黄帝内经素问补注释文（道藏本）,有所远行劳倦，逢大热而渴，渴则阳气内伐，内伐则热舍于肾，肾者水藏也，今水不胜火，,True,True,False,False,False,False,False,清暑益气汤
+40308dbe777ae2106d36beaa4da37aef,5,黄帝内经太素,五曰输刺，输刺者，直入直出，深内之至骨，以取骨痹，此肾之应也。,False,True,True,True,False,False,False,
+41632aa979188015b64729bef5c3d42d,4,救伤秘旨,凡损伤骨断皮破者，药用水煎。皮不破者，药用酒煎。必加童便，以活瘀血。,True,False,False,False,False,False,False,乳香;没药;滑石;生油;童便;肉桂;良姜;葱汁;象皮
+419cb89c9dbae3d57c5f88465d00e5b5,2,程氏易简方论,治骨极，腰脊酸痛，齿痛，手足烦疼，不欲行动等症。,False,True,True,False,True,False,False,
+42cee89fbfbb5a5795cd47068ee8cab7,3,素问识,吴云：空。孔同。骨空。髓空也。马云：骨必有空。空。即穴也。故名篇。,False,False,True,False,False,False,False,
+43567d57f47c603b9427e673b4f773d2,2,冉雪峰内经讲义,4.骨空易髓，义颇精透，扁骨无孔，其髓气髓质，由何处出入，能实指之否。,False,False,False,False,False,False,False,
+43855c33e6bf0970623b42e7dc6ddbe9,2,针灸甲乙经校注,〔6〕发为骨痿　《太素》注：“肾在腰中，所以肾气热，腰脊不举，骨干，热煎髓减，故,False,False,True,False,False,False,False,
+43a931b34e608b721da3bbbd1bcc2be8,3,沈氏尊生书,筋也者，所以束节络骨，绊肉弸皮，为一身之关纽，利全体之运动者也。其主则属于肝，故,True,True,True,False,True,False,False,二妙散;温肾散;滋阴降火汤;虎潜丸;虎骨散;补骨脂
+43cf00a7002ebb1069de2daf861fed24,2,黄帝内经素问补注释文（道藏本）,肾气热，则腰脊不举，骨枯而髓臧，发为骨痿。,False,False,False,False,False,True,False,
+446ea2b6e0522072e1a511db0c22115e,2,古今图书集成医部全录,【 注  身寒而汤火不能热，厚衣不能温者，太阳气衰而寒在表也。不冻栗者，二阳火热,False,False,False,False,False,False,False,
+453bd80d3fdd258f57a8cf3b6cfc14d4,2,针灸甲乙经,黄帝问曰：肠胃受谷，上焦出气，以温分肉，以养骨节，通腠理。中焦出气如雾，上注溪谷,False,True,True,False,True,False,False,
+4553b6c6bf20aa0ca09bb7136de1302c,2,脉确,关主中宫胀不舒。（血虚肝郁则胀、脾胃虚。中气不足亦胀。）潮热骨蒸痿候尺。（阳气终,False,False,False,False,False,True,False,
+4557bef122fc9bff3fe38ba670067b07,11,不居集,《五癃津液别》篇曰：五谷之精液，和合而为膏者，内渗入于骨空，补益脑髓，而下流于阴,False,True,True,False,True,True,False,
+4569823acf87ecf299c6a3ae5d70b230,4,玉机辨症,东垣曰：房室劳伤，肾虚腰痛者，是阳气虚弱，不能运动故也。阳之不足宜补阳。如膏粱之,True,True,True,False,False,False,True,六味地黄丸;封髓丹;温肾丸;肾气丸;鹿茸茴香丸
+45f8f0a0b6431d804ffc8341f6958bf2,4,勿听子俗解八十一难经,然。足少阴气绝，即骨枯，少阴者，冬脉也，伏行而濡于骨髓。故骨髓不濡，即肉不着骨；,False,True,False,False,False,True,False,
+46060bf92e461c84b7aa36a1f6f5d578,20,医述,<span style='font-weight:bold;'>骨痹,True,True,True,True,True,True,True,三痹汤;乌药顺气散;五物汤;五痹汤;加味五痹汤;升麻汤;增味五痹汤;天麻丸;奇效人参散;川芎茯苓汤;当归汤;独活散;紫苏子汤;羚羊角汤;茯苓汤;蠲痹汤;行湿流气散;防风汤;附子汤
+4665ea6d8a581b0608a302a983d5de39,8,古今图书集成医部全录,【 王冰曰：内销骨髓，外破大腘，热过故致是。若留于骨节之间，津液所凑之处，则骨节,True,False,True,False,True,False,True,附子
+46d637a718a5d49cdab9b7f80b070c72,2,普济方（四库本61-120卷）,独活散【出圣惠方】　治腲腿风肌骨虚满四肢不收骨节疼痛腰脚缓弱无力,True,False,False,False,False,False,False,牛膝;独活;独活散;薏苡仁;赤茯苓;防风;附子;麻黄
+48bd220ecbf258430422ae8adec15eb5,2,素问悬解,有所远行劳倦，途大热而燥渴，渴则阳气燔蒸而内伐，内伐则热气舍于肾部。肾者水脏也，,False,False,False,False,False,False,False,
+496d6e6920c343fa1b51156a37a60764,2,古今名医验方秘方,钱峻：接骨仙方，治骨断粉碎者。,True,True,False,False,False,False,False,五加皮;接骨仙方;雄鸡
+4a7034090afc074ce5499a40c5c752b9,5,内经博议,五脏痿症。自肺热叶焦皮薄着而下。有脉痿肉痿筋痿骨痿之不一。脉痿者。心气热则脉下厥,True,True,False,False,False,True,False,肾着汤
+4aa82c987d72be838130f7a1cf1e3023,2,赤水玄珠（标点本）,东垣曰：大抵寒湿多而风热少，然有房室劳伤，肾虚腰痛者，是阳气虚弱，不能运动故也。,False,False,False,False,False,False,False,六味地黄丸;凤髓丹;滋肾丸;肾气丸;茴香丸
+4ae285d59794cb843cfc0be4f4f93ba4,2,黄帝内经素问集注,此三者。血行而不得反其空。故为痹厥也。（空、骨空也。骨空者。节之交三百六十五穴会,False,True,True,False,False,True,False,
+4bc1cef6d09978bebd506e42425f3ae0,4,喻选古方试验,打跌骨折　酒调白芨末二钱服，其功不减自然铜。古铢钱也。（《永类方》）,True,False,True,False,False,True,False,古铢钱;川乌头;白及;白芨;石膏;自然铜
+4cdc7515412eeb76b2ee66b94feffa56,10,"古今图书集成医部全录011（359-380,外科）",虚邪之中人也，洒淅动形，起毫毛而发腠理，其入深，内搏于骨则为骨痹，搏于筋则为筋挛,False,True,True,True,False,False,False,
+4ce4736124f8e6cbccef775896b30f72,2,古今图书集成医部全录,金刚丸  治肾损骨痿，不能起于床，宜益精。,False,True,False,False,False,False,False,金刚丸
+4d1ec9ac5ca3f571c8fee507c20ea896,15,圣济总录,治积气不散，结伏贲豚，发即上冲心胸，令人喘逆，骨痿少气，木香槟榔散方,True,True,True,False,True,True,True,东垣奔豚丸;木香槟榔散;桂枝独活汤
+4d31244f0176156d1e6daf3054ca1560,2,针灸甲乙经,曰：人身非衣寒也，中非有寒气也，寒从中生者何？曰：是人多痹，阳气少而阴气多，故身,False,False,True,True,False,False,False,
+4d345c4efc99b4b83cace65d7752c2ee,7,黄帝内经太素,太阴有余病骨痹身重，,False,True,True,True,False,True,False,
+4d6685b156500dd4b121e24101ab6db6,2,素问绍识,体重烦冤先兄曰。吴云。肝主筋。筋缓则不能收持。肾主骨。骨痿则艰于举动。脾主四肢。,False,False,True,False,False,True,False,
+4e94c15576787bc7ef762d6af4269b45,2,针灸甲乙经校注,手之阴阳，其受气之道近，其气之来也疾〔1〕，其刺深皆无过二分，留皆无过一呼〔2〕,False,False,False,False,False,False,False,
+4ed4b9cb518414dfe19c94949cbcb04b,2,"古今图书集成医部全录010（303-358,内科、伤寒）",肾积发于小腹，奔上至心，上下无时，如奔豚走，饥见饱减，小腹急，腰痛口干，目昏骨冷,True,False,False,False,False,True,False,大七气汤;桂;炒楝子肉;茴香
+4f0981ef10061ef521b081755f797b0b,2,针灸大成,《铜人针灸图》三卷，宋仁宗诏王维德考次针灸之法，铸铜人为式，分腑脏十二经，旁注俞,False,False,False,False,True,False,False,
+4ff7cfb47b2230df643d8c27e6446330,2,本草乘雅半偈,客曰∶人身以九窍为门，越人别立七冲为衢，大戟惟堪下泄，何有疆界门户？答曰∶九窍者,True,False,False,False,False,False,True,大戟
+517e06d4e2aa6264dac57182117a357b,3,济世全书,一厘金　治打跌骨折如神。（孙督方）,True,True,True,True,False,False,False,白及;白芨
+51a2c3ab4e2beb619a4a6ac416f9ed08,2,本草易读,骨折头破（葱二百二十一，验方二十三。）,True,True,False,False,False,False,True,葱白;蜜
+531e49278f6439846dc5d763688b43b7,2,古今图书集成医部全录009（211-302）,有无故口眼喎斜，投以中风药剂不效，盖缘骨虚中受风所致，当于此求之，不可例作寻常中,False,False,False,False,True,False,False,川乌
+5323d702a8aed3ea44268e55e6855316,3,黄帝素问直解,尻骨空，在髀骨之后，相去四寸。,False,False,True,True,True,False,False,
+53761463382e4f75beaaf30517f67c87,2,古今图书集成医部全录,积寒留舍，荣卫不居，卷肉缩筋，肋肘不得伸，内为骨痹，外为不仁，命曰不足，大寒流于,False,False,False,False,False,True,False,
+5457628444f71b162c3e9de26e439d46,2,古今图书集成医部全录,【 马莳曰：此言五脏各有所合，故五脏热则其所合者，有皮毛焦而为痿躄，有脉痿，有筋,False,True,False,False,False,False,False,
+5498838607c0691d701b8e7588333bab,4,证治准绳,每服五七十丸，食前温酒、白汤任下。（以上俱用下药，实者宜之。）腰胯连脚膝晓夜疼痛,True,True,False,False,False,True,False,六味丸;六味地黄丸;封髓丹;杜仲酒;滋肾丸;独活寄生汤;肾气丸;虎骨散;补阴丸;补骨脂丸
+551f0a831089a87ae68602317ef2a3d6,2,"古今图书集成医部全录003（47-68,灵枢）",【 王子方曰：风伤气，寒伤神，湿伤精。盖风伤卫，寒伤营，而寒水之气，又伤心火也。,False,False,False,False,False,False,False,
+5537b28ca91a8ae96d8ba63668fe49ee,2,彤园医书（外科）,生膝盖下左右两骨空陷之中，名鬼眼穴，四穴皆同，由下焦素虚、外邪乘入，先从膝眼隐隐,True,False,False,False,False,False,True,万灵丹;独活寄生汤;雷火神针
+560749d0abe6559465a97495e747092e,27,古今图书集成医部全录009（211-302）,肾气热则腰脊不举，骨枯而髓减，发为骨痿。,True,True,True,False,False,False,True,大建中汤;清神甘露丸
+562ffbf680f327f26da7837fdce1fcb2,3,望诊遵经,闻之精神者。天之分。骨骸者。地之分。属天者。清而散。属地者。浊而聚。是故阳化气。,False,True,False,False,True,True,False,
+5632f1bf86685f6b8a2d34b709de245e,2,证治汇补,胃病则气短精神少而生大热。有时显火上行。独燎其面。脾病则怠惰嗜卧。四肢不收。肠鸣,True,True,False,False,False,False,True,五苓散;四君子汤;平胃散;黄耆建中汤
+56a16ffc738116bf5dbb5e305c334cc2,2,圣济总录,治腕伤骨折。青金散方,True,True,False,False,False,False,False,丁香;虎胫骨;青金散;鲮鲤甲;麝香;龙脑
+5708706ef48ca99d2caf94c5c8015f3e,2,备急千金要方,论曰：骨极者，主肾也。肾应骨，骨与肾合。又曰：以冬遇病为骨痹，骨痹不已，复感于邪,False,False,False,False,False,False,False,
+57aef7d7a5796bd7a60b09a6440bccdd,2,圣济总录纂要,酸枣仁散方　治骨极肾虚，脚膝骨髓酸痛。,True,False,True,False,False,False,False,杜仲;熟干地黄;虎胫骨;酸枣仁;酸枣仁散
+57d06b4bcc8625b7c689c81882743776,3,"古今图书集成医部全录002（1-46,素问）",【 王冰曰：内销骨髓，外破大腘，热过故致是。若留于骨节之间，津液所凑之处，则骨节,False,True,False,False,True,True,False,
+580006d757bb09959ba99e5b18642aba,7,古今图书集成医部全录009（211-302）,骨痿,True,True,True,False,False,True,True,巴防天丸;补骨脂丸;龙骨丸
+5824a33240aad2da29dfa59405face7d,2,古今图书集成医部全录,骨痹者，乃嗜欲不节，伤于肾也。气内消则不能关禁，不能关禁则中上俱乱，中上乱则三焦,False,True,False,False,False,False,False,
+584d5d108b43989e7eec738f0d420e5a,3,玉机辨症,东垣曰：脾胃虚弱，必上焦之气不足，遇夏天热盛，损伤元气，怠惰嗜卧，四肢不收，精神,True,True,False,False,False,False,False,清暑益气汤
+591046d8ce35c46e80891c44b87e2b8c,3,赤水元珠（四库本）,金刚丸　肾损骨痿不能起床,True,True,True,False,False,False,False,牛膝丸;金刚丸
+5989d0fb873f197ae20cbaa7b97b4f7c,12,古今图书集成医部全录009（211-302）,骨空,True,True,True,True,True,True,True,艾
+59936348c19a4edc1e46bf260fb630c5,2,杂病源流犀烛,筋骨皮肉毛发病源流筋也者，所以束节络骨，绊肉  皮，为一身之关纽，利全体之运动者,True,True,False,False,True,False,False,二妙散;温肾散;滋阴降火汤;虎兞鸜;虎骨散;补骨脂
+59974c0dc50b3fbbd12514cd3dea6be9,2,伏气解,《痿论》曰：肾气热则腰脊不举，骨枯而髓减，发为骨痿。有所远行劳倦，逢大热而渴，渴,False,False,False,False,False,True,False,
+5a6b6ffb3811b1921a1eb1e451c74f2a,2,古今图书集成医部全录009（211-302）,风寒湿三气杂至，合而为痹也。以冬遇此者为骨痹。骨痹不已，复感于邪，内舍于肾。肾痹,False,False,True,False,False,False,False,
+5b4b4074729804956dbe9bee61d6720f,2,医灯续焰,此言远行劳倦，逢热而渴。渴则内热殊甚。内热甚，则乘其虚者而迫之。远行劳倦，则肾气,False,True,False,False,False,True,False,
+5be0c667c37c5847353d34c9fccf4169,2,"古今图书集成医部全录002（1-46,素问）",【 马莳曰：此言治痿之有法也。盖筋脉骨肉，各以其时而有受病之月，如肝受病于春为筋,False,False,False,False,False,False,False,
+5bfb7b489cdb4fcf37422c90299addaa,2,普济方（四库本1-60卷）,帝曰夫子言虚实者有十生于五脏五脉耳夫十二经脉皆生其病【注曰甲乙经曰皆生百病素问】,False,True,False,False,False,False,False,
+5c7fecd81d0479f407ed9a9f3bd0b253,48,伤燥论,嗌干　嗜卧　舌干口燥　寝汗出　憎风　骨痿不能起于床　发堕,True,True,True,False,False,False,False,八味丸;六味丸;加减八味丸;左归丸;煨肾丸;牛膝丸;益精金刚丸;金刚丸;金匮丸;黄芪建中汤
+5d2b7b4439570ad772e6dd719357122d,2,杂病心法要诀,虚损为六极之证：一，数转筋，十指爪甲痛，筋极也。一、牙齿动，手足痛，不能久立，骨,False,False,True,True,True,False,False,
+5dfc37fb8bd30369e49ceede2161cbda,2,古今图书集成医部全录,郾城梁贾人，年六十余。忽晓起梳发，觉左手指麻，斯须半臂麻，又一臂麻，斯须头一半麻,False,True,False,True,False,True,False,
+5eabc2ef75f533471c9ee76e597659b5,2,古今图书集成医部全录,骨虚者，酸疼不安，好倦；骨实者，苦烦热。凡骨虚实之应，主于肾膀胱。若其腑脏有病，,False,True,False,False,False,False,False,
+5edfd7e86f0f32d29fe7edb796c0a142,2,针灸甲乙经,邪之入于身也深，其寒与热相搏，久留而内着，寒胜其热则骨疼肉枯，热胜其寒则烂肉腐肌,False,False,True,True,True,False,False,
+5f2f91d53dfa831a39dee409174160fb,2,"古今图书集成医部全录003（47-68,灵枢）",【 张志聪曰：此言精液之为髓也。夫肾主藏精而主骨，和合而高者，五谷之液与肾脏之精,False,False,False,False,False,False,False,
+5f6c2b2bad13cf259189cbd613bcdeea,7,急救广生集,骨折肿痛 狗骨烧研，热醋调涂。（《敬修斋方》）,True,True,True,True,False,True,False,乳香;五灵脂;川芎;当归;没药;狗骨;白芨;赤芍;香油
+5f704549126c82fad9ca11205ede595b,4,古今图书集成医部全录,骨痹举节不用而痛，汗注烦心，取三阳之经补之。,False,False,True,False,False,True,False,
+6007d59aab969c446bc3372b3cde8b27,6,针灸经络腧穴歌诀白话解,大小骨空皆妙穴，多加艾火疾应痊。,False,True,True,False,True,False,False,
+602c053e044d1e73c95c90e33637cf7f,2,类经,黄帝问曰：痹之安生？岐伯对曰：风寒湿三气杂至，合而为痹也。<em>（痹者，闭也。,False,True,False,False,False,False,False,
+604360e5b25313309e6bed11a6b2230f,2,普济方·针灸,京门（肾募也。一名气府。一名气俞。在监骨腰中季肋。本侠脊灸三壮。主 。反折腰痛。,False,False,True,False,False,False,False,
+6053dd44bbce8b064eef00473349d0e2,2,读素问钞,大骨枯愿大肉陷下。（皮肤干着骨间肉陷也诸附骨际及空窍处亦同其类。）,False,True,False,False,False,False,False,
+606df09a14e760ca66230213083fff00,2,古今图书集成医部全录009（211-302）,牛膝丸 【 《保命集》】 　治肝肾损骨痿，不能起于床，筋弱不能收持，宜益精缓中。,False,False,False,False,False,False,False,牛膝丸
+61414818ffa471f46167ec40488ff707,6,回生集,<span style='font-weight:bold;'>骨痿,True,True,True,False,False,True,True,三黄;巴戟天丸;木通;玄参;生地;苍术;茯苓;葛根;起废汤;郁李仁;防风
+619ced37b88b65681d78ea99deaffdb6,2,古今图书集成医部全录,大骨枯藁，大肉陷下，胷中气满，喘息不便，内痛引肩项，期一月死。真脏见，乃予之期日,False,True,False,False,False,False,False,
+61bdea73b93e375cbaccfec1a36cf013,2,黄帝内经灵枢白话解,【白话解】虚邪贼风中伤人体，使人萧索寒栗，毫毛竖起，肌腠疏缓开泄，因此易于深陷。,False,False,False,False,True,False,False,
+62853ef897bc1b05f05eb380a3fbbe69,4,外科证治全生集,<b>跌打骨断</b>,False,True,True,False,False,False,False,
+63731160efec091ee82124f59e047b32,2,古今图书集成医部全录009（211-302）,【 注　四之加临客气，乃太阳寒水，主气乃太阴湿土，故寒凝于外，火郁于内，而病骨痿,False,False,False,False,False,False,False,
+64c4187bca997d338df7b981e256bef2,2,圣济总录纂要,补骨脂汤　治骨虚酸疼，多倦不能久立。,True,True,False,False,True,False,False,补骨脂汤
+6527b3854967a21bbe108cb6f07882d9,6,严氏济生方,治骨虚极，面肿垢黑，脊痛不能久立，气衰发落齿槁，腰脊痛，甚则喜唾。,True,True,True,False,True,False,False,牛膝;鹿角;鹿角丸
+6568ad1b8f79b48b1eb609e0626f0794,3,一见能医,六极者：尽力谋虑，劳伤乎肝，应乎筋极；曲运神机，劳伤乎心，应乎脉极。意外过思，劳,False,True,True,False,False,False,False,
+664658b6d49873500309c1ec6313446c,3,古今图书集成医部全录,肾主骨之精，为瞳子散大者，因肾水虚骨枯，而心包络之火得以乘之也。,True,True,False,False,False,False,False,清热地黄汤;滋阴地黄丸
+6668446c427c659aedc0e030739c35ba,2,"古今图书集成医部全录010（303-358,内科、伤寒）",虚劳之证，《金匮》叙于血痹之下，可见劳则必劳其精血也。营血伤则内热起，五心常热，,True,True,False,False,False,False,False,复脉汤;建中汤
+6680b597cb551eae4739451ec27e2eda,11,冯氏锦囊秘录,肾损骨痿，不能起床。,True,True,True,True,False,False,True,煨肾丸;牛膝丸;猪肾;金刚丸
+6750942587b444a0550b60e87d467e77,2,古今图书集成医部全录,【 注  脉气散于皮毛，复从太阴所主之肉，少阳所主之筋，太阳所主之骨而内通于五脏,False,False,True,False,False,False,False,
+67807d8aa36f521a61e6adac3f7ddca7,3,不居集,徐东皋云：腰者，肾之外候，一身所持，以转移、开合者也。盖诸脉皆贯于肾，而络于腰脊,True,True,False,False,False,False,False,六味地黄丸;封髓丸;滋肾丸;肾气丸;茴香丸;补肾丸;补肾汤
+67e5638952bb792f4a636ba207fa48ec,2,伤寒温疫条辨,大头者，天行疵疠之杂气，人感受之，壅遏上焦，直犯清道，发之为大头温也。世皆谓风寒,True,True,False,False,True,False,True,升降散;大黄;姜黄;白僵蚕;蝉蜕;马齿苋
+68de8fac6ae692d92809d36e06967db9,2,神农本草经疏,疏：矾石味酸，气寒而无毒。其性燥急，收涩解毒，除热坠浊。盖寒热泄痢，皆湿热所为；,False,False,True,False,False,False,False,矾石
+6943d4c97fcdf414daca6445bbc1fd76,3,普济方（四库本301-360卷）,蒲黄散　治骨折筋伤恶血攻心烦闷,True,False,True,False,False,False,False,川芎;当归;桂心;白芷;细辛;蒲黄;蒲黄散;蒲黄散方
+695ebd80b73fa7814f40c46e9fe7b884,2,普济方（四库本1-60卷）,洁古云洪尺由阴不及阳也从下至上先损肾肝故小便赤涩骨痿筋缓云岐曰主脉沉客脉洪沉洪相,False,False,True,False,False,False,False,
+69c31de0bca5a497a4757b32acb634e8,4,不居集,王海藏云：凡病人骨痿肉燥，筋缓血枯，皮聚毛落，阴不足而有热疾，是谓虚热。,True,True,False,False,False,True,True,人参地骨皮散;四顺饮子;地骨皮散;柴胡饮子;桃仁承气汤;清凉饮子;牵牛;白虎汤;羌活冲和汤;补中益气汤加芍药、黄柏;调胃承气汤;防己;黄连解毒汤
+6a546368a64e869bcca4eb5f80c6a04c,2,普济方（四库本181-240卷）,虚劳者五劳六极七伤是也五劳者一曰志劳二曰思劳三曰心劳四曰忧劳五曰痩劳又有五劳肺劳,True,False,False,False,False,False,False,人参黄耆散;加减五苓散;地黄;当归;当归地黄黄耆芍药;当归饮子;木香三棱丸;犀角散;芍药;通解丸;黄耆
+6b04050e8f41635ef9168e32d49b0b93,5,永类钤方,【病证】肾伤骨极。虚则面肿垢黑，脊痛气衰，毛发枯稿；实则面焦耳鸣，小便不通，手足,True,True,True,False,False,True,True,玄参汤;磁石丸;鹿角丸
+6b46a1e50149dc196a71426cf6ff2345,2,"古今图书集成医部全录002（1-46,素问）",帝曰：六气之复何如？岐伯曰：悉乎哉问也！厥阴之腹，少腹坚满，里急暴痛，偃木飞沙，,False,False,True,False,False,False,False,
+6c0d6f83faea1d40e711cb97219e807f,20,古今医统大全,经曰：肺热叶焦，五脏因而受之，发为痿 。心气热，则生脉痿，枢折挈，胫纵而不任地也,True,True,True,False,False,True,True,柏皮;清暑益气汤
+6cf06dbea7f2627f45773e7e19c534be,3,证治准绳·杂病,其为病也，惊痰则成心包痛，颠疾。热痰则成烦躁，头风，烂眼燥结，怔忡懊 ，惊眩。风,False,False,True,False,False,False,False,
+6dcd8489d0cbf1c3368186f819f54df1,2,黄帝内经素问集注,髓空在脑后三分。在颅际锐骨之下。一在龈基下。一在项后中复骨下。一在脊骨上空。在风,False,False,False,False,False,False,False,
+6e4263b28d7b2d419f2f9e337c991ae3,2,御纂医宗金鉴（四库本）,【集注】王又原曰肾为作强之官有精血以为之强也若肾虚精枯而血必随之精血交败湿热风毒,True,True,True,False,False,False,False,人参;熟地;牛膝;知母;羊肉;虎潜丸;虎骨;锁阳;黄茋;黄蘗;龟板
+6e843d54f8186947a1dd14b404fa51fd,3,黄帝内经素问集注,腰痛不可以转摇。急引阴卵。刺八与痛上。八 在腰尻分间。（腰痛不可以转摇者。肾将惫,False,False,False,False,False,False,False,
+6edbf25b62fca68c060137aff564acd8,2,圣济总录,论曰肾脏虚损，骨痿羸瘦者，盖骨属于肾，肾若虚损，则髓竭骨枯，阳气既衰，身体无以滋,False,True,False,False,False,True,False,
+6f2867115c6a2bb85c83a903d5d06ea6,3,黄帝内经素问补注释文（道藏本）,骨痹刺无伤脉肉者何？自刺其气，通肉之大小分中也。,False,False,True,False,False,False,False,
+6f2b2e0cbb8b12259e9a29942f455936,3,古今图书集成医部全录009（211-302）,骨极,True,True,True,True,False,False,False,桑根白皮
+6f48c4442067e07f6f69e3dda186ad7a,5,医述,热痰多成烦热；风痰多成瘫痪；冷痰多成骨痹；湿痰多成倦怠软弱；惊痰多成心痛癫疾；饮,True,True,True,True,False,False,False,六君子汤;半夏;南星
+6f524deda881d9393a70ec0ec09dd27c,2,福寿丹书,足少阴气绝，则骨枯。少阴者，冬脉也。伏行而温于骨髓，故骨髓不温，即肉不着骨，骨肉,False,True,False,False,False,True,False,
+6f84e371c7df5b54566460dfb882acec,2,古今图书集成医部全录,颠扑筋断骨折：用糯米一升，皂角切碎半升，铜钱百个，同炒至半焦黑，去铜钱为末，用好,True,False,False,False,False,False,False,半夏;好酒;妇人发;木鳖肉;热酢;皂角;粟米;糯米;葱白须;铜钱
+6fc1864600879bb1eeb580cc8cac176a,2,沈氏尊生书,诸痹，风、寒、湿三气，犯其经络之阴而成病也。故经曰：病在阳曰风，病在阴曰痹。痹者,True,True,False,True,False,False,False,五积散;四物汤;桂枝;秦艽;羌活;葛根;防风
+6fcc2d82798fffd4305601bd4dd2bb17,2,读素问钞,肾气热则腰脊不举骨枯而髓减发为骨痿。（续腰为肾府又肾脉上股内贯脊属肾故肾气热则腰,False,False,False,False,False,False,False,
+7023af1f12d5e01e665d316abf9c32c1,3,奇效良方,治男子女人虚劳不足，骨枯肉陷，并皆治之。,True,True,True,False,False,False,False,清神甘露丸
+7135ea0fc537ce7e144c7e9098160e7f,4,"古今图书集成医部全录010（303-358,内科、伤寒）",肾之积名曰贲豚，发于少腹，上至心下若豚状，或上或下，无时。久不已，令人喘逆骨痿少,False,True,False,False,True,False,False,
+717d6f7dfc84f2c306a4692c53fc1c4c,3,古今图书集成医部全录009（211-302）,骨痹者，乃嗜欲不节，伤于肾也。气内消则不能关禁，不能关禁则中上俱乱，中上乱则三焦,False,False,False,False,False,True,False,
+71e6864f97f7245bc50820be9dbfc851,3,古今图书集成医部全录,黄帝问于伯高曰：何以知骨之病也？伯高曰：耳焦枯，受尘垢，病在骨，骨有属，骨之属者,False,False,True,False,True,True,False,
+71fd426d7d4b039d656946c0e7a840c7,8,古今图书集成医部全录,【 注  肾热则津液竭，腰者肾之腑，故腰脊不能伸举，髓减骨枯而发为骨痿也。】,False,True,False,False,False,True,False,
+722312bdc3fb006569cfb7af31dd3810,2,黄帝内经素问补注释文（道藏本）,腰为肾府，又肾脉上股内贯脊属肾，故肾气热则腰脊不举也。肾主骨髓，故热，热则骨枯而,False,False,False,False,False,False,False,
+7229bfbfe91f0a6f3f6ca6d6f745dfea,3,古今图书集成医部全录,木香槟榔散  治积气不散，结伏奔豚，发即上冲心胷，令人喘逆，骨痿少力。,True,True,True,False,False,True,False,木香槟榔散
+723054773b2b12f508293e97e6a3fe08,9,古今图书集成医部全录,肾气热则腰脊不举，骨枯而髓减，发为骨痿。,False,True,False,False,False,True,False,
+727babba911e9762035f45ae4be3e4dd,2,普济方（四库本1-60卷）,生地黄煎【出圣恵方】治骨极实热骨髓酸疼宜服,True,False,False,False,True,False,False,生地黄煎;芍药汤
+732cc37af93a77d06fec618ce0f77dd6,2,医方选要,奔豚汤　治肾积发于小腹上至心，如豚奔走之状，上下无时，久不愈，病喘逆，骨痿，少气,False,True,True,False,False,False,False,
+73491a67a6ad824c91580c2c994f5e70,3,东医宝鉴,<b>骨折筋断伤</b>,True,True,True,True,False,False,False,七厘散;三七;乳香;川续断;廑虫;没药;自然铜;骨碎补;龙骨
+742fdbf450a47babb9594c2d86f7c67e,5,医辨,大抵诸腰痛，皆起肾虚，既挟邪气，则须除其邪。如无外邪积滞而自痛，则惟补肾而已。腰,True,True,True,False,False,True,False,乳香散;六味丸;大建中汤;封髓丹;摩腰膏;杜仲;滋肾丸;续断;羊肾;肾气丸;茴香丸;补阴丸;补骨脂;骨碎补;鹿茸
+7552d64a9165a45bb8675e9206a85244,9,古今图书集成医部全录,【 肾气虚，心悬如饥善恐，惕惕如人将捕，水不胜火，则骨枯而髓虚，故足不任身，发为,True,True,True,False,False,True,True,人参黄芪汤;清暑益气汤
+7588ada1bcd79c0708dfb3519518bc25,2,医学纲目,〔河〕热甚客于肾部，手足厥阴之经，廷孔郁结极甚，而气血不能宣通，则痿痹，神无所用,False,True,True,True,False,False,False,
+767ecd294f6cee3425c2df794334f675,2,杏苑生春,五脏各有所主，至其病证，莫不随所主而见焉。面青多怒，胁下痛硬，咳逆目眩，肢节挛急,False,True,True,False,False,True,False,
+771589264ffddcfd0fcff9e621ba9b46,2,圣济总录,治骨极骨髓中疼，酒浸芍药散方,True,False,False,False,False,False,False,芍药汤;酒浸芍药散
+77875bbbf5ffcf5e75d9c3635e526862,2,普济方（四库本121-180卷）,木香梹榔散【出圣济总録】治积病不散结伏奔豚发即上冲心胸令人喘逆骨痿少气,False,False,True,False,True,False,False,
+77bfb97313d3a577111413be44c878bd,2,灵素节注类编,此明痿病之因也。肺为心之盖，有所失亡，所求不得，则懊 而心火炽动，久则灼肺，肺鸣,False,False,False,False,False,False,False,
+77de9f622e0b2ef2b3e447a80077a566,5,古今图书集成医部全录,【 注  远行劳倦则伤肾，逢大热则暑暍伤阴，渴则阴液内竭，是以阳热之气，内伐其阴,False,True,False,False,False,False,False,
+77e642ae4bcce7fa11a7f21a922d2a26,2,证治准绳·杂病,观其微旨，是用五志、五劳、六淫，从脏气所要者，各举其一以为例耳。若会通八十一篇而,False,True,False,False,False,False,False,藿香养胃汤;黄柏
+78145081b84f0d1cf69021a973f9b3b6,2,神农本草经疏（四库本）,疏○萎防禀天地清和之气而得稼穑之甘故本经味甘平无毒主诸不足乆服好颜色润泽轻身不老,True,True,False,False,False,True,False,女萎;黄精
+785bd4b521c571bfc84840ecc3b446ba,4,普济方（四库本301-360卷）,治打扑伤损骨折,True,True,True,False,False,True,False,乌金散;半夏;夜合树白皮;桂;生姜汁;神仙立效散;续骨膏;自然铜;芥菜子;黄柏
+787c4f250cdf1483f2425c4a0f5a2f00,3,古今图书集成医部全录009（211-302）,骨极者，主肾也。肾应骨，骨与肾合。又曰：以冬遇病为骨痹，骨痹不已，复感于邪，内舍,False,True,True,False,True,False,False,
+7896a106654ca1435426158662650c91,2,冯氏锦囊秘录,治跌扑骨折骨碎，筋断疼痛，此药续断神验。用路上或墙脚下过往人便溺处，经久碎瓦片，,True,True,False,True,False,False,False,久碎瓦片;碎瓦片;秘传神效散
+78c70e5a5fb5050951902ba22a614230,7,素问识,<span class='zhengwen'>大骨枯 大肉陷下  张云：大骨大肉,True,True,True,False,False,False,True,清神甘露丸;罗氏清神甘露丸
+78fb5ec9fbf22a63f32cf0e0cc985750,2,本草简要方,研末。熟水同香油调敷。治骨折肿痛。,True,True,True,True,False,False,False,三七;丹参;乳香;五灵脂;川芎;当归;没药;生地黄;益母草;蒲黄
+795888a1f2c0b05642945bfccf5f011d,2,灵枢悬解,两眉，阙中，其应在肺，肺主皮，故应在皮。脾窍于口，其主肌肉，口唇者，肌肉之本，故,False,False,True,False,False,True,False,
+796abb07550190784b971937f8629e39,8,"古今图书集成医部全录007（151-174,鼻唇口）",足少阴气绝则骨枯发无泽。发无泽者骨先死。,False,True,True,False,True,False,False,
+7975da79f1968a0a1d900c13f9bcf5ff,2,普济方（四库本301-360卷）,接骨膏　治手脚骨折,False,False,False,False,False,False,False,接骨膏
+797606f9cecf511472e07d9e071cafa8,2,500种中药现代研究,续断配伍骨碎补 二药皆有行血止痛、续筋接骨之功。相伍为用，其效更著，用于治疗扭伤,True,False,True,False,False,False,False,乳香;五灵脂;没药;狗头骨;续断;骨碎补
+7987007b7c37e25a4b5decbfc64b1008,4,圣济总录,治骨极肾虚，脚膝骨髓酸疼，宜服补益。酸枣仁散方,True,True,True,False,False,False,False,杜仲;桂心;熟地黄;牛膝;生地黄汁;生地黄煎方;生天门冬汁;白蜜;虎胫骨;酸枣仁;酸枣仁散
+79dff1070a70855e289a4cc5666a6ca1,4,圣济总录,论曰骨极之病，本于肾脏中风，肾主身之骨髓，风邪中其脏，则历骨，故为骨极，所谓骨极,True,True,False,False,True,False,False,地黄煎丸
+79eb1a02bbc584ee100ec79b353173c1,2,药笼小品,苦坚肾，温行血，补伤折，疗骨痿，蜜拌蒸晒。,False,False,False,False,False,False,False,骨碎补
+79f706e3ed4ade5bc3419dc37481e42d,2,张氏医通,金刚丸（改定） 治肾虚骨痿。不能起于床。,True,True,False,False,False,False,False,金刚丸;龟甲
+7a66ba68e436ced19f474f285f52251c,2,东医宝鉴,寒痰，即冷痰也。骨痹，四肢不举，气刺痛，无烦热，凝结清冷。宜温中化痰丸、温胃化痰,True,False,True,False,False,False,False,新法半夏汤;温中化痰丸;温胃化痰丸
+7a918be7a8fc4679fbff76c84354ec9d,2,证治准绳·杂病,上清紫庭追劳方云：三尸九虫之为害，治者不可不知其详。九虫之内，三虫不传， 、蛔、,False,False,False,False,False,False,False,
+7b87b50d2c04085bad47e92748f1d66e,3,普济方,粟米。味咸微寒无毒。养肾气。去骨痹。热中益气。,False,True,False,False,False,False,False,粟米
+7b94f333382ee1467479a21b88a7b695,2,张氏医通,凡人自觉两足热如火炙。自足踝下上冲膝腿。且痿弱软痛。能行而不能久立。脉濡而数。乃,False,False,False,False,False,False,False,二陈汤;六君子汤;四君子汤;四物汤;导痰汤;清暑益气汤;虎潜丸;补血荣筋丸;金刚丸
+7b964705d6eb02e0772c284840bd4b19,5,古今图书集成医部全录,【 注  如病形而不伤其气，则止见骨痹之身重，脉痹之血凝不行，筋痹之屈而不伸，肉,False,True,True,True,False,False,False,
+7b9bd75cf3c00f2bddce14bd6d5cc112,3,古今医鉴,夫虚者，虚损也。《难经》所谓五损脉者，亦因虚而致损也。一损损于皮毛，皮聚而毛落；,False,False,False,False,False,False,False,
+7b9d96e040565c668911ab9135464f8d,2,千金要方（四库本）,天门冬大煎治男子五劳七伤八风十二痹伤中六极一气极则多寒痹腹痛喘息惊恐头痛二肺极则,False,True,False,False,False,False,False,天门冬大煎
+7c954ac22fd359d563783784b583361e,2,针灸甲乙经校注,提要：本篇重在论述脾病而四肢不用，故以此名篇。其主要内容有：脾病四肢不用之病机；,False,True,True,False,False,True,False,
+7d03f3b1469558feb3d5a2f1f88c7abd,3,东医宝鉴,肾气热则腰脊不举，骨枯骨髓减，发为骨痿。有所远行劳倦，逢大热而渴，渴则阳气内伐，,False,True,False,False,False,True,False,
+7d30a0f40bf919269913f1e71d4645d8,11,古今图书集成医部全录,骨极,True,True,True,False,True,True,True,大黄汤
+7d8e83a67c774ec8c0f6d6ae10e8c486,3,难经集注,从上下者。骨痿不能起于床者死。,False,True,True,False,False,False,False,
+7df3302e7f6f2379e519904b6f3b3a0b,4,千金翼方,五实（未见）六虚者，皮虚则热，脉虚则惊，肉虚则重，骨虚则痛，肠虚则泄溏，髓虚则惰,False,False,True,False,False,False,False,
+7e9ecdf854b4672ed4700a2a8aef6eb6,2,古今图书集成医部全录,肾热生骨痿，足不任身，腰脊不举，骨枯髓减，色黑而齿槁者，补其荣然谷，通其俞太溪，,False,False,False,False,False,False,False,
+7f4c4c8e4d40d1f5a3c2ea7d62652618,2,"古今图书集成医部全录010（303-358,内科、伤寒）",风寒燥热，致声不清者，人共知之，暑湿相干者，鲜有知也。经曰：因于湿，首如裹。声如,False,False,False,False,False,False,False,
+7fd9a9c30ea9226f6677713efc183cec,2,黄帝内经灵枢注证发微,此承上文而悉举虚邪中人之病，亦变化无穷之义也。虚邪入于人者既深，则寒与热相搏，如,False,False,True,False,True,False,False,
+805661795b19d6331bb70d4d798befd4,6,古今图书集成医部全录009（211-302）,阳明司天之政，气化运行后天。四之气，骨痿血便。,False,False,True,False,False,False,False,
+80b5227826b7abf41dd610e7a508be62,2,黄帝内经素问详注直讲全集,讲：少阴肾脉，上腨内，循腹入肺。故邪实于肾而病者，腹大胫肿而喘咳也，兼肾主骨，司,False,True,False,False,False,False,False,
+80f1816dc9e983c75564f7a8cbe6f257,2,医碥,虚者血气不足也，久则肌肤脏腑亦渐消损，故曰虚损。劳者久为病苦，不得安息，如劳苦不,False,False,False,False,False,False,False,
+80f5cebb2f935c21b7aee9a901206791,2,普济方（四库本181-240卷）,薤汁饮【出圣恵方】治胸脾骨痹不可触者已差更发,True,True,False,False,False,False,False,薤根;薤汁散;薤汁饮
+81569be9d444d306cbf78bfeaa25e8e1,2,三十年临证经验集,盖腰为肾之腑，而腰背又为脊柱所居之地，腰痛每与脊骨有关，故本方引用昔贤腰痛之论以,False,False,False,False,False,False,False,
+8195baa0c44336a2dd709c594651453d,2,黄帝素问直解,肾者，水藏也。今水不胜火，则骨枯而髓虚，故足不任身，发为骨痿，故下经曰，骨痿者生,False,True,False,False,False,True,False,
+82f18588a7648639532f19ff8a333ec8,16,黄帝内经素问补注释文（道藏本）,肋肘不得伸，内为骨痹，外为不仁，命日不足，大寒留于溪谷也。,True,True,True,True,True,False,True,附子
+835407f7609828bbf6375030eb8c0a12,2,黄帝内经素问语译,"黄帝问道:五脏都能使人发生痿弱的病,这是什么原因?岐伯说:肺主管全身的皮毛,心主",False,False,False,False,False,False,False,
+83611e409feb867042ab9c004f4742eb,4,灵枢悬解,足少阴气绝则骨枯，少阴者，冬脉也，伏行而濡骨髓者也，故骨不濡则肉不能着也，骨肉不,False,True,False,False,False,False,False,
+83c997a3db18839137cd6ac5ea8e21c0,4,玄隐遗密,肾风緃气热膏膜痹，膏膜痹则腰脊不利，骨枯而髓减，发为骨痿。,False,False,False,False,False,True,False,
+83d48e2346f4dee2d3027413ec1a44ed,9,古今图书集成医部全录009（211-302）,输刺者，直入直出，深内之至骨，以取骨痹，此肾之应也。,False,True,True,True,False,True,False,
+843b621b4aec24aa86777e11de51ba9d,2,古今图书集成医部全录009（211-302）,阳辅、阳交、阳陵泉，主髀枢膝骨痹不仁。,False,True,True,True,False,True,False,
+848a0aa21ff854988ce2234d158ca60a,7,古今图书集成医部全录001目录,＋ 骨极,True,False,True,False,True,True,True,三黄汤;二黄汤;大黄;当归;枣仁;柏子仁;栀子;熟地;牛膝酒;甘草;芒硝;苁蓉;茸珠丸;鹿茸;鹿角胶;鹿角霜;黄芩;黄芪
+849d19a40ccda36ed68436aab150076a,3,普济方（四库本1-60卷）,生地黄散【出圣恵方】治骨极头热肢节疼痛不得睡卧兼不思饮食宜服,True,True,True,False,True,False,False,生地黄散;生干地黄散方
+852c57fb02d6b6585429cfaa5f8a81b3,15,灵枢识,<span class='zhengwen'>骨蚀 马云：骨有所损也。,False,True,True,True,True,True,False,
+8541bd5523bc970ab2eb9e5a5fc9eb33,2,全生指迷方,若腰脊不举，由远行劳倦，逢大热而渴，阳气内伐，热舍于肾，水不胜火，则骨枯而髓减，,False,True,False,False,False,False,False,菟丝子丸;补肾散
+855f2a9be2644a5a66c1db43e88e9b9f,4,古今图书集成医部全录009（211-302）,【 注　如病形而不伤其气，则止见骨痹之身重，脉痹之血凝不行，筋痹之屈而不伸，肉痹,False,True,True,True,False,False,False,
+8596a0d4c1a9be6f94268ad81f276680,2,重辑严氏济生方,大率痹病，总而言之，凡有五种，筋痹、脉痹、皮痹、骨痹、肌痹是也。筋痹之为病，应乎,False,False,True,False,False,False,False,
+8666852eaab658822482b52ddc2d5850,3,中藏经,痹者，风寒暑湿之气，中于人脏腑之为也。入腑则病浅易洽，入脏则病深难治。而有风痹，,False,False,False,True,False,False,False,
+86688f3272471f9e3c967663b0e954a8,2,青囊药性赋,五虚者，脉细、皮寒、气少、泄利前后、饮食不入是也。浆粥入胃，泄泻止则生。五实者，,False,False,False,False,False,False,False,
+86d570934f75d161fff8053057666d78,2,医学心悟,腰痛，有风、有寒、有湿、有热、有瘀血、有气滞、有痰饮，皆标也，肾虚其本也。腰痛拘,True,True,True,False,False,False,False,八味丸;六君子汤;六君子汤加杜仲、续断;六味丸;独活汤;补阴丸
+86d9289a181cad6c99f3edecad7888fd,7,杏苑生春,【病】有所远行劳倦，逢大热而渴，渴则阳气内伐，热舍于肾，今水不胜火，故骨枯而髓虚,True,True,False,False,False,False,True,清暑益气汤
+87107afea8aaeeaece0c54737763102c,10,黄帝素问直解,肾气热，则腰脊不举，骨枯而髓减，发为骨痿。,True,True,False,False,False,False,True,葱熨
+8713b95c6fc53c028ae6178a16027037,2,跌损妙方,凡跌打骨断，痛不可忍。急拾往来便溺墙下瓦片，洗净，火 醋淬五七次，研极细末。,False,False,True,False,False,False,False,瓦片
+87348488c2981e6ab7bfcb37551c8876,3,杂病源流犀烛,【解俴症状】  《灵枢》曰：髓伤则消烁，腑酸体解，俴然不去矣，不去者谓不能行去也,True,True,True,True,True,False,False,三黄汤;茸珠丸
+873bd1ccf68f9769dab2fb5aa984787a,2,任应秋讲黄帝内经素问,【原文】帝曰：人有身寒，汤火不能热，厚衣不能温，然不冻栗，是为何病？岐伯曰：是人,False,False,False,False,False,False,False,
+87ec1fa6aa114d9da96c8053c6391bb8,7,医学钩玄,骨痿，骨枯髓虚，足不任身也，用人参黄芪汤。,True,True,False,False,False,True,True,人参黄芪汤
+88804dc0e5b45884fe81c745f68ca012,9,古今图书集成医部全录,肾气热则腰脊不举，骨枯而髓减，发为骨痿。,False,True,False,False,False,True,False,
+8926e0a85d3f26bacfd8c018d94e0835,2,疡医大全,《心法》曰：膝眼风生于膝眼穴，（又名鬼眼穴，在膝盖之下，左右两骨空陷中。）由下焦,True,False,False,False,True,False,False,万灵丹;火针;独活寄生汤
+8b16a83d324a7711a8b4e8135a384eeb,2,本草纲目,诜曰∶ 虽冷补，热食及多食亦拥气不下，甚损人胃及齿，令人颜色恶，损毛发。和醋食，,False,True,True,False,False,True,False,
+8b56a78605155e98d978c2cae142811e,2,保命歌括,劳气所至为咽嗌病，为喘促，为嗽血，为腰痛骨痿，为肺鸣，为高骨坏，为阴痿，为唾血，,False,True,True,False,False,True,False,
+8b8c80465f1a78c5acf3fa7706abc8d8,3,丹溪手镜,牛膝丸 治肾肝损，骨痿筋缓不能收持，亦治腰痛。,True,True,False,False,False,False,False,牛膝丸
+8be44b8bfad1a292b8cb257bf9a2da10,3,袖珍方,如打破骨头并损伤，可用前项接骨散半钱，加马兜铃末半钱，同好酒一大盏热调，连渣温服,True,False,True,False,False,False,False,好酒;小油;接骨散;马兜铃;马兜铃末
+8c27417d802bc1e8e2519a77fa29432c,2,灵素节注类编,帝曰：人身有寒，汤火不能热，浓衣不能温，然不冻 ，是为何病？岐伯曰：是人者，素肾,False,False,True,False,True,True,False,
+8d03b766bf80941cedf6ce2adb3913bf,16,古今图书集成医部全录009（211-302）,肾气热则腰脊不举，骨枯而髓减，发为骨痿。,True,True,False,False,False,True,True,二陈汤;加味四斤丸;牛膝丸;白术;苍术;金刚丸;霞天膏
+8de8df1fdc43d363186c2334d429b862,2,证治汇补,积虚成损。积损成劳。经年不愈。谓之久虚。有五劳六极七伤之分。五劳应五脏。曲运神机,False,True,False,False,False,False,False,
+8e1e1df79793c80597ce79c427ce4cf7,2,理虚元鉴,在心肾不交之初，或梦泄滑精，体倦骨痿，健忘怔忡；或心脾少血，肝胆动焰，上冒下厥。,True,False,True,False,False,False,True,养心丸;归脾丸
+8e27a944ce8447af3a0528d7987e6c0a,2,黄帝内经素问详注直讲全集,讲：是以形体消瘦而脱去其肉，以至筋弱骨痿不能举步而行者，必死。与中部之脉，乍疏而,False,True,False,False,False,False,False,
+8f3757f24c8138e252e701bf43a9ab43,2,轩岐救正论,内经论五脏之痿。谆谆以肺热为主。而治痿则独取阳明阳明与太阴相表里为五脏六腑之海。,False,False,False,False,False,False,False,炙甘草汤;甘草生姜汤;生姜人参大枣汤
+8f815c8782a82a0ee55fef209741a6a3,3,金匮玉函要略述义,〔鉴〕手足烦。即今之虚劳五心烦热。阴虚不能藏阳也。阴寒精自出。即今之虚劳遗精。阴,False,True,False,False,False,False,False,
+8fcae02be447ece52a1bf81f95acc109,4,"古今图书集成医部全录004（69-92,难经脉法）",大骨枯藁，大肉陷下，肩髓内消，动作益衰，真脏来见，期一岁死。见其真脏，乃予之期日,False,True,True,False,False,False,False,
+8fe1c10038374b8948701613e1fe9c9b,2,黄帝内经素问详注直讲全集,讲：黄帝问曰：五脏之使人痿者，既由于脏气之热矣，然究何以治之？岐伯对曰：痿躄之证,False,True,False,False,False,False,False,
+9023e0f6eefea843a9bcaec7cce4f4b2,2,冉雪峰内经讲义,《灵枢·五癃津液别》曰：五谷之津液，和合而为膏者，内渗入于骨空，补益脑髓，而下流,False,False,False,False,False,False,False,
+9025330dad193ffd57078a1577f9e3ad,5,古今图书集成医部全录009（211-302）,【 注　皮肉筋骨，内合于五脏，五脏之气，外合于四时，始病在外之有形，复伤在内之五,True,True,True,False,False,True,False,胡桃仁;补骨脂
+9028665df3d4245ef4e77c7f98397e37,2,黄帝内经素问详注直讲全集,注：注详水热穴论中，此皆是骨空，故并及之。,False,False,False,False,False,False,False,
+9049419469ade43616b17e8389d0852c,2,内伤集要,人有久立腿酸，立而行房，足必无力，久之面黄体瘦，口臭肢热，盗汗骨蒸，此乃伤其骨也,True,True,False,False,False,False,False,充髓丹;北味;枣皮;沙参;熟地;牛膝;石斛;茯苓;骨皮
+90c86f827de76211feca7830cba12399,2,医效秘传,六极者，尽力谋虑，劳伤乎肝，应乎筋极。曲运神机，劳伤乎心，应乎脉极。意外过思，劳,False,False,True,False,False,False,False,
+90e80edeee64c1e638cbd3ee7985ef7a,2,古今图书集成医部全录,凡骨断皮破者，不用酒煎药。或损在内破皮肉者，可加童便在破血药内和服。若骨断皮不破,True,True,True,False,False,False,False,姜葱;定痛膏;损药;消肿膏;生油;童便;肉桂;良姜;葱汁
+917dd8bde62160a79d00c68ba6dbaf2d,2,500种中药现代研究,“矾石，味酸气寒而无毒，其性燥急收涩，解毒除热坠浊。盖寒热泄痢，皆湿热所为，妇人,True,False,True,False,False,False,False,明矾;白矾
+91c92d1e5e05f794e83c2b3d16022b06,2,证治准绳·杂病,每服五七十丸，食前温酒、白汤任下。（以上俱用下药，实者宜之。）腰胯连脚膝晓夜疼痛,True,False,True,False,False,True,False,六味地黄丸;封髓丹;摩腰膏;滋肾丸;独活寄生汤;肾气丸;茴香丸
+921db68a67affa12420329834ddd167f,11,医学入门,肾气虚，心悬如饥善恐，惕惕如人将捕，水不胜火，则骨枯而髓虚，故足不任身，发为骨痿,True,True,True,False,False,False,True,六味丸;桂;清暑益气汤;知柏八味丸;补阴丸;附子
+929c636c6fa5fd6b4bb2efe1706ccdb3,3,叶氏录验方,治打扑伤损，筋断骨折疼痛。,True,True,False,False,False,False,False,吴茱萸;如圣散;当归;木鳖子;牛膝;白胶香;良姜;败龟;金毛狗脊;黑神散
+930fac5df78f32ff80c0dcf5a0b0014f,2,类经,故骨痹不已，复感于邪，内舍于肾。筋痹不已，复感于邪，内舍于肝。脉痹不已，复感于邪,False,False,True,True,False,False,False,
+934c72dbc713c6d92da45773dcf6eb51,2,古今医学捷要六书,病本十形，风寒暑湿，燥火二分。内伤外伤，内积外积，六气四因，病气以明。气固形实，,False,False,False,False,False,True,False,
+93566d371ac26b69dd9c0965b8c3cc9b,2,赤水玄珠（标点本）,肾脉微滑为骨痿，坐不能起，起则目无所见。,False,False,True,False,False,False,False,
+93923387a6519f496fa1d8b50d157040,2,500种中药现代研究,血竭配伍自然铜 二者均有活血散淤止痛之功效。且自然铜能续筋接骨，相伍为用，共奏活,True,False,True,False,False,False,False,地鳖虫;自然铜;血竭
+946a4185e4d5aeaf032c99179dd2f8bb,2,古今图书集成医部全录009（211-302）,加味虎潜丸　虎之精力潜于胫骨，人肾主骨而司精，精弱则骨痿，用此强骨补精，故名虎潜,False,False,True,False,False,False,False,加味虎潜丸
+94a4c54dd9befb22c20bf18b7884f8d5,6,古今医统大全,小腹里急，腰痛口干，目昏骨冷。久不已，令人病喘逆骨痿少气，其脉沉而滑。,True,True,True,False,False,True,True,奔豚丸
+94d4eaed36adac7b3510a53d5e6c5c14,3,医宗金鉴,·或骨断、骨碎、骨歪、骨整、骨软、骨硬。,True,True,True,True,False,False,True,敷药;熨法;绢包缚;苎麻夹缚
+95333ec5ce047816cf332c9c9fde841a,2,丹溪心法,治 伤骨折及血出者。,True,True,False,True,False,False,False,乳香;人参汤;头发灰;好醋;姜汁;接骨丹;独子肥皂;益元散;笋箬;糯米;醋;鼠粪
+953e4c80b4f47004e2740e4e509d4aee,10,古今图书集成医部全录,虚邪之中人也，洒淅动形，起毫毛而发腠理，其入深，内搏于骨则为骨痹，搏于筋则为筋挛,False,True,True,True,False,False,False,
+954f26612223a6607dc0dc3a459eda56,4,永类钤方,秘传起痿丹　治肾经虚败，遂成骨痿，腰脚难举，日加困乏。,True,False,False,False,False,True,True,秘传起痿丹;起痿丹
+95cacd9a0a9fd53f265e51298db81354,2,玄隐遗密,齿黄枯落、骨痹不用，肾绝也。,False,True,True,False,True,False,False,
+95e24d60d5db5473b5c8720b72b2fd11,5,一见能医,《内经》曰:肺热叶焦，则皮毛虚弱急薄，着则生痿躄。心气热，生脉痿，胫纵不任地。肝,True,True,False,False,False,True,True,五兽三匮丹;五痿汤;五茄皮酒;清燥汤;舒筋健步丸
+95fbc2b5a521bb8ca86470d469788116,6,任应秋讲黄帝内经灵枢,“寒气化为热，热胜则腐肉，肉腐则为脓，脓不泻则烂筋，筋烂则伤骨，骨伤则髓消，不当,True,True,True,True,True,False,True,砭石;豕膏
+96650af9a5fb43dd0f544477c90816ef,3,太平圣惠方,秋遇痹者为皮痹。则皮肤无所知觉。皮痹不已。则入于肺。其状气奔喘痛。冬遇痹者为骨痹,False,False,True,False,False,False,False,
+968c39fd4d0089b1808b38eca70e9b44,2,施杞医案,诊断：左踝骨折后急性骨萎缩。,True,True,False,False,False,False,True,桃红四物汤
+96c9b384cfd1bd8db16226c5348326ca,13,古今图书集成医部全录009（211-302）,【 注　肾热则津液竭，腰者肾之腑，故腰脊不能伸举，髓减骨枯而发为骨痿也。】,True,True,False,False,False,True,True,十全大补汤;虎潜丸
+96d0d9bdfc4afdafc01a08b083d7386a,2,食疗本草,（二）又，不宜和醋食之，令人骨痿。少食，补大小肠虚气。久食损毛发。〔嘉〕,False,False,True,False,False,False,False,
+96d6585e04fb5f58ec8805175771151c,2,疡医大全,又曰：小儿脑热肚痛，寒热往来，滑泄频频，口臭干渴，耳内疮脓；外则身体壮热，足冷如,False,True,True,False,True,True,False,
+9731766a65e66a380602f4c975ed0736,3,永类钤方,骨断者，用：,True,True,True,True,False,False,False,人参;土狗;地虱
+98929b55c6562d1c48e9797587bca600,2,素问识,<span class='zhengwen'>大迎骨空各一  吴云：一出足阳明。,False,False,True,False,False,False,False,
+9896852283d82eeb8f0c8915b97efde6,2,三因极一病证方论,治骨虚极，面肿垢黑，脊痛不能久立，气衰发落齿槁，腰背相引痛；甚则喜唾不了。(方见,False,True,False,False,True,False,False,
+99031e3379359041604e9f32113adac1,2,目经大成,凡人之身，有真火焉，寄于命门，会于肝，出入于艮、坤。所以温百骸，养脏腑，皆此火也,True,True,True,False,True,False,True,丁香;小茴香;山药;故纸;木香;沉香;白术;白椒;硫磺;胡巴;豆蔻;附子
+990bba9fdc6be43c0ee69dcc287320ac,3,症因脉治,【肾痹之症】即骨痹也。善胀，腰痛，遗精，小便时时变色，足挛不能伸，骨痿不能起，此,True,True,True,False,True,True,True,八风十二痹散
+9957144beb1d0866dd9ff28ac1b11a43,2,十四经发挥,濂之友滑君，深有所见於此，以内经骨空诸论，及灵枢本输篇，所述经脉辞旨简严，读者未,False,False,False,False,True,False,False,
+99acbd73660b9d3177c13bce2f7996ae,2,太平圣惠方,夫骨极者。主肾病也。肾应骨。骨与肾合。以冬遇风为骨痹。痹不已复感于邪。内舍于肾。,False,True,False,False,False,True,False,
+9a5954e14d183870b7ba5f9b74afc119,2,景岳全书,当归没药丸：治血瘀作痛，及血风筋挛骨痹，手足麻木疼痛。,False,True,False,False,False,True,False,当归没药丸
+9ae1039f20028a219e582d9da1d60110,2,济众新编,骨痹四肢不举气刺痛无烦热凝结淸冷 ○因形寒飮冷痰色靑黑如灰善唾或喘轻者五积散(寒,True,False,False,False,False,False,True,五积散
+9b63a0ecfabc9817a724dc2679ae0446,3,黄帝内经灵枢集注,五谷之精液。和合而为高者。内渗入于骨空。补益脑髓，而下流于阴股。,False,False,True,False,True,False,False,
+9c1bbee9122c52bd84c160bfdab923bd,2,古今图书集成医部全录008（175-210）,痔骨蚀，商丘主之。,False,False,True,True,False,False,False,
+9c37d87fb82c54655a4a0f0e22461d1d,2,齐氏医案,曾治韩千总，每至夏月无阴，一到三伏之时，全无气力，悠悠忽忽，惟思睡眠，一睡不足，,True,False,False,False,False,True,False,五味子;山茱萸;当归;熟地黄;白术;白芍;芡实;茯苓;软坚汤;酸枣仁;陈皮;麦冬
+9cb4a8ebda5d65cd0650eee811815930,30,内经提要,▲病在骨，骨重不可举，骨髓酸痛，寒气至，名曰骨痹。,False,False,True,True,False,True,False,
+9cd494fbf979d9568d157f62e58ff7c9,2,济阳纲目,接骨紫金丹　治跌打骨折，瘀血攻心，发热昏晕，及瘀血自下，吐血等证。,True,False,False,False,False,False,False,乳香;土鳖;大黄;当归尾;接骨紫金丹;没药;硼砂;自然铜;血竭;骨碎补
+9ce459fc146d5cdeac1efd9005d999ed,2,"古今图书集成医部全录011（359-380,外科）",凡平处骨断骨碎皮不破者，只用接骨膏、定痛膏敷贴夹缚。若手足曲直等处及转动处，只宜,True,True,True,False,False,True,False,定痛膏;接骨定痛膏;接骨膏;消肿膏;绢包缚;苎麻夹缚;补肉膏;补肌散
+9d358f42cbd51b99aaf3f682f8876f31,2,古今医统大全,腰者肾之外候，一身所恃以转移阖辟者也。盖诸脉皆贯于肾而络于腰脊，肾气一虚，腰必痛,False,True,True,False,False,True,False,补肾汤丸
+9dc89c40f1eec3c4d9e14df878168558,4,普济方（四库本301-360卷）,肾絶反目直视狂言遗尿腰折骨枯,False,True,True,False,False,False,False,
+9e794dc5c433301450cb436d84c747e6,2,普济方（四库本1-60卷）,地黄煎　治骨虚骨寒,True,False,True,False,True,False,False,地黄煎;玉环丹
+9ec09186cbfb18f04c859018c0b6f044,4,古今图书集成医部全录009（211-302）,肾脉微滑为骨痿，坐不能起，起则目无所见。,False,False,True,False,False,False,False,
+9ec6c2205683e0d1150c8a8e66cbf18e,2,素问玄机原病式,又曰：“血气者人之神，不可不谨养也。”；故诸所运用，时习之则气血通利，而能为用；,False,False,True,False,False,False,False,
+9ec9e8fbbc07951af5723b2789463d05,2,古今图书集成医部全录,【 注  足少阴之气主骨，故气绝则骨枯。冬脉谓五脏之脉气，合四时而外濡于皮肉筋骨,False,False,False,False,False,False,False,
+9f4f6e5551575e55409a20d692c6677e,28,景岳全书,虚邪之入于身也深。寒与热相搏，久留而内着。寒胜其热，则骨疼肉枯。热胜其寒，则烂肉,False,True,True,True,True,True,False,
+9f9ad950813937b4ef9593b81f51ec35,2,黄帝内经素问补注释文（道藏本）,气街，穴名也。在归来下鼠既上同身寸之一寸脉动应手，足阳明脉气所发，刺可入同身寸之,False,False,True,False,False,False,False,
+a051a8d90857d87bec3013567c64580a,13,针灸逢源,灸之一然。灸而过此者。得恶火。则骨枯。脉涩。刺而过此者。则脱气。,False,True,True,False,True,True,False,
+a0a2a17858017cd135b24068117347cb,2,针灸大成,大、小骨空不针，俱灸七壮，吹之。,False,False,True,False,False,False,False,
+a1467d8c679d6beba5ba22a0a4b1a7ba,2,本草汇纂,专入心、肺。味甘微苦微寒，甘多寒少。润肺清心泻热。有类天冬，但彼所主在肺，此则在,True,False,False,False,False,False,False,麦冬
+a1a867c3c93f26fe8b3d59c40c4f17b8,7,兰台轨范,金刚丸【保命】治肾损骨痿不能起于床,True,True,True,False,False,True,False,保命金刚丸;兎丝子;杜仲;桂枝;煨肾丸;牛膝;猪腰子;白蒺藜;破故纸;芦巴;苁蓉;菟丝子;萆;萆薢;金刚丸;金萆;防风
+a22b096ad2d757431e5d72c4e404a48d,2,"古今图书集成医部全录003（47-68,灵枢）",【 马莳曰：此言肾经脉气之行，乃为第八经也。趋，向也。跟，足根也。足少阴肾经之脉,False,True,False,False,False,False,False,
+a234df74a89fac80d2060627dcab3233,3,古今图书集成医部全录,痢后下虚，不善调养，或远行，或房劳，或外感，致两足痿软，或痛或痹，遂成痢风，宜用,True,True,False,False,False,True,False,南星;杉木节;杜仲;杜牛膝;杜牛膝等熏洗方;牛膝;独活寄生汤;白芷;萆薢;虎骨;虎骨丸;虎骨四斤丸;骨碎补
+a23887ae8ec467ac34414ea70c74cd76,2,古今图书集成医部全录008（175-210）,萆薢丸　治肾损骨痿，不能起于床，腰背腿皆痛。,False,True,False,False,False,False,False,萆薢丸
+a23a8ca4ce897ef432bc94893adbeb24,2,普济方（四库本1-60卷）,夫肾臓虚损骨痿羸瘦者葢骨属于肾肾虚损则髓竭骨枯阳气既衰身体无以滋养所以骨痿肌肤损,False,False,True,False,False,True,False,
+a3913f44ddbdaa84c6d86f13d8f0a999,4,古今图书集成医部全录,肾气热生骨痿，故足不任身。诸痿皆属于上者，指病之本在肺也。故必先起于肺，然后热传,False,True,False,False,False,True,False,
+a3b9502c06386fbaa6850b0c1966d92b,3,"古今图书集成医部全录011（359-380,外科）",颠扑筋断骨折：用糯米一升，皂角切碎半升，铜钱百个，同炒至半焦黑，去铜钱为末，用好,True,True,True,False,False,False,False,半夏;好酒;妇人发;木鳖肉;热酢;皂角;粟米;糯米;葱白须;铜钱
+a3c282ae73150c3abe677ed521b4dedb,2,普济方（四库本1-60卷）,夫骨极之病本于肾臓中风肾主身之骨髓风邪中其臓则伤骨故为骨极所谓骨极者令人瘦削齿苦,False,False,False,False,False,True,False,
+a4057114136536ab312a1e08bf2785b4,6,脉因证治,有由湿地，以水为事，热生于脾。病则胃干而渴，肌肉不仁，名曰肉痿。有因远行劳倦，遇,False,True,False,False,False,False,False,
+a40f8d4d3549c98825b299a5f9c0b050,2,本草从新,甘咸温。本人之血气所生。故能大补气血。治一切虚劳损极。（虚损、一损肺、皮槁毛落、,False,True,False,False,False,False,False,人胞
+a462de8dd5052f57b354709263d3c717,2,任应秋讲黄帝内经灵枢,【原文】黄帝问于伯高曰：何以知皮肉、气血、筋骨之病也？伯高曰：色起两眉薄泽者，病,False,False,True,False,False,False,False,
+a463054a64e39d26c24ad29b39542dab,3,寿世保元,命绝脉来如弹石。三阳谷气久虚空。胃气分明屋漏滴。散乱还同解索形。髓竭骨枯见两尺。,True,False,True,False,False,False,True,五味异功散
+a495e275d4daa0605b7c865dcc4bc459,2,外科心法要诀,<span style='font-weight:bold;'>骨痿疮,False,False,False,False,False,False,False,
+a4e80d431dcf000836d63764da99136e,2,续名医类案,窦材治一人，身长五尺，因酒色伤，渐觉肌肉消瘦，令灸关元三百壮，服保元丹一斤，自后,False,False,False,False,False,True,False,保元丹
+a4f40376bc62c154f276f7d3024035fd,2,普济方（四库本1-60卷）,石钟乳丸【出圣济总録】治肾臓虚损骨痿羸瘦行无力短气不足腰背相引疼痛,True,False,False,False,False,False,False,五味子;石钟乳;石钟乳丸;菟丝子;蛇床子;黄芪
+a5235329c654427813d26f6c211cac27,2,医学正传,脾气热为肉痿，则胃干而渴，肌肉不仁。肾气热为骨痿，则腰膝不举，骨枯而髓减。又曰：,False,False,False,False,False,False,False,
+a54b319047228e429b8e2002afbe91c2,2,普济方（四库本1-60卷）,干地黄丸【出圣恵方】治骨极羸瘦心神虚烦脚膝疼痛久立不得宜服,True,False,False,False,True,False,False,干地黄丸;熟干地黄丸
+a5cfe6f988a0d462741549456bd80481,2,医学阶梯,《灵枢》云：“脑为髓之海，其输上在于其盖，下在风府。”又云：“髓海有余，则轻劲多,False,True,True,False,False,False,False,
+a674f328b08337b69d4d452db2584d25,15,"古今图书集成医部全录006（122-150,头面耳）",肾脉微滑为骨痿，坐不能起，起则目无所见。,False,True,True,False,False,True,False,
+a6cc08546ed8931451ef3390fde0afd5,2,经络全书,〔 附〕统属足少阴肾经（《灵枢》曰：足少阴气绝者，则骨枯。少阴者，冬脉也，伏阴而,True,True,True,False,False,False,False,八味丸;安肾丸;黑锡丹
+a71739b73fb896ac25bf46b2faa6eb18,19,环溪草堂医案,某　风、寒、湿三气，伏留于骨。骨节酸痛，自冬而起，所谓骨痹也。骨痹不已，内舍于肾,True,True,True,True,False,True,True,五痹汤;增味五痹汤;行湿流气散
+a78e703b53f905a4b40c8f4b7b2abd04,2,东医宝鉴,虚者，皮毛、肌肉、筋脉、骨髓、气血、津液不足是也。（《纲目》。）凡饮食减少，精神,True,False,False,False,False,False,False,四物汤;地黄;当归;苁蓉;鹿茸
+a7e5b7baa3760d9eb82a57e9872a6044,3,素问经注节解,肾气热，则腰脊不举，骨枯而髓减，发为骨痿。（腰为肾府，又肾脉上股内，贯脊，属肾，,False,True,False,False,False,False,False,
+a8475e5ca1da88960e6d2118a2e3d461,6,不居集,治肾损骨痿，不能起于床。益精补肾。,True,True,True,False,False,True,False,萆薢丸;金刚丸
+a88b975bd532650a95cb150271ba1c74,9,银海指南,知柏八味丸 治阴虚火动，骨痿髓枯。,True,True,False,True,False,True,False,丹皮;六味地黄丸;地黄;山药;山萸肉;桂附八味丸;泽泻;知柏八味丸;知柏地黄丸;知母;茯苓;黄柏
+a9c0029d27a32b9d08e5f873d3e8a5c7,2,古今图书集成医部全录009（211-302）,阳明司天之政，气化运行后天，四之气，病骨痿。,False,False,True,False,False,False,False,
+a9dffc374b9ad7078dedf14171f28554,3,病机沙篆,经曰：腰者肾之府，转摇不能，肾将惫矣。又云：巨阳虚，则腰背头项痛。此二条言正气之,True,False,True,False,False,True,False,乳香散;六味地黄丸;官桂;封髓丸;摩腰膏;杜仲;滋肾丸;牛膝;续断;羊肾;肾气丸;茴香丸;风髓丹;骨碎补;鹿茸
+aa1dab3529a607c9daebcdeda376254b,2,杂病广要,行痹者，痛处行而不定，走注历节疼痛之类，当散风为主，御风利气仍不可废，更须参以补,False,False,True,False,False,False,False,
+aa4463d560041ddc523c3f58f53564fa,5,"古今图书集成医部全录010（303-358,内科、伤寒）",木香槟榔散　治积气不散，结伏奔豚，发即上冲心胷，令人喘逆，骨痿少力。,True,True,True,False,False,False,False,七气汤;五积丸;大安丸加参;大阿魏丸;散聚汤;木香槟榔散;香棱丸
+aa4a131ace5b97ce24e5739db3deb917,2,外科启玄,治跌打损伤骨折疼痛等症。,True,False,True,False,False,False,False,定痛散
+aba6395789c07a6bcdaa1e8139af3138,3,古今图书集成医部全录009（211-302）,肾热生骨痿，足不任身，腰脊不举，骨枯髓减，色黑而齿槁者，补其荣然谷，通其俞太溪，,False,True,False,False,False,False,False,
+abdc8c3613a5d5801acc45c9b35544a6,2,本草备要,甘寒。助阳气，起阴痿，补虚劳，壮筋骨，明目充肌（时珍曰：《别录》、《大明》皆云楮,False,True,False,False,False,False,False,楮实
+ac0b854833c870cbefd550e58df7c10d,2,普济方（四库本301-360卷）,紫金丹　治打伤损骨折,False,True,True,False,False,False,False,紫金丹
+ac155c97bfec70aa6958545f61ab54d9,155,古今图书集成医部全录001目录,＋ 骨空,True,True,True,True,True,True,True,广木香;松节;芦巴
+ade2dc9192d58849257317e892136858,4,寿世保元,骨枯髓减者。枯涸之极也。肾主骨。故曰骨痿。是方也。地黄、茱萸。味浓而能生阴。知柏,True,True,False,False,False,True,False,丹皮;地黄;山茱萸;山药;泽泻;熟地黄;牡丹皮;知母;茯苓;黄柏
+adf33dc08461d2f6a77f751e9d7e8275,11,黄帝内经太素,微滑为骨痿，坐不能起，起目毋所见。,False,False,True,False,False,True,False,
+ae2f919adae91c3fd29f8789a652bfce,4,黄帝内经太素,邪气者，虚风之贼伤人也，其中人也深，不能自去。正风者，其中人也浅，合而自去，其气,False,False,True,True,False,True,False,
+ae724889bd5a23580e313bd409e66b13,2,名老中医邓明鲁经验集,药理研究表明，鹿茸精能提高机体工作能力，改善睡眠和食欲，并可减轻肌肉的疲劳。鹿茸,True,True,True,False,False,False,False,鹿茸;鹿茸精
+af36264880fcab7ef7a98517e98b2ba7,2,证治准绳·类方,茹黄门卒中风病，发时服药，泄出恶脓四升，赤黄水一升，一肉虫如乱发，愈。李知府妻杨,False,False,True,False,False,False,False,
+af9245f44d6fde6ff1616768f24a8c3c,3,痎疟论疏（四库本）,盖痎与疟乃风与暑合作为病应从两治矣但气病之至所有逺近上下及新故重轻之别则适其至所,False,True,True,False,False,False,False,
+b05a6f71e4f3e8ba80daf339338a7bca,2,赤水玄珠（标点本）,<u>金刚丸</u>　肾损骨痿，不能起床。,False,False,False,False,False,False,False,金刚丸
+b0c03d5adaab3e7d7c945d6c4beeb252,2,普济方,夫肾脏虚损骨痿羸瘦者。盖骨属于肾。肾虚损则髓竭骨枯。阳气既衰。身体无以滋养。,False,True,False,False,False,False,False,
+b1428051cd9f9284158cead930fbb20b,3,证治准绳·类方,木香槟榔散 治积气不散，结伏奔豚，发即上冲心胸，令人喘逆，骨痿少力。,True,True,True,True,True,False,True,木香槟榔散
+b17ed6050aa9c6925d64131bcb37fc00,2,古今图书集成医部全录,【 王冰曰：髓者骨之充。  《针经》曰：髓海不足，则脑转耳鸣，胻酸眩冒，故髓伤则,False,True,False,False,False,False,False,
+b234356be1d9f1ddfb112f26eccb5eba,4,袖珍方,治骨虚极，面肿垢黑，脊痛不能久立，血气衰惫，发落齿枯，甚则喜唾。,True,True,False,False,True,True,False,川牛膝;鹿角;鹿角丸
+b25b5dfd59b7abe57e46d224fd6ac06b,6,古今图书集成医部全录,骨痹举节不用而痛，汗注烦心，取三阳之经补之。,False,False,True,False,False,True,False,
+b281bf6bbec07fc2eda999f352c04c75,2,御纂医宗金鉴（四库本）,【注】虚者隂阳气血荣衞精神骨髓津液不足是也损者外而皮衇肉筋骨内而肺心脾肝肾消损是,False,True,False,False,False,True,False,
+b2c341e3b404944014451d234d5fffa8,2,古今图书集成医部全录,夫积有五积，聚有六聚。积者，生于五脏之阴气也；聚者，成于六腑之阳气也。此由阴阳不,False,True,True,False,False,False,False,
+b34ebf55819512e4e6a9785dc904d3da,2,医宗必读,迹其勋伐，皆是足少阴肾经，观其命名，想见功力。戴元礼用以治骨痿有效。,True,False,True,False,False,False,False,减味清燥汤
+b372be68067728cbac4447b66789f598,3,勉学堂针灸集成,大骨空　在手大指第二节前尖上，屈指当骨节中，灸二七壮，禁针。主治内瘴久痛及吐泻。,False,True,False,True,True,False,False,
+b3a954e7f642b169a26bfd298d8e6eb1,2,程氏易简方论,六味丸加知母、黄柏，治肾气热则腰脊不举，骨枯髓减而成骨痿。,False,False,False,False,False,False,False,六味丸;知母;黄柏
+b3b58dabe0b77b96484846ee1b00cf0b,6,古今图书集成医部全录,骨空,False,True,True,False,True,False,False,
+b3c579481576c177f795369ce9c70c1e,5,黄帝内经素问补注释文（道藏本）,骨痿无力。,False,True,False,False,False,False,False,
+b44fea0e7c727d4ce65f78d1363de468,2,神农本草经疏（四库本）,疏○天门冬正禀大寒初之气以生得地之阴精独厚味虽微苦甘而带辛其气大寒其性无毒要以甘,False,False,False,False,False,False,False,天门冬
+b4988bae85c066cffaa1374448cc41bd,3,李翰卿医学全集,在“再障”三大症中，气血虚是疾病之根本，是矛盾的主要方面。李老认为，一切虚损、虚,False,True,True,False,True,True,False,
+b5fdb86a2964944d63b4516edbe11b89,42,素问识,<span class='zhengwen'>以冬遇此者为骨痹  楼云。凡风寒湿,False,True,True,True,False,True,False,
+b63948f8f61016c47f4f5c24394d999f,5,遵生八笺,《太平御览》曰：“道者，气也，宝气则道长存；秘者，精也，宝精则神长生。精者，血脉,False,True,True,False,True,False,False,
+b6ec86be5e08298f47bea4d40175d013,2,王氏医案,胡氏妇，患乳房结核，外科杂投温补，核渐增而痛胀日甚，驯至形消汛愆，夜热餐减，骨痿,True,True,False,False,False,False,False,川贝母;当归龙荟丸;甘麦大枣汤;虎潜丸;贝母
+b7774368de6b89accd59cad989b99857,2,普济方（四库本301-360卷）,用南蓼杜独活藁本黄柏生姜煎洗如有口除姜蓼损而青肿用此二味若肉冷痹痛骨断而肿不可洗,False,False,False,True,False,False,False,南蓼;杜独活;生姜;藁本;黄柏
+b797e0e3ae70c5c34dfe3775c7d340ed,2,古今图书集成医部全录009（211-302）,有所远行劳倦，逢大热而渴，渴则阳气内伐，内伐则热舍于肾。肾者，水脏也。今水不胜火,False,True,False,False,False,False,False,
+b7ddd1b4ebe7f0e0ef7927f52c78dc78,2,玄隐遗密,夫伤之道：入者为先，去其物；血注者，燔火去恶。少血者，汤去其污，敷之。甚者，火刃,False,True,True,True,False,False,False,
+b7e074b2f10a3b8715f228b8ffbca319,8,千金要方（四库本）,商丘主骨痹烦满,False,True,True,True,False,True,False,
+b7fc32c4bbab7adf16fea426b202412e,17,读素问钞,太阳气衰肾脂枯不长一水不能胜两火肾者水也而生于骨肾不生则髓不能满故寒甚至骨也所以,False,True,False,False,True,True,False,
+b8b9e40977f1cc8609c37a3a0ed971c6,7,素问释义,病名曰骨痹，是人当挛节也。,False,True,True,True,False,True,False,
+b9024fa09f8fa614767c10fe11febd05,145,全体病源类纂,骨寒　骨蒸　骨痿　骨痛　骨伤　骨绝,True,True,True,False,True,True,False,丹谷;人参白术汤;何首乌;加味四斤丸;噙化丸;天门冬;奔豚丸;奔豚汤;审平汤;小安肾丸;枣仁;桂附地黄丸;泽泻散;煨肾丸;牛膝;牛膝丸;知蘗地黄丸;石刻安肾丸;稷;紫河车;紫苑散;紫菀散;续断丸;肾气桂附地黄汤丸;虎牙丸;虎骨;虎骨四斤丸;虎骨酒;败龟板;车前;酒浸牛膝丸;金刚丸;骨碎补;鹿茸;龙骨丸;龙骨圆;龟板
+b90385ebb6ab3a9989e65ab3fd122ab3,3,古今图书集成医部全录009（211-302）,【 注　肾气胜者，肾水之气胜也。以水为事者，膀胱之水胜也。言水寒之气偏胜，则太阳,False,False,False,False,False,True,False,
+b91b7a2e6e0f29703fbb1aeca80e8d8d,2,学古诊则,大骨枯槁，大肉陷下，肩髓内消，动作益衰，真脏未见，期一岁死。张景岳曰：骨枯肉陷，,False,True,False,False,False,False,False,
+ba016a09af7db64b1cc7045b6d173dc8,2,千金要方（四库本）,扁鹊曰骨絶不治㾓而切痛伸缩不得十日死骨应足少阴少阴气絶则骨枯髪无泽骨先死矣,False,False,False,False,False,False,False,
+ba16d2c26f3a9033546437a885de353a,4,千金要方（四库本）,论曰骨极者主肾也肾应骨骨与肾合又曰以冬遇病为骨痹骨痹不巳复感于邪内舍于肾耳鸣见黑,False,False,False,False,False,True,False,
+ba211bcafa935816a5630e0f3eff0227,2,"古今图书集成医部全录010（303-358,内科、伤寒）",外因：感寒久则损阳，自上而下，一损于肺，则皮聚毛落；二损于心，则血脉虚少，不荣脏,True,True,False,False,False,False,False,人参养荣汤;八味丸;参苓白朮散;地黄丸;煨肾丸;牛膝丸;缓中牛膝丸;补中益气汤;金刚丸;黄芪建中汤
+bae0e846e41de76bbe9e2b805abd23fc,2,圣济总录,治肾脏伤惫，腰膝无力，形瘦骨痿，头目昏沉，时忽旋晕，项背疼痛，不得俯仰。鹿茸丸方,True,True,False,False,False,False,False,天雄;白附子;腽肭脐;鹿茸;鹿茸丸;鹿髓
+bb270a3b4ebfcdb710fe5bfc756e18ce,2,本草纲目,汗后入冷水，成骨痹。时珍曰∶顾闵远行，汗后渡水，遂成骨痹痿蹶，数年而死也。,False,True,False,False,False,False,False,
+bbaa2eb1d7916bfd1413e8bcf72b215e,4,永类钤方,【病证】肾奔豚。动也，发于小腹，上至心下，上下无时，如豚走，色黑，饥则见，饱则减,True,True,True,False,False,False,True,大七气汤;奔豚丸;桂;楝子肉;茴香
+bc5cb9a9fdecfd7a82dfbbde55c8f7dd,2,医学钩玄,丹溪云：阴常不足，阳常有余，劳瘵之症，多是阴虚火动者，只宜补阴为主也。况南方火旺,False,True,False,False,False,True,False,固本丸;集灵膏
+bc8beec5af0c7054e087eb6ee422a314,3,历代本草药性汇解,甘咸性温。本人之血气所生，故能大补气血，治一切虚劳损极，虚损：一损肺皮，槁毛落；,True,True,False,False,False,False,False,人胞衣;紫河车
+bd48e0277d909df2cf84c532451f0383,2,李翰卿医学全集,[释名]肾痹是指骨痹日久不愈，复感于邪而形成的一种内脏痹证。,False,False,True,False,False,False,False,
+bda61d29cb1ee26fa3c84f7ea24baea0,4,张氏医通,故骨痹不已。复感于邪。内舍于肾。筋痹不已。复感于邪。内舍于肝。脉痹不已。复感于邪,False,False,True,True,False,False,False,
+bdffda727b1790172eedb64cb0cb41f5,2,素问识,<span class='zhengwen'>股际骨空  吴云：股际骨。前阴曲骨,False,False,True,True,False,False,False,
+be12abeb785de7b522b8b5495b548e77,2,古今图书集成医部全录001目录,＋ 骨痹证　主肾气弱,False,False,False,True,False,False,False,
+bf7198c8780e83d45eab0b3f04cd16a3,4,普济方（四库本1-60卷）,补骨脂汤　治骨虚酸疼多倦,True,False,False,False,False,True,False,五味子;人参;肉苁蓉;虎骨酒;补骨脂;补骨脂汤;附子
+c065de568a723b935671a7de874454f4,4,冯氏锦囊秘录杂症大小合参,肾损骨痿，不能起床。,True,True,True,False,False,False,False,金刚丸
+c0b4af484baa9b2d0a0c1ecb921ac7ab,2,洗冤集录译注,[13] 折者，其色在骨断处两头——这句话似紧接“不损则墨不浸”后面。,False,True,True,False,False,False,False,
+c104d78e516c0c39d7faff1c4db65516,2,普济方（四库本301-360卷）,桂附散【出圣方】　治骨折筋断伤损,True,False,True,False,False,False,False,古铜;桂;桂附散;白僵蚕;茅根;蒲黄;附子
+c13321ff6d911c935401d10a62676189,3,奇效良方,然劳极损伤，尸疰诸蒸之名，既以闻矣，其所感之因，所患之状，又果何如哉？曰∶矜持志,False,True,True,False,True,False,False,
+c1f4c327da08177b7dfc39b4908778c2,4,全体病源类纂,《气穴论》：积寒留舍，荣卫不居，卷肉缩筋，肋肘不得伸，内为骨痹，外为不仁。,True,True,True,False,True,False,False,附子
+c20a0715abe2967342dcadb995a394cc,2,古今图书集成医部全录009（211-302）,【 注　肾者，胃之关。关门不利则胃气不转，故善胀。骨痿不能行，故尻以代踵。阴病不,False,True,True,False,False,False,False,
+c2b9893999c36081e8dadd5bb30ed62e,2,证治准绳·杂病,恐气所至，为破 脱肉，为骨酸痿厥，为暴下绿水，为面热肤急，为阴痿，为惧而脱颐。惊,False,False,True,False,False,False,False,
+c2c52eb08eda6d24b8c987a16383598d,2,三十年临证经验集,六极所现之证候。据《巢氏病源》载为：“一曰气极，令人内虚，五脏不足，邪气多，正气,False,False,True,False,False,False,False,
+c2dac57cc0753a80229fe91636d3d477,3,巢氏诸病源候总论（四库本）,齿者骨之所终髓之所养髓弱骨虚风气客之则齿齭,False,True,False,False,True,True,False,
+c33f7e7aa0c55ca7802bf034fa6733d7,2,"古今图书集成医部全录011（359-380,外科）",凡骨碎断或未碎断，但皮破损肉者，先用补肌散填满疮口，次用散血膏敷贴。如骨折，要接,False,False,True,False,False,False,False,接骨膏;散血膏;补肉膏;补肌散
+c3d407e822f0438deff1cc0b974d4858,2,古今图书集成医部全录,【 注  皮肉筋骨，内合于五脏，五脏之气，外合于四时，始病在外之有形，复伤在内之,False,False,True,False,False,False,False,
+c4333995caaaeb1643408012d890893d,2,幼幼集成,尻骨不成则坐迟，髁骨不成则行迟，真阳不足则齿迟，血脉不荣则发稀，心气不足则语迟。,False,True,True,False,False,False,False,
+c43e3c3f3824fa28ddbc3c5a4b474d6b,2,丹台玉案,诸虚先要辨阴阳血阴而气阳也。有暴虚而无伤损者易复。有虚而亏损者亦可补益。惟久虚。,False,True,True,False,False,False,False,
+c482f80fe76ea162cd2cca1ccea39ebb,2,黄帝内经灵枢集注,岐伯曰：经脉流行不止。与天同度。与地合纪，故天宿失度。日月薄蚀。地经失纪。水道流,False,False,True,True,True,False,False,
+c48e32e6cd57334ae83f2c1cfab9f6c8,4,古今图书集成医部全录,风寒湿三气杂至，合而为痹也。以冬遇此者为骨痹。骨痹不已，复感于邪，内舍于肾。肾痹,False,False,False,True,False,False,False,
+c4a0d7add932b4819fff28336318147a,4,千金翼方校释,五实未见。六虚者，皮虚则热，脉虚则惊，肉虚则重，骨虚则痛，肠虚则泄溏，髓虚则惰〔,False,False,False,False,True,True,False,
+c579f15d4b3d78a82fbe8e53e93c211f,3,历代本草药性汇解,·骨碎补有促进骨折愈合作用。,True,True,True,True,False,True,False,丹参;犬肉;骨碎补
+c59769645cd07f18ebf13062566f45c2,2,仙授理伤续断秘方,治跌扑伤损，折骨断筋，疼痛浮肿。腹有瘀血，灌注四肢，烦闷不安。痈疽发背，肌肉坏烂,True,False,False,False,False,False,False,姜汁;杉木片;没药;温葱汤;葱汤
+c5dfe5f3456bb6eabda42217bc70ed91,2,"古今图书集成医部全录002（1-46,素问）",【 王冰曰：痿谓痿弱无力以运动。膜者，人皮下肉上筋膜也。脾主肌肉，肾主骨髓，所主,False,False,False,False,False,False,False,
+c700cd6047330b62ee6c2b9b22399e36,2,嵩厓尊生书,《内经》云：肺热叶焦，五脏因而受之，发为痿躄。心热脉痿，胫纵不任地。肝热筋痿，筋,False,False,False,False,False,True,False,
+c7306ffcf87a29dbed7e41a3b9d192a1,2,疡医大全,先将人参各项俱研细。后用土狗、地虱捣烂，入前药末内捣匀，佩身上三日，干为末，盛在,True,True,False,False,False,False,False,人参;冰片;土狗;地虱;接骨药末;狗舌;生地;象皮;龙齿
+c78d98be382b457d5b127d7b695995bd,2,竹亭医案女科,风寒湿三气杂合而为痹，骨痹者以冬遇此为骨痹也。,False,False,False,False,False,False,False,
+c79235eb7320aac142f011df61365556,2,医学要数,五脏各有取主，至其病证，莫不随取主而见焉。面青多怒，肋下痛硬，咳逆目眩，肢节挛急,False,True,False,False,False,False,False,
+c7cb5bb23b84e506428042e6a8bf789a,2,普济方（四库本1-60卷）,鹿角胶丸　治骨极肌体羸瘦肾虚弱腰膝无力宜服,True,False,False,False,True,False,False,人参;熟地黄;破故纸;薯蓣;鹿角胶;鹿角胶丸
+c829adea0b1c93469cbef8a3cfddbaf4,2,永类钤方,《本草》打伤，只以骨碎补末，和黄米粥裹伤处。打跌骨断，只白及一味，为末，酒调服，,True,True,False,False,False,False,False,定痛膏;接骨膏;白及;骨碎补;黄米粥
+c90cb23104dd3943a87062405ac5bec1,4,医学纲目,〔海〕骨痿肉燥，筋缓血枯，皮聚毛落，阴不足而有热疾，是谓虚热。,True,True,False,False,False,True,True,四顺饮子;地骨皮散;柴胡饮子;桃仁承气汤;清凉饮子;牵牛;白虎汤;防己
+ca084e0cc88d7d232e334c6eb7524c45,2,脾胃论,大抵脾胃虚弱，阳气不能生长，是春夏之令不行，五脏之气不生。脾病则下流乘肾，土克水,True,True,True,False,False,False,True,五苓散;四君子汤;四物汤;平胃散;黄芪建中汤
+ca9b52a8991f60c9585ab53acb90060c,2,"古今图书集成医部全录010（303-358,内科、伤寒）",人生有性分之乐，有势分之乐，有形体康健之乐。性分之乐，四时皆春，万物同体，虽环堵,True,False,False,False,False,False,False,六味地黄汤
+cac4839acaf3a813661f378d172f7245,3,黄帝内经素问补注释文（道藏本）,故《下经》曰：骨痿者，生于大热也。,False,True,True,False,True,False,False,
+cb559aceac60f76270551c8fc5ea2c79,2,养生导引秘籍,《明医论》云：疾之所起，自生五劳，五劳既用，二脏先损。心肾受邪，府脏俱病。五劳者,False,False,True,False,True,False,False,
+ccd14753443bee1108badf2c16b4037d,7,名老中医张镜人经验集,［评析］　多发性骨髓瘤与中医所谓的“骨痹”、“骨蚀”颇相似。本病内因肝肾气阴亏损,False,True,True,False,True,True,False,
+cd1dd662009d768e6ea79a47739be6fa,2,内伤集要,秦越人始发虚损之论，谓虚而感寒则损其阳，阳虚则阴盛，损则自上而下。一损损于肺，皮,False,True,False,False,False,False,False,
+cd8e5f298823760e45160b94548ea244,2,望诊遵经,尝思古圣以背为阳。腹为阴。先贤以背为阴。腹为阳。岂前后有异。而上下不同欤。然愚谓,False,False,False,False,False,False,False,
+cd95c988d00bcf2832e5f78dd12b31ee,2,古今图书集成医部全录,【 注  骨之精髓充于骨髓，从骨空而上通于脑，故脑渗之为涕也。夫志者骨之主也，是,False,False,False,False,True,False,False,
+cd992876b5dbc48b35a535ee1a0a1ff5,4,本草从新,蚀恶肉。生好肉。除痼热在骨髓。（髓为热所劫则空、故骨痿而齿浮。）治惊痫黄胆。血痛,True,False,True,False,False,False,False,明矾;矾石;蜡矾丸
+cdaf62375729373f368d3c5c1fa97337,2,"古今图书集成医部全录002（1-46,素问）",【 马莳曰：此言五脏各有所合，故五脏热则其所合者，有皮毛焦而为痿躄，有脉痿，有筋,False,True,False,False,False,False,False,
+cf6971d3a4fe65c1280033f199f77e1e,2,全国名老中医秘方,跌打损伤包括刀枪、跌仆、殴打、闪挫、刺伤、擦伤、运动损伤等，伤处；多有疼痛、肿胀,True,True,False,False,False,False,True,跌打紫金丹
+d03cc74f39c84e14e71d8eac41b975e8,2,古今图书集成医部全录,六元正纪大论云：太阳所至为腰痛。又云：巨阳，即太阳也，虚则头项腰背痛。足太阳膀胱,True,False,False,False,False,False,False,六味地黄丸;封髓丹;滋肾丸;肾气丸;茴香丸;针刺足太阴、阳明、厥阴、少阳经穴
+d060d913735d871f36f0364d156852ba,2,普济方（四库本1-60卷）,虎骨酒　治骨虚酸痛不安好倦主膀胱寒,False,False,False,False,False,True,False,虎骨酒
+d07aff52e9a24db3e01948273fb3cc3c,3,外科大成,<span style='font-weight:bold;'>骨痿疮,True,False,True,False,False,False,False,补中益气汤
+d0f97b127888f822e073298aee7b53b0,3,古今医统大全,骨空论 髓空在脑后五分，颅际锐骨之下。（即风府穴是也。）一在断基下，一在项下中复,False,False,True,False,True,False,False,
+d145a9896c1386cd3c8905f87fda8b98,2,素问释义,咸，润下而走血，肾阳不升，血涩不行，故骨枯肌缩。大骨气劳，　即骨痿之渐，心气抑，,False,True,False,False,False,False,False,
+d17476907a85af29e31be38f0e022fa5,2,永类钤方,神仙透骨丹　骨断八分，加用此药。,True,False,True,False,False,False,False,乳香;川独活;当归;熟地黄;生地黄;白胶;神仙透骨丹;自然铜
+d232eb83fb9b15c88f8ccb1698adb0bf,5,旧德堂医案,文学陆元振，经年伏枕，足膝枯细，耳轮焦薄，形容憔悴。历访名医俱用四物地黄汤，反觉,True,True,False,False,False,False,False,人参;人参白术当归地黄汤加味;地黄;当归;牛膝;白术;肉桂;茯苓;萎蕤;鹿茸;龟甲
+d2d3496c623bac9e63d9011c466ae3e8,3,沈氏尊生书,虚损痨瘵，真元病也。虚者，气血之虚。损者，脏腑之损。虚久致损，五脏皆有。损肺伤气,True,True,False,False,True,True,False,八味丸;六味丸;煨肾丸;金刚丸
+d2f9602221def0f7d1a6412783d0301a,3,证治汇补,以秋遇此为皮痹。以至阴六月遇此为肌痹。以冬遇此为骨痹。各因其时。重感于风寒湿也。,False,False,True,True,False,False,False,
+d3271fde16707a0005e6fd6e3ae4cb44,2,黄帝素问直解,臂骨空，在臂阳，去踝四寸，两骨空之间。,False,False,True,True,False,False,False,
+d34bd62c305bc7de00f6f2dc180121dc,2,古今图书集成医部全录009（211-302）,【 注　按前论最为切当。临川陈先生云：医风先医血，血行风自灭。盖肝藏血而主风，又,False,False,False,False,False,False,False,
+d3577dfa555b865432bd9e5eae639123,2,"古今图书集成医部全录003（47-68,灵枢）",骨痹举节不用而痛，汗注烦心，取三阳之经补之。,False,False,True,False,False,False,False,
+d51ace6c9981c2c017c106f72de35c53,18,全体病源类纂,《痿论》：肾主身之骨髓（节）。肾气热则腰脊不举，骨枯而髓减，发为骨痿（节）。有所,True,True,False,False,False,True,True,人参黄芪汤;清暑益气汤
+d5436b62a63fac0d175cce631a092f77,2,内科纲要验方类编,腰痛，有风，有寒，有热，有湿，有瘀血，有气滞，有痰饮，皆标也，肾虚其本也。腰痛拘,True,False,False,False,False,False,False,二陈汤;八味丸;六君子汤;六君子汤加杜仲续断;六味丸;橘核丸;泽兰汤;独活汤;苍白二陈汤;补阴丸
+d58e3419689e4f235c31486fdea18da7,2,三消论,故余着有《原病式》曰：皮肤之汗孔者，谓泄汗之孔窍也。一名气门者，谓泄气之门户也。,False,False,True,True,False,False,False,
+d623285127537673ca1be97422dfb5ef,14,医学纲目,运气 痿有三：一曰热痿。经云：少阴之复，少气骨痿。又云：少阳之复，少气脉痿是也。,True,True,True,False,False,True,True,独参汤;生脉散
+d65ab1ab1d9bfff94e83069ee2c75cf3,2,顾松园医镜,痿者，痿弱无力，举动不能也。经言：五脏皆能使人痿。以五脏各有所主，如肺主皮毛，心,False,False,False,False,False,True,False,
+d7aae110b5357cb10a488aaee5b4d289,2,仁斋直指方论（附补遗）,至若心病而直视，面黧，肝病而舌卷、囊缩，肾病而腰折、骨枯，肺病而毛焦、气出，脾病,False,True,False,False,True,True,False,
+d803f72f84389262988ab926f52f814c,2,医悟,手足疲软而无力，百节缓纵而不收，谓之痿。说者曰：肺者，相傅之官，大气之主，治节出,True,True,False,False,False,False,False,二妙加味;二陈汤加竹沥、姜汁;二陈汤加竹沥姜汁;四君子汤;四物汤;清燥汤;补阴丸;黄芪
+d80b98f75b8c79855e912b5f0d6d9441,2,古今图书集成医部全录009（211-302）,积寒留舍，荣卫不居，卷肉缩筋，肋肘不得仲，内为骨痹，外为不仁，命曰不足，大寒流于,False,False,True,True,False,True,False,
+d8c686395a25d89ea180573d5c83623a,4,赤水玄珠（标点本）,热痰则多烦热，风痰多成瘫痪奇症，冷痰多成骨痹，湿痰多成倦怠软弱，惊痰多成心痛癫疾,True,True,True,True,False,False,False,六君子汤;半夏;南星;滚痰丸
+d92395a6454dcf512835e0dc8a9a868e,6,内经知要,有所远行劳倦，逢大热而渴，渴则阳气内伐，内伐则热舍于肾，肾者水脏也，今水不胜火，,True,True,False,False,False,True,True,清暑益气汤
+d961fa3e610fcb657c11e5e5a03c681e,2,古今图书集成医部全录,软痹者，乃膏粱火乘肝肾，以致血气濇则痹厥不仁，虚则软缓无力，或麻木不举，三妙丸、,True,True,False,False,True,False,False,三妙丸;五兽三匮丹;养真丹;大补阴丸;大补阴丸去地黄加白芍知母甘草倍牛膝;搜风顺气丸;肾气丸;虎潜丸;附虎四斤丸;隔蒜灸
+d9af6d1d9f2500bccc094fd86575b6db,2,备急千金要方,治骨虚酸疼不安好倦，主膀胱寒方。,True,True,False,False,False,True,True,虎骨酒
+daef5750578b4f5160100d7b908ef04c,7,素问识,<span class='zhengwen'>肾痹  痹论云。骨痹不已。复感于邪,True,True,True,True,False,True,True,人参益气汤;防己黄芪汤
+db1d315e44c4189ad09e3c9f386c7785,4,古今图书集成医部全录008（175-210）,痢后下虚，不善调养，或远行，或房劳，或外感，致两足痿软，或痛或痹，遂成痢风，宜用,True,True,False,False,False,True,False,南星;杉木节;杜仲;杜牛膝、杉木节、萆薢、白芷、南星;牛膝;独活寄生汤;白芷;萆薢;虎骨四斤丸;骨碎补
+dc1edfc948f16eeedb7b3deb6225811c,2,圣济总录纂要,没药散　治跌打损伤，骨折筋绝。,True,False,True,False,False,True,False,木香;桃仁;没药散;牛黄;珍珠;血竭;雄黄;麝香
+dc5da3c906199f9fda7b3d23ce712d6c,2,普济方·针灸,凡欲用针。须明骨空所在。及机关之节。机关者。内经曰。辅骨上。横骨下为 。狭髋为机,False,False,False,True,False,False,False,
+dc5f68d21a810f73a8a5ccbff8d0ba7e,2,普济方（四库本301-360卷）,又方　治骨折,True,False,True,False,False,False,True,乳香;没药;滑石;自然铜;赤石脂;麝香;龙骨
+dcc6e7fe52f5dbd082e14860d35067c3,2,东医宝鉴,数转筋，十指爪甲皆痛，为筋极。牙齿动，手足痛，不能久立，为骨极。面无血色，头发堕,True,True,True,False,False,True,False,茸珠丸
+ddae10f2402bb123cda5396ff1af4e88,3,证治准绳,木香槟榔散 治积气不散，结伏奔豚，发即上冲心胸，令人喘逆，骨痿少力。,True,True,True,False,False,True,True,木香槟榔散
+ddd46fd70e6429921b1f0342ed1f5aa7,4,证治准绳·疡医,若元气虚弱，或不戒房劳，或妄行攻伐，致死肉上延，或腐而不痛，黑而不脱者，当大补元,True,True,True,True,False,False,False,十全大补汤;托里散;附子
+de194f1400c3846e9799994e5335dfd7,3,勉学堂针灸集成,大骨空二穴　在手大指第二节尖上。可灸九壮如下法。,False,False,True,True,True,False,False,
+dee5d3ac3797980a5197d024ff40fc37,2,遵生八笺,《明医论》云：“疾之所起，自生五劳；五劳既用，二脏先损；心肾受邪，腑脏俱病。五劳,False,False,True,False,False,False,False,
+df1a7db72b675da991cd0fe3cc4d905a,8,经穴汇解,小骨空 手小指二节尖上。（大全）,False,True,True,True,True,False,False,
+e00f78c77edefb000854c53a3297129b,2,顾松园医镜,真脏脉见，乃予之期日。大骨枯槁，大肉陷下，胸中气满，喘息不便，内痛引肩项，身热，,False,True,True,False,False,False,False,
+e0186edc38f574ace9d8dacc9da9d446,6,古今图书集成医部全录008（175-210）,六元正纪大论云：太阳所至为腰痛。又云：巨阳，即太阳也，虚则头项腰背痛。足太阳膀胱,True,True,True,False,False,False,False,六味丸;六味地黄丸;养肾散;封髓丹;杜仲酒;滋肾丸;煨肾丸;百倍丸;肾气丸;茴香丸;虎骨散;补阴丸;补骨脂丸
+e023bf78a6fc875357e4d15198a2baa2,2,医学纲目,〔子和〕魏德新因赴冬选，犯寒而行，真元气衰，加之坐卧冷湿，饮食失节，以冬遇此，遂,True,True,False,False,False,False,False,姜;官桂;玲珑灶熨蒸;白术;茯苓;附子
+e0491ff91f2115372d78e153b01ff9e8,3,伤寒杂病心法集解,五痿者，心、肝、脾、肺、肾之痿也。痿属燥病，故皆因肺热而生，但阳明为脏腑之海，主,False,False,False,False,False,True,False,
+e15881da03db4206b0d61e6aceb7d1c7,3,针灸逢源,上气。短气。偏痛脉满起。斜出尻脉络胸胁。支心贯鬲。上肩。加天突。斜下肩。交十椎下,False,False,False,False,True,True,False,
+e20635c0c9ccbc56309a1f2c71e52d6a,7,黄帝内经太素,寒气客于经络之中则血泣，血泣则不通，不通则卫气归之，不得复反，故痈肿。寒气化为热,False,True,True,True,True,True,False,
+e2197c4617d2f2a70b533fbcb953b32a,3,医碥,一曰热则气泄。腠理开，汗大泄，喘呕吐酸，暴迫下注，所谓壮火食气，又曰热伤气也。（,False,True,True,False,False,False,False,
+e21b029e305db6415242b13259a979ed,9,赤水元珠（四库本）,肾脉防滑为骨痿坐不能起起则目无所见,False,True,True,False,False,False,False,
+e23851c24e28650ac788ef7d04373147,7,喻选古方试验,骨虚劳极面肿垢黑，脊痛不能久立，血气衰惫，发落齿枯，甚则喜唾。,True,True,True,False,True,True,False,牛膝;鹿角;鹿角屑
+e246d99f40e4aa9ec5efaba0223d6385,3,圣济总录,治骨极虚寒，面肿垢黑，腰脊痛，不能久立，屈伸不利，梦寐惊悸，上气，小腹里急，痛引,True,True,True,False,True,True,False,肾沥汤;肾沥汤方
+e28249ab9cd58981c47e1efdf4130efa,4,赤水元珠（四库本）,虎潜丸　补肾丸皆治骨痿之剂也○肉痿当以清燥汤治之,True,False,True,False,False,False,False,减味清燥汤;石菖蒲;虎潜丸;虎牙丸;补肾丸
+e309834e676831a81a8e0b7ab6314d8e,2,圣济总录,治肾气虚损，骨痿体瘦无力，两耳KT KT 鸣，甚即成聋，短气不足。石斛饮方,True,False,False,False,False,False,False,人参;当归;熟地黄;石斛;石斛饮;石斛饮方;肉苁蓉
+e38bd5f67708d74ed1f7b7fb483ad8c2,2,黄帝八十一难经纂图句解,从上下者，骨痿不能起于床者死。,False,False,True,False,False,False,False,
+e3dc9d40b3079b193e6411ebaacc2ed8,2,沈氏尊生书,色欲伤，精气神病也。说以三者相因，不能离贰，尝考养生家言，精能生气，气能生神，荣,True,True,False,False,True,False,True,桑螵蛸散;补心丹
+e46f5363b89ed5bb4b754fb477476495,2,感证集腋,“痿论”云：有所失亡，所求不得，则发肺鸣，鸣则肺热叶焦。皮毛虚弱，而生痿躄；悲哀,False,True,False,False,False,False,False,
+e4faf10ab47bb1f31db9ffd95adb7d2b,2,方症会要,人之五火皆赖肾水制之色欲过度则肾水虚虚则热矣肾脉贯肝膈入肺中循喉咙系舌本所以肾虚,False,False,False,False,False,True,False,
+e51c7889c43e68a97a79a9f045d024c0,3,古今图书集成医部全录,【 注  姚氏曰：精液补益脑髓而下流阴股，故髓海有余则足劲轻健而多力。髓从骨空，,False,True,True,False,True,False,False,
+e53b88839f485f152d49fcd453eed47c,2,奇效良方,金刀伤挫臼者，去自然铜，骨碎骨折者用之。然须于此方内去自然铜，临好时却入用之，如,True,True,False,False,False,False,False,接骨膏;散血膏;自然铜;蜂蜜;补肉膏;补肌散;黄丹
+e5ffc32aa2b98c4cbace2fde495e9e14,2,"古今图书集成医部全录005（93-121,脏腑经络运气）",【 注　足少阴之气主骨，故气绝则骨枯。冬脉谓五脏之脉气，合四时而外濡于皮肉筋骨者,False,False,True,False,False,False,False,
+e6031b860fa3936781ede03ed3d0a970,2,太平圣惠方,则虚 痛甚 是骨极之候也。足少阴气绝即骨枯。少阴者肾脉也。伏行而温于骨髓。故骨髓,False,True,False,False,True,False,False,
+e65c287d3935ef8ca1d565166c5d77ed,4,医灯续焰,足少阴气绝，则骨枯。少阴者，冬脉也。伏行而温于骨髓。故骨髓不温，则肉不着骨。骨肉,False,True,True,False,False,False,False,
+e6a0503c40ae06d958aa8dc943f19297,2,千金翼方,经曰：皮部在于四肢；肉柱在于臂 诸阳分肉之间及少阴分肉之间；气血之输在于诸经络脉,False,False,True,False,False,False,False,
+e76762f853b611868e5c0c67bdadd779,4,普济方（四库本1-60卷）,石斛丸【出圣恵方】治肾臓虚损头昏耳鸣目暗茫茫心中善忘恍惚不定饮食无味心恒不乐多有,True,True,True,False,False,False,False,石斛丸;磁石丸
+e769490dd1566b36acfd0af5d1beff20,6,赤水元珠（四库本）,热痰则多烦热风痰多成瘫痪竒症冷痰多成骨痹湿痰多成倦怠软弱惊痰多成心痛癫疾饮痰多脇,True,True,True,True,False,False,False,六君子汤;半夏;南星
+e87474b03740f34c76715ee9830f2b11,2,类经,大骨枯 ，大肉陷下，胸中气满，喘息不便，其气动形，期六月死；真藏脉见，乃予之期日,False,True,False,False,False,True,False,
+e9abf765506a07dd036ce85ae1966a33,5,东医宝鉴,<b>骨痿</b>,True,True,True,False,False,False,True,丁香;全蝎;六味地黄丸;厚朴;参归汤;川乌;巴霜;橘核丸;泽兰汤;泽泻;清暑益气汤;独活;独活汤;玄胡;肉桂;肾气丸;苦楝子;茯苓;菖蒲;黄连
+ea797e314256627291e523a454516a7d,2,医学汇函,贲，奔也。心积曰伏梁，言伏而不动也。肾积曰贲豚，言动而不伏，如豚之奔也。肾居下，,False,True,True,False,False,False,False,
+eaaeb301913284d6f72a0108384ca248,2,订正仲景全书金匮要略注,『集注』赵良曰：此证风湿皆从表受之，其病在外，故脉浮汗出。凡身重，有肌肉痿而重者,True,False,True,False,False,False,False,桂枝;甘草;白术;细辛;芍药;防己;麻黄;黄芪
+eaefe35523bcbb4c2dc9d3376d3f0ee3,5,古今图书集成医部全录,足少阴气绝则骨枯。少阴者，冬脉也，伏行而濡骨髓者也，故骨不濡则肉不能着也。骨肉不,False,True,True,False,False,False,False,
+eb0aee8f51d0884a776fa5fc7ff4799c,3,古今图书集成医部全录009（211-302）,骨痹举节不用而痛，汗注烦心，取三阳之经补之。,False,False,True,True,False,False,False,
+eccf2295ca81ee9f0ec8a4ec6273eb1a,2,"古今图书集成医部全录004（69-92,难经脉法）",大骨枯藁，大肉陷下，胷中气满，喘息不便，内痛引肩项，期一月死。真脏见，乃予之期日,False,True,True,False,False,False,False,
+ee060b047f4a042e2ba9491279e0b250,2,"古今图书集成医部全录013（401-458,儿科）",小儿疳病，诸论丛杂，唯五疳之说为当。其证候外则传变不同，内则悉属五脏。一曰肝疳，,True,False,True,True,True,False,True,如圣丸;木香丸;白朮散;黄连丸
+ee4eeaa10313d3f51ee6cfc026c224f7,11,"古今图书集成医部全录005（93-121,脏腑经络运气）",【 肾气虚，心悬如饥善恐，惕惕如人将捕，水不胜火，则骨枯而髓虚，故足不任身，发为,True,True,False,False,False,True,True,清暑益气汤
+eed67da80a7bca1ec9ee199d8009909c,2,"古今图书集成医部全录010（303-358,内科、伤寒）",五脏，阴也，所主皆有形，骨肉筋血皮毛是也。此五脏皆阴足，是为实热，阴足而实不能起,False,True,True,False,False,False,False,
+ef10790e27a2e3a403d65d41d58ede11,2,本草求真,麦冬（专入心肺）。有类天冬。然麦冬甘味甚多。寒性差少。天冬所主在肺。而麦冬所主。,True,True,False,False,False,False,False,生脉散;麦冬
+ef612bcf3ad26cd03fbbcca7db787093,3,古今图书集成医部全录,＋ 骨极,False,True,True,True,True,False,False,
+ef72e796482f0f0521d9b2591cf582b0,3,千金要方（四库本）,论曰补方通治五劳六极七伤虚损五劳五臓病六极六腑病七伤表里受病五劳者一曰志劳二曰思,False,False,True,False,True,False,False,
+f007b4d4aafa07b75bebd61c2a74f03f,7,鲁府禁方,筋断骨折痛不可忍,True,True,True,True,False,True,False,无名异;没药散;没药降圣丹;猴姜
+f03c3514ae0a406ee0dd5e05dcf04614,58,灵素节注类编,肾枯骨痹,True,True,True,True,False,False,True,增味五痹汤;增损五痹汤;姜桂丸;安肾丸;局方胡椒理中丸;川芎;干姜;桂;泽泻;炙虎骨;狗脊;独活;秦艽;红花;细辛;续断;羌活;羚羊角散;肉桂;苍术;虎骨;酸枣仁;防风;麻黄
+f10cec9c96be30f67216b1c0532ef69d,3,古今图书集成医部全录,骨极者，主肾也。肾应骨，骨与肾合。又曰：以冬遇病为骨痹，骨痹不已，复感于邪，内舍,False,False,True,False,True,False,False,
+f1172b0a65d5209bc5859dcd2ab9836a,3,古今图书集成医部全录009（211-302）,骨痿,True,True,True,False,False,True,False,减味清燥汤
+f1489e573391e118f2b9a1f946e20406,3,养生类纂,梅子多食伤骨，蚀脾胃，令人发热。（《本草》）,True,False,True,False,False,False,True,乌梅;梅子;白梅
+f1919964c53637af1be4b97e7f155fa5,2,"古今图书集成医部全录006（122-150,头面耳）",【 注　骨痿坐不起，热伤肾气也。目无所见，热伤骨精也。】,False,False,False,False,False,False,False,
+f216da84378268a62bf1b54efda60f61,2,济阳纲目,上为细末，每用半两，生姜自然汁调如稀糊，摊纸花上贴用，如干再敷。骨折，先以绢帛封,True,False,False,False,False,False,False,杉木札;沙木;生姜自然汁;纸花;绢帛
+f26a09c0289c4ac9e8a18f851674a145,16,黄帝内经太素,肾气热，则腰脊不举，骨枯而髓减，发为骨痿。,True,True,False,False,False,False,True,肾着汤;防己;防风;黄柏
+f28c5f4a252e47be1bd20bb2564c57db,2,圣济总录,治肾虚骨痹，肌体羸瘦，腰脚酸痛，饮食无味，小便滑数。石斛丸方。,False,True,False,False,True,False,False,石斛丸
+f2c28c2c6fc57a99929994b890db3361,3,图经衍义本草,禹锡云：谨按《药性论》云：丹砂，君，有大毒。镇心，主尸疰，抽风。青霞子云：丹砂，,True,True,True,True,True,False,True,丹砂
+f2dedb43b1226850889b17783f57f98a,5,黄帝素问直解,会，合也。肉之大合处即为谷，肉之小合处即为溪，会之所在，即分之所在。分之所在，即,False,False,False,False,True,False,False,
+f365729207e393e61400f11d691ab651,2,药性通考,味甘，气平寒，无毒。酒调服良，口吮更妙。入肺胃脾肾。补精血，益元阳。肌瘦皮黄、毛,False,True,False,False,False,False,False,人乳
+f374dea30901e75b7f26b9c63f6a7de3,3,普济方（四库本1-60卷）,五脏各有所主至其病证莫不随所主而见焉面赤喜笑舌破口干颐燥掌热心痛而啘脐上有动气者,False,True,False,False,True,True,False,
+f4953247cd96f29e3544b13f1f904495,2,普济方·针灸,尻骨空。在髀骨之后相去四寸（八 穴也）。扁骨有渗理腠。无髓孔。易髓无空是也。凡病,False,False,False,False,False,False,False,
+f4b9a9f0414881d5022ec01bb0c960e2,2,塘医话,古人治气分之病，如四磨饮、四七汤、丁香柿蒂汤、橘皮竹茹汤，皆用参。治血分之病，如,False,True,False,False,False,False,False,
+f565e5715a34fc63723bdd47386c93d4,3,黄帝内经素问,病在骨，骨重不可举，骨髓酸痛，寒气至，名曰骨痹。深者，刺无伤脉肉为故，其道大分、,False,False,False,False,False,False,False,
+f572993dd550452c2948ad483e968942,3,友渔斋医话,春季摄生。遇风日融和，当从园林亭阁虚敞之处，凭栏凝眺，用滤滞怀，以畅生气不可默坐,False,True,False,False,False,False,False,
+f5db133ec1d38868eb56d1775cd89c67,5,黄帝内经太素,积寒留舍，营卫不居，塞肉缩筋，时不得伸，内为骨痹，外为不仁，,False,True,False,True,False,True,False,
+f65096abb872aadc1ab3c41e92daf429,4,冉雪峰内经讲义,足少阴气绝，则骨枯，少阴者冬脉也，伏行而濡骨髓者也，故骨不濡则肉不能著也，骨肉不,False,True,True,False,False,False,False,
+f6d6749e760cde652c81231b39b6869f,3,冯氏锦囊秘录杂症大小合参,治跌扑闪肭，骨折疼痛。,True,False,True,False,False,False,True,接骨散
+f7bf0c822ba6dae45236e33ae12ff010,3,医述,水不胜火，则骨枯而髓虚，故足不任身，发为骨痿。或因阴虚为骨蒸，骨髓酸痛。寒气至为,False,True,True,False,False,False,False,
+f91482fc9d71061619a8a1e4e976aa04,2,素问释义,寒入骨髓，骨病而筋亦缩为挛节，病名骨痹，因乎寒湿也。,True,False,False,False,False,False,True,干漆;生干地黄;附子;鹿茸
+f93768b91ea75cbb888b25dc4424e87d,16,针灸逢源,上至心。下若豚状。上下无时。久则喘逆。骨痿少气。,True,True,True,False,False,True,False,二陈汤;增损五积丸;奔豚丸;香附
+f961316357934ea09683b2f7b57004fb,3,医学纲目,〔垣〕六元正纪论云：太阳所至为腰痛。又云：巨阳，即太阳也，虚则头项腰背痛。足太阳,True,True,True,False,False,False,False,六味丸;六味地黄丸;封髓丹;滋肾丸;肾气丸;茴香丸;虎骨散;补阴丸;补骨脂丸
+f980d2423f92b411e1bcb8cdaa99a731,2,黄帝素问直解,人之生气，发原于肾，生气不升，故善胀。尻，尾骨也。尾骨下蹲，以代踵，足骨痿也；脊,False,True,False,False,False,False,False,
+f9db5f4044064114b324c9e2532ddbf6,3,医学钩玄,腰痛之脉，沉而弦，沉弦紧为寒，沉弦浮为风，沉弦濡细为湿，沉弦而实为闪肭。其有时时,True,True,True,False,False,True,True,六味地黄丸;官桂;羊肾;肾气丸;茴香丸;风髓丹;鹿茸
+f9ec9b4caff9ef7ddfb4b5f8e97cc3c7,5,古今图书集成医部全录,肾脉微滑为骨痿，坐不能起，起则目无所见。,False,False,True,True,False,False,False,
+fa09673024df218b58eaf9b874a5fcc3,2,赤水元珠（四库本）,运气言少气有二　一曰火热经云火郁之发民病少气又云少阴之复少气骨痿又云少阳之复少气,False,True,True,False,False,True,False,
+fac015749c66a5f35577c258b6c86241,2,永类钤方,细末，细嚼，生姜酒调。如刀伤，不用酒。骨断皮不破，加乳、没浸酒调。体弱伤损气痛，,True,True,False,False,False,False,False,乳香;川芎;没药;生姜;白芷;茴香;荆芥;草乌;荜澄茄
+fac803a337dca028b909a83ee4bd885d,2,"古今图书集成医部全录002（1-46,素问）",【 王冰曰：复，谓执其胜，凡先不胜，后必有复也。里，腹胁之内。木偃沙飞，风之大。,False,True,True,False,False,False,False,
+facc2be2db1614c88db600ff12289994,3,东医宝鉴,骨蒸之极，声嗄、咽痛、面黧、脉躁、直视、汗出如珠、喘乏气促、皮焦、唇反，皆为不治,True,True,False,False,False,False,True,地黄;当归;芍药;黄芪
+fb1010ea3579e6a97e2ccd81d77fc68a,5,古今图书集成医部全录,【 注  阴阳之气不和，则液与精不合，使液溢于骨外，而下流于阴矣。液溢于外，则髓,False,True,True,False,True,True,False,
+fb9c179a2719e84746470ee1378f6fa3,2,神仙济世良方,吕祖择，如人久坐，则血滞 疏，久卧则肉痿而骨缩，必使之行走于途中，而后以药继之也,False,False,False,False,False,False,False,半夏;当归;甘草;白芍;防风;陈皮;黄芪
+fcb6ca3b3942d2f100a28bedb5c3f811,2,脏腑虚实标本用药式,本病：诸寒厥逆，骨痿腰痛，腰冷如冰，足 肿寒，少腹满急疝瘕，大便闭泄，吐利腥秽,False,False,True,False,False,True,False,
+fcbaa762974f92b0eba2a48864490fb7,4,黄帝内经太素,骨痹，举节不用而痛，汗注烦心，取三阴之经补之。,False,False,True,False,False,False,False,
+fd0a19d4004772d158223bf4efa1df3c,2,灵枢悬解,虚邪偏客于身半，其入深，内居营卫，营卫稍衰，则真气去，邪气独留，发为偏枯，其邪气,False,False,False,False,False,False,False,
+fd1cd37774cdebbac806c605d5989ac5,21,内经运气病释,寒已而热，渴而欲饮，少气，骨痿，隔肠不便，浮肿，哕噫。,True,True,True,False,True,True,False,独参汤;生脉散
+fe36cb223132a05f96742c2bb8c4c6cd,2,黄帝内经素问语译,"病在骨,骨重不可举,骨髓酸痛,寒气至,名曰骨痹,深者刺,无伤脉肉为故,其道大分小",False,False,True,False,True,False,False,
+fe79a51e38f0b628ee42894a3819b72b,2,黄帝内经太素,平按：此卷自卷首①至“两目之下中”以上，原钞残脱，平于日本仁和寺宫御残卷十三纸中,False,False,True,False,False,False,False,
+fe8f5bb74bb7843620dfbc7cf8874658,2,内外伤寒辩惑论（四库本）,刺志论云气虚身热得之伤暑热伤气故也痿论云有所逺行劳倦逢大热而渇则阳气内伐内伐则热,False,True,False,False,False,True,False,
+febe45c8f370ef9c7952c42628eb3263,2,仙授理伤续断秘方,治男子妇人骨断，用此煎水洗后整骨了却用乌龙角贴。,True,True,False,False,False,False,False,乌龙角;乌龙角贴
+ffaa3f6985b1c3e59bd0ab8a9ff8aa41,5,杏苑生春,夫积有五，《难经》备详其由。盖肝之积曰肥气，在左胁下，大如覆杯，有头足，令人发咳,False,True,True,False,True,True,False,
+ffda302fb040e20fc2db27aaa2ace91a,11,古今图书集成医部全录,输刺者，直入直出，深内之至骨，以取骨痹，此肾之应也。,False,True,True,True,False,False,False,

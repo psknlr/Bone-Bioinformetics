@@ -1,0 +1,16 @@
+molecule_chembl_id,target_chembl_id,target_pref_name,pchembl_value,standard_type,standard_relation,assay_type,assay_description,document_chembl_id,herb,compound_query,target_type,target_gene_symbol,all_component_genes
+CHEMBL284616,CHEMBL2093865,Histone deacetylase,6.87,Ki,=,B,Inhibition of HDAC in human Hela cells nuclear extracts by fluorimetric assay,CHEMBL1155249,杜仲,chlorogenic acid,PROTEIN FAMILY,,HDAC1;HDAC3;HDAC6;HDAC2;HDAC5;HDAC7;HDAC8;HDAC11;HDAC4;HDAC9;HDAC10
+CHEMBL168,CHEMBL614806,H9,5.43,EC50,=,A,Cytotoxicity against mock-infected human H9 cells,CHEMBL1155638,牛膝,oleanolic acid,CELL-LINE,,
+CHEMBL168,CHEMBL394,HCT-116,5.32,IC50,=,F,Cytotoxicity against human HCT116 cells by MTT assay,CHEMBL1287676,牛膝,oleanolic acid,CELL-LINE,,
+CHEMBL168,CHEMBL614526,BGC-823,5.59,IC50,=,F,Cytotoxicity against human BGC823 cells by MTT assay,CHEMBL2346627,牛膝,oleanolic acid,CELL-LINE,,
+CHEMBL168,CHEMBL392,A549,6.41,IC50,=,F,Cytotoxicity against human A549 cells by MTT assay,CHEMBL2346627,牛膝,oleanolic acid,CELL-LINE,,
+CHEMBL168,CHEMBL390,PC-3,5.19,IC50,=,F,Cytotoxicity against human PC3 cells by MTT assay,CHEMBL2346627,牛膝,oleanolic acid,CELL-LINE,,
+CHEMBL168,CHEMBL392,A549,5.19,IC50,=,F,Antiproliferative activity against human A549 cells harbouring wild type EGFR incubated for 72 hrs by SRB assay,CHEMBL4414650,牛膝,oleanolic acid,CELL-LINE,,
+CHEMBL168,CHEMBL387,MCF7,8.37,IC50,=,F,Antiproliferative activity against human MCF7 cells assessed as inhibition of cell growth incubated for 72 hrs by MTT as,CHEMBL5390238,牛膝,oleanolic acid,CELL-LINE,,
+CHEMBL168,CHEMBL3831201,20S proteasome,5.57,EC50,=,B,Activation of 20s proteosome (unknown origin) mediated chymotrypsin-like activity,CHEMBL6096634,牛膝,oleanolic acid,PROTEIN COMPLEX GROUP,,PSMB2;PSMB1;PSMB5;PSMB8;PSMB9;PSMB6;PSMA1;PSMA2;PSMA3;PSMA4;PSMA5;PSMA6;PSMA7;PSMA8;PSMB10;PSMB11;PSMB3;PSMB4;PSMB7
+CHEMBL284616,CHEMBL2093865,Histone deacetylase,6.87,Ki,=,B,Inhibition of HDAC in human Hela cells nuclear extracts by fluorimetric assay,CHEMBL1155249,续断,chlorogenic acid,PROTEIN FAMILY,,HDAC1;HDAC3;HDAC6;HDAC2;HDAC5;HDAC7;HDAC8;HDAC11;HDAC4;HDAC9;HDAC10
+CHEMBL150,CHEMBL2095188,Glycogen synthase kinase-3,5.46,IC50,=,B,Inhibition of glycogen synthase kinase 3,CHEMBL1141883,骨碎补,kaempferol,PROTEIN FAMILY,,GSK3A;GSK3B
+CHEMBL150,CHEMBL614076,Monocyte,5.57,IC50,=,F,Inhibition of procoagulant activity in monocyte from human blood assessed as counteraction of IL1-induced tissue factor ,CHEMBL1158193,骨碎补,kaempferol,CELL-LINE,,
+CHEMBL150,CHEMBL395,HepG2,5.11,EC50,=,F,Antioxidant activity in human HepG2 cells assessed as decrease in fluorescence level after 2.5 hrs measured every 5 mins,CHEMBL3779891,骨碎补,kaempferol,CELL-LINE,,
+CHEMBL150,CHEMBL3832943,Casein kinase 2,6.4,IC50,=,B,Inhibition of human recombinant CK2 expressed in Escherichia coli using RRRADDSDDDDD as substrate after 10 mins in prese,CHEMBL4368927,骨碎补,kaempferol,PROTEIN FAMILY,,CSNK2B;CSNK2A1;CSNK2A2;CSNK2A3
+CHEMBL150,CHEMBL3832943,Casein kinase 2,6.68,Ki,=,B,Binding affinity to CK2 (unknown origin),CHEMBL5380797,骨碎补,kaempferol,PROTEIN FAMILY,,CSNK2B;CSNK2A1;CSNK2A2;CSNK2A3

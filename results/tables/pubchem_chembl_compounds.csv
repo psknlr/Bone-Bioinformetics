@@ -1,17 +1,17 @@
-query,pubchem_cid,pubchem_title,formula,canonical_smiles,herb,molecule_chembl_id
-pinoresinol diglucoside,174003,Pinoresinol diglucoside,C32H42O16,,杜仲,CHEMBL460862
-aucubin,91458,Aucubin,C15H22O9,,杜仲,CHEMBL514882
-geniposidic acid,443354,Geniposidic Acid,C16H22O10,,杜仲,CHEMBL460031
-chlorogenic acid,1794427,Chlorogenic Acid,C16H18O9,,杜仲,CHEMBL284616
-20-hydroxyecdysone,5459840,20-Hydroxyecdysone,C27H44O7,,牛膝,CHEMBL224128
-ecdysterone,118701161,Ecdysterone,C27H44O7,,牛膝,CHEMBL224128
-oleanolic acid,10494,Oleanolic Acid,C30H48O3,,牛膝,CHEMBL168
-ginsenoside Ro,11815492,Ginsenoside Ro,C48H76O19,,牛膝,CHEMBL488317
-asperosaponin VI,14284436,Asperosaponin VI,C47H76O18,,续断,CHEMBL4521246
-akebia saponin D,14284436,Asperosaponin VI,C47H76O18,,续断,CHEMBL4521246
-loganin,87691,(-)-Loganin,C17H26O10,,续断,CHEMBL1081584
-chlorogenic acid,1794427,Chlorogenic Acid,C16H18O9,,续断,CHEMBL284616
-naringin,442428,Naringin,C27H32O14,,骨碎补,CHEMBL4303320
-neoeriocitrin,114627,Neoeriocitrin,C27H32O15,,骨碎补,CHEMBL3609603
-eriodictyol,440735,(+)-Eriodictyol,C15H12O6,,骨碎补,CHEMBL8996
-kaempferol,5280863,Kaempferol,C15H10O6,,骨碎补,CHEMBL150
+query,pubchem_cid,pubchem_title,formula,inchikey,canonical_smiles,herb,compound_scope,molecule_chembl_id,chembl_pref_name,chembl_inchikey,pubchem_cid_shared_by_n_queries,chembl_inchikey_shared_by_n_queries,synonym_collision
+pinoresinol diglucoside,174003,Pinoresinol diglucoside,C32H42O16,ZJSJQWDXAYNLNS-FUPWJLLWSA-N,COC1=C(C=CC(=C1)[C@@H]2[C@H]3CO[C@@H]([C@H]3CO2)C4=CC(=C(C=C4)O[C@H]5[C@@H]([C@H]([C@@H]([C@H](O5)CO)O)O)O)OC)O[C@H]6[C@@H]([C@H]([C@@H]([C@H](O6)CO)O)O)O,杜仲,selected_representative_compound,CHEMBL460862,(-)-PINORESINOL,HGXBRUKMWQGOIE-FEBSWUBLSA-N,1,1,False
+aucubin,91458,Aucubin,C15H22O9,RJWJHRPNHPHBRN-FKVJWERZSA-N,C1=CO[C@H]([C@H]2[C@@H]1[C@@H](C=C2CO)O)O[C@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CO)O)O)O,杜仲,selected_representative_compound,CHEMBL514882,AUCUBIN,RJWJHRPNHPHBRN-FKVJWERZSA-N,1,1,False
+geniposidic acid,443354,Geniposidic Acid,C16H22O10,ZJDOESGVOWAULF-OGJQONSISA-N,C1C=C([C@@H]2[C@H]1C(=CO[C@H]2O[C@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CO)O)O)O)C(=O)O)CO,杜仲,selected_representative_compound,CHEMBL460031,GENIPOSIDIC ACID,ZJDOESGVOWAULF-OGJQONSISA-N,1,1,False
+chlorogenic acid,1794427,Chlorogenic Acid,C16H18O9,CWVRJTMFETXNAD-JUHZACGLSA-N,C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O,杜仲,selected_representative_compound,CHEMBL284616,CHLOROGENIC ACID,CWVRJTMFETXNAD-JUHZACGLSA-N,1,1,False
+20-hydroxyecdysone,5459840,20-Hydroxyecdysone,C27H44O7,NKDFYOWSKOHCCO-YPVLXUMRSA-N,C[C@]12CC[C@H]3C(=CC(=O)[C@H]4[C@@]3(C[C@@H]([C@@H](C4)O)O)C)[C@@]1(CC[C@@H]2[C@](C)([C@@H](CCC(C)(C)O)O)O)O,牛膝,selected_representative_compound,CHEMBL224128,20-HYDROXYECDYSONE,NKDFYOWSKOHCCO-YPVLXUMRSA-N,1,2,True
+ecdysterone,118701161,Ecdysterone,C27H44O7,NKDFYOWSKOHCCO-WRDNMVOESA-N,C[C@]12CCC3C(=CC(=O)C4[C@@]3(C[C@@H]([C@@H](C4)O)O)C)[C@@]1(CC[C@@H]2C(C)([C@@H](CCC(C)(C)O)O)O)O,牛膝,selected_representative_compound,CHEMBL224128,20-HYDROXYECDYSONE,NKDFYOWSKOHCCO-YPVLXUMRSA-N,1,2,True
+oleanolic acid,10494,Oleanolic Acid,C30H48O3,MIJYXULNPSFWEK-GTOFXWBISA-N,C[C@]12CC[C@@H](C([C@@H]1CC[C@@]3([C@@H]2CC=C4[C@]3(CC[C@@]5([C@H]4CC(CC5)(C)C)C(=O)O)C)C)(C)C)O,牛膝,selected_representative_compound,CHEMBL168,OLEANOLIC_ACID,MIJYXULNPSFWEK-GTOFXWBISA-N,1,1,False
+ginsenoside Ro,11815492,Ginsenoside Ro,C48H76O19,NFZYDZXHKFHPGA-QQHDHSITSA-N,C[C@]12CC[C@@H](C([C@@H]1CC[C@@]3([C@@H]2CC=C4[C@]3(CC[C@@]5([C@H]4CC(CC5)(C)C)C(=O)O[C@H]6[C@@H]([C@H]([C@@H]([C@H](O6)CO)O)O)O)C)C)(C)C)O[C@H]7[C@@H]([C@H]([C@@H]([C@H](O7)C(=O)O)O)O)O[C@H]8[C@@H]([C@H]([C@@H]([C@H](O8)CO)O)O)O,牛膝,selected_representative_compound,CHEMBL488317,GINSENOSIDE R0,NFZYDZXHKFHPGA-QQHDHSITSA-N,1,1,False
+asperosaponin VI,14284436,Asperosaponin VI,C47H76O18,CCRXMHCQWYVXTE-HMRSNRLKSA-N,C[C@]12CC[C@@H]([C@@]([C@@H]1CC[C@@]3([C@@H]2CC=C4[C@]3(CC[C@@]5([C@H]4CC(CC5)(C)C)C(=O)O[C@H]6[C@@H]([C@H]([C@@H]([C@H](O6)CO[C@H]7[C@@H]([C@H]([C@@H]([C@H](O7)CO)O)O)O)O)O)O)C)C)(C)CO)O[C@H]8[C@@H]([C@H]([C@H](CO8)O)O)O,续断,selected_representative_compound,CHEMBL4521246,,CCRXMHCQWYVXTE-HMRSNRLKSA-N,2,2,True
+akebia saponin D,14284436,Asperosaponin VI,C47H76O18,CCRXMHCQWYVXTE-HMRSNRLKSA-N,C[C@]12CC[C@@H]([C@@]([C@@H]1CC[C@@]3([C@@H]2CC=C4[C@]3(CC[C@@]5([C@H]4CC(CC5)(C)C)C(=O)O[C@H]6[C@@H]([C@H]([C@@H]([C@H](O6)CO[C@H]7[C@@H]([C@H]([C@@H]([C@H](O7)CO)O)O)O)O)O)O)C)C)(C)CO)O[C@H]8[C@@H]([C@H]([C@H](CO8)O)O)O,续断,selected_representative_compound,CHEMBL4521246,,CCRXMHCQWYVXTE-HMRSNRLKSA-N,2,2,True
+loganin,87691,(-)-Loganin,C17H26O10,AMBQHHVBBHTQBF-UOUCRYGSSA-N,C[C@H]1[C@H](C[C@H]2[C@@H]1[C@@H](OC=C2C(=O)OC)O[C@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CO)O)O)O)O,续断,selected_representative_compound,CHEMBL1081584,LOGANIN,AMBQHHVBBHTQBF-UOUCRYGSSA-N,1,1,False
+chlorogenic acid,1794427,Chlorogenic Acid,C16H18O9,CWVRJTMFETXNAD-JUHZACGLSA-N,C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O,续断,selected_representative_compound,CHEMBL284616,CHLOROGENIC ACID,CWVRJTMFETXNAD-JUHZACGLSA-N,1,1,False
+naringin,442428,Naringin,C27H32O14,DFPMSGMNTNDNHN-ZPHOTFPESA-N,C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)O[C@@H]2[C@H]([C@@H]([C@H](O[C@H]2OC3=CC(=C4C(=O)C[C@H](OC4=C3)C5=CC=C(C=C5)O)O)CO)O)O)O)O)O,骨碎补,selected_representative_compound,CHEMBL4303320,,CWBZAESOUBENAP-WMKOAESCSA-N,1,1,False
+neoeriocitrin,114627,Neoeriocitrin,C27H32O15,OBKKEZLIABHSGY-DOYQYKRZSA-N,C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)O[C@@H]2[C@H]([C@@H]([C@H](O[C@H]2OC3=CC(=C4C(=O)C[C@H](OC4=C3)C5=CC(=C(C=C5)O)O)O)CO)O)O)O)O)O,骨碎补,selected_representative_compound,CHEMBL3609603,,OBKKEZLIABHSGY-DOYQYKRZSA-N,1,1,False
+eriodictyol,440735,(+)-Eriodictyol,C15H12O6,SBHXYTNGIZCORC-ZDUSSCGKSA-N,C1[C@H](OC2=CC(=CC(=C2C1=O)O)O)C3=CC(=C(C=C3)O)O,骨碎补,selected_representative_compound,CHEMBL8996,ERIODICTYOL,SBHXYTNGIZCORC-ZDUSSCGKSA-N,1,1,False
+kaempferol,5280863,Kaempferol,C15H10O6,IYRMWMYZSQPJKC-UHFFFAOYSA-N,C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O,骨碎补,selected_representative_compound,CHEMBL150,KAEMPFEROL,IYRMWMYZSQPJKC-UHFFFAOYSA-N,1,1,False

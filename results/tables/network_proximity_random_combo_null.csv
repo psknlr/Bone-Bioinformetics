@@ -1,2 +1,2 @@
-comparison,core_distance,random_mean,random_sd,empirical_p_core_closer,n_random
-core_combo_vs_random_equal_size_combos,1.2258064516129032,1.2258064516129035,2.220446049250313e-16,1.0,2000
+comparison,core_distance,background_size,n_targets,random_mean,random_sd,empirical_p_core_closer,n_random
+core_combo_vs_random_size_matched_background,1.9230769230769231,557,58,1.3187705940988834,0.09851133936844432,1.0,2000

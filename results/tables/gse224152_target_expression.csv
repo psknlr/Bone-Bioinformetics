@@ -9,7 +9,6 @@ GSE224152,CA2,1771,0.9486166007905138,0.32298136645962733,57.0,https://ftp.ncbi.
 GSE224152,CDC25B,1771,0.015245623941276116,0.01129305477131564,4.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,CES1,1771,0.0016939582156973462,0.0016939582156973462,1.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,CISD1,1771,0.09542631281761717,0.07284020327498589,5.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
-GSE224152,CSNK2B,1771,0.5426312817617166,0.26312817617165446,10.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,CTDSP1,1771,0.03670242800677583,0.028232636928289104,3.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,CYP1B1,1771,0.018633540372670808,0.01129305477131564,3.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,DAPK1,1771,0.00564652738565782,0.005081874647092038,2.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
@@ -19,8 +18,6 @@ GSE224152,F3,1771,0.002258610954263128,0.0016939582156973462,2.0,https://ftp.ncb
 GSE224152,FLT3,1771,0.001129305477131564,0.001129305477131564,1.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,FTO,1771,0.020628646527385656,0.019762845849802372,2.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,FUNDC1,1771,0.06437041219649915,0.05138339920948617,3.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
-GSE224152,GSK3A,1771,0.018068887634105024,0.014680971202710334,3.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
-GSE224152,HDAC1,1771,0.12761151891586675,0.09147374364765669,4.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,HDAC6,1771,0.025409373235460192,0.01693958215697346,3.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,HIF1A,1771,0.04743083003952569,0.038396386222473176,3.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,HSD17B1,1771,0.009034443817052512,0.007340485601355167,3.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
@@ -32,7 +29,6 @@ GSE224152,MPO,1771,0.039525691699604744,0.010728402032749858,13.0,https://ftp.nc
 GSE224152,PKM,1771,0.0818746470920384,0.040654997176736304,9.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,PLA2G1B,1771,0.004517221908526256,0.003952569169960474,2.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,POLB,1771,0.024280067758328628,0.020892151326933936,3.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
-GSE224152,PSMB2,1771,0.5081874647092038,0.25691699604743085,10.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,PTPN1,1771,0.03613777526821005,0.028232636928289104,3.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,PTPN2,1771,0.07848673066064371,0.06154714850367024,4.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz
 GSE224152,PTPRC,1771,0.03613777526821005,0.020892151326933936,7.0,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE224nnn/GSE224152/suppl/GSE224152_matrix-Combined-Loic-GenesInRows.csv.gz

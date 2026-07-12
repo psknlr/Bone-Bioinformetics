@@ -2,8 +2,6 @@ source,source_type,target,target_type,relation
 杜仲,herb,aucubin,compound,contains
 aucubin,compound,L3MBTL1,target,binds
 杜仲,herb,chlorogenic acid,compound,contains
-chlorogenic acid,compound,HDAC1,target,binds
-杜仲,herb,chlorogenic acid,compound,contains
 chlorogenic acid,compound,AKR1B1,target,binds
 杜仲,herb,chlorogenic acid,compound,contains
 chlorogenic acid,compound,AKR1B10,target,binds
@@ -183,20 +181,6 @@ oleanolic acid,compound,GPBAR1,target,binds
 oleanolic acid,compound,PTPN1,target,binds
 牛膝,herb,oleanolic acid,compound,contains
 oleanolic acid,compound,AKR1B10,target,binds
-牛膝,herb,oleanolic acid,compound,contains
-oleanolic acid,compound,PSMB2,target,binds
-续断,herb,chlorogenic acid,compound,contains
-chlorogenic acid,compound,HDAC1,target,binds
-续断,herb,chlorogenic acid,compound,contains
-chlorogenic acid,compound,AKR1B1,target,binds
-续断,herb,chlorogenic acid,compound,contains
-chlorogenic acid,compound,AKR1B10,target,binds
-续断,herb,chlorogenic acid,compound,contains
-chlorogenic acid,compound,AKR1B1,target,binds
-续断,herb,chlorogenic acid,compound,contains
-chlorogenic acid,compound,PTPN1,target,binds
-续断,herb,chlorogenic acid,compound,contains
-chlorogenic acid,compound,AKR1B1,target,binds
 骨碎补,herb,neoeriocitrin,compound,contains
 neoeriocitrin,compound,PKM,target,binds
 骨碎补,herb,neoeriocitrin,compound,contains
@@ -219,8 +203,6 @@ eriodictyol,compound,FTO,target,binds
 eriodictyol,compound,FTO,target,binds
 骨碎补,herb,kaempferol,compound,contains
 kaempferol,compound,CYP2C9,target,binds
-骨碎补,herb,kaempferol,compound,contains
-kaempferol,compound,GSK3A,target,binds
 骨碎补,herb,kaempferol,compound,contains
 kaempferol,compound,ALOX5,target,binds
 骨碎补,herb,kaempferol,compound,contains
@@ -258,8 +240,6 @@ kaempferol,compound,ALOX15,target,binds
 骨碎补,herb,kaempferol,compound,contains
 kaempferol,compound,ALOX15,target,binds
 骨碎补,herb,kaempferol,compound,contains
-kaempferol,compound,HIF1A,target,binds
-骨碎补,herb,kaempferol,compound,contains
 kaempferol,compound,TP53,target,binds
 骨碎补,herb,kaempferol,compound,contains
 kaempferol,compound,TP53,target,binds
@@ -273,8 +253,6 @@ kaempferol,compound,CYP3A4,target,binds
 kaempferol,compound,CYP2D6,target,binds
 骨碎补,herb,kaempferol,compound,contains
 kaempferol,compound,CYP2C9,target,binds
-骨碎补,herb,kaempferol,compound,contains
-kaempferol,compound,CYP3A4,target,binds
 骨碎补,herb,kaempferol,compound,contains
 kaempferol,compound,ABCG2,target,binds
 骨碎补,herb,kaempferol,compound,contains
@@ -332,8 +310,6 @@ kaempferol,compound,IP6K2,target,binds
 骨碎补,herb,kaempferol,compound,contains
 kaempferol,compound,IPMK,target,binds
 骨碎补,herb,kaempferol,compound,contains
-kaempferol,compound,CSNK2B,target,binds
-骨碎补,herb,kaempferol,compound,contains
 kaempferol,compound,TRPC5,target,binds
 骨碎补,herb,kaempferol,compound,contains
 kaempferol,compound,YES1,target,binds
@@ -343,208 +319,206 @@ kaempferol,compound,HDAC6,target,binds
 kaempferol,compound,RPS6KA3,target,binds
 骨碎补,herb,kaempferol,compound,contains
 kaempferol,compound,DPP4,target,binds
-骨碎补,herb,kaempferol,compound,contains
-kaempferol,compound,CSNK2B,target,binds
-TERT,target,osteoporosis,disease,associated_with
-CSMD1,target,osteoporosis,disease,associated_with
-MARK3,target,osteoporosis,disease,associated_with
-FHL2,target,osteoporosis,disease,associated_with
-SEM1,target,osteoporosis,disease,associated_with
-SOX4,target,osteoporosis,disease,associated_with
-AR,target,osteoporosis,disease,associated_with
-E2F6,target,osteoporosis,disease,associated_with
-PDZRN4,target,osteoporosis,disease,associated_with
-OPA1,target,osteoporosis,disease,associated_with
-RARG,target,osteoporosis,disease,associated_with
-QTMAN,target,osteoporosis,disease,associated_with
-LRP5,target,osteoporosis,disease,associated_with
-GUCY1B1,target,osteoporosis,disease,associated_with
-CKB,target,osteoporosis,disease,associated_with
-COL1A2,target,osteoporosis,disease,associated_with
-TNFRSF11B,target,osteoporosis,disease,associated_with
-WNT1,target,osteoporosis,disease,associated_with
-CCR1,target,osteoporosis,disease,associated_with
-TTR,target,osteoporosis,disease,associated_with
-HOXB8,target,osteoporosis,disease,associated_with
-GUCY1A1,target,osteoporosis,disease,associated_with
-IGF1,target,osteoporosis,disease,associated_with
-JAG1,target,osteoporosis,disease,associated_with
-FGFR1,target,osteoporosis,disease,associated_with
-CCDC170,target,osteoporosis,disease,associated_with
-LIN7C,target,osteoporosis,disease,associated_with
-CCN2,target,osteoporosis,disease,associated_with
-CTSK,target,osteoporosis,disease,associated_with
-LRP6,target,osteoporosis,disease,associated_with
-WNT16,target,osteoporosis,disease,associated_with
-GUCY1A2,target,osteoporosis,disease,associated_with
-FGFRL1,target,osteoporosis,disease,associated_with
-LEP,target,osteoporosis,disease,associated_with
-SOX6,target,osteoporosis,disease,associated_with
-GLP1R,target,osteoporosis,disease,associated_with
-USP7,target,osteoporosis,disease,associated_with
-AKAP11,target,osteoporosis,disease,associated_with
-SPRED1,target,osteoporosis,disease,associated_with
-KDM6B,target,osteoporosis,disease,associated_with
-DAG1,target,osteoporosis,disease,associated_with
-HOXA4,target,osteoporosis,disease,associated_with
-WNT11,target,osteoporosis,disease,associated_with
-OFD1,target,osteoporosis,disease,associated_with
-CASR,target,osteoporosis,disease,associated_with
-CTHRC1,target,osteoporosis,disease,associated_with
-MEOX1,target,osteoporosis,disease,associated_with
-PPARG,target,osteoporosis,disease,associated_with
-GALNT3,target,osteoporosis,disease,associated_with
-CBR1,target,osteoporosis,disease,associated_with
-ZDHHC6,target,osteoporosis,disease,associated_with
-VDR,target,osteoporosis,disease,associated_with
-SH2B3,target,osteoporosis,disease,associated_with
-NFATC1,target,osteoporosis,disease,associated_with
-CSNK2A2IP,target,osteoporosis,disease,associated_with
-EN1,target,osteoporosis,disease,associated_with
-SP7,target,osteoporosis,disease,associated_with
-FAM3C,target,osteoporosis,disease,associated_with
-SRC,target,osteoporosis,disease,associated_with
-WLS,target,osteoporosis,disease,associated_with
 IAPP,target,osteoporosis,disease,associated_with
-ASB16,target,osteoporosis,disease,associated_with
-SRPK3,target,osteoporosis,disease,associated_with
-HES7,target,osteoporosis,disease,associated_with
-PKDCC,target,osteoporosis,disease,associated_with
-PPP6R3,target,osteoporosis,disease,associated_with
-WNT3A,target,osteoporosis,disease,associated_with
-IL6,target,osteoporosis,disease,associated_with
-NDRG2,target,osteoporosis,disease,associated_with
-HOXC5,target,osteoporosis,disease,associated_with
-RING1,target,osteoporosis,disease,associated_with
-ZBTB40,target,osteoporosis,disease,associated_with
-DHFR2,target,osteoporosis,disease,associated_with
-CDK9,target,osteoporosis,disease,associated_with
-PTH1R,target,osteoporosis,disease,associated_with
-HIVEP3,target,osteoporosis,disease,associated_with
-KAT2A,target,osteoporosis,disease,associated_with
-RSPO3,target,osteoporosis,disease,associated_with
-FGF21,target,osteoporosis,disease,associated_with
-IDUA,target,osteoporosis,disease,associated_with
-API5,target,osteoporosis,disease,associated_with
-PLS3,target,osteoporosis,disease,associated_with
-DLL3,target,osteoporosis,disease,associated_with
-BGLAP,target,osteoporosis,disease,associated_with
-IFITM5,target,osteoporosis,disease,associated_with
-HMGCR,target,osteoporosis,disease,associated_with
-CD40LG,target,osteoporosis,disease,associated_with
-FBXL14,target,osteoporosis,disease,associated_with
-POSTN,target,osteoporosis,disease,associated_with
-AXIN1,target,osteoporosis,disease,associated_with
-KLF3,target,osteoporosis,disease,associated_with
-NOTCH1,target,osteoporosis,disease,associated_with
-HBQ1,target,osteoporosis,disease,associated_with
-LGR4,target,osteoporosis,disease,associated_with
-FMN2,target,osteoporosis,disease,associated_with
-SETD4,target,osteoporosis,disease,associated_with
-PGR,target,osteoporosis,disease,associated_with
-FOXC2,target,osteoporosis,disease,associated_with
-SLC34A3,target,osteoporosis,disease,associated_with
-CALCR,target,osteoporosis,disease,associated_with
-CST3,target,osteoporosis,disease,associated_with
-HIF1A,target,osteoporosis,disease,associated_with
-TMCO5A,target,osteoporosis,disease,associated_with
-TBX6,target,osteoporosis,disease,associated_with
-ALG12,target,osteoporosis,disease,associated_with
-FGFR3,target,osteoporosis,disease,associated_with
-INS,target,osteoporosis,disease,associated_with
-APOB,target,osteoporosis,disease,associated_with
-BTG2,target,osteoporosis,disease,associated_with
-UBA7,target,osteoporosis,disease,associated_with
-MEPE,target,osteoporosis,disease,associated_with
-DPP4,target,osteoporosis,disease,associated_with
-ESR2,target,osteoporosis,disease,associated_with
-TP53,target,osteoporosis,disease,associated_with
-AQP1,target,osteoporosis,disease,associated_with
-ALDH7A1,target,osteoporosis,disease,associated_with
-HOXC4,target,osteoporosis,disease,associated_with
-FOXL1,target,osteoporosis,disease,associated_with
-GCG,target,osteoporosis,disease,associated_with
-NKX3-2,target,osteoporosis,disease,associated_with
-P4HA2,target,osteoporosis,disease,associated_with
-CYP19A1,target,osteoporosis,disease,associated_with
-RPS6KA5,target,osteoporosis,disease,associated_with
-GPR78,target,osteoporosis,disease,associated_with
-TLR4,target,osteoporosis,disease,associated_with
-SHBG,target,osteoporosis,disease,associated_with
-PHC2,target,osteoporosis,disease,associated_with
-HOXC9,target,osteoporosis,disease,associated_with
-GREM2,target,osteoporosis,disease,associated_with
-SUPT3H,target,osteoporosis,disease,associated_with
-CYP27B1,target,osteoporosis,disease,associated_with
-APOA1,target,osteoporosis,disease,associated_with
-ACVR2B,target,osteoporosis,disease,associated_with
-DDN,target,osteoporosis,disease,associated_with
-SLC34A1,target,osteoporosis,disease,associated_with
-VTI1A,target,osteoporosis,disease,associated_with
-FDPS,target,osteoporosis,disease,associated_with
-GAS5,target,osteoporosis,disease,associated_with
-KAT2B,target,osteoporosis,disease,associated_with
-ALPL,target,osteoporosis,disease,associated_with
-STK39,target,osteoporosis,disease,associated_with
-CRELD2,target,osteoporosis,disease,associated_with
-PAX1,target,osteoporosis,disease,associated_with
-TRAF6,target,osteoporosis,disease,associated_with
-STARD13,target,osteoporosis,disease,associated_with
-C3orf38,target,osteoporosis,disease,associated_with
-CCND2,target,osteoporosis,disease,associated_with
-NHERF1,target,osteoporosis,disease,associated_with
-LRG1,target,osteoporosis,disease,associated_with
-ETS2,target,osteoporosis,disease,associated_with
-METTL14,target,osteoporosis,disease,associated_with
-PHEX,target,osteoporosis,disease,associated_with
-MGP,target,osteoporosis,disease,associated_with
-COPB2,target,osteoporosis,disease,associated_with
-SMN2,target,osteoporosis,disease,associated_with
-HDAC5,target,osteoporosis,disease,associated_with
-CCR3,target,osteoporosis,disease,associated_with
 PCSK9,target,osteoporosis,disease,associated_with
-TNFRSF11A,target,osteoporosis,disease,associated_with
-HOXC6,target,osteoporosis,disease,associated_with
-SMN1,target,osteoporosis,disease,associated_with
-MTHFR,target,osteoporosis,disease,associated_with
-SPP1,target,osteoporosis,disease,associated_with
-SOST,target,osteoporosis,disease,associated_with
-COL1A1,target,osteoporosis,disease,associated_with
-SERPINF1,target,osteoporosis,disease,associated_with
-OXT,target,osteoporosis,disease,associated_with
-MIR2861,target,osteoporosis,disease,associated_with
-MALAT1,target,osteoporosis,disease,associated_with
+TMCO5A,target,osteoporosis,disease,associated_with
+UBA7,target,osteoporosis,disease,associated_with
+LRP6,target,osteoporosis,disease,associated_with
+MEOX1,target,osteoporosis,disease,associated_with
+WNT1,target,osteoporosis,disease,associated_with
+PHC2,target,osteoporosis,disease,associated_with
+VDR,target,osteoporosis,disease,associated_with
+SHBG,target,osteoporosis,disease,associated_with
 CFAP97D1,target,osteoporosis,disease,associated_with
-RYR1,target,osteoporosis,disease,associated_with
-CDX1,target,osteoporosis,disease,associated_with
-LRP4,target,osteoporosis,disease,associated_with
-RARRES2,target,osteoporosis,disease,associated_with
-CSRNP3,target,osteoporosis,disease,associated_with
-TNFSF11,target,osteoporosis,disease,associated_with
-UGT8,target,osteoporosis,disease,associated_with
-TLE3,target,osteoporosis,disease,associated_with
-RUNX2,target,osteoporosis,disease,associated_with
-PFKFB3,target,osteoporosis,disease,associated_with
-MACF1,target,osteoporosis,disease,associated_with
-STARD3NL,target,osteoporosis,disease,associated_with
-STX19,target,osteoporosis,disease,associated_with
-MIMS1,target,osteoporosis,disease,associated_with
-MESP2,target,osteoporosis,disease,associated_with
-IL18,target,osteoporosis,disease,associated_with
-GLDN,target,osteoporosis,disease,associated_with
-FGF2,target,osteoporosis,disease,associated_with
-GPT,target,osteoporosis,disease,associated_with
-ESR1,target,osteoporosis,disease,associated_with
-COLEC10,target,osteoporosis,disease,associated_with
-CTNNB1,target,osteoporosis,disease,associated_with
-TMEM135,target,osteoporosis,disease,associated_with
-GHR,target,osteoporosis,disease,associated_with
-SLC25A13,target,osteoporosis,disease,associated_with
-SLC1A3,target,osteoporosis,disease,associated_with
+NFATC1,target,osteoporosis,disease,associated_with
+MALAT1,target,osteoporosis,disease,associated_with
+AKAP11,target,osteoporosis,disease,associated_with
+KAT2B,target,osteoporosis,disease,associated_with
+HIVEP3,target,osteoporosis,disease,associated_with
+CCN2,target,osteoporosis,disease,associated_with
+PAX1,target,osteoporosis,disease,associated_with
+FOXC2,target,osteoporosis,disease,associated_with
 WNT4,target,osteoporosis,disease,associated_with
-APPL1,target,osteoporosis,disease,associated_with
+C3orf38,target,osteoporosis,disease,associated_with
+FMN2,target,osteoporosis,disease,associated_with
+APOB,target,osteoporosis,disease,associated_with
 GCK,target,osteoporosis,disease,associated_with
+SMN2,target,osteoporosis,disease,associated_with
+SH2B3,target,osteoporosis,disease,associated_with
+AR,target,osteoporosis,disease,associated_with
+LIN7C,target,osteoporosis,disease,associated_with
+CDX1,target,osteoporosis,disease,associated_with
+TRAF6,target,osteoporosis,disease,associated_with
+ALDH7A1,target,osteoporosis,disease,associated_with
+TNFRSF11A,target,osteoporosis,disease,associated_with
+MIR2861,target,osteoporosis,disease,associated_with
+GUCY1B1,target,osteoporosis,disease,associated_with
+SLC34A1,target,osteoporosis,disease,associated_with
+CCND2,target,osteoporosis,disease,associated_with
+ESR2,target,osteoporosis,disease,associated_with
+NKX3-2,target,osteoporosis,disease,associated_with
+DLL3,target,osteoporosis,disease,associated_with
+HOXC4,target,osteoporosis,disease,associated_with
+FAM3C,target,osteoporosis,disease,associated_with
+HIF1A,target,osteoporosis,disease,associated_with
+DAG1,target,osteoporosis,disease,associated_with
+NDRG2,target,osteoporosis,disease,associated_with
+ETS2,target,osteoporosis,disease,associated_with
+DPP4,target,osteoporosis,disease,associated_with
+PKDCC,target,osteoporosis,disease,associated_with
+HOXC9,target,osteoporosis,disease,associated_with
+APOA1,target,osteoporosis,disease,associated_with
+PDZRN4,target,osteoporosis,disease,associated_with
+ASB16,target,osteoporosis,disease,associated_with
+LRP4,target,osteoporosis,disease,associated_with
+SLC34A3,target,osteoporosis,disease,associated_with
+CSMD1,target,osteoporosis,disease,associated_with
+CTNNB1,target,osteoporosis,disease,associated_with
+SEM1,target,osteoporosis,disease,associated_with
+AQP1,target,osteoporosis,disease,associated_with
+AXIN1,target,osteoporosis,disease,associated_with
+RUNX2,target,osteoporosis,disease,associated_with
+CSRNP3,target,osteoporosis,disease,associated_with
+SUPT3H,target,osteoporosis,disease,associated_with
+SMN1,target,osteoporosis,disease,associated_with
+ACVR2B,target,osteoporosis,disease,associated_with
+HMGCR,target,osteoporosis,disease,associated_with
+USP7,target,osteoporosis,disease,associated_with
 MYF5,target,osteoporosis,disease,associated_with
+FOXL1,target,osteoporosis,disease,associated_with
+LRG1,target,osteoporosis,disease,associated_with
+ESR1,target,osteoporosis,disease,associated_with
+GCG,target,osteoporosis,disease,associated_with
+SLC1A3,target,osteoporosis,disease,associated_with
+RYR1,target,osteoporosis,disease,associated_with
+CKB,target,osteoporosis,disease,associated_with
+P4HA2,target,osteoporosis,disease,associated_with
+QTMAN,target,osteoporosis,disease,associated_with
+NOTCH1,target,osteoporosis,disease,associated_with
+RSPO3,target,osteoporosis,disease,associated_with
+WNT3A,target,osteoporosis,disease,associated_with
+LGR4,target,osteoporosis,disease,associated_with
+RPS6KA5,target,osteoporosis,disease,associated_with
+CYP19A1,target,osteoporosis,disease,associated_with
+UGT8,target,osteoporosis,disease,associated_with
+GLDN,target,osteoporosis,disease,associated_with
+WLS,target,osteoporosis,disease,associated_with
+JAG1,target,osteoporosis,disease,associated_with
+HES7,target,osteoporosis,disease,associated_with
+SRC,target,osteoporosis,disease,associated_with
+HOXC5,target,osteoporosis,disease,associated_with
+CBR1,target,osteoporosis,disease,associated_with
+SPRED1,target,osteoporosis,disease,associated_with
+CD40LG,target,osteoporosis,disease,associated_with
+FGFR1,target,osteoporosis,disease,associated_with
+COL1A1,target,osteoporosis,disease,associated_with
+GALNT3,target,osteoporosis,disease,associated_with
+OXT,target,osteoporosis,disease,associated_with
+NHERF1,target,osteoporosis,disease,associated_with
+ALPL,target,osteoporosis,disease,associated_with
+KAT2A,target,osteoporosis,disease,associated_with
+COLEC10,target,osteoporosis,disease,associated_with
+STARD13,target,osteoporosis,disease,associated_with
+OPA1,target,osteoporosis,disease,associated_with
+ALG12,target,osteoporosis,disease,associated_with
+MGP,target,osteoporosis,disease,associated_with
+TLR4,target,osteoporosis,disease,associated_with
+STX19,target,osteoporosis,disease,associated_with
+OFD1,target,osteoporosis,disease,associated_with
+SOX4,target,osteoporosis,disease,associated_with
+CRELD2,target,osteoporosis,disease,associated_with
+SERPINF1,target,osteoporosis,disease,associated_with
+PLS3,target,osteoporosis,disease,associated_with
+TBX6,target,osteoporosis,disease,associated_with
+GAS5,target,osteoporosis,disease,associated_with
+COL1A2,target,osteoporosis,disease,associated_with
+BTG2,target,osteoporosis,disease,associated_with
+IFITM5,target,osteoporosis,disease,associated_with
+FHL2,target,osteoporosis,disease,associated_with
+PPP6R3,target,osteoporosis,disease,associated_with
+LEP,target,osteoporosis,disease,associated_with
+MACF1,target,osteoporosis,disease,associated_with
+HOXB8,target,osteoporosis,disease,associated_with
+FGFR3,target,osteoporosis,disease,associated_with
+MARK3,target,osteoporosis,disease,associated_with
+E2F6,target,osteoporosis,disease,associated_with
+IGF1,target,osteoporosis,disease,associated_with
+CST3,target,osteoporosis,disease,associated_with
+FGFRL1,target,osteoporosis,disease,associated_with
+GPT,target,osteoporosis,disease,associated_with
+COPB2,target,osteoporosis,disease,associated_with
+CCR1,target,osteoporosis,disease,associated_with
+MEPE,target,osteoporosis,disease,associated_with
+POSTN,target,osteoporosis,disease,associated_with
+CALCR,target,osteoporosis,disease,associated_with
+PHEX,target,osteoporosis,disease,associated_with
+GHR,target,osteoporosis,disease,associated_with
+FBXL14,target,osteoporosis,disease,associated_with
+PTH1R,target,osteoporosis,disease,associated_with
+SETD4,target,osteoporosis,disease,associated_with
+IL18,target,osteoporosis,disease,associated_with
+TLE3,target,osteoporosis,disease,associated_with
+APPL1,target,osteoporosis,disease,associated_with
+DHFR2,target,osteoporosis,disease,associated_with
+CYP27B1,target,osteoporosis,disease,associated_with
+TTR,target,osteoporosis,disease,associated_with
+TP53,target,osteoporosis,disease,associated_with
+MTHFR,target,osteoporosis,disease,associated_with
+GPR78,target,osteoporosis,disease,associated_with
+CTHRC1,target,osteoporosis,disease,associated_with
+KLF3,target,osteoporosis,disease,associated_with
+CCDC170,target,osteoporosis,disease,associated_with
+SPP1,target,osteoporosis,disease,associated_with
+KDM6B,target,osteoporosis,disease,associated_with
+RARRES2,target,osteoporosis,disease,associated_with
+ZBTB40,target,osteoporosis,disease,associated_with
+PPARG,target,osteoporosis,disease,associated_with
+RING1,target,osteoporosis,disease,associated_with
+SOX6,target,osteoporosis,disease,associated_with
+SLC25A13,target,osteoporosis,disease,associated_with
+GREM2,target,osteoporosis,disease,associated_with
+TNFSF11,target,osteoporosis,disease,associated_with
+CASR,target,osteoporosis,disease,associated_with
+SRPK3,target,osteoporosis,disease,associated_with
+GLP1R,target,osteoporosis,disease,associated_with
+SOST,target,osteoporosis,disease,associated_with
+LRP5,target,osteoporosis,disease,associated_with
+METTL14,target,osteoporosis,disease,associated_with
+FGF21,target,osteoporosis,disease,associated_with
+CCR3,target,osteoporosis,disease,associated_with
+TNFRSF11B,target,osteoporosis,disease,associated_with
+MESP2,target,osteoporosis,disease,associated_with
+EN1,target,osteoporosis,disease,associated_with
+RARG,target,osteoporosis,disease,associated_with
+MIMS1,target,osteoporosis,disease,associated_with
+INS,target,osteoporosis,disease,associated_with
+CSNK2A2IP,target,osteoporosis,disease,associated_with
+WNT16,target,osteoporosis,disease,associated_with
+SP7,target,osteoporosis,disease,associated_with
+HOXA4,target,osteoporosis,disease,associated_with
+PGR,target,osteoporosis,disease,associated_with
+HDAC5,target,osteoporosis,disease,associated_with
+API5,target,osteoporosis,disease,associated_with
+GUCY1A1,target,osteoporosis,disease,associated_with
+ZDHHC6,target,osteoporosis,disease,associated_with
+IL6,target,osteoporosis,disease,associated_with
+HOXC6,target,osteoporosis,disease,associated_with
+PFKFB3,target,osteoporosis,disease,associated_with
+WNT11,target,osteoporosis,disease,associated_with
+TERT,target,osteoporosis,disease,associated_with
+VTI1A,target,osteoporosis,disease,associated_with
+HBQ1,target,osteoporosis,disease,associated_with
+TMEM135,target,osteoporosis,disease,associated_with
+CTSK,target,osteoporosis,disease,associated_with
+DDN,target,osteoporosis,disease,associated_with
+STARD3NL,target,osteoporosis,disease,associated_with
+GUCY1A2,target,osteoporosis,disease,associated_with
+STK39,target,osteoporosis,disease,associated_with
+BGLAP,target,osteoporosis,disease,associated_with
+FDPS,target,osteoporosis,disease,associated_with
+CDK9,target,osteoporosis,disease,associated_with
+FGF2,target,osteoporosis,disease,associated_with
+IDUA,target,osteoporosis,disease,associated_with
 ABCB1,target,Abacavir transmembrane transport,pathway,participates_in
 ABCB1,target,ABC-family protein mediated transport,pathway,participates_in
 ABCB1,target,Atorvastatin ADME,pathway,participates_in
@@ -611,14 +585,6 @@ CDC25B,target,Deregulated CDK5 triggers multiple neurodegenerative pathways in A
 CDC25B,target,Regulation of MITF-M-dependent genes involved in cell cycle and proliferation,pathway,participates_in
 CES1,target,Metallothioneins bind metals,pathway,participates_in
 CES1,target,Interferon gamma signaling,pathway,participates_in
-CSNK2B,target,Synthesis of PC,pathway,participates_in
-CSNK2B,target,WNT mediated activation of DVL,pathway,participates_in
-CSNK2B,target,Condensation of Prometaphase Chromosomes,pathway,participates_in
-CSNK2B,target,Signal transduction by L1,pathway,participates_in
-CSNK2B,target,Neutrophil degranulation,pathway,participates_in
-CSNK2B,target,Regulation of TP53 Activity through Phosphorylation,pathway,participates_in
-CSNK2B,target,Cooperation of PDCL (PhLP1) and TRiC/CCT in G-protein beta folding,pathway,participates_in
-CSNK2B,target,Receptor Mediated Mitophagy,pathway,participates_in
 CYP1A1,target,PPARA activates gene expression,pathway,participates_in
 CYP1A1,target,Xenobiotics,pathway,participates_in
 CYP1A1,target,Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET),pathway,participates_in
@@ -682,20 +648,6 @@ FTO,target,Reversal of alkylation damage by DNA dioxygenases,pathway,participate
 FUNDC1,target,Receptor Mediated Mitophagy,pathway,participates_in
 GPBAR1,target,Class A/1 (Rhodopsin-like receptors),pathway,participates_in
 GPBAR1,target,G alpha (s) signalling events,pathway,participates_in
-GSK3A,target,AKT phosphorylates targets in the cytosol,pathway,participates_in
-GSK3A,target,XBP1(S) activates chaperone genes,pathway,participates_in
-GSK3A,target,Constitutive Signaling by AKT1 E17K in Cancer,pathway,participates_in
-GSK3A,target,Suppression of apoptosis,pathway,participates_in
-GSK3A,target,Maturation of nucleoprotein,pathway,participates_in
-GSK3A,target,Maturation of nucleoprotein,pathway,participates_in
-HDAC1,target,Transcription of E2F targets under negative control by DREAM complex,pathway,participates_in
-HDAC1,target,Transcription of E2F targets under negative control by p107 (RBL1) and p130 (RBL2) in complex with HDAC1,pathway,participates_in
-HDAC1,target,G0 and Early G1,pathway,participates_in
-HDAC1,target,p75NTR negatively regulates cell cycle via SC1,pathway,participates_in
-HDAC1,target,Formation of the beta-catenin:TCF transactivating complex,pathway,participates_in
-HDAC1,target,NOTCH1 Intracellular Domain Regulates Transcription,pathway,participates_in
-HDAC1,target,Downregulation of SMAD2/3:SMAD4 transcriptional activity,pathway,participates_in
-HDAC1,target,SMAD2/SMAD3:SMAD4 heterotrimer regulates transcription,pathway,participates_in
 HDAC6,target,NOTCH1 Intracellular Domain Regulates Transcription,pathway,participates_in
 HDAC6,target,Constitutive Signaling by NOTCH1 PEST Domain Mutants,pathway,participates_in
 HDAC6,target,Constitutive Signaling by NOTCH1 HD+PEST Domain Mutants,pathway,participates_in
@@ -751,14 +703,6 @@ POLB,target,APEX1-Independent Resolution of AP Sites via the Single Nucleotide R
 POLB,target,PCNA-Dependent Long Patch Base Excision Repair,pathway,participates_in
 POLB,target,Ub-specific processing proteases,pathway,participates_in
 POLB,target,Abasic sugar-phosphate removal via the single-nucleotide replacement pathway,pathway,participates_in
-PSMB2,target,Activation of NF-kappaB in B cells,pathway,participates_in
-PSMB2,target,Oxygen-dependent proline hydroxylation of Hypoxia-inducible Factor Alpha,pathway,participates_in
-PSMB2,target,ER-Phagosome pathway,pathway,participates_in
-PSMB2,target,Cross-presentation of soluble exogenous antigens (endosomes),pathway,participates_in
-PSMB2,target,Autodegradation of Cdh1 by Cdh1:APC/C,pathway,participates_in
-PSMB2,target,SCF-beta-TrCP mediated degradation of Emi1,pathway,participates_in
-PSMB2,target,APC/C:Cdc20 mediated degradation of Securin,pathway,participates_in
-PSMB2,target,APC/C:Cdh1 mediated degradation of Cdc20 and other APC/C:Cdh1 targeted proteins in late mitosis/early G1,pathway,participates_in
 PTPN1,target,Integrin signaling,pathway,participates_in
 PTPN1,target,Negative regulation of MET activity,pathway,participates_in
 PTPN1,target,Insulin receptor recycling,pathway,participates_in

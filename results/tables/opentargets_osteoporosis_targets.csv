@@ -1,201 +1,201 @@
-target,open_targets_score,ensembl_id
-LRP5,0.7852473691585107,ENSG00000162337
-SLC34A1,0.7694997049225367,ENSG00000131183
-PLS3,0.7479704699815767,ENSG00000102024
-TNFSF11,0.7310068313868319,ENSG00000120659
-ESR1,0.7151185013089664,ENSG00000091831
-COL1A1,0.702238071011831,ENSG00000108821
-COL1A2,0.6820049558393122,ENSG00000164692
-WNT1,0.6456073145951026,ENSG00000125084
-NHERF1,0.6437360926228046,ENSG00000109062
-SOST,0.6391121376006254,ENSG00000167941
-CALCR,0.6284065218848808,ENSG00000004948
-VDR,0.6228905646570332,ENSG00000111424
-PTH1R,0.6168352826050348,ENSG00000160801
-ESR2,0.6133167760262854,ENSG00000140009
-FDPS,0.6117856629678046,ENSG00000160752
-SPP1,0.5724081652645986,ENSG00000118785
-COPB2,0.5445809174624211,ENSG00000184432
-TNFRSF11A,0.5309341999215937,ENSG00000141655
-AR,0.48935523253171564,ENSG00000169083
-RSPO3,0.4854537509687868,ENSG00000146374
-TNFRSF11B,0.47200529987615936,ENSG00000164761
-WNT16,0.46408830538482654,ENSG00000002745
-FAM3C,0.4556944033448106,ENSG00000196937
-SLC1A3,0.4456522459313072,ENSG00000079215
-PGR,0.4441745404829242,ENSG00000082175
-SH2B3,0.44400277310175035,ENSG00000111252
-WLS,0.44347683962016404,ENSG00000116729
-AQP1,0.4305057935146686,ENSG00000240583
-CCDC170,0.42428779934764516,ENSG00000120262
-CYP19A1,0.4235226120120589,ENSG00000137869
-CTNNB1,0.41722179736464854,ENSG00000168036
-CTSK,0.40006847783719285,ENSG00000143387
-SOX6,0.398536180192446,ENSG00000110693
-JAG1,0.39603960712878145,ENSG00000101384
-LGR4,0.3955560671702674,ENSG00000205213
-TMEM135,0.3883815854774906,ENSG00000166575
-WNT11,0.37303953276883356,ENSG00000085741
-CCR1,0.35540036691603355,ENSG00000163823
-IFITM5,0.34199995802885597,ENSG00000206013
-SLC34A3,0.34100224641281335,ENSG00000198569
-SEM1,0.33977859140451033,ENSG00000127922
-GHR,0.3347751851751237,ENSG00000112964
-CDK9,0.333361028925601,ENSG00000136807
-MIR2861,0.3326218692162316,ENSG00000284547
-GALNT3,0.3289988041163961,ENSG00000115339
-ZBTB40,0.32840408421646144,ENSG00000184677
-SLC25A13,0.32689553943863814,ENSG00000004864
-HOXC6,0.32472694999341734,ENSG00000197757
-GUCY1A1,0.3233823728491141,ENSG00000164116
-GUCY1B1,0.3233823728491141,ENSG00000061918
-GUCY1A2,0.3233823728491141,ENSG00000152402
-CFAP97D1,0.31833676458865906,ENSG00000231256
-FGFRL1,0.31271550137426085,ENSG00000127418
-COLEC10,0.3051327861275696,ENSG00000184374
-ALDH7A1,0.30266773429361765,ENSG00000164904
-EN1,0.3015768517928854,ENSG00000163064
-CASR,0.2975134988775017,ENSG00000036828
-CRELD2,0.2952176129081495,ENSG00000184164
-PDZRN4,0.28930310797159947,ENSG00000165966
-UGT8,0.2888107277648558,ENSG00000174607
-NFATC1,0.28603045205786326,ENSG00000131196
-FMN2,0.2794498259730338,ENSG00000155816
-DDN,0.27660729708344206,ENSG00000181418
-STK39,0.2698200182167301,ENSG00000198648
-DPP4,0.2697023872895011,ENSG00000197635
-RPS6KA5,0.26851473934612036,ENSG00000100784
-AXIN1,0.2677079967912162,ENSG00000103126
-SRC,0.2653043612432015,ENSG00000197122
-OFD1,0.25870589827929125,ENSG00000046651
-VTI1A,0.25866423852847287,ENSG00000151532
-SP7,0.25692233981350165,ENSG00000170374
-CSMD1,0.24787838197816317,ENSG00000183117
-KAT2B,0.24731383199315146,ENSG00000114166
-QTMAN,0.24670610858458394,ENSG00000121964
-IDUA,0.24650549407529856,ENSG00000127415
-PPP6R3,0.24334547929728864,ENSG00000110075
-CCND2,0.24176077546898206,ENSG00000118971
-TLE3,0.23738819894253835,ENSG00000140332
-WNT4,0.23671356528726353,ENSG00000162552
-STARD13,0.23553552045975176,ENSG00000133121
-SETD4,0.22870868920231882,ENSG00000185917
-SOX4,0.2265794915078322,ENSG00000124766
-HDAC5,0.22207572951639032,ENSG00000108840
-GLDN,0.2213851964863872,ENSG00000186417
-C3orf38,0.2105193988286736,ENSG00000179021
-API5,0.20758837334953134,ENSG00000166181
-STARD3NL,0.2054924212712147,ENSG00000010270
-AKAP11,0.1982388574865575,ENSG00000023516
-SPRED1,0.19184581613785218,ENSG00000166068
-P4HA2,0.1847899273423509,ENSG00000072682
-SRPK3,0.17927646916671033,ENSG00000184343
-LRP4,0.1620324714693371,ENSG00000134569
-DAG1,0.16171092067623175,ENSG00000173402
-PKDCC,0.16020521274584165,ENSG00000162878
-STX19,0.15882241398366254,ENSG00000178750
-CCR3,0.1553717969597064,ENSG00000183625
-MARK3,0.14269760030679082,ENSG00000075413
-FOXL1,0.14140775983870374,ENSG00000176678
-SERPINF1,0.14070264067325622,ENSG00000132386
-TMCO5A,0.13767370377947724,ENSG00000166069
-HBQ1,0.13264641022140167,ENSG00000086506
-FOXC2,0.13183746054083548,ENSG00000176692
-RYR1,0.13168761588001013,ENSG00000196218
-HOXC5,0.12990271752043903,ENSG00000172789
-LIN7C,0.12644518353854234,ENSG00000148943
-CKB,0.1237222181060597,ENSG00000166165
-ETS2,0.1231777862742049,ENSG00000157557
-GREM2,0.12197581376065876,ENSG00000180875
-MEPE,0.12158630865433784,ENSG00000152595
-OPA1,0.1203906376635416,ENSG00000198836
-SUPT3H,0.11991285174099062,ENSG00000196284
-GAS5,0.11734863709470414,ENSG00000234741
-CBR1,0.11591178927754274,ENSG00000159228
-MIMS1,0.11214242704795267,ENSG00000177150
-UBA7,0.10735589164853879,ENSG00000182179
-ZDHHC6,0.10679146339684145,ENSG00000023041
-IGF1,0.10600281406553741,ENSG00000017427
-ASB16,0.10553556346594008,ENSG00000161664
-IL6,0.10527003389845234,ENSG00000136244
-GPR78,0.10397494297531132,ENSG00000155269
-BGLAP,0.10377377793663277,ENSG00000242252
-CYP27B1,0.1030813526177275,ENSG00000111012
-GCG,0.10097608727976116,ENSG00000115263
-CST3,0.09995833812991622,ENSG00000101439
-CD40LG,0.09860586458080721,ENSG00000102245
-POSTN,0.09858270867435986,ENSG00000133110
-FHL2,0.09842724811256057,ENSG00000115641
-MESP2,0.09806301519005237,ENSG00000188095
-MALAT1,0.09775896903855873,ENSG00000251562
-FBXL14,0.09766850753699424,ENSG00000171823
-PPARG,0.09671246971297061,ENSG00000132170
-APPL1,0.09547746498138733,ENSG00000157500
-PAX1,0.09522583915584751,ENSG00000125813
-LRP6,0.09521639332301114,ENSG00000070018
-TTR,0.09484642930603417,ENSG00000118271
-RUNX2,0.09481355270879953,ENSG00000124813
-FGF21,0.09480161304311738,ENSG00000105550
-FGF2,0.09445782500943051,ENSG00000138685
-CDX1,0.0940556922769091,ENSG00000113722
-FGFR1,0.09355938438293193,ENSG00000077782
-TRAF6,0.09303104634345614,ENSG00000175104
-PHC2,0.09301549155502026,ENSG00000134686
-HOXC9,0.09254198944135628,ENSG00000180806
-APOA1,0.09229411249385767,ENSG00000118137
-HOXC4,0.09113796746107419,ENSG00000198353
-CSRNP3,0.09111777958950937,ENSG00000178662
-HES7,0.09108483982336892,ENSG00000179111
-LEP,0.09101784943610061,ENSG00000174697
-PCSK9,0.09099261344478851,ENSG00000169174
-GLP1R,0.09031394008138567,ENSG00000112164
-ALG12,0.09022234144779892,ENSG00000182858
-SMN1,0.09011647888269184,ENSG00000172062
-METTL14,0.08953889519248467,ENSG00000145388
-CSNK2A2IP,0.08931999180900772,ENSG00000283434
-FGFR3,0.0890700181594093,ENSG00000068078
-OXT,0.08894930992245738,ENSG00000101405
-CTHRC1,0.08881925286787223,ENSG00000164932
-IAPP,0.08863500835750397,ENSG00000121351
-NOTCH1,0.08824946995809552,ENSG00000148400
-PHEX,0.08759315705783736,ENSG00000102174
-MACF1,0.0875444190348409,ENSG00000127603
-GCK,0.08753293536065669,ENSG00000106633
-ALPL,0.08745385812892485,ENSG00000162551
-NKX3-2,0.08703429080397752,ENSG00000109705
-IL18,0.08701835028910353,ENSG00000150782
-DHFR2,0.0869973212593663,ENSG00000178700
-APOB,0.08695708882403672,ENSG00000084674
-KDM6B,0.08666872189637562,ENSG00000132510
-SMN2,0.08666450037886597,ENSG00000205571
-TBX6,0.08664425801463177,ENSG00000149922
-WNT3A,0.08625767567525694,ENSG00000154342
-MEOX1,0.08585545346467115,ENSG00000005102
-INS,0.08579773925761416,ENSG00000254647
-USP7,0.08578502121359523,ENSG00000187555
-HIF1A,0.08573418158526028,ENSG00000100644
-LRG1,0.08565526437671694,ENSG00000171236
-TLR4,0.08555802711117459,ENSG00000136869
-RING1,0.08529410272983337,ENSG00000204227
-RARRES2,0.08527205121767933,ENSG00000106538
-TP53,0.0852182899844695,ENSG00000141510
-RARG,0.08512291334114343,ENSG00000172819
-ACVR2B,0.08506997308018124,ENSG00000114739
-BTG2,0.08499145789327489,ENSG00000159388
-GPT,0.08498786438058838,ENSG00000167701
-MGP,0.08485624278000091,ENSG00000111341
-HOXA4,0.0847310580873283,ENSG00000197576
-E2F6,0.08352576578623784,ENSG00000169016
-MTHFR,0.08351198991218282,ENSG00000177000
-MYF5,0.08320057657854361,ENSG00000111049
-SHBG,0.08303283139082715,ENSG00000129214
-CCN2,0.08282060428081356,ENSG00000118523
-HIVEP3,0.08260206274642207,ENSG00000127124
-HMGCR,0.08249606410563551,ENSG00000113161
-HOXB8,0.08235117530496457,ENSG00000120068
-NDRG2,0.0821858334908643,ENSG00000165795
-KAT2A,0.0820839937086845,ENSG00000108773
-TERT,0.08195009329313561,ENSG00000164362
-DLL3,0.08188406290760379,ENSG00000090932
-KLF3,0.08163875264486017,ENSG00000109787
-PFKFB3,0.08132194058053879,ENSG00000170525
+target,open_targets_score,ensembl_id,note
+LRP5,0.7852473691585107,ENSG00000162337,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SLC34A1,0.7694997049225367,ENSG00000131183,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+PLS3,0.7479704699815767,ENSG00000102024,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+TNFSF11,0.7310068313868319,ENSG00000120659,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+ESR1,0.7151185013089664,ENSG00000091831,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+COL1A1,0.702238071011831,ENSG00000108821,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+COL1A2,0.6820049558393122,ENSG00000164692,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+WNT1,0.6456073145951026,ENSG00000125084,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+NHERF1,0.6437360926228046,ENSG00000109062,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SOST,0.6391121376006254,ENSG00000167941,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CALCR,0.6284065218848808,ENSG00000004948,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+VDR,0.6228905646570332,ENSG00000111424,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+PTH1R,0.6168352826050348,ENSG00000160801,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+ESR2,0.6133167760262854,ENSG00000140009,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+FDPS,0.6117856629678046,ENSG00000160752,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SPP1,0.5724081652645986,ENSG00000118785,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+COPB2,0.5445809174624211,ENSG00000184432,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+TNFRSF11A,0.5309341999215937,ENSG00000141655,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+AR,0.48935523253171564,ENSG00000169083,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+RSPO3,0.4854537509687868,ENSG00000146374,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+TNFRSF11B,0.47200529987615936,ENSG00000164761,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+WNT16,0.46408830538482654,ENSG00000002745,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+FAM3C,0.4556944033448106,ENSG00000196937,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SLC1A3,0.4456522459313072,ENSG00000079215,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+PGR,0.4441745404829242,ENSG00000082175,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SH2B3,0.44400277310175035,ENSG00000111252,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+WLS,0.44347683962016404,ENSG00000116729,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+AQP1,0.4305057935146686,ENSG00000240583,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CCDC170,0.42428779934764516,ENSG00000120262,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CYP19A1,0.4235226120120589,ENSG00000137869,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CTNNB1,0.41722179736464854,ENSG00000168036,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CTSK,0.40006847783719285,ENSG00000143387,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SOX6,0.398536180192446,ENSG00000110693,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+JAG1,0.39603960712878145,ENSG00000101384,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+LGR4,0.3955560671702674,ENSG00000205213,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+TMEM135,0.3883815854774906,ENSG00000166575,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+WNT11,0.37303953276883356,ENSG00000085741,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CCR1,0.35540036691603355,ENSG00000163823,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+IFITM5,0.34199995802885597,ENSG00000206013,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SLC34A3,0.34100224641281335,ENSG00000198569,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SEM1,0.33977859140451033,ENSG00000127922,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+GHR,0.3347751851751237,ENSG00000112964,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CDK9,0.333361028925601,ENSG00000136807,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+MIR2861,0.3326218692162316,ENSG00000284547,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+GALNT3,0.3289988041163961,ENSG00000115339,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+ZBTB40,0.32840408421646144,ENSG00000184677,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SLC25A13,0.32689553943863814,ENSG00000004864,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+HOXC6,0.32472694999341734,ENSG00000197757,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+GUCY1A1,0.3233823728491141,ENSG00000164116,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+GUCY1B1,0.3233823728491141,ENSG00000061918,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+GUCY1A2,0.3233823728491141,ENSG00000152402,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CFAP97D1,0.31833676458865906,ENSG00000231256,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+FGFRL1,0.31271550137426085,ENSG00000127418,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+COLEC10,0.3051327861275696,ENSG00000184374,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+ALDH7A1,0.30266773429361765,ENSG00000164904,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+EN1,0.3015768517928854,ENSG00000163064,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CASR,0.2975134988775017,ENSG00000036828,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CRELD2,0.2952176129081495,ENSG00000184164,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+PDZRN4,0.28930310797159947,ENSG00000165966,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+UGT8,0.2888107277648558,ENSG00000174607,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+NFATC1,0.28603045205786326,ENSG00000131196,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+FMN2,0.2794498259730338,ENSG00000155816,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+DDN,0.27660729708344206,ENSG00000181418,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+STK39,0.2698200182167301,ENSG00000198648,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+DPP4,0.2697023872895011,ENSG00000197635,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+RPS6KA5,0.26851473934612036,ENSG00000100784,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+AXIN1,0.2677079967912162,ENSG00000103126,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SRC,0.2653043612432015,ENSG00000197122,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+OFD1,0.25870589827929125,ENSG00000046651,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+VTI1A,0.25866423852847287,ENSG00000151532,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SP7,0.25692233981350165,ENSG00000170374,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CSMD1,0.24787838197816317,ENSG00000183117,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+KAT2B,0.24731383199315146,ENSG00000114166,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+QTMAN,0.24670610858458394,ENSG00000121964,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+IDUA,0.24650549407529856,ENSG00000127415,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+PPP6R3,0.24334547929728864,ENSG00000110075,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CCND2,0.24176077546898206,ENSG00000118971,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+TLE3,0.23738819894253835,ENSG00000140332,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+WNT4,0.23671356528726353,ENSG00000162552,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+STARD13,0.23553552045975176,ENSG00000133121,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SETD4,0.22870868920231882,ENSG00000185917,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SOX4,0.2265794915078322,ENSG00000124766,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+HDAC5,0.22207572951639032,ENSG00000108840,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+GLDN,0.2213851964863872,ENSG00000186417,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+C3orf38,0.2105193988286736,ENSG00000179021,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+API5,0.20758837334953134,ENSG00000166181,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+STARD3NL,0.2054924212712147,ENSG00000010270,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+AKAP11,0.1982388574865575,ENSG00000023516,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SPRED1,0.19184581613785218,ENSG00000166068,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+P4HA2,0.1847899273423509,ENSG00000072682,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SRPK3,0.17927646916671033,ENSG00000184343,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+LRP4,0.1620324714693371,ENSG00000134569,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+DAG1,0.16171092067623175,ENSG00000173402,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+PKDCC,0.16020521274584165,ENSG00000162878,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+STX19,0.15882241398366254,ENSG00000178750,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CCR3,0.1553717969597064,ENSG00000183625,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+MARK3,0.14269760030679082,ENSG00000075413,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+FOXL1,0.14140775983870374,ENSG00000176678,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SERPINF1,0.14070264067325622,ENSG00000132386,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+TMCO5A,0.13767370377947724,ENSG00000166069,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+HBQ1,0.13264641022140167,ENSG00000086506,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+FOXC2,0.13183746054083548,ENSG00000176692,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+RYR1,0.13168761588001013,ENSG00000196218,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+HOXC5,0.12990271752043903,ENSG00000172789,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+LIN7C,0.12644518353854234,ENSG00000148943,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CKB,0.1237222181060597,ENSG00000166165,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+ETS2,0.1231777862742049,ENSG00000157557,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+GREM2,0.12197581376065876,ENSG00000180875,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+MEPE,0.12158630865433784,ENSG00000152595,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+OPA1,0.1203906376635416,ENSG00000198836,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SUPT3H,0.11991285174099062,ENSG00000196284,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+GAS5,0.11734863709470414,ENSG00000234741,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CBR1,0.11591178927754274,ENSG00000159228,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+MIMS1,0.11214242704795267,ENSG00000177150,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+UBA7,0.10735589164853879,ENSG00000182179,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+ZDHHC6,0.10679146339684145,ENSG00000023041,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+IGF1,0.10600281406553741,ENSG00000017427,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+ASB16,0.10553556346594008,ENSG00000161664,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+IL6,0.10527003389845234,ENSG00000136244,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+GPR78,0.10397494297531132,ENSG00000155269,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+BGLAP,0.10377377793663277,ENSG00000242252,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CYP27B1,0.1030813526177275,ENSG00000111012,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+GCG,0.10097608727976116,ENSG00000115263,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CST3,0.09995833812991622,ENSG00000101439,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CD40LG,0.09860586458080721,ENSG00000102245,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+POSTN,0.09858270867435986,ENSG00000133110,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+FHL2,0.09842724811256057,ENSG00000115641,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+MESP2,0.09806301519005237,ENSG00000188095,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+MALAT1,0.09775896903855873,ENSG00000251562,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+FBXL14,0.09766850753699424,ENSG00000171823,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+PPARG,0.09671246971297061,ENSG00000132170,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+APPL1,0.09547746498138733,ENSG00000157500,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+PAX1,0.09522583915584751,ENSG00000125813,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+LRP6,0.09521639332301114,ENSG00000070018,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+TTR,0.09484642930603417,ENSG00000118271,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+RUNX2,0.09481355270879953,ENSG00000124813,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+FGF21,0.09480161304311738,ENSG00000105550,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+FGF2,0.09445782500943051,ENSG00000138685,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CDX1,0.0940556922769091,ENSG00000113722,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+FGFR1,0.09355938438293193,ENSG00000077782,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+TRAF6,0.09303104634345614,ENSG00000175104,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+PHC2,0.09301549155502026,ENSG00000134686,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+HOXC9,0.09254198944135628,ENSG00000180806,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+APOA1,0.09229411249385767,ENSG00000118137,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+HOXC4,0.09113796746107419,ENSG00000198353,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CSRNP3,0.09111777958950937,ENSG00000178662,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+HES7,0.09108483982336892,ENSG00000179111,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+LEP,0.09101784943610061,ENSG00000174697,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+PCSK9,0.09099261344478851,ENSG00000169174,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+GLP1R,0.09031394008138567,ENSG00000112164,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+ALG12,0.09022234144779892,ENSG00000182858,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SMN1,0.09011647888269184,ENSG00000172062,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+METTL14,0.08953889519248467,ENSG00000145388,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CSNK2A2IP,0.08931999180900772,ENSG00000283434,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+FGFR3,0.0890700181594093,ENSG00000068078,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+OXT,0.08894930992245738,ENSG00000101405,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CTHRC1,0.08881925286787223,ENSG00000164932,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+IAPP,0.08863500835750397,ENSG00000121351,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+NOTCH1,0.08824946995809552,ENSG00000148400,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+PHEX,0.08759315705783736,ENSG00000102174,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+MACF1,0.0875444190348409,ENSG00000127603,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+GCK,0.08753293536065669,ENSG00000106633,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+ALPL,0.08745385812892485,ENSG00000162551,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+NKX3-2,0.08703429080397752,ENSG00000109705,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+IL18,0.08701835028910353,ENSG00000150782,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+DHFR2,0.0869973212593663,ENSG00000178700,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+APOB,0.08695708882403672,ENSG00000084674,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+KDM6B,0.08666872189637562,ENSG00000132510,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SMN2,0.08666450037886597,ENSG00000205571,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+TBX6,0.08664425801463177,ENSG00000149922,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+WNT3A,0.08625767567525694,ENSG00000154342,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+MEOX1,0.08585545346467115,ENSG00000005102,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+INS,0.08579773925761416,ENSG00000254647,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+USP7,0.08578502121359523,ENSG00000187555,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+HIF1A,0.08573418158526028,ENSG00000100644,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+LRG1,0.08565526437671694,ENSG00000171236,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+TLR4,0.08555802711117459,ENSG00000136869,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+RING1,0.08529410272983337,ENSG00000204227,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+RARRES2,0.08527205121767933,ENSG00000106538,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+TP53,0.0852182899844695,ENSG00000141510,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+RARG,0.08512291334114343,ENSG00000172819,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+ACVR2B,0.08506997308018124,ENSG00000114739,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+BTG2,0.08499145789327489,ENSG00000159388,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+GPT,0.08498786438058838,ENSG00000167701,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+MGP,0.08485624278000091,ENSG00000111341,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+HOXA4,0.0847310580873283,ENSG00000197576,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+E2F6,0.08352576578623784,ENSG00000169016,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+MTHFR,0.08351198991218282,ENSG00000177000,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+MYF5,0.08320057657854361,ENSG00000111049,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+SHBG,0.08303283139082715,ENSG00000129214,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+CCN2,0.08282060428081356,ENSG00000118523,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+HIVEP3,0.08260206274642207,ENSG00000127124,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+HMGCR,0.08249606410563551,ENSG00000113161,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+HOXB8,0.08235117530496457,ENSG00000120068,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+NDRG2,0.0821858334908643,ENSG00000165795,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+KAT2A,0.0820839937086845,ENSG00000108773,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+TERT,0.08195009329313561,ENSG00000164362,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+DLL3,0.08188406290760379,ENSG00000090932,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+KLF3,0.08163875264486017,ENSG00000109787,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+PFKFB3,0.08132194058053879,ENSG00000170525,"Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
