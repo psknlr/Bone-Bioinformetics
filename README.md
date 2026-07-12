@@ -1,6 +1,6 @@
 # Bone-Bioinformetics
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pariskang/Bone-Bioinformetics/blob/main/notebooks/bone_bioinformatics_colab.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/psknlr/Bone-Bioinformetics/blob/main/notebooks/bone_bioinformatics_colab.ipynb)
 
 Reproducible analysis workflow for integrating classical Chinese medicine records with modern osteoporosis network biology.
 
@@ -309,12 +309,12 @@ PNG files are ignored by git, but the Colab notebook regenerates and displays th
 Click the badge at the top of this README or open:
 
 ```text
-https://colab.research.google.com/github/pariskang/Bone-Bioinformetics/blob/main/notebooks/bone_bioinformatics_colab.ipynb
+https://colab.research.google.com/github/psknlr/Bone-Bioinformetics/blob/main/notebooks/bone_bioinformatics_colab.ipynb
 ```
 
 The notebook:
 
-1. clones `pariskang/Bone-Bioinformetics` if needed;
+1. clones `psknlr/Bone-Bioinformetics` if needed;
 2. installs `requirements.txt`;
 3. runs the full planning pipeline;
 4. previews the core CSV tables;
