@@ -4,12 +4,12 @@ This project is designed to avoid simulated pharmacology, expression, GWAS, or n
 
 ## What is computed from real data
 
-- Classical herb-module statistics are computed from `osteoporosis_extraction_output_finalV6.xlsx`.
-- The target quartet and all sub-combinations are tested explicitly (`core_module_significance.csv`); the complete four-herb co-occurrence is reported truthfully (support = 0), not overstated.
-- Component identity is validated through PubChem PUG REST and ChEMBL molecule search.
-- Component-target evidence is retrieved from ChEMBL activity records and mapped to gene symbols through ChEMBL target components, then tiered by assay type/potency (experimental) with a separate STRING-neighbour predicted layer.
-- Osteoporosis target evidence is retrieved from Open Targets for `MONDO_0005298`.
-- Network proximity uses STRING interactions queried from `string-db.org`, scored with a degree-preserving random reference (z-score, empirical p) and a random-equal-size-combination null.
+- Classical herb-module statistics are computed from `osteoporosis_extraction_output_finalV6.xlsx`. Multiple structured extractions of the **same source passage** are reconciled (default `merge` = expert-confirmed union), not silently de-duplicated to the first row; `dedup_conflict_log.csv` and `dedup_strategy_sensitivity.csv` document conflicts and strategy dependence.
+- The target quartet and all sub-combinations are tested explicitly (`core_module_significance.csv`). Under proper reconciliation the complete four-herb set **does co-occur** (support = 1, high lift, FDR < 0.01); the earlier "support = 0" was a keep-first de-duplication artifact and is now corrected.
+- Component identity is audited through PubChem PUG REST (CID, InChIKey, SMILES) and ChEMBL molecule search (InChIKey), with synonym-collision flags for distinct query names that resolve to one compound.
+- Component-target evidence is retrieved from ChEMBL activity records, restricted to **human single-protein targets** (cell-line/phenotypic assays logged to `excluded_nonmolecular_activities.csv`), de-duplicated and aggregated per gene with n_activities/n_documents/median/max pChEMBL, then tiered by assay/potency with a separate STRING-neighbour predicted layer.
+- Osteoporosis target evidence is retrieved from Open Targets for `MONDO_0005298`; the association score is treated as a ranking heuristic (not a probability) and the disease module is defined by a documented score threshold.
+- Network proximity uses STRING **physical** interactions, scored with a degree-preserving random reference (z-score, empirical p) and a size-matched null drawn from an independent background; direct target–disease overlaps count as distance 0.
 - Reference marker localisation downloads PanglaoDB markers and computes target-marker overlap with a hypergeometric enrichment test.
 - Expression localisation downloads the real GSE224152 processed matrix (aggregate; columns are cell barcodes, so cell-type-resolved localisation awaits an annotated matrix).
 - Osteoclast dynamics downloads the real GSE246769 count matrix.

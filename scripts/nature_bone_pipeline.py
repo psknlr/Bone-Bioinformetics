@@ -121,16 +121,110 @@ def parse_json_list(x):
 def norm_herb(name):
     return re.sub(r"（.*?）|\(.*?\)|[\s，,。；;：:]+", "", str(name)).strip()
 
-def load_records(path):
+def _herbset(x):
+    return {h for h in (norm_herb(d.get("name", "")) for d in parse_json_list(x) if isinstance(d, dict) and d.get("name")) if h}
+
+def _symptomset(x):
+    return {norm_herb(d.get("name", d) if isinstance(d, dict) else d) for d in parse_json_list(x)} - {""}
+
+def _base_records(path):
+    """Filtered rows with a source_record_id for the *same original passage*.
+
+    The id is the extraction-invariant identity of a classical passage
+    (Books|year|Diagnosis|Chapter|Title); multiple structured extractions of the
+    same passage share it and must be reconciled, not silently dropped."""
     df = pd.read_excel(path, sheet_name="Sheet1")
-    df = df[df["status"].eq("ok") & df["consider_include"].fillna(False)].copy()
-    df["record_key"] = df[["Books","year","Diagnosis","Chapter","Title"]].fillna("").astype(str).agg("|".join, axis=1).map(lambda s: hashlib.md5(s.encode()).hexdigest())
-    df = df.drop_duplicates("record_key")
-    df["herbs"] = [[h for h in sorted({norm_herb(d.get("name", "")) for d in parse_json_list(x) if d.get("name")}) if h] for x in df["therapeutic_drugs_json"]]
-    df = df[df["herbs"].map(len).gt(0)].copy()
-    df["dynasty"] = pd.cut(df["year"], bins=[x[0] for x in DYNASTIES]+[10_000], labels=[x[2] for x in DYNASTIES], right=False)
-    df["symptoms"] = [sorted({norm_herb(d.get("name", d) if isinstance(d, dict) else d) for d in parse_json_list(x)}) if "symptoms_signs_json" in df.columns else [] for x in df.get("symptoms_signs_json", pd.Series([None]*len(df), index=df.index))]
+    df = df[df["status"].eq("ok") & df["consider_include"].fillna(False)].copy().reset_index(drop=True)
+    df["source_record_id"] = df[["Books", "year", "Diagnosis", "Chapter", "Title"]].fillna("").astype(str).agg("|".join, axis=1).map(lambda s: hashlib.md5(s.encode()).hexdigest())
+    df["herbs_set"] = df["therapeutic_drugs_json"].map(_herbset)
+    df["symptoms_set"] = df["symptoms_signs_json"].map(_symptomset) if "symptoms_signs_json" in df.columns else [set()] * len(df)
+    df["quality"] = pd.to_numeric(df.get("quality_score"), errors="coerce").fillna(-1)
     return df
+
+def dedup_conflict_log(path, outdir=None):
+    """Field-level conflicts among multiple extractions of the same passage."""
+    df = _base_records(path)
+    rows = []
+    for sid, sub in df.groupby("source_record_id"):
+        if len(sub) < 2:
+            continue
+        herb_variants = {tuple(sorted(s)) for s in sub.herbs_set}
+        sym_variants = {tuple(sorted(s)) for s in sub.symptoms_set}
+        rows.append({
+            "source_record_id": sid, "n_extractions": len(sub),
+            "books": sub.Books.iloc[0], "title": str(sub.Title.iloc[0])[:40],
+            "drugs_conflict": len(herb_variants) > 1,
+            "symptoms_conflict": len(sym_variants) > 1,
+            "syndrome_conflict": sub.get("tcm_syndrome", pd.Series(dtype=str)).astype(str).nunique() > 1,
+            "op_related_conflict": sub.get("is_osteoporosis_related", pd.Series(dtype=str)).astype(str).nunique() > 1,
+            "relevance_conflict": pd.to_numeric(sub.get("osteoporosis_relevance_score"), errors="coerce").nunique() > 1,
+            "first_not_highest_quality": sub.quality.iloc[0] < sub.quality.max(),
+            "first_has_no_drug_but_others_do": (len(sub.herbs_set.iloc[0]) == 0) and any(len(s) > 0 for s in sub.herbs_set.iloc[1:]),
+            "union_herbs": ";".join(sorted(set().union(*sub.herbs_set))),
+        })
+    log = pd.DataFrame(rows)
+    if outdir is not None:
+        log.to_csv(outdir / "dedup_conflict_log.csv", index=False)
+    return log
+
+def _finalise(df):
+    df = df[df["herbs"].map(len).gt(0)].copy()
+    df["dynasty"] = pd.cut(df["year"], bins=[x[0] for x in DYNASTIES] + [10_000], labels=[x[2] for x in DYNASTIES], right=False)
+    return df
+
+def load_records(path, strategy="merge"):
+    """Reconcile multiple extractions of the same passage.
+
+    strategy:
+      * "merge"           – expert-confirmed *union* of herbs/symptoms per passage (primary);
+      * "highest_quality" – keep the single highest quality_score extraction;
+      * "first"           – legacy keep-first (drops later, often higher-quality, extractions);
+      * "raw"             – every extraction kept as its own record (no reconciliation).
+    """
+    df = _base_records(path)
+    if strategy == "raw":
+        out = df.copy()
+        out["herbs"] = out.herbs_set.map(lambda s: sorted(s))
+        out["symptoms"] = out.symptoms_set.map(lambda s: sorted(s))
+        return _finalise(out)
+    if strategy == "first":
+        out = df.drop_duplicates("source_record_id").copy()
+        out["herbs"] = out.herbs_set.map(lambda s: sorted(s))
+        out["symptoms"] = out.symptoms_set.map(lambda s: sorted(s))
+        return _finalise(out)
+    if strategy == "highest_quality":
+        idx = df.sort_values("quality", ascending=False).drop_duplicates("source_record_id").index
+        out = df.loc[idx].copy()
+        out["herbs"] = out.herbs_set.map(lambda s: sorted(s))
+        out["symptoms"] = out.symptoms_set.map(lambda s: sorted(s))
+        return _finalise(out)
+    # merge (default): union of herbs/symptoms; keep max quality and first metadata
+    agg = df.groupby("source_record_id")
+    out = agg.first().reset_index()
+    out["herbs"] = [sorted(set().union(*g.herbs_set)) for _, g in agg]
+    out["symptoms"] = [sorted(set().union(*g.symptoms_set)) for _, g in agg]
+    out["quality"] = agg.quality.max().values
+    out["n_extractions"] = agg.size().values
+    return _finalise(out)
+
+def dedup_strategy_sensitivity(path, outdir=None):
+    """Sensitivity of the core-quartet co-occurrence to the de-duplication choice."""
+    core = set(CORE)
+    rows = []
+    for strat in ["first", "highest_quality", "merge", "raw"]:
+        d = load_records(path, strategy=strat)
+        sets = [set(h) for h in d.herbs]
+        rows.append({
+            "strategy": strat, "records_with_herbs": len(sets),
+            "core_quartet_complete_n": sum(core.issubset(s) for s in sets),
+            "core_triple_n": sum(len(core & s) >= 3 for s in sets),
+            "core_pair_n": sum(len(core & s) >= 2 for s in sets),
+            "core_any_n": sum(bool(core & s) for s in sets),
+        })
+    out = pd.DataFrame(rows)
+    if outdir is not None:
+        out.to_csv(outdir / "dedup_strategy_sensitivity.csv", index=False)
+    return out
 
 def _perm_cooccurrence_p(rng, N, colsums, obs, n_perm):
     """Permutation p preserving each herb's marginal frequency."""
@@ -192,17 +286,34 @@ def mine_modules(df, outdir, n_perm=200, seed=7):
     pd.DataFrame(hist).to_csv(outdir/"historical_stability.csv", index=False); return mods, pd.DataFrame(hist)
 
 def pubchem_lookup(cache, name):
-    url=f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/{requests.utils.quote(name)}/property/Title,MolecularFormula,CanonicalSMILES/JSON"
+    # PubChem deprecated the `CanonicalSMILES` property name; request current
+    # `SMILES`/`ConnectivitySMILES` plus InChIKey for a real chemical-identity audit.
+    props_req = "Title,MolecularFormula,InChIKey,SMILES,ConnectivitySMILES"
+    url=f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/{requests.utils.quote(name)}/property/{props_req}/JSON"
     try: props=cache.get_json(url)["data"]["PropertyTable"]["Properties"][0]
-    except Exception: return None
-    return {"query":name,"pubchem_cid":props.get("CID"),"pubchem_title":props.get("Title"),"formula":props.get("MolecularFormula"),"canonical_smiles":props.get("CanonicalSMILES")}
+    except Exception:
+        try:  # fall back to legacy property name on older PubChem deployments
+            url2=f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/{requests.utils.quote(name)}/property/Title,MolecularFormula,InChIKey,CanonicalSMILES/JSON"
+            props=cache.get_json(url2)["data"]["PropertyTable"]["Properties"][0]
+        except Exception:
+            return None
+    return {"query":name,"pubchem_cid":props.get("CID"),"pubchem_title":props.get("Title"),
+            "formula":props.get("MolecularFormula"),"inchikey":props.get("InChIKey"),
+            "canonical_smiles":props.get("SMILES") or props.get("CanonicalSMILES") or props.get("ConnectivitySMILES")}
 
 def chembl_molecule(cache, name):
+    """Best fuzzy match plus the fields needed to audit chemical identity."""
     data=cache.get_json("https://www.ebi.ac.uk/chembl/api/data/molecule/search.json", {"q":name,"limit":1})["data"]
     mols=data.get("molecules") or []
-    return mols[0].get("molecule_chembl_id") if mols else None
+    if not mols: return {"molecule_chembl_id":None,"chembl_pref_name":None,"chembl_inchikey":None}
+    m=mols[0]; struct=m.get("molecule_structures") or {}
+    return {"molecule_chembl_id":m.get("molecule_chembl_id"),"chembl_pref_name":m.get("pref_name"),
+            "chembl_inchikey":struct.get("standard_inchi_key")}
 
-def chembl_targets(cache, chembl_id, min_pchembl=5.0, max_pages=4):
+def chembl_targets(cache, chembl_id, min_pchembl=5.0, max_pages=6):
+    """Human activities with the assay/target/relation metadata needed to keep
+    only molecular-target binding/functional evidence (excludes cell-line and
+    phenotypic assays)."""
     out=[]
     for page in range(max_pages):
         data=cache.get_json("https://www.ebi.ac.uk/chembl/api/data/activity.json", {"molecule_chembl_id":chembl_id,"pchembl_value__isnull":False,"limit":100,"offset":page*100})["data"]
@@ -210,21 +321,28 @@ def chembl_targets(cache, chembl_id, min_pchembl=5.0, max_pages=4):
             try: pchem=float(a.get("pchembl_value") or 0)
             except ValueError: pchem=0
             if pchem >= min_pchembl and a.get("target_organism") == "Homo sapiens":
-                out.append({"molecule_chembl_id":chembl_id,"target_chembl_id":a.get("target_chembl_id"),"target_pref_name":a.get("target_pref_name"),"pchembl_value":pchem,"standard_type":a.get("standard_type")})
+                out.append({"molecule_chembl_id":chembl_id,"target_chembl_id":a.get("target_chembl_id"),
+                            "target_pref_name":a.get("target_pref_name"),"pchembl_value":pchem,
+                            "standard_type":a.get("standard_type"),"standard_relation":a.get("standard_relation"),
+                            "assay_type":a.get("assay_type"),"assay_description":(a.get("assay_description") or "")[:120],
+                            "document_chembl_id":a.get("document_chembl_id")})
         if not data.get("page_meta",{}).get("next"): break
     return out
 
-def chembl_target_gene_symbol(cache, target_chembl_id):
-    if not target_chembl_id: return None
+def chembl_target_detail(cache, target_chembl_id):
+    """Return (target_type, [gene_symbols]) so complexes/families are not collapsed to one arbitrary gene."""
+    if not target_chembl_id: return None, []
     try:
         data=cache.get_json(f"https://www.ebi.ac.uk/chembl/api/data/target/{target_chembl_id}.json")["data"]
     except Exception:
-        return None
+        return None, []
+    genes=[]
     for comp in data.get("target_components") or []:
         for syn in comp.get("target_component_synonyms") or []:
             if syn.get("syn_type") == "GENE_SYMBOL":
-                return syn.get("component_synonym")
-    return None
+                g=syn.get("component_synonym")
+                if g and g not in genes: genes.append(g)
+    return data.get("target_type"), genes
 
 def opentargets_osteoporosis(cache, size=200):
     q='''query disease($id:String!,$size:Int!){ disease(efoId:$id){ id name associatedTargets(page:{index:0,size:$size}){ rows{ score target{ approvedSymbol id } } } } }'''
@@ -232,13 +350,19 @@ def opentargets_osteoporosis(cache, size=200):
     rows=data.get("data",{}).get("disease",{}).get("associatedTargets",{}).get("rows",[]) if data else []
     return pd.DataFrame([{"target":r["target"].get("approvedSymbol"),"open_targets_score":r.get("score"),"ensembl_id":r["target"].get("id")} for r in rows if r.get("target")])
 
-def string_network(cache, genes, add_nodes=300):
-    """STRING PPI network for the seed genes, expanded with `add_nodes` extra
-    high-confidence interactors so there is a real background universe for the
-    degree-matched network-proximity randomisation."""
+def string_network(cache, genes, add_nodes=500, physical=True):
+    """STRING physical-interaction network for the seed genes, expanded with
+    `add_nodes` interactors so there is a broader background for randomisation.
+
+    Note: `add_nodes` interactors are chosen relative to the query seeds, so this
+    is a seed-centred local network, not an unbiased whole-interactome background;
+    the randomisation below draws from an independent target universe to avoid
+    that bias (see build_background_universe)."""
     genes=sorted({g for g in genes if isinstance(g,str) and g});
     if len(genes)<2: return nx.Graph()
-    text=requests.get("https://string-db.org/api/tsv/network", params={"identifiers":"%0d".join(genes),"species":9606,"required_score":400,"add_nodes":add_nodes}, timeout=90).text
+    params={"identifiers":"%0d".join(genes),"species":9606,"required_score":400,"add_nodes":add_nodes}
+    if physical: params["network_type"]="physical"
+    text=requests.get("https://string-db.org/api/tsv/network", params=params, timeout=120).text
     G=nx.Graph(); G.add_nodes_from(genes)
     for line in text.splitlines()[1:]:
         f=line.split('\t')
@@ -246,11 +370,15 @@ def string_network(cache, genes, add_nodes=300):
     return G
 
 def _closest_distance(G, source_set, target_set):
-    """Mean over sources of the shortest-path distance to the nearest target (Guney et al. 2016 d_c)."""
-    tgt=[t for t in target_set if t in G]; vals=[]
+    """Mean over sources of the shortest-path distance to the nearest target
+    (Guney et al. 2016 closest distance d_c). A source that is itself a disease
+    (target-set) gene has distance 0 — direct overlap must count as closest."""
+    tgt=set(t for t in target_set if t in G); vals=[]
     for s in source_set:
         if s not in G: continue
-        ds=[nx.shortest_path_length(G,s,t) for t in tgt if t!=s and nx.has_path(G,s,t)]
+        if s in tgt:
+            vals.append(0); continue
+        ds=[nx.shortest_path_length(G,s,t) for t in tgt if nx.has_path(G,s,t)]
         if ds: vals.append(min(ds))
     return float(np.mean(vals)) if vals else np.nan
 
@@ -290,27 +418,67 @@ def evidence_tier(standard_type, pchembl):
     if p>=5: return "T4_experimental_moderate"
     return "T5_experimental_weak"
 
-def real_targets_and_network(outdir, cache):
-    compounds=[]; target_rows=[]
+def real_targets_and_network(outdir, cache, ot_score_threshold=0.10):
+    # --- compound identity (PubChem CID/InChIKey + ChEMBL id/InChIKey) ---
+    compounds=[]; raw_activities=[]
     for herb, queries in HERB_COMPOUND_QUERIES.items():
         for q in queries:
-            pc=pubchem_lookup(cache, q) or {"query":q,"pubchem_cid":None,"pubchem_title":None,"formula":None,"canonical_smiles":None}
-            chembl=chembl_molecule(cache, q); pc.update({"herb":herb,"molecule_chembl_id":chembl}); compounds.append(pc)
-            if chembl:
-                for t in chembl_targets(cache, chembl):
-                    t.update({"herb":herb,"compound_query":q,"target_gene_symbol":chembl_target_gene_symbol(cache, t.get("target_chembl_id"))}); target_rows.append(t)
-    comp=pd.DataFrame(compounds); comp.to_csv(outdir/"pubchem_chembl_compounds.csv", index=False)
-    targets=pd.DataFrame(target_rows)
-    if not targets.empty:
-        targets["evidence_type"]="experimental_ChEMBL"
-        targets["evidence_tier"]=[evidence_tier(st, p) for st, p in zip(targets.get("standard_type"), targets.get("pchembl_value"))]
-    targets.to_csv(outdir/"component_target_evidence_tiers.csv", index=False)
-    disease=opentargets_osteoporosis(cache); disease.to_csv(outdir/"opentargets_osteoporosis_targets.csv", index=False)
-    drug_gene=set(targets.get("target_gene_symbol", pd.Series(dtype=str)).dropna())
-    disease_gene=set(disease.target.dropna().head(100)) if not disease.empty else set()
+            pc=pubchem_lookup(cache, q) or {"query":q,"pubchem_cid":None,"pubchem_title":None,"formula":None,"inchikey":None,"canonical_smiles":None}
+            ch=chembl_molecule(cache, q)
+            pc.update({"herb":herb,"compound_scope":"selected_representative_compound",**ch}); compounds.append(pc)
+            cid=ch.get("molecule_chembl_id")
+            if cid:
+                for t in chembl_targets(cache, cid):
+                    ttype, genes = chembl_target_detail(cache, t.get("target_chembl_id"))
+                    t.update({"herb":herb,"compound_query":q,"target_type":ttype,
+                              "target_gene_symbol":(genes[0] if ttype=="SINGLE PROTEIN" and genes else None),
+                              "all_component_genes":";".join(genes)})
+                    raw_activities.append(t)
+    comp=pd.DataFrame(compounds)
+    # synonym-collision detection: distinct query names sharing a PubChem CID / ChEMBL InChIKey
+    collision=pd.Series(False, index=comp.index)
+    for key in ["pubchem_cid","chembl_inchikey"]:
+        if key in comp:
+            n_shared=comp[key].map(comp.dropna(subset=[key]).groupby(key)["query"].nunique())
+            comp[f"{key}_shared_by_n_queries"]=n_shared
+            collision=collision | (n_shared.fillna(1)>1)
+    comp["synonym_collision"]=collision
+    comp.to_csv(outdir/"pubchem_chembl_compounds.csv", index=False)
+
+    acts=pd.DataFrame(raw_activities)
+    # transparency: log activities excluded because the target is not a single protein
+    if not acts.empty:
+        nonmol=acts[acts.target_type.ne("SINGLE PROTEIN")].copy()
+        nonmol.to_csv(outdir/"excluded_nonmolecular_activities.csv", index=False)
+        acts=acts[acts.target_type.eq("SINGLE PROTEIN") & acts.target_gene_symbol.notna()].copy()
+        acts=acts.drop_duplicates(subset=["molecule_chembl_id","target_chembl_id","standard_type","pchembl_value","document_chembl_id"])
+        acts["evidence_type"]="experimental_ChEMBL_single_protein"
+        acts["evidence_tier"]=[evidence_tier(st,p) for st,p in zip(acts.standard_type, acts.pchembl_value)]
+    else:
+        acts=pd.DataFrame(columns=["herb","compound_query","target_gene_symbol","pchembl_value","standard_type"])
+    acts.to_csv(outdir/"component_target_evidence_tiers.csv", index=False)
+    # target-level aggregation: replaces "max-pChEMBL of duplicated rows" with real summaries
+    if not acts.empty:
+        summ=acts.groupby("target_gene_symbol").agg(
+            herbs=("herb",lambda s:";".join(sorted(set(s)))),
+            n_activities=("pchembl_value","size"),
+            n_documents=("document_chembl_id","nunique"),
+            n_assay_types=("assay_type","nunique"),
+            median_pchembl=("pchembl_value","median"),
+            max_pchembl=("pchembl_value","max"),
+            standard_types=("standard_type",lambda s:";".join(sorted(set(map(str,s))))),
+            best_evidence_tier=("evidence_tier","min")).reset_index()
+        summ.to_csv(outdir/"component_target_summary.csv", index=False)
+    disease=opentargets_osteoporosis(cache)
+    disease["note"]="Open Targets association score is a weighted ranking heuristic (genetics+drugs+literature+animal+expression), not a probability"
+    disease.to_csv(outdir/"opentargets_osteoporosis_targets.csv", index=False)
+    drug_gene=set(acts.get("target_gene_symbol", pd.Series(dtype=str)).dropna())
+    # disease module by association-score threshold (documented), not an arbitrary top-N
+    disease_gene=set(disease.loc[disease.open_targets_score.ge(ot_score_threshold),"target"].dropna()) if not disease.empty else set()
+    if not disease_gene and not disease.empty:
+        disease_gene=set(disease.target.dropna().head(50))
     G=string_network(cache, drug_gene | disease_gene)
-    # Predicted-target layer: STRING first-shell neighbours of experimental targets
-    # that themselves belong to the osteoporosis module (experimental vs predicted split).
+    # Predicted-target layer: STRING first-shell neighbours of experimental targets in the disease module
     pred_rows=[]
     for g in sorted(drug_gene):
         if g not in G: continue
@@ -319,26 +487,26 @@ def real_targets_and_network(outdir, cache):
                 pred_rows.append({"predicted_target":nb,"via_experimental_target":g,"string_score":G[g][nb].get("score"),"evidence_type":"predicted_STRING_neighbour_of_experimental_target","in_osteoporosis_module":True})
     pd.DataFrame(pred_rows).to_csv(outdir/"predicted_target_layer.csv", index=False)
     # Network proximity with degree-preserving random reference (z-score, empirical p).
-    rows=[{"set":"core_combo","targets":len(drug_gene),**proximity_zscore(G, drug_gene, disease_gene),"source":"ChEMBL+OpenTargets+STRING"}]
+    rows=[{"set":"core_combo","targets":len(drug_gene),**proximity_zscore(G, drug_gene, disease_gene),"source":"ChEMBL(single-protein)+OpenTargets(score>=%.2f)+STRING-physical"%ot_score_threshold}]
     for herb in CORE:
-        hg=set(targets.loc[targets.herb.eq(herb),"target_gene_symbol"].dropna()) if not targets.empty else set()
-        rows.append({"set":herb,"targets":len(hg),**proximity_zscore(G, hg, disease_gene),"source":"ChEMBL+OpenTargets+STRING"})
+        hg=set(acts.loc[acts.herb.eq(herb),"target_gene_symbol"].dropna()) if not acts.empty else set()
+        rows.append({"set":herb,"targets":len(hg),**proximity_zscore(G, hg, disease_gene),"source":"ChEMBL(single-protein)+OpenTargets+STRING-physical"})
     prox_df=pd.DataFrame(rows).rename(columns={"observed_distance":"network_distance"})
     prox_df.to_csv(outdir/"network_proximity.csv", index=False)
-    # Random-combination null: does the actual 4-herb target set beat random equal-sized combos?
-    herb_pools={h:set(targets.loc[targets.herb.eq(h),"target_gene_symbol"].dropna()) for h in CORE} if not targets.empty else {h:set() for h in CORE}
-    all_pool=sorted({g for s in herb_pools.values() for g in s if g in G})
-    rng=np.random.default_rng(17); k=len([g for g in drug_gene if g in G])
-    d_core=_closest_distance(G, [g for g in drug_gene if g in G], [d for d in disease_gene if d in G])
-    null=[]
-    if all_pool and k and not np.isnan(d_core):
+    # Random-combination null drawn from an INDEPENDENT background (all network proteins
+    # outside the disease module: drug targets + STRING add_nodes interactors), size-matched.
+    # This fixes the previous degenerate null where sampling equalled the whole target pool.
+    background=[n for n in G.nodes if n not in disease_gene]
+    k=len([g for g in drug_gene if g in G]); d_core=_closest_distance(G,[g for g in drug_gene if g in G],[d for d in disease_gene if d in G])
+    rng=np.random.default_rng(17); null=[]
+    if len(background)>k>0 and not np.isnan(d_core):
         for _ in range(2000):
-            samp=list(rng.choice(all_pool, min(k,len(all_pool)), replace=False))
+            samp=[background[i] for i in rng.choice(len(background),k,replace=False)]
             d=_closest_distance(G, samp, [d for d in disease_gene if d in G])
             if not np.isnan(d): null.append(d)
-    combo_null=pd.DataFrame([{"comparison":"core_combo_vs_random_equal_size_combos","core_distance":d_core,"random_mean":float(np.mean(null)) if null else np.nan,"random_sd":float(np.std(null)) if null else np.nan,"empirical_p_core_closer":(1+sum(x<=d_core for x in null))/(len(null)+1) if null else np.nan,"n_random":len(null)}])
+    combo_null=pd.DataFrame([{"comparison":"core_combo_vs_random_size_matched_background","core_distance":d_core,"background_size":len(background),"n_targets":k,"random_mean":float(np.mean(null)) if null else np.nan,"random_sd":float(np.std(null)) if null else np.nan,"empirical_p_core_closer":(1+sum(x<=d_core for x in null))/(len(null)+1) if null else np.nan,"n_random":len(null)}])
     combo_null.to_csv(outdir/"network_proximity_random_combo_null.csv", index=False)
-    return comp, targets, disease, prox_df
+    return comp, acts, disease, prox_df
 
 def omics_genetics(outdir, targets, disease):
     genes=set(targets.get("target_gene_symbol", pd.Series(dtype=str)).dropna())
@@ -568,9 +736,11 @@ def plot_all(figdir, mods, hist, prox, cell, genetics):
     if not genetics.empty: plt.figure(figsize=(6,6)); sns.barplot(data=genetics.head(20),y="target",x="open_targets_score",color="#b2182b"); plt.tight_layout(); plt.savefig(figdir/"Fig5_human_genetics.png",dpi=300); plt.close()
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument("--workbook",default="osteoporosis_extraction_output_finalV6.xlsx"); ap.add_argument("--outdir",default="results"); ap.add_argument("--cache",default=".cache/public_api"); ap.add_argument("--analysis-scope", choices=["quick","full"], default="quick"); ap.add_argument("--download-large", action="store_true"); ap.add_argument("--large-data-dir", default="data/full_scale")
+    ap=argparse.ArgumentParser(); ap.add_argument("--workbook",default="osteoporosis_extraction_output_finalV6.xlsx"); ap.add_argument("--outdir",default="results"); ap.add_argument("--cache",default=".cache/public_api"); ap.add_argument("--analysis-scope", choices=["quick","full"], default="quick"); ap.add_argument("--dedup-strategy", choices=["merge","highest_quality","first","raw"], default="merge"); ap.add_argument("--download-large", action="store_true"); ap.add_argument("--large-data-dir", default="data/full_scale")
     args=ap.parse_args(); out=Path(args.outdir); tab=out/"tables"; fig=out/"figures"; tab.mkdir(parents=True,exist_ok=True); fig.mkdir(parents=True,exist_ok=True)
-    df=load_records(args.workbook); df.to_csv(tab/"deduplicated_classical_records.csv", index=False)
+    df=load_records(args.workbook, strategy=args.dedup_strategy); df["dedup_strategy"]=args.dedup_strategy
+    df.drop(columns=[c for c in ["herbs_set","symptoms_set"] if c in df.columns]).to_csv(tab/"deduplicated_classical_records.csv", index=False)
+    dedup_conflict_log(args.workbook, tab); dedup_strategy_sensitivity(args.workbook, tab)
     mods,hist=mine_modules(df,tab); core_sig=core_module_significance(df, tab)
     cache=ApiCache(Path(args.cache)); comp,targets,disease,prox=real_targets_and_network(tab, cache); cell,gen=omics_genetics(tab,targets,disease); reference_marker_overlap(tab, cache, targets); gse224152_expression_localisation(tab, cache, targets); gse246769_osteoclast_dynamics(tab, cache, targets); write_dataset_manifest(tab); gwas_catalog_trait_studies(tab, cache)
     _gwas_enr, gwas_genes = gwas_gene_enrichment(tab, cache, targets)

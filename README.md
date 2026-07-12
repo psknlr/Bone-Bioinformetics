@@ -16,9 +16,9 @@ python scripts/nature_bone_pipeline.py --workbook osteoporosis_extraction_output
 
 The pipeline implements the requested main narrative:
 
-1. **Stable herb modules**: filters included classical records, creates strict record hashes, removes duplicate book/year/diagnosis/chapter/title entries, mines herb modules with FP-Growth, estimates lift against independence, calculates permutation p values, and applies Benjamini-Hochberg FDR correction. A dedicated `core_module_significance.csv` tests the Du-Zhong/Niu-Xi/Xu-Duan/Gu-Sui-Bu quartet and **every** 2/3/4-herb sub-combination regardless of frequency, so the central claim is reported honestly: the pairs and two triples (杜仲–牛膝–续断, 杜仲–牛膝–骨碎补) are FDR-significant with high lift, whereas the complete four-herb set never co-occurs in a single record and is reported as such rather than overstated.
+1. **Stable herb modules**: filters included classical records and reconciles **multiple structured extractions of the same source passage** instead of arbitrarily keeping the first. The default `--dedup-strategy merge` takes the expert-confirmed *union* of herbs/symptoms per passage (a real `source_record_id`), with `highest_quality`, `first` (legacy) and `raw` available; `dedup_conflict_log.csv` records field-level conflicts and `dedup_strategy_sensitivity.csv` shows how the core-quartet count depends on the choice. It then mines modules with FP-Growth, lift against independence, permutation p and Benjamini-Hochberg FDR. `core_module_significance.csv` tests the Du-Zhong/Niu-Xi/Xu-Duan/Gu-Sui-Bu quartet and **every** 2/3/4-herb sub-combination: under proper reconciliation the pairs and triples are FDR-significant, and the complete four-herb set **does co-occur** (in 《病机沙篆》, support = 1, lift ≈ 300×, FDR < 0.01) — rare but real, not the "never co-occurs" artifact produced by keep-first de-duplication.
 2. **Historical stability**: compares the core across dynasty, TCM syndrome, diagnosis **and symptom** strata, reporting complete/pair/any co-occurrence of the core herbs.
-3. **Component-target and network medicine layer**: queries PubChem/ChEMBL for core-herb compound evidence, tiers experimental targets by assay/potency and adds a STRING-neighbour predicted-target layer, then computes STRING network proximity of the core module and each single herb to the osteoporosis module with a **degree-preserving random reference (z-score, empirical p)** and a **random-equal-size-combination null**, directly answering whether the combination is closer to the disease network than single herbs or random combos.
+3. **Component-target and network medicine layer**: queries PubChem/ChEMBL for core-herb compound evidence with a real chemical-identity audit (PubChem CID/InChIKey, ChEMBL InChIKey, **synonym-collision flags**), keeps only **single-protein** human targets with assay metadata (cell-line/phenotypic assays are excluded to `excluded_nonmolecular_activities.csv`), de-duplicates activities and aggregates them per gene (`component_target_summary.csv`: n_activities, n_documents, median/max pChEMBL). It then builds a **STRING physical-interaction** network, defines the osteoporosis module by an Open Targets score threshold (documented as a ranking heuristic, not a probability), and computes proximity with a **degree-preserving random reference (z-score, empirical p)** plus a **size-matched null drawn from an independent background** (direct target-disease overlaps correctly count as distance 0).
 4. **Cell and human genetics layer**: exports reference marker-based cell-type overlap localisation **with hypergeometric enrichment**, downloads the real GSE224152 marrow non-haematopoietic expression matrix for target-expression summaries, downloads the real GSE246769 multi-donor osteoclast differentiation bulk RNA-seq matrix for dynamic validation, runs a **gene-level GWAS-Catalog bone-gene enrichment** for the candidate targets, and converges classical/pharmacology/cell-expression/human-genetics evidence into a four-pillar prioritisation. UCell/pseudo-bulk/trajectory and coloc/MR remain reserved for true single-cell matrices and full summary statistics.
 
 ## Outputs
@@ -26,11 +26,15 @@ The pipeline implements the requested main narrative:
 Generated tables are written to `results/tables/`:
 
 - `deduplicated_classical_records.csv`
+- `dedup_conflict_log.csv`
+- `dedup_strategy_sensitivity.csv`
 - `stable_herb_modules.csv`
 - `core_module_significance.csv`
 - `historical_stability.csv`
 - `pubchem_chembl_compounds.csv`
 - `component_target_evidence_tiers.csv`
+- `component_target_summary.csv`
+- `excluded_nonmolecular_activities.csv`
 - `predicted_target_layer.csv`
 - `opentargets_osteoporosis_targets.csv`
 - `network_proximity.csv`
