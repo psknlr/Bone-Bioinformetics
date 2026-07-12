@@ -92,22 +92,44 @@ def symbol_to_ensembl(cache, symbols):
     return mapping
 
 
-def eqtl_catalogue_cis_support(cache, ensembl_ids, max_genes=40):
-    """Presence check of a significant cis-eQTL for candidate genes in the eQTL
-    Catalogue. Returns True/False/None (None = endpoint unavailable) and never
-    fabricates; full coloc/SMR still needs region sumstats (pending table)."""
+def _eqtl_bone_relevant_datasets(cache, want=6):
+    """A small curated set of eQTL Catalogue gene-expression datasets in
+    bone/marrow-relevant tissues (blood, macrophage, monocyte, muscle, fibroblast)."""
+    try:
+        dsets = cache.get_json("https://www.ebi.ac.uk/eqtl/api/v2/datasets", {"size": 1000})["data"]
+    except Exception:
+        return []
+    keep_terms = ("blood", "macrophage", "monocyte", "muscle", "fibroblast", "mesenchym", "osteo")
+    out = []
+    for d in dsets if isinstance(dsets, list) else []:
+        if d.get("quant_method") != "ge":
+            continue
+        if any(t in str(d.get("tissue_label", "")).lower() for t in keep_terms):
+            out.append(d["dataset_id"])
+        if len(out) >= want:
+            break
+    return out
+
+def eqtl_catalogue_cis_support(cache, ensembl_ids, max_genes=60):
+    """Real cis-eQTL presence check: for each gene, query a curated set of
+    bone/immune-relevant eQTL Catalogue datasets (per-dataset REST path) and mark
+    True if any significant (p<5e-8) cis-eQTL is found, False if none, None if the
+    catalogue is unreachable. Full multi-tissue coloc/SMR/MR stay pending."""
+    datasets = _eqtl_bone_relevant_datasets(cache)
     rows = []
     for gid in list(ensembl_ids)[:max_genes]:
-        has = None
-        for params in ({"gene_id": gid, "size": 1, "p_upper": 5e-8},
-                       {"molecular_trait_id": gid, "size": 1, "p_upper": 5e-8}):
+        if not datasets:
+            rows.append({"ensembl_id": gid, "has_significant_cis_eqtl": None, "n_datasets_queried": 0}); continue
+        has = False
+        for ds in datasets:
             try:
-                data = cache.get_json("https://www.ebi.ac.uk/eqtl/api/v2/associations", params)["data"]
-                hits = data if isinstance(data, list) else data.get("_embedded", {}).get("associations", [])
-                has = bool(hits); break
+                data = cache.get_json(f"https://www.ebi.ac.uk/eqtl/api/v2/datasets/{ds}/associations",
+                                      {"gene_id": gid, "size": 1, "p_upper": 5e-8})["data"]
+                if (data if isinstance(data, list) else data.get("_embedded", {}).get("associations", [])):
+                    has = True; break
             except Exception:
-                continue
-        rows.append({"ensembl_id": gid, "has_significant_cis_eqtl": has})
+                continue  # 400 "No results" or transient -> no hit in this dataset
+        rows.append({"ensembl_id": gid, "has_significant_cis_eqtl": has, "n_datasets_queried": len(datasets)})
     return pd.DataFrame(rows)
 
 
