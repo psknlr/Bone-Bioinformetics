@@ -10,10 +10,11 @@ This project is designed to avoid simulated pharmacology, expression, GWAS, or n
 - Component-target evidence is retrieved from ChEMBL activity records, restricted to **human single-protein targets** (cell-line/phenotypic assays logged to `excluded_nonmolecular_activities.csv`), de-duplicated and aggregated per gene with n_activities/n_documents/median/max pChEMBL, then tiered by assay/potency with a separate STRING-neighbour predicted layer.
 - Osteoporosis target evidence is retrieved from Open Targets for `MONDO_0005298`; the association score is treated as a ranking heuristic (not a probability) and the disease module is defined by a documented score threshold.
 - Network proximity uses STRING **physical** interactions, scored with a degree-preserving random reference (z-score, empirical p) and a size-matched null drawn from an independent background; direct target–disease overlaps count as distance 0.
-- Reference marker localisation downloads PanglaoDB markers and computes target-marker overlap with a hypergeometric enrichment test.
-- Expression localisation downloads the real GSE224152 processed matrix (aggregate; columns are cell barcodes, so cell-type-resolved localisation awaits an annotated matrix).
-- Osteoclast dynamics downloads the real GSE246769 count matrix.
-- Bone trait study discovery and gene-level enrichment query the GWAS Catalog REST API (`gwas_gene_enrichment.csv`).
+- Curated marker overlap is reported as `marker_overlap_fraction` (Fisher exact vs a protein-coding background) and is explicitly **not** a UCell score; cell-specific panels are used (broad signalling nodes removed). PanglaoDB overlap keeps its hypergeometric test.
+- GSE224152 is processed as real single-cell data: per-cell QC, CP10k+log1p normalisation, marker-score cell-type annotation (donor from the barcode suffix), and per-cell-type/per-donor candidate-target expression; genes absent from the matrix are reported as NA/not_mapped, never as zero.
+- GSE246769 uses a donor-PAIRED design (d0 missing for donors 5/7/8): within-donor log2CPM contrasts d2/d5/d9 vs d0 on donors present at both timepoints, paired t-tests and BH-FDR after low-expression filtering.
+- Human-genetics evidence uses the Open Targets `genetic_association` datatype (separated from the blended score); GWAS-Catalog genes are collected after EFO resolution with pagination (author-reported + mapped) and summary-statistics availability is actually checked (`fullPvalueSet`).
+- The convergence output is a `preliminary_multi_source_evidence_prioritisation` (no causal grade, no pharmacology-direction inference); the constant "classical" pillar is excluded and coloc/MR remain the gate for causality.
 
 ## What is deliberately not faked
 
