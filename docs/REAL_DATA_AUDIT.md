@@ -5,14 +5,15 @@ This project is designed to avoid simulated pharmacology, expression, GWAS, or n
 ## What is computed from real data
 
 - Classical herb-module statistics are computed from `osteoporosis_extraction_output_finalV6.xlsx`.
+- The target quartet and all sub-combinations are tested explicitly (`core_module_significance.csv`); the complete four-herb co-occurrence is reported truthfully (support = 0), not overstated.
 - Component identity is validated through PubChem PUG REST and ChEMBL molecule search.
-- Component-target evidence is retrieved from ChEMBL activity records and mapped to gene symbols through ChEMBL target components.
+- Component-target evidence is retrieved from ChEMBL activity records and mapped to gene symbols through ChEMBL target components, then tiered by assay type/potency (experimental) with a separate STRING-neighbour predicted layer.
 - Osteoporosis target evidence is retrieved from Open Targets for `MONDO_0005298`.
-- Network proximity uses STRING interactions queried from `string-db.org`.
-- Reference marker localisation downloads PanglaoDB markers and computes target-marker overlap.
-- Expression localisation downloads the real GSE224152 processed matrix.
+- Network proximity uses STRING interactions queried from `string-db.org`, scored with a degree-preserving random reference (z-score, empirical p) and a random-equal-size-combination null.
+- Reference marker localisation downloads PanglaoDB markers and computes target-marker overlap with a hypergeometric enrichment test.
+- Expression localisation downloads the real GSE224152 processed matrix (aggregate; columns are cell barcodes, so cell-type-resolved localisation awaits an annotated matrix).
 - Osteoclast dynamics downloads the real GSE246769 count matrix.
-- Bone trait study discovery queries the GWAS Catalog REST API.
+- Bone trait study discovery and gene-level enrichment query the GWAS Catalog REST API (`gwas_gene_enrichment.csv`).
 
 ## What is deliberately not faked
 

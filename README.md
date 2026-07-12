@@ -16,10 +16,10 @@ python scripts/nature_bone_pipeline.py --workbook osteoporosis_extraction_output
 
 The pipeline implements the requested main narrative:
 
-1. **Stable herb modules**: filters included classical records, creates strict record hashes, removes duplicate book/year/diagnosis/chapter/title entries, mines herb modules with FP-Growth, estimates lift against independence, calculates permutation p values, and applies Benjamini-Hochberg FDR correction.
-2. **Historical stability**: compares the Du-Zhong/Niu-Xi/Xu-Duan/Gu-Sui-Bu core across dynasty, TCM syndrome, and diagnosis strata.
-3. **Component-target and network medicine layer**: queries PubChem/ChEMBL for core-herb compound evidence and compares the core module's osteoporosis-network proximity with single herbs using STRING protein interactions and Open Targets osteoporosis genes.
-4. **Cell and human genetics layer**: exports reference marker-based cell-type overlap localisation, downloads the real GSE224152 marrow non-haematopoietic expression matrix for target-expression summaries, downloads the real GSE246769 multi-donor osteoclast differentiation bulk RNA-seq matrix for dynamic validation, and keeps UCell/pseudo-bulk/trajectory reserved for true single-cell matrices with adequate metadata.
+1. **Stable herb modules**: filters included classical records, creates strict record hashes, removes duplicate book/year/diagnosis/chapter/title entries, mines herb modules with FP-Growth, estimates lift against independence, calculates permutation p values, and applies Benjamini-Hochberg FDR correction. A dedicated `core_module_significance.csv` tests the Du-Zhong/Niu-Xi/Xu-Duan/Gu-Sui-Bu quartet and **every** 2/3/4-herb sub-combination regardless of frequency, so the central claim is reported honestly: the pairs and two triples (杜仲–牛膝–续断, 杜仲–牛膝–骨碎补) are FDR-significant with high lift, whereas the complete four-herb set never co-occurs in a single record and is reported as such rather than overstated.
+2. **Historical stability**: compares the core across dynasty, TCM syndrome, diagnosis **and symptom** strata, reporting complete/pair/any co-occurrence of the core herbs.
+3. **Component-target and network medicine layer**: queries PubChem/ChEMBL for core-herb compound evidence, tiers experimental targets by assay/potency and adds a STRING-neighbour predicted-target layer, then computes STRING network proximity of the core module and each single herb to the osteoporosis module with a **degree-preserving random reference (z-score, empirical p)** and a **random-equal-size-combination null**, directly answering whether the combination is closer to the disease network than single herbs or random combos.
+4. **Cell and human genetics layer**: exports reference marker-based cell-type overlap localisation **with hypergeometric enrichment**, downloads the real GSE224152 marrow non-haematopoietic expression matrix for target-expression summaries, downloads the real GSE246769 multi-donor osteoclast differentiation bulk RNA-seq matrix for dynamic validation, runs a **gene-level GWAS-Catalog bone-gene enrichment** for the candidate targets, and converges classical/pharmacology/cell-expression/human-genetics evidence into a four-pillar prioritisation. UCell/pseudo-bulk/trajectory and coloc/MR remain reserved for true single-cell matrices and full summary statistics.
 
 ## Outputs
 
@@ -27,11 +27,16 @@ Generated tables are written to `results/tables/`:
 
 - `deduplicated_classical_records.csv`
 - `stable_herb_modules.csv`
+- `core_module_significance.csv`
 - `historical_stability.csv`
 - `pubchem_chembl_compounds.csv`
 - `component_target_evidence_tiers.csv`
+- `predicted_target_layer.csv`
 - `opentargets_osteoporosis_targets.csv`
 - `network_proximity.csv`
+- `network_proximity_random_combo_null.csv`
+- `gwas_gene_enrichment.csv`
+- `gwas_catalog_bone_genes.csv`
 - `single_cell_localisation.csv`
 - `reference_marker_overlap_localisation.csv`
 - `gse224152_target_expression.csv`

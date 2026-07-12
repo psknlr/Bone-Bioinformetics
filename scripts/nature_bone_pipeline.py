@@ -19,7 +19,7 @@ import pandas as pd
 import requests
 import seaborn as sns
 from mlxtend.frequent_patterns import fpgrowth
-from scipy.stats import fisher_exact
+from scipy.stats import fisher_exact, hypergeom
 from statsmodels.stats.multitest import multipletests
 
 CORE = ("杜仲", "牛膝", "续断", "骨碎补")
@@ -129,7 +129,37 @@ def load_records(path):
     df["herbs"] = [[h for h in sorted({norm_herb(d.get("name", "")) for d in parse_json_list(x) if d.get("name")}) if h] for x in df["therapeutic_drugs_json"]]
     df = df[df["herbs"].map(len).gt(0)].copy()
     df["dynasty"] = pd.cut(df["year"], bins=[x[0] for x in DYNASTIES]+[10_000], labels=[x[2] for x in DYNASTIES], right=False)
+    df["symptoms"] = [sorted({norm_herb(d.get("name", d) if isinstance(d, dict) else d) for d in parse_json_list(x)}) if "symptoms_signs_json" in df.columns else [] for x in df.get("symptoms_signs_json", pd.Series([None]*len(df), index=df.index))]
     return df
+
+def _perm_cooccurrence_p(rng, N, colsums, obs, n_perm):
+    """Permutation p preserving each herb's marginal frequency."""
+    null = [len(set.intersection(*[set(rng.sample(range(N), s)) for s in colsums])) for _ in range(n_perm)]
+    return (1 + sum(x >= obs for x in null)) / (n_perm + 1)
+
+def core_module_significance(df, outdir, n_perm=1000, seed=11):
+    """Explicitly test the target quartet and EVERY 2/3/4-herb sub-combination,
+    independent of any frequency threshold, so the central claim about
+    杜仲–牛膝–续断–骨碎补 is reported honestly (support, lift, permutation p, FDR)."""
+    rng = random.Random(seed)
+    sets = [set(hs) for hs in df.herbs]
+    N = len(sets)
+    freq = {h: sum(h in s for s in sets) for h in CORE}
+    rows = []
+    for k in range(2, len(CORE) + 1):
+        for cols in combinations(sorted(CORE), k):
+            obs = sum(set(cols).issubset(s) for s in sets)
+            exp = N * np.prod([freq[c] / N for c in cols])
+            perm_p = _perm_cooccurrence_p(rng, N, [freq[c] for c in cols], obs, n_perm)
+            rows.append({"module": "–".join(cols), "size": len(cols), "support_n": obs,
+                         "support_rate": obs / N, "expected_n": exp,
+                         "lift_vs_independence": obs / max(exp, 1e-12), "perm_p": perm_p,
+                         "co_occurs_at_all": obs > 0})
+    res = pd.DataFrame(rows)
+    res["fdr"] = multipletests(res.perm_p, method="fdr_bh")[1]
+    res = res.sort_values(["size", "support_n"], ascending=[True, False])
+    res.to_csv(outdir / "core_module_significance.csv", index=False)
+    return res
 
 def mine_modules(df, outdir, n_perm=200, seed=7):
     rng = random.Random(seed); herbs = sorted({h for hs in df.herbs for h in hs})
@@ -144,9 +174,21 @@ def mine_modules(df, outdir, n_perm=200, seed=7):
     core=set(CORE); mods["contains_core"] = mods["items"].map(lambda x: set(x).issubset(core) or core.issubset(set(x)))
     mods.sort_values(["contains_core","fdr","lift_vs_independence","support_n"], ascending=[False,True,False,False]).to_csv(outdir/"stable_herb_modules.csv", index=False)
     hist=[]
+    def _core_stats(sub):
+        return {"records":len(sub),
+                "core_complete_n":sum(core.issubset(set(x)) for x in sub.herbs),
+                "core_pair_n":sum(len(core & set(x))>=2 for x in sub.herbs),
+                "core_any_n":sum(bool(core & set(x)) for x in sub.herbs),
+                "core_any_rate":sum(bool(core & set(x)) for x in sub.herbs)/len(sub)}
     for group_col in ["dynasty","tcm_syndrome","Diagnosis"]:
+        if group_col not in df.columns: continue
         for g, sub in df.groupby(group_col, dropna=True):
-            hist.append({"stratum":group_col,"level":str(g),"records":len(sub),"core_complete_n":sum(core.issubset(set(x)) for x in sub.herbs),"core_any_n":sum(bool(core & set(x)) for x in sub.herbs),"core_any_rate":sum(bool(core & set(x)) for x in sub.herbs)/len(sub)})
+            hist.append({"stratum":group_col,"level":str(g),**_core_stats(sub)})
+    # symptom (症状) stratification: for each recurring symptom, persistence of the core set
+    sym_counts=pd.Series([s for syms in df.symptoms for s in syms if s]).value_counts()
+    for sym in sym_counts[sym_counts>=8].index:
+        sub=df[df.symptoms.map(lambda ss: sym in ss)]
+        if len(sub): hist.append({"stratum":"symptom","level":str(sym),**_core_stats(sub)})
     pd.DataFrame(hist).to_csv(outdir/"historical_stability.csv", index=False); return mods, pd.DataFrame(hist)
 
 def pubchem_lookup(cache, name):
@@ -190,15 +232,63 @@ def opentargets_osteoporosis(cache, size=200):
     rows=data.get("data",{}).get("disease",{}).get("associatedTargets",{}).get("rows",[]) if data else []
     return pd.DataFrame([{"target":r["target"].get("approvedSymbol"),"open_targets_score":r.get("score"),"ensembl_id":r["target"].get("id")} for r in rows if r.get("target")])
 
-def string_network(cache, genes):
+def string_network(cache, genes, add_nodes=300):
+    """STRING PPI network for the seed genes, expanded with `add_nodes` extra
+    high-confidence interactors so there is a real background universe for the
+    degree-matched network-proximity randomisation."""
     genes=sorted({g for g in genes if isinstance(g,str) and g});
     if len(genes)<2: return nx.Graph()
-    text=requests.get("https://string-db.org/api/tsv/network", params={"identifiers":"%0d".join(genes),"species":9606,"required_score":400}, timeout=60).text
+    text=requests.get("https://string-db.org/api/tsv/network", params={"identifiers":"%0d".join(genes),"species":9606,"required_score":400,"add_nodes":add_nodes}, timeout=90).text
     G=nx.Graph(); G.add_nodes_from(genes)
     for line in text.splitlines()[1:]:
         f=line.split('\t')
         if len(f)>5: G.add_edge(f[2], f[3], score=float(f[5]))
     return G
+
+def _closest_distance(G, source_set, target_set):
+    """Mean over sources of the shortest-path distance to the nearest target (Guney et al. 2016 d_c)."""
+    tgt=[t for t in target_set if t in G]; vals=[]
+    for s in source_set:
+        if s not in G: continue
+        ds=[nx.shortest_path_length(G,s,t) for t in tgt if t!=s and nx.has_path(G,s,t)]
+        if ds: vals.append(min(ds))
+    return float(np.mean(vals)) if vals else np.nan
+
+def proximity_zscore(G, drug_genes, disease_genes, n_rand=1000, seed=3):
+    """Network proximity of a drug-target set to the disease module with a
+    degree-preserving random reference, giving z-score and empirical p."""
+    drug=[g for g in drug_genes if g in G]; disease=[g for g in disease_genes if g in G]
+    d_obs=_closest_distance(G, drug, disease)
+    if np.isnan(d_obs) or not drug: return {"observed_distance":d_obs,"z_score":np.nan,"empirical_p":np.nan,"random_mean":np.nan,"random_sd":np.nan,"n_targets_in_network":len(drug)}
+    # degree-preserving bins over candidate nodes (exclude disease module itself)
+    universe=[n for n in G.nodes if n not in set(disease)]
+    deg={n:G.degree(n) for n in universe}
+    import bisect
+    order=sorted(universe, key=lambda n: deg[n]); degs=[deg[n] for n in order]
+    rng=np.random.default_rng(seed); null=[]
+    for _ in range(n_rand):
+        pick=set()
+        for g in drug:
+            d=G.degree(g); lo=bisect.bisect_left(degs,int(d*0.5)); hi=max(bisect.bisect_right(degs,int(d*1.5)+1),lo+1)
+            cand=order[lo:hi] or order
+            for _try in range(20):
+                c=cand[rng.integers(len(cand))]
+                if c not in pick: pick.add(c); break
+        d=_closest_distance(G, list(pick), disease)
+        if not np.isnan(d): null.append(d)
+    mu=float(np.mean(null)) if null else np.nan; sd=float(np.std(null)) if null else np.nan
+    z=(d_obs-mu)/sd if sd and sd>0 else np.nan
+    emp_p=(1+sum(x<=d_obs for x in null))/(len(null)+1) if null else np.nan
+    return {"observed_distance":d_obs,"z_score":z,"empirical_p":emp_p,"random_mean":mu,"random_sd":sd,"n_targets_in_network":len(drug)}
+
+def evidence_tier(standard_type, pchembl):
+    """Stratify experimental ChEMBL evidence by assay type and potency."""
+    st=str(standard_type).upper(); p=pchembl or 0
+    if st in {"KI","KD"} and p>=7: return "T1_experimental_high_affinity_binding"
+    if st in {"KI","KD","IC50","XC50"} and p>=6: return "T2_experimental_binding"
+    if st in {"EC50","POTENCY","AC50"} and p>=6: return "T3_experimental_functional"
+    if p>=5: return "T4_experimental_moderate"
+    return "T5_experimental_weak"
 
 def real_targets_and_network(outdir, cache):
     compounds=[]; target_rows=[]
@@ -210,24 +300,45 @@ def real_targets_and_network(outdir, cache):
                 for t in chembl_targets(cache, chembl):
                     t.update({"herb":herb,"compound_query":q,"target_gene_symbol":chembl_target_gene_symbol(cache, t.get("target_chembl_id"))}); target_rows.append(t)
     comp=pd.DataFrame(compounds); comp.to_csv(outdir/"pubchem_chembl_compounds.csv", index=False)
-    targets=pd.DataFrame(target_rows); targets.to_csv(outdir/"component_target_evidence_tiers.csv", index=False)
+    targets=pd.DataFrame(target_rows)
+    if not targets.empty:
+        targets["evidence_type"]="experimental_ChEMBL"
+        targets["evidence_tier"]=[evidence_tier(st, p) for st, p in zip(targets.get("standard_type"), targets.get("pchembl_value"))]
+    targets.to_csv(outdir/"component_target_evidence_tiers.csv", index=False)
     disease=opentargets_osteoporosis(cache); disease.to_csv(outdir/"opentargets_osteoporosis_targets.csv", index=False)
     drug_gene=set(targets.get("target_gene_symbol", pd.Series(dtype=str)).dropna())
     disease_gene=set(disease.target.dropna().head(100)) if not disease.empty else set()
     G=string_network(cache, drug_gene | disease_gene)
-    def prox(genes):
-        vals=[]
-        for g in genes:
-            if g in G:
-                ds=[nx.shortest_path_length(G,g,d) for d in disease_gene if d in G and nx.has_path(G,g,d) and g!=d]
-                if ds: vals.append(min(ds))
-        return np.mean(vals) if vals else np.nan
-    rows=[{"set":"core_combo","targets":len(drug_gene),"network_distance":prox(drug_gene),"source":"ChEMBL+OpenTargets+STRING"}]
+    # Predicted-target layer: STRING first-shell neighbours of experimental targets
+    # that themselves belong to the osteoporosis module (experimental vs predicted split).
+    pred_rows=[]
+    for g in sorted(drug_gene):
+        if g not in G: continue
+        for nb in G.neighbors(g):
+            if nb in disease_gene and nb not in drug_gene:
+                pred_rows.append({"predicted_target":nb,"via_experimental_target":g,"string_score":G[g][nb].get("score"),"evidence_type":"predicted_STRING_neighbour_of_experimental_target","in_osteoporosis_module":True})
+    pd.DataFrame(pred_rows).to_csv(outdir/"predicted_target_layer.csv", index=False)
+    # Network proximity with degree-preserving random reference (z-score, empirical p).
+    rows=[{"set":"core_combo","targets":len(drug_gene),**proximity_zscore(G, drug_gene, disease_gene),"source":"ChEMBL+OpenTargets+STRING"}]
     for herb in CORE:
         hg=set(targets.loc[targets.herb.eq(herb),"target_gene_symbol"].dropna()) if not targets.empty else set()
-        rows.append({"set":herb,"targets":len(hg),"network_distance":prox(hg),"source":"ChEMBL+OpenTargets+STRING"})
-    pd.DataFrame(rows).to_csv(outdir/"network_proximity.csv", index=False)
-    return comp, targets, disease, pd.DataFrame(rows)
+        rows.append({"set":herb,"targets":len(hg),**proximity_zscore(G, hg, disease_gene),"source":"ChEMBL+OpenTargets+STRING"})
+    prox_df=pd.DataFrame(rows).rename(columns={"observed_distance":"network_distance"})
+    prox_df.to_csv(outdir/"network_proximity.csv", index=False)
+    # Random-combination null: does the actual 4-herb target set beat random equal-sized combos?
+    herb_pools={h:set(targets.loc[targets.herb.eq(h),"target_gene_symbol"].dropna()) for h in CORE} if not targets.empty else {h:set() for h in CORE}
+    all_pool=sorted({g for s in herb_pools.values() for g in s if g in G})
+    rng=np.random.default_rng(17); k=len([g for g in drug_gene if g in G])
+    d_core=_closest_distance(G, [g for g in drug_gene if g in G], [d for d in disease_gene if d in G])
+    null=[]
+    if all_pool and k and not np.isnan(d_core):
+        for _ in range(2000):
+            samp=list(rng.choice(all_pool, min(k,len(all_pool)), replace=False))
+            d=_closest_distance(G, samp, [d for d in disease_gene if d in G])
+            if not np.isnan(d): null.append(d)
+    combo_null=pd.DataFrame([{"comparison":"core_combo_vs_random_equal_size_combos","core_distance":d_core,"random_mean":float(np.mean(null)) if null else np.nan,"random_sd":float(np.std(null)) if null else np.nan,"empirical_p_core_closer":(1+sum(x<=d_core for x in null))/(len(null)+1) if null else np.nan,"n_random":len(null)}])
+    combo_null.to_csv(outdir/"network_proximity_random_combo_null.csv", index=False)
+    return comp, targets, disease, prox_df
 
 def omics_genetics(outdir, targets, disease):
     genes=set(targets.get("target_gene_symbol", pd.Series(dtype=str)).dropna())
@@ -244,20 +355,28 @@ def reference_marker_overlap(outdir, cache, targets):
     """Reference marker-based cell-type overlap localisation using PanglaoDB plus curated bone markers."""
     genes=set(targets.get("target_gene_symbol", pd.Series(dtype=str)).dropna())
     marker_rows=[]
-    # PanglaoDB: real downloaded marker table.
+    # PanglaoDB: real downloaded marker table, scored with a hypergeometric
+    # enrichment test against the PanglaoDB human gene universe.
     try:
         raw=cache.get_bytes(PANGLOADB_URL, headers={"User-Agent":"Mozilla/5.0"})
         pang=pd.read_csv(io.BytesIO(gzip.decompress(raw)), sep="\t")
+        pang=pang[pang["species"].str.contains("Hs", na=False)].copy()
+        universe=set(pang["official gene symbol"].dropna().astype(str))
+        M=len(universe); drawn=genes & universe; N=len(drawn)
         keep=pang["cell type"].str.lower().isin({"osteoblasts","osteoclasts","osteoclast precursor cells","osteocytes","stromal cells"})
-        pang=pang[keep & pang["species"].str.contains("Hs", na=False)].copy()
-        for cell, sub in pang.groupby("cell type"):
-            markers=set(sub["official gene symbol"].dropna().astype(str))
-            marker_rows.append({"source":"PanglaoDB_27_Mar_2020","cell_state":cell,"marker_n":len(markers),"target_overlap":len(genes & markers),"overlap_genes":";".join(sorted(genes & markers))})
+        for cell, sub in pang[keep].groupby("cell type"):
+            markers=set(sub["official gene symbol"].dropna().astype(str)); ov=genes & markers
+            p=float(hypergeom.sf(len(ov)-1, M, len(markers), N)) if (M and len(markers) and N) else np.nan
+            marker_rows.append({"source":"PanglaoDB_27_Mar_2020","cell_state":cell,"marker_n":len(markers),"target_overlap":len(ov),"hypergeom_p":p,"background_universe":M,"overlap_genes":";".join(sorted(ov))})
     except Exception as e:
-        marker_rows.append({"source":"PanglaoDB_27_Mar_2020","cell_state":"download_failed","marker_n":0,"target_overlap":0,"overlap_genes":str(e)[:200]})
+        marker_rows.append({"source":"PanglaoDB_27_Mar_2020","cell_state":"download_failed","marker_n":0,"target_overlap":0,"hypergeom_p":np.nan,"background_universe":0,"overlap_genes":str(e)[:200]})
     for cell, markers in CELL_MARKERS.items():
-        marker_rows.append({"source":"curated_bone_marker_panel","cell_state":cell,"marker_n":len(markers),"target_overlap":len(genes & markers),"overlap_genes":";".join(sorted(genes & markers))})
-    out=pd.DataFrame(marker_rows); out.to_csv(outdir/"reference_marker_overlap_localisation.csv", index=False)
+        ov=genes & markers
+        marker_rows.append({"source":"curated_bone_marker_panel","cell_state":cell,"marker_n":len(markers),"target_overlap":len(ov),"hypergeom_p":np.nan,"background_universe":0,"overlap_genes":";".join(sorted(ov))})
+    out=pd.DataFrame(marker_rows)
+    if "hypergeom_p" in out and out["hypergeom_p"].notna().any():
+        mask=out["hypergeom_p"].notna(); out.loc[mask,"fdr"]=multipletests(out.loc[mask,"hypergeom_p"], method="fdr_bh")[1]
+    out.to_csv(outdir/"reference_marker_overlap_localisation.csv", index=False)
     return out
 
 def gse224152_expression_localisation(outdir, cache, targets):
@@ -309,7 +428,38 @@ def gwas_catalog_trait_studies(outdir, cache, traits=GWAS_TRAITS):
             rows.append({"query_trait":trait,"accessionId":None,"diseaseTrait":"download_failed","initialSampleSize":str(e)[:200],"replicateSampleSize":None,"publication":None,"summaryStats":None})
     out=pd.DataFrame(rows).drop_duplicates(); out.to_csv(outdir/"gwas_catalog_bone_trait_studies.csv", index=False); return out
 
-def causal_pharmacology_scores(outdir):
+def gwas_catalog_bone_genes(cache, traits=GWAS_TRAITS, per_trait=1000):
+    """Collect author-reported / mapped genes from GWAS Catalog associations for bone traits."""
+    genes=set()
+    for trait in traits:
+        try:
+            data=cache.get_json("https://www.ebi.ac.uk/gwas/rest/api/associations/search/findByEfoTrait", {"efoTrait":trait,"size":per_trait})["data"]
+        except Exception:
+            continue
+        for a in data.get("_embedded",{}).get("associations",[]):
+            for locus in a.get("loci",[]) or []:
+                for rg in locus.get("authorReportedGenes",[]) or []:
+                    g=(rg.get("geneName") or "").strip()
+                    if g and g.lower() not in {"intergenic","nr","na"}: genes.add(g.upper())
+            for ra in a.get("strongestRiskAlleles",[]) or []:
+                pass
+    return genes
+
+def gwas_gene_enrichment(outdir, cache, targets, background_n=20000):
+    """Gene-level enrichment: overlap of candidate targets with GWAS-Catalog bone-trait
+    genes, tested by hypergeometric enrichment against a genome background."""
+    target_genes={str(g).upper() for g in targets.get("target_gene_symbol", pd.Series(dtype=str)).dropna()}
+    gwas_genes=gwas_catalog_bone_genes(cache)
+    overlap=sorted(target_genes & gwas_genes)
+    M, n, N, k = background_n, len(gwas_genes), len(target_genes), len(overlap)
+    p=float(hypergeom.sf(k-1, M, n, N)) if (n and N) else np.nan
+    fold=(k/N)/(n/M) if (N and n) else np.nan
+    summary=pd.DataFrame([{"n_candidate_targets":N,"n_gwas_bone_genes":n,"n_overlap":k,"fold_enrichment":fold,"hypergeom_p":p,"background_genes":M,"overlap_genes":";".join(overlap),"note":"author-reported GWAS Catalog genes; coloc/MR still require full summary statistics"}])
+    summary.to_csv(outdir/"gwas_gene_enrichment.csv", index=False)
+    pd.DataFrame({"gene":sorted(gwas_genes)}).to_csv(outdir/"gwas_catalog_bone_genes.csv", index=False)
+    return summary, gwas_genes
+
+def causal_pharmacology_scores(outdir, gwas_genes=None):
     targets=pd.read_csv(outdir/"component_target_evidence_tiers.csv")
     ot=pd.read_csv(outdir/"opentargets_osteoporosis_targets.csv") if (outdir/"opentargets_osteoporosis_targets.csv").exists() else pd.DataFrame(columns=["target","open_targets_score"])
     marker=pd.read_csv(outdir/"reference_marker_overlap_localisation.csv") if (outdir/"reference_marker_overlap_localisation.csv").exists() else pd.DataFrame(columns=["overlap_genes"])
@@ -318,19 +468,27 @@ def causal_pharmacology_scores(outdir):
     marker_genes=set()
     for x in marker.get("overlap_genes", pd.Series(dtype=str)).dropna():
         marker_genes |= {g for g in str(x).split(";") if g and g != "nan"}
+    gwas_genes={str(g).upper() for g in (gwas_genes or set())}
     rows=[]
     for gene, sub in targets.dropna(subset=["target_gene_symbol"]).groupby("target_gene_symbol"):
         ot_score=float(ot.loc[ot.target.eq(gene),"open_targets_score"].max()) if gene in set(ot.target) else 0.0
         pct=float(gse224.loc[gse224.gene.eq(gene),"pct_cells_detected"].max()) if gene in set(gse224.gene) else 0.0
         delta=float(gse246.loc[gse246.gene.eq(gene),"delta_d9_vs_d0"].mean()) if gene in set(gse246.gene) else 0.0
         max_pchem=float(sub.pchembl_value.max()) if "pchembl_value" in sub else 0.0
-        evidence_count=sum([ot_score>0, gene in marker_genes, pct>0.01, abs(delta)>1, max_pchem>=6])
-        if ot_score>0 and evidence_count>=4: grade="A_candidate_requires_coloc_MR_confirmation"
-        elif ot_score>0 or evidence_count>=3: grade="B_multi_omics_partial_support"
+        in_gwas=gene.upper() in gwas_genes
+        # four independent evidence pillars from the requested main narrative
+        classical=True  # every candidate derives from the deduplicated stable-module herbs
+        pharmacology=max_pchem>=6
+        cell_expression=(pct>0.01) or (abs(delta)>1) or (gene in marker_genes)
+        human_genetics=(ot_score>0) or in_gwas
+        pillars=sum([classical, pharmacology, cell_expression, human_genetics])
+        evidence_count=sum([ot_score>0, in_gwas, gene in marker_genes, pct>0.01, abs(delta)>1, max_pchem>=6])
+        if human_genetics and pillars==4 and evidence_count>=4: grade="A_candidate_requires_coloc_MR_confirmation"
+        elif human_genetics or evidence_count>=3: grade="B_multi_omics_partial_support"
         else: grade="C_pharmacology_only_or_weak_omics"
         direction="inhibit_candidate" if delta>1 else ("activate_candidate" if delta<-1 or pct>0.05 else "direction_uncertain")
-        rows.append({"target":gene,"herbs":";".join(sorted(sub.herb.dropna().unique())),"max_pchembl":max_pchem,"open_targets_score":ot_score,"reference_marker_overlap":gene in marker_genes,"gse224152_pct_cells_detected":pct,"gse246769_delta_d9_vs_d0":delta,"evidence_count":evidence_count,"causal_evidence_grade":grade,"estimated_pharmacology_direction":direction,"fine_mapping_coloc_mr_status":"not_run_requires_full_sumstats_QTL"})
-    out=pd.DataFrame(rows).sort_values(["causal_evidence_grade","open_targets_score","evidence_count","max_pchembl"], ascending=[True,False,False,False])
+        rows.append({"target":gene,"herbs":";".join(sorted(sub.herb.dropna().unique())),"max_pchembl":max_pchem,"open_targets_score":ot_score,"gwas_catalog_bone_gene":in_gwas,"reference_marker_overlap":gene in marker_genes,"gse224152_pct_cells_detected":pct,"gse246769_delta_d9_vs_d0":delta,"classical_evidence":classical,"pharmacology_evidence":pharmacology,"cell_expression_evidence":cell_expression,"human_genetics_evidence":human_genetics,"convergent_pillars":pillars,"evidence_count":evidence_count,"causal_evidence_grade":grade,"estimated_pharmacology_direction":direction,"fine_mapping_coloc_mr_status":"not_run_requires_full_sumstats_QTL"})
+    out=pd.DataFrame(rows).sort_values(["convergent_pillars","causal_evidence_grade","open_targets_score","evidence_count","max_pchembl"], ascending=[False,True,False,False,False])
     out.to_csv(outdir/"genetics_anchored_causal_pharmacology_scores.csv", index=False); return out
 
 def write_high_order_resource_manifest(outdir):
@@ -413,6 +571,9 @@ def main():
     ap=argparse.ArgumentParser(); ap.add_argument("--workbook",default="osteoporosis_extraction_output_finalV6.xlsx"); ap.add_argument("--outdir",default="results"); ap.add_argument("--cache",default=".cache/public_api"); ap.add_argument("--analysis-scope", choices=["quick","full"], default="quick"); ap.add_argument("--download-large", action="store_true"); ap.add_argument("--large-data-dir", default="data/full_scale")
     args=ap.parse_args(); out=Path(args.outdir); tab=out/"tables"; fig=out/"figures"; tab.mkdir(parents=True,exist_ok=True); fig.mkdir(parents=True,exist_ok=True)
     df=load_records(args.workbook); df.to_csv(tab/"deduplicated_classical_records.csv", index=False)
-    mods,hist=mine_modules(df,tab); cache=ApiCache(Path(args.cache)); comp,targets,disease,prox=real_targets_and_network(tab, cache); cell,gen=omics_genetics(tab,targets,disease); reference_marker_overlap(tab, cache, targets); gse224152_expression_localisation(tab, cache, targets); gse246769_osteoclast_dynamics(tab, cache, targets); write_dataset_manifest(tab); gwas_catalog_trait_studies(tab, cache); causal_pharmacology_scores(tab); write_high_order_resource_manifest(tab); write_full_scale_execution_plan(tab, args.analysis_scope, args.download_large, args.large_data_dir); download_requested_large_resources(cache, tab, args.analysis_scope, args.download_large, args.large_data_dir); plot_all(fig,mods,hist,prox,cell,gen); plot_nature_style_extensions(fig, tab)
-    print(f"Analysed {len(df)} deduplicated records; queried public APIs; wrote outputs to {out}.")
+    mods,hist=mine_modules(df,tab); core_sig=core_module_significance(df, tab)
+    cache=ApiCache(Path(args.cache)); comp,targets,disease,prox=real_targets_and_network(tab, cache); cell,gen=omics_genetics(tab,targets,disease); reference_marker_overlap(tab, cache, targets); gse224152_expression_localisation(tab, cache, targets); gse246769_osteoclast_dynamics(tab, cache, targets); write_dataset_manifest(tab); gwas_catalog_trait_studies(tab, cache)
+    _gwas_enr, gwas_genes = gwas_gene_enrichment(tab, cache, targets)
+    causal_pharmacology_scores(tab, gwas_genes); write_high_order_resource_manifest(tab); write_full_scale_execution_plan(tab, args.analysis_scope, args.download_large, args.large_data_dir); download_requested_large_resources(cache, tab, args.analysis_scope, args.download_large, args.large_data_dir); plot_all(fig,mods,hist,prox,cell,gen); plot_nature_style_extensions(fig, tab)
+    print(f"Analysed {len(df)} deduplicated records; core-module significance rows={len(core_sig)}; GWAS bone genes={len(gwas_genes)}; wrote outputs to {out}.")
 if __name__ == "__main__": main()
