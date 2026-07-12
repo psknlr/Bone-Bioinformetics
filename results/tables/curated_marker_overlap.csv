@@ -1,0 +1,6 @@
+cell_state,marker_n,target_overlap,marker_overlap_fraction,odds_ratio,p_value,background_n,overlap_genes,method,fdr
+BMSC/成骨祖细胞,7,0,0.0,0.0,1.0,19000,,curated marker set overlap (Fisher exact vs protein-coding background); not single-cell UCell,1.0
+成骨细胞,7,0,0.0,0.0,1.0,19000,,curated marker set overlap (Fisher exact vs protein-coding background); not single-cell UCell,1.0
+骨细胞,5,0,0.0,0.0,1.0,19000,,curated marker set overlap (Fisher exact vs protein-coding background); not single-cell UCell,1.0
+破骨细胞,8,0,0.0,0.0,1.0,19000,,curated marker set overlap (Fisher exact vs protein-coding background); not single-cell UCell,1.0
+破骨前体/巨噬细胞,5,0,0.0,0.0,1.0,19000,,curated marker set overlap (Fisher exact vs protein-coding background); not single-cell UCell,1.0

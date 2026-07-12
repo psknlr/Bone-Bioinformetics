@@ -4,7 +4,8 @@ PanglaoDB_27_Mar_2020,Osteoclast precursor cells,8,0,1.0,4345,,1.0
 PanglaoDB_27_Mar_2020,Osteoclasts,49,3,0.004418663594235416,4345,CA2;HIF1A;SLC2A1,0.022093317971177077
 PanglaoDB_27_Mar_2020,Osteocytes,5,0,1.0,4345,,1.0
 PanglaoDB_27_Mar_2020,Stromal cells,35,0,1.0,4345,,1.0
-curated_bone_marker_panel,BMSC/成骨祖细胞,8,0,,0,,
-curated_bone_marker_panel,成骨细胞,6,0,,0,,
-curated_bone_marker_panel,破骨细胞,5,0,,0,,
-curated_bone_marker_panel,骨免疫细胞,5,0,,0,,
+curated_bone_marker_panel,BMSC/成骨祖细胞,7,0,,0,,
+curated_bone_marker_panel,成骨细胞,7,0,,0,,
+curated_bone_marker_panel,骨细胞,5,0,,0,,
+curated_bone_marker_panel,破骨细胞,8,0,,0,,
+curated_bone_marker_panel,破骨前体/巨噬细胞,5,0,,0,,
